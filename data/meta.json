@@ -1,0 +1,115 @@
+{
+  "newsCategories": {
+    "must-read": "今日必看",
+    "model-update": "模型更新",
+    "tools-workflow": "工具与工作流",
+    "industry-product": "行业与产品",
+    "deep-insight": "深度观点"
+  },
+  "toolCategories": {
+    "all": "全部工具",
+    "text": "文本对话",
+    "image": "图像设计",
+    "video": "视频制作",
+    "code": "代码辅助",
+    "audio": "音频创作",
+    "productivity": "效率工具"
+  },
+  "tutorialTiers": {
+    "all": "全部",
+    "beginner": "入门基础",
+    "job-specific": "岗位提效",
+    "advanced": "进阶应用"
+  },
+  "difficultyMap": {
+    "beginner": { "label": "入门", "cssClass": "beginner" },
+    "easy": { "label": "简单", "cssClass": "beginner" },
+    "intermediate": { "label": "中级", "cssClass": "intermediate" },
+    "medium": { "label": "中等", "cssClass": "intermediate" },
+    "advanced": { "label": "高级", "cssClass": "advanced" },
+    "hard": { "label": "高级", "cssClass": "advanced" }
+  },
+  "resourceCategories": {
+    "guide": { "label": "使用指南", "icon": "📘", "color": "#3b82f6" },
+    "template": { "label": "模板资源", "icon": "📋", "color": "#10b981" },
+    "report": { "label": "行业报告", "icon": "📊", "color": "#f59e0b" },
+    "internal": { "label": "内部资料", "icon": "🔒", "color": "#8b5cf6" }
+  },
+  "modelTypes": {
+    "all": "全部",
+    "llm": "大语言模型",
+    "multimodal": "多模态",
+    "image": "图像生成",
+    "video": "视频生成",
+    "audio": "音频/语音",
+    "code": "代码助手"
+  },
+  "modelCapabilities": {
+    "all": "全部能力",
+    "text-gen": "文本生成",
+    "code-gen": "代码生成",
+    "image-gen": "图像生成",
+    "video-gen": "视频生成",
+    "audio-gen": "音频/语音",
+    "reasoning": "推理分析",
+    "vision": "图像理解",
+    "translation": "多语言",
+    "search": "联网搜索"
+  },
+  "jobRecommendations": {
+    "设计": {
+      "label": "设计",
+      "tools": ["midjourney", "stable-diffusion", "photoshop-ai", "canva-ai", "google-imagen"],
+      "tutorials": ["t005", "t006", "t018", "t019"],
+      "prompts": ["p017", "p025", "p121", "p122", "p123", "p124", "p125", "p180", "p181", "p212", "p224", "p240", "p270", "p387", "p398", "p405", "p417", "p440", "p452", "p454", "p468", "p474", "p486", "p516"]
+    },
+    "运营": {
+      "label": "运营",
+      "tools": ["chatgpt", "claude", "notion-ai", "google-notebooklm"],
+      "tutorials": ["t009", "t016", "t004"],
+      "prompts": ["p001", "p009", "p007", "p028", "p055", "p059", "p075", "p077", "p085", "p150", "p157", "p163", "p164", "p165", "p166", "p167", "p197", "p202", "p203", "p206", "p226", "p277", "p385", "p396", "p408", "p414", "p418", "p431", "p434", "p438", "p442", "p449", "p456", "p461", "p469", "p480", "p481", "p487", "p491", "p499", "p504", "p511", "p515", "p522", "p523"]
+    },
+    "策划": {
+      "label": "策划",
+      "tools": ["chatgpt", "claude", "perplexity", "gemini"],
+      "tutorials": ["t013", "t011", "t015"],
+      "prompts": ["p004", "p003", "p013", "p041", "p044", "p067", "p070", "p071", "p083", "p139", "p140", "p141", "p142", "p176", "p177", "p184", "p193", "p194", "p198", "p208", "p214", "p215", "p218", "p221", "p237", "p280", "p290", "p301", "p395", "p403", "p407", "p411", "p413", "p419", "p421", "p424", "p428", "p430", "p435", "p445", "p448", "p450", "p457", "p460", "p470", "p489", "p492", "p495", "p497", "p500", "p501", "p509", "p513", "p514"]
+    },
+    "品牌": {
+      "label": "品牌",
+      "tools": ["chatgpt", "midjourney", "canva-ai", "gamma", "heygen"],
+      "tutorials": ["t008", "t010", "t012"],
+      "prompts": ["p006", "p015", "p017", "p050", "p051", "p052", "p054", "p074", "p148", "p149", "p191", "p195", "p207", "p216", "p234", "p389", "p393", "p412", "p420", "p426", "p436", "p439", "p444", "p474", "p476", "p478", "p485", "p491", "p507", "p512", "p524"]
+    },
+    "发行": {
+      "label": "发行",
+      "tools": ["perplexity", "chatgpt", "claude", "google-notebooklm"],
+      "tutorials": ["t010", "t015", "t003"],
+      "prompts": ["p008", "p020", "p011", "p063", "p098", "p099", "p102", "p105", "p155", "p172", "p185", "p200", "p204", "p217", "p258", "p390", "p423", "p433", "p444", "p451", "p455", "p462", "p466", "p471", "p473", "p479", "p482", "p490", "p519"]
+    },
+    "视频": {
+      "label": "视频",
+      "tools": ["google-veo", "sora", "runway", "kling", "capcut-ai", "elevenlabs"],
+      "tutorials": ["t007", "t012"],
+      "prompts": ["p005", "p017", "p021", "p045", "p106", "p107", "p108", "p114", "p143", "p144", "p145", "p146", "p147", "p173", "p174", "p220", "p253", "p282", "p346", "p416", "p422", "p459", "p494"]
+    },
+    "投放": {
+      "label": "投放",
+      "tools": ["chatgpt", "perplexity", "runway", "capcut-ai"],
+      "tutorials": ["t008", "t016"],
+      "prompts": ["p002", "p018", "p009", "p031", "p093", "p094", "p095", "p096", "p131", "p132", "p133", "p134", "p169", "p170", "p190", "p205", "p223", "p227", "p254", "p329", "p410", "p415", "p425", "p433", "p447", "p463", "p488", "p502", "p510", "p518"]
+    },
+    "数值": {
+      "label": "数值",
+      "tools": ["chatgpt", "claude"],
+      "tutorials": [],
+      "prompts": ["p013", "p027", "p030", "p080", "p081", "p082", "p083", "p084", "p151", "p152", "p158", "p159", "p160", "p188", "p189", "p201", "p210", "p213", "p222", "p230", "p276", "p326", "p383", "p397", "p401", "p409", "p427", "p430", "p432", "p443", "p458", "p464", "p475", "p477", "p484", "p503", "p506", "p520"]
+    },
+    "新媒体": {
+      "label": "新媒体",
+      "tools": ["chatgpt", "canva-ai", "capcut-ai"],
+      "tutorials": [],
+      "prompts": ["p010", "p046", "p049", "p072", "p073", "p079", "p109", "p116", "p161", "p162", "p182", "p183", "p199", "p211", "p251", "p384", "p388", "p402", "p404", "p422", "p429", "p461", "p472", "p498", "p508", "p511", "p524"]
+    }
+  }
+}

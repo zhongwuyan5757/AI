@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FiveSeven AI — 图标预览</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #09090b;
+    color: #f0f6fc;
+    font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #69EACB, #A78BFA, #D264B6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 60px;
+  }
+
+  .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    max-width: 960px;
+    width: 100%;
+  }
+
+  .icon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .icon-label {
+    font-size: 13px;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .icon-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f0f6fc;
+  }
+
+  .icon-name-en {
+    font-size: 12px;
+    color: #4e5a6e;
+    margin-top: 4px;
+  }
+
+  /* 图标容器 —— 三种尺寸展示 */
+  .icon-sizes {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+  }
+
+  .icon-size-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .icon-size-label {
+    font-size: 10px;
+    color: #4e5a6e;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(145deg, rgba(30,30,42,0.95), rgba(20,20,28,0.98));
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .icon-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 30% 30%, rgba(105,234,203,0.08), transparent 60%);
+    pointer-events: none;
+  }
+
+  .icon-container.size-64 { width: 80px; height: 80px; }
+  .icon-container.size-48 { width: 64px; height: 64px; border-radius: 12px; }
+  .icon-container.size-32 { width: 48px; height: 48px; border-radius: 10px; }
+
+  .icon-container.size-64 svg { width: 48px; height: 48px; }
+  .icon-container.size-48 svg { width: 36px; height: 36px; }
+  .icon-container.size-32 svg { width: 24px; height: 24px; }
+
+  /* 大展示区 */
+  .icon-hero {
+    width: 160px;
+    height: 160px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(30,30,42,0.95), rgba(20,20,28,0.98));
+    border: 1px solid rgba(105,234,203,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(105,234,203,0.08), 0 0 80px rgba(167,139,250,0.05);
+  }
+
+  .icon-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 30% 30%, rgba(105,234,203,0.1), transparent 60%);
+    pointer-events: none;
+  }
+
+  .icon-hero svg {
+    width: 88px;
+    height: 88px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 暗色卡片预览 */
+  .card-preview {
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+    background: #16161d;
+    border: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .card-preview .card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(145deg, rgba(30,30,42,0.95), rgba(20,20,28,0.98));
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-preview .card-icon::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 30% 30%, rgba(105,234,203,0.08), transparent 60%);
+    pointer-events: none;
+  }
+
+  .card-preview .card-icon svg {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card-preview .card-text h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .card-preview .card-text p {
+    font-size: 12px;
+    color: #94a3b8;
+    line-height: 1.5;
+  }
+
+  .section-divider {
+    width: 100%;
+    max-width: 960px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(105,234,203,0.15), rgba(167,139,250,0.15), transparent);
+    margin: 60px 0;
+  }
+
+  .section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+  }
+
+  /* Emoji 对比 */
+  .compare-row {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 12px;
+  }
+
+  .compare-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .compare-label {
+    font-size: 10px;
+    color: #4e5a6e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .emoji-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+  }
+
+  .arrow-icon {
+    color: #4e5a6e;
+    font-size: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1>FiveSeven AI 图标系统预览</h1>
+<p class="subtitle">三个基准图标 — 游戏策划 / AI 对话 / 学习路径</p>
+
+<!-- ==================== 图标定义 ==================== -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <defs>
+    <!-- 主渐变 -->
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#69EACB"/>
+      <stop offset="50%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#D264B6"/>
+    </linearGradient>
+    <!-- 发光渐变（降低不透明度） -->
+    <linearGradient id="g1-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#69EACB" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#A78BFA" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#D264B6" stop-opacity="0.3"/>
+    </linearGradient>
+    <!-- 反向渐变 -->
+    <linearGradient id="g1-rev" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#69EACB"/>
+      <stop offset="50%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#D264B6"/>
+    </linearGradient>
+
+    <!-- ===== J01 游戏策划 ===== -->
+    <symbol id="icon-game-planner" viewBox="0 0 48 48">
+      <!-- 手柄主体 -->
+      <path d="M10 20 C10 17, 12 15, 15 15 L33 15 C36 15, 38 17, 38 20 L38 24 C38 27, 36.5 30, 33 31 L30 32 C28 33, 27 35, 26 37 L25 38 C24.5 39, 23.5 39, 23 38 L22 37 C21 35, 20 33, 18 32 L15 31 C11.5 30, 10 27, 10 24 Z"
+            fill="none" stroke="url(#g1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- 左摇杆 -->
+      <circle cx="18" cy="22" r="3" fill="none" stroke="url(#g1)" stroke-width="1.2"/>
+      <circle cx="18" cy="22" r="1" fill="url(#g1)"/>
+      <!-- 右侧按钮 -->
+      <circle cx="30" cy="20" r="1.5" fill="url(#g1)" opacity="0.7"/>
+      <circle cx="33" cy="23" r="1.5" fill="url(#g1)" opacity="0.5"/>
+      <circle cx="30" cy="26" r="1.5" fill="url(#g1)" opacity="0.3"/>
+      <!-- AI 神经网络节点 -->
+      <circle cx="8" cy="10" r="1.5" fill="#69EACB" opacity="0.8"/>
+      <circle cx="16" cy="8" r="1.2" fill="#A78BFA" opacity="0.7"/>
+      <circle cx="24" cy="7" r="1" fill="#D264B6" opacity="0.6"/>
+      <circle cx="32" cy="8" r="1.2" fill="#A78BFA" opacity="0.7"/>
+      <circle cx="40" cy="10" r="1.5" fill="#69EACB" opacity="0.8"/>
+      <!-- 连接线 -->
+      <line x1="8" y1="10" x2="16" y2="8" stroke="#69EACB" stroke-width="0.6" opacity="0.4"/>
+      <line x1="16" y1="8" x2="24" y2="7" stroke="#A78BFA" stroke-width="0.6" opacity="0.4"/>
+      <line x1="24" y1="7" x2="32" y2="8" stroke="#A78BFA" stroke-width="0.6" opacity="0.4"/>
+      <line x1="32" y1="8" x2="40" y2="10" stroke="#D264B6" stroke-width="0.6" opacity="0.4"/>
+      <!-- 节点到手柄的连线 -->
+      <line x1="16" y1="8" x2="18" y2="15" stroke="url(#g1)" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 2"/>
+      <line x1="24" y1="7" x2="24" y2="15" stroke="url(#g1)" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 2"/>
+      <line x1="32" y1="8" x2="30" y2="15" stroke="url(#g1)" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 2"/>
+    </symbol>
+
+    <!-- ===== T01 AI 对话 ===== -->
+    <symbol id="icon-ai-chat" viewBox="0 0 48 48">
+      <!-- 主对话气泡 -->
+      <path d="M8 14 C8 11.5, 10 10, 13 10 L35 10 C38 10, 40 11.5, 40 14 L40 28 C40 30.5, 38 32, 35 32 L20 32 L14 37 L14 32 L13 32 C10 32, 8 30.5, 8 28 Z"
+            fill="none" stroke="url(#g1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- AI 脑纹路 -->
+      <circle cx="24" cy="21" r="6" fill="none" stroke="url(#g1)" stroke-width="1" opacity="0.5"/>
+      <circle cx="24" cy="21" r="2.5" fill="url(#g1)" opacity="0.6"/>
+      <!-- 内环放射点 -->
+      <circle cx="24" cy="14.5" r="1" fill="#69EACB" opacity="0.8"/>
+      <circle cx="29.5" cy="17.5" r="1" fill="#A78BFA" opacity="0.7"/>
+      <circle cx="29.5" cy="24.5" r="1" fill="#D264B6" opacity="0.6"/>
+      <circle cx="24" cy="27.5" r="1" fill="#D264B6" opacity="0.7"/>
+      <circle cx="18.5" cy="24.5" r="1" fill="#A78BFA" opacity="0.6"/>
+      <circle cx="18.5" cy="17.5" r="1" fill="#69EACB" opacity="0.7"/>
+      <!-- 节点连线 -->
+      <line x1="24" y1="14.5" x2="24" y2="18.5" stroke="#69EACB" stroke-width="0.6" opacity="0.5"/>
+      <line x1="29.5" y1="17.5" x2="26.2" y2="19.5" stroke="#A78BFA" stroke-width="0.6" opacity="0.5"/>
+      <line x1="29.5" y1="24.5" x2="26.2" y2="22.5" stroke="#D264B6" stroke-width="0.6" opacity="0.5"/>
+      <line x1="24" y1="27.5" x2="24" y2="23.5" stroke="#D264B6" stroke-width="0.6" opacity="0.5"/>
+      <line x1="18.5" y1="24.5" x2="21.8" y2="22.5" stroke="#A78BFA" stroke-width="0.6" opacity="0.5"/>
+      <line x1="18.5" y1="17.5" x2="21.8" y2="19.5" stroke="#69EACB" stroke-width="0.6" opacity="0.5"/>
+      <!-- 信号波 -->
+      <path d="M34 14 C36 14, 37 15, 37 16" fill="none" stroke="#69EACB" stroke-width="0.8" opacity="0.4" stroke-linecap="round"/>
+      <path d="M35.5 12 C38.5 12, 40 14, 40 16" fill="none" stroke="#A78BFA" stroke-width="0.6" opacity="0.3" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- ===== F01 学习路径 ===== -->
+    <symbol id="icon-learning-path" viewBox="0 0 48 48">
+      <!-- 主路径曲线 -->
+      <path d="M8 38 C8 38, 14 30, 14 26 C14 22, 10 20, 14 16 C18 12, 22 18, 24 14 C26 10, 24 8, 28 6 C32 4, 34 8, 36 6 L40 4"
+            fill="none" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- 路径上的里程碑节点 -->
+      <circle cx="8" cy="38" r="3" fill="none" stroke="#69EACB" stroke-width="1.2"/>
+      <circle cx="8" cy="38" r="1.3" fill="#69EACB"/>
+      <circle cx="14" cy="26" r="2.5" fill="none" stroke="#7DD4B8" stroke-width="1.2"/>
+      <circle cx="14" cy="26" r="1" fill="#7DD4B8"/>
+      <circle cx="24" cy="14" r="2.5" fill="none" stroke="#A78BFA" stroke-width="1.2"/>
+      <circle cx="24" cy="14" r="1" fill="#A78BFA"/>
+      <circle cx="36" cy="6" r="2.5" fill="none" stroke="#D264B6" stroke-width="1.2"/>
+      <circle cx="36" cy="6" r="1" fill="#D264B6"/>
+      <!-- 顶部星星/成就 -->
+      <path d="M40 4 L41 2.5 L42 4 L43.5 4.2 L42.3 5.3 L42.6 7 L41 6 L39.4 7 L39.7 5.3 L38.5 4.2 Z"
+            fill="url(#g1)" opacity="0.8"/>
+      <!-- 路径旁的小标签 -->
+      <rect x="17" y="30" width="16" height="6" rx="3" fill="none" stroke="url(#g1)" stroke-width="0.8" opacity="0.3"/>
+      <line x1="20" y1="33" x2="30" y2="33" stroke="url(#g1)" stroke-width="0.6" opacity="0.3"/>
+      <rect x="26" y="18" width="14" height="6" rx="3" fill="none" stroke="url(#g1)" stroke-width="0.8" opacity="0.25"/>
+      <line x1="29" y1="21" x2="37" y2="21" stroke="url(#g1)" stroke-width="0.6" opacity="0.25"/>
+      <!-- 虚线进度 -->
+      <path d="M9 36 L13 28" stroke="url(#g1)" stroke-width="0.5" opacity="0.2" stroke-dasharray="1.5 2"/>
+      <path d="M15 24 L23 16" stroke="url(#g1)" stroke-width="0.5" opacity="0.2" stroke-dasharray="1.5 2"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ==================== 展示区 ==================== -->
+<div class="icons-grid">
+
+  <!-- J01 游戏策划 -->
+  <div class="icon-card">
+    <span class="icon-label">J01</span>
+    <div class="icon-hero">
+      <svg><use href="#icon-game-planner"/></svg>
+    </div>
+    <div style="text-align:center">
+      <div class="icon-name">游戏策划</div>
+      <div class="icon-name-en">Game Planner</div>
+    </div>
+    <div class="icon-sizes">
+      <div class="icon-size-wrap">
+        <div class="icon-container size-64"><svg><use href="#icon-game-planner"/></svg></div>
+        <span class="icon-size-label">64px</span>
+      </div>
+      <div class="icon-size-wrap">
+        <div class="icon-container size-48"><svg><use href="#icon-game-planner"/></svg></div>
+        <span class="icon-size-label">48px</span>
+      </div>
+      <div class="icon-size-wrap">
+        <div class="icon-container size-32"><svg><use href="#icon-game-planner"/></svg></div>
+        <span class="icon-size-label">32px</span>
+      </div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-item">
+        <span class="compare-label">原 Emoji</span>
+        <div class="emoji-box">🎮</div>
+      </div>
+      <span class="arrow-icon">→</span>
+      <div class="compare-item">
+        <span class="compare-label">新图标</span>
+        <div class="icon-container size-48"><svg><use href="#icon-game-planner"/></svg></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- T01 AI 对话 -->
+  <div class="icon-card">
+    <span class="icon-label">T01</span>
+    <div class="icon-hero">
+      <svg><use href="#icon-ai-chat"/></svg>
+    </div>
+    <div style="text-align:center">
+      <div class="icon-name">AI 对话</div>
+      <div class="icon-name-en">AI Chat</div>
+    </div>
+    <div class="icon-sizes">
+      <div class="icon-size-wrap">
+        <div class="icon-container size-64"><svg><use href="#icon-ai-chat"/></svg></div>
+        <span class="icon-size-label">64px</span>
+      </div>
+      <div class="icon-size-wrap">
+        <div class="icon-container size-48"><svg><use href="#icon-ai-chat"/></svg></div>
+        <span class="icon-size-label">48px</span>
+      </div>
+      <div class="icon-size-wrap">
+        <div class="icon-container size-32"><svg><use href="#icon-ai-chat"/></svg></div>
+        <span class="icon-size-label">32px</span>
+      </div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-item">
+        <span class="compare-label">原 Emoji</span>
+        <div class="emoji-box">🤖</div>
+      </div>
+      <span class="arrow-icon">→</span>
+      <div class="compare-item">
+        <span class="compare-label">新图标</span>
+        <div class="icon-container size-48"><svg><use href="#icon-ai-chat"/></svg></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- F01 学习路径 -->
+  <div class="icon-card">
+    <span class="icon-label">F01</span>
+    <div class="icon-hero">
+      <svg><use href="#icon-learning-path"/></svg>
+    </div>
+    <div style="text-align:center">
+      <div class="icon-name">学习路径</div>
+      <div class="icon-name-en">Learning Path</div>
+    </div>
+    <div class="icon-sizes">
+      <div class="icon-size-wrap">
+        <div class="icon-container size-64"><svg><use href="#icon-learning-path"/></svg></div>
+        <span class="icon-size-label">64px</span>
+      </div>
+      <div class="icon-size-wrap">
+        <div class="icon-container size-48"><svg><use href="#icon-learning-path"/></svg></div>
+        <span class="icon-size-label">48px</span>
+      </div>
+      <div class="icon-size-wrap">
+        <div class="icon-container size-32"><svg><use href="#icon-learning-path"/></svg></div>
+        <span class="icon-size-label">32px</span>
+      </div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-item">
+        <span class="compare-label">原 Emoji</span>
+        <div class="emoji-box">🛤️</div>
+      </div>
+      <span class="arrow-icon">→</span>
+      <div class="compare-item">
+        <span class="compare-label">新图标</span>
+        <div class="icon-container size-48"><svg><use href="#icon-learning-path"/></svg></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-divider"></div>
+
+<p class="section-title">卡片实际效果预览</p>
+
+<div style="max-width:960px; width:100%; display:flex; flex-direction:column; gap:16px;">
+  <div class="card-preview">
+    <div class="card-icon"><svg><use href="#icon-game-planner"/></svg></div>
+    <div class="card-text">
+      <h3>游戏策划</h3>
+      <p>掌握 AI 工具提升游戏设计效率，从创意到原型一键生成</p>
+    </div>
+  </div>
+  <div class="card-preview">
+    <div class="card-icon"><svg><use href="#icon-ai-chat"/></svg></div>
+    <div class="card-text">
+      <h3>AI 对话基础</h3>
+      <p>学习高效 Prompt 技巧，让 ChatGPT、Claude 成为你的超级助手</p>
+    </div>
+  </div>
+  <div class="card-preview">
+    <div class="card-icon"><svg><use href="#icon-learning-path"/></svg></div>
+    <div class="card-text">
+      <h3>定制学习路径</h3>
+      <p>根据你的岗位和水平，智能推荐最适合的 AI 技能成长路线</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

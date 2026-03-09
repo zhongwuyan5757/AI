@@ -1,0 +1,156 @@
+[
+  {
+    "id": "r001",
+    "name": "AI 工具使用手册 v3.0",
+    "desc": "涵盖公司推荐的所有 AI 工具的操作指南，从注册到高级功能全面覆盖，新增 Google 系列工具和视频生成工具章节",
+    "category": "guide",
+    "format": "PDF",
+    "size": "18.5 MB",
+    "url": "#",
+    "relatedJobs": ["all"],
+    "tags": ["入门", "工具指南", "必读"]
+  },
+  {
+    "id": "r002",
+    "name": "各岗位 AI 使用指南合集",
+    "desc": "针对 9 个核心岗位分别编写的 AI 应用指南，聚焦具体工作场景，含真实案例和效率对比数据",
+    "category": "guide",
+    "format": "PDF",
+    "size": "28.3 MB",
+    "url": "#",
+    "relatedJobs": ["all"],
+    "tags": ["岗位指南", "实操"]
+  },
+  {
+    "id": "r003",
+    "name": "Prompt 模板合集（完整版 v2.0）",
+    "desc": "覆盖 80+ 工作场景的 Prompt 模板，可直接复制使用，含游戏行业专属模板和通用模板两大板块",
+    "category": "template",
+    "format": "PDF + Notion",
+    "size": "6.8 MB",
+    "url": "#",
+    "relatedJobs": ["all"],
+    "tags": ["Prompt", "模板", "高频使用"]
+  },
+  {
+    "id": "r004",
+    "name": "AI 委员会培训 PPT 合集",
+    "desc": "历次 AI 培训的课件合集，包含基础培训和岗位专项培训，定期更新紧跟最新工具动态",
+    "category": "internal",
+    "format": "PPTX",
+    "size": "156 MB",
+    "url": "#",
+    "relatedJobs": ["all"],
+    "tags": ["培训", "内部资料"]
+  },
+  {
+    "id": "r005",
+    "name": "Midjourney 提示词参考手册 v6",
+    "desc": "系统整理的 Midjourney V6 提示词参考，包含风格关键词、参数说明、--sref 风格参考和大量实战案例",
+    "category": "guide",
+    "format": "PDF",
+    "size": "12.7 MB",
+    "url": "#",
+    "relatedJobs": ["graphic-designer", "brand-manager", "new-media"],
+    "tags": ["设计", "Midjourney", "提示词"]
+  },
+  {
+    "id": "r006",
+    "name": "游戏行业 AI 应用白皮书 2026",
+    "desc": "最新游戏行业 AI 应用趋势报告，涵盖国内外 30+ 案例，深度分析 AI 在研发、运营、发行全链路的落地实践",
+    "category": "report",
+    "format": "PDF",
+    "size": "15.8 MB",
+    "url": "#",
+    "relatedJobs": ["all"],
+    "tags": ["行业报告", "趋势", "推荐阅读"]
+  },
+  {
+    "id": "r007",
+    "name": "公司 AI 使用规范与安全手册",
+    "desc": "公司内部 AI 使用的安全规范、数据保护要求和合规指南，明确哪些数据可以/不可以输入 AI 工具",
+    "category": "internal",
+    "format": "PDF",
+    "size": "3.1 MB",
+    "url": "#",
+    "relatedJobs": ["all"],
+    "tags": ["安全", "规范", "必读"]
+  },
+  {
+    "id": "r008",
+    "name": "AI 辅助投放优化指南",
+    "desc": "详细的 AI 辅助广告投放优化方法论，包含文案生成、素材分析、数据复盘和自动化投放全流程实操",
+    "category": "guide",
+    "format": "PDF",
+    "size": "9.4 MB",
+    "url": "#",
+    "relatedJobs": ["ad-manager", "new-media"],
+    "tags": ["投放", "效果广告"]
+  },
+  {
+    "id": "r009",
+    "name": "AI 工具速查清单 2026 版",
+    "desc": "一页纸速查卡，列出各岗位推荐 AI 工具、适用场景和最佳搭配方案，含 Google 系列和最新视频工具",
+    "category": "template",
+    "format": "PDF",
+    "size": "1.5 MB",
+    "url": "#",
+    "relatedJobs": ["all"],
+    "tags": ["速查", "工具清单"]
+  },
+  {
+    "id": "r010",
+    "name": "海外发行 AI 工具包",
+    "desc": "出海发行常用的 AI 工具清单和使用方法，覆盖市场调研、本地化、KOL 筛选、素材制作和数据分析全流程",
+    "category": "guide",
+    "format": "PDF + Excel",
+    "size": "11.6 MB",
+    "url": "#",
+    "relatedJobs": ["publishing-manager", "brand-manager"],
+    "tags": ["出海", "发行", "工具包"]
+  },
+  {
+    "id": "r011",
+    "name": "AI 视频制作工具对比评测",
+    "desc": "对 Sora、Veo、Runway、可灵、Pika 等主流 AI 视频生成工具的全面横评，含画质对比、速度测试和使用场景推荐",
+    "category": "report",
+    "format": "PDF",
+    "size": "22.3 MB",
+    "url": "#",
+    "relatedJobs": ["video-designer", "new-media", "ad-manager"],
+    "tags": ["视频工具", "横评", "推荐阅读"]
+  },
+  {
+    "id": "r012",
+    "name": "Google AI 工具全景指南",
+    "desc": "Google 全系 AI 工具使用指南，涵盖 Gemini、NotebookLM、Veo、Imagen、Flow 等产品的功能详解和最佳实践",
+    "category": "guide",
+    "format": "PDF",
+    "size": "14.2 MB",
+    "url": "#",
+    "relatedJobs": ["all"],
+    "tags": ["Google", "工具指南"]
+  },
+  {
+    "id": "r013",
+    "name": "AI 数字人与配音工具实操手册",
+    "desc": "HeyGen 数字人视频、ElevenLabs 语音克隆和 AI 配音的完整实操教程，含游戏宣传视频制作案例",
+    "category": "guide",
+    "format": "PDF",
+    "size": "8.5 MB",
+    "url": "#",
+    "relatedJobs": ["video-designer", "brand-manager", "publishing-manager"],
+    "tags": ["数字人", "配音", "视频制作"]
+  },
+  {
+    "id": "r014",
+    "name": "AI 自动化工作流搭建指南",
+    "desc": "使用 n8n 等工具搭建 AI 自动化工作流的入门指南，含数据同步、内容分发和运营自动化等实用案例",
+    "category": "guide",
+    "format": "PDF + 模板文件",
+    "size": "7.3 MB",
+    "url": "#",
+    "relatedJobs": ["product-ops", "ad-manager", "numerical-planner"],
+    "tags": ["自动化", "工作流", "进阶"]
+  }
+]

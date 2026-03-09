@@ -1,0 +1,689 @@
+[
+  {
+    "id": "graphic-designer",
+    "name": "平面设计师",
+    "icon": "🎨",
+    "color": "#7c3aed",
+    "tagline": "AI出图、延展、修图、KV辅助",
+    "desc": "用AI加速视觉设计全流程，从创意构思、风格探索到成品输出，大幅提升设计效率",
+    "capabilities": [
+      {
+        "name": "AI创意出图",
+        "level": 3
+      },
+      {
+        "name": "风格探索与迁移",
+        "level": 3
+      },
+      {
+        "name": "海报/KV概念草图",
+        "level": 2
+      },
+      {
+        "name": "图像修复与延展",
+        "level": 2
+      },
+      {
+        "name": "批量素材生成",
+        "level": 2
+      },
+      {
+        "name": "AI辅助排版",
+        "level": 1
+      },
+      {
+        "name": "品牌视觉一致性",
+        "level": 2
+      }
+    ],
+    "scenarios": [
+      {
+        "title": "活动海报创意探索",
+        "desc": "使用Midjourney快速生成多种风格的海报概念图，缩短创意发散时间",
+        "tools": [
+          "midjourney",
+          "stable-diffusion"
+        ]
+      },
+      {
+        "title": "广告素材初稿生成",
+        "desc": "利用AI工具批量生成广告素材初稿，设计师聚焦精修和细节优化",
+        "tools": [
+          "midjourney",
+          "canva-ai"
+        ]
+      },
+      {
+        "title": "角色/场景风格参考",
+        "desc": "AI生成不同画风的角色和场景参考图，辅助美术方向决策",
+        "tools": [
+          "midjourney",
+          "stable-diffusion"
+        ]
+      },
+      {
+        "title": "Banner延展与适配",
+        "desc": "使用Photoshop AI的生成式填充功能，快速完成不同尺寸的Banner延展",
+        "tools": [
+          "photoshop-ai"
+        ]
+      },
+      {
+        "title": "社媒配图快速产出",
+        "desc": "利用Canva AI快速制作社交媒体配图，保持品牌视觉一致性",
+        "tools": [
+          "canva-ai",
+          "figma-ai"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "video-designer",
+    "name": "视频设计师",
+    "icon": "🎬",
+    "color": "#ef4444",
+    "tagline": "AI分镜、脚本、口播、剪辑提效",
+    "desc": "用AI辅助视频创作全流程，从脚本撰写、分镜生成到剪辑字幕，显著提升产出效率",
+    "capabilities": [
+      {
+        "name": "AI视频脚本生成",
+        "level": 3
+      },
+      {
+        "name": "分镜/故事板辅助",
+        "level": 2
+      },
+      {
+        "name": "AI视频生成",
+        "level": 2
+      },
+      {
+        "name": "口播文案撰写",
+        "level": 3
+      },
+      {
+        "name": "字幕自动生成",
+        "level": 1
+      },
+      {
+        "name": "AI辅助剪辑",
+        "level": 2
+      }
+    ],
+    "scenarios": [
+      {
+        "title": "广告视频脚本生成",
+        "desc": "使用ChatGPT/Claude快速生成多版广告视频脚本，节省头脑风暴时间",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "社媒短视频提纲",
+        "desc": "AI辅助生成短视频结构和分镜提纲，确保内容节奏紧凑",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "AI视频片段生成",
+        "desc": "使用Runway/Kling生成创意视频片段，作为素材或概念验证",
+        "tools": [
+          "runway",
+          "kling"
+        ]
+      },
+      {
+        "title": "口播视频文案",
+        "desc": "AI快速生成口播稿件，配合CapCut AI自动生成字幕",
+        "tools": [
+          "chatgpt",
+          "capcut-ai"
+        ]
+      },
+      {
+        "title": "AI辅助剪辑提效",
+        "desc": "利用AI工具自动识别精彩片段、生成粗剪版本",
+        "tools": [
+          "capcut-ai",
+          "descript"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "product-ops",
+    "name": "产品运营",
+    "icon": "📊",
+    "color": "#f59e0b",
+    "tagline": "AI活动策划、文案、数据分析、SOP",
+    "desc": "用AI提效运营日常工作，从活动策划到数据分析，从文案撰写到SOP整理",
+    "capabilities": [
+      {
+        "name": "活动方案生成",
+        "level": 3
+      },
+      {
+        "name": "运营文案撰写",
+        "level": 3
+      },
+      {
+        "name": "用户数据分析",
+        "level": 2
+      },
+      {
+        "name": "数据报告总结",
+        "level": 2
+      },
+      {
+        "name": "SOP/FAQ整理",
+        "level": 2
+      },
+      {
+        "name": "用户反馈归纳",
+        "level": 2
+      }
+    ],
+    "scenarios": [
+      {
+        "title": "活动策划案生成",
+        "desc": "输入活动目标和约束条件，AI快速生成完整活动策划方案",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "留存/召回方案优化",
+        "desc": "AI分析用户行为数据，给出留存和召回策略建议",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "数据周报自动总结",
+        "desc": "将原始数据输入AI，自动生成结构化的数据周报",
+        "tools": [
+          "chatgpt",
+          "notion-ai"
+        ]
+      },
+      {
+        "title": "客服话术整理",
+        "desc": "AI辅助生成和优化客服标准话术库",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "用户反馈分类归纳",
+        "desc": "批量导入用户反馈，AI自动分类和提炼核心问题",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "product-planner",
+    "name": "产品策划",
+    "icon": "📋",
+    "color": "#3b82f6",
+    "tagline": "AI需求整理、竞品分析、方案拆解",
+    "desc": "用AI辅助产品策划全流程，从需求整理、竞品分析到PRD撰写和功能拆解",
+    "capabilities": [
+      {
+        "name": "需求文档整理",
+        "level": 3
+      },
+      {
+        "name": "竞品功能分析",
+        "level": 2
+      },
+      {
+        "name": "PRD辅助撰写",
+        "level": 3
+      },
+      {
+        "name": "功能拆解梳理",
+        "level": 2
+      },
+      {
+        "name": "用户流程设计",
+        "level": 2
+      },
+      {
+        "name": "版本规划辅助",
+        "level": 1
+      }
+    ],
+    "scenarios": [
+      {
+        "title": "需求文档初稿生成",
+        "desc": "输入需求要点，AI生成结构完整的PRD初稿",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "竞品功能对比分析",
+        "desc": "AI辅助整理竞品功能清单，生成对比分析报告",
+        "tools": [
+          "chatgpt",
+          "perplexity"
+        ]
+      },
+      {
+        "title": "用户流程梳理",
+        "desc": "描述业务场景，AI辅助绘制用户流程图和交互说明",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "版本规划讨论",
+        "desc": "AI辅助分析需求优先级，给出版本规划建议",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "功能优先级拆解",
+        "desc": "使用AI进行需求拆解和优先级排序分析",
+        "tools": [
+          "chatgpt",
+          "notion-ai"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "numerical-planner",
+    "name": "数值策划",
+    "icon": "🔢",
+    "color": "#06b6d4",
+    "tagline": "AI数值推演、表格分析、规则校验",
+    "desc": "用AI辅助数值分析和验证，从表格处理到规则模拟，提升数值工作的准确性和效率",
+    "capabilities": [
+      {
+        "name": "表格数据分析",
+        "level": 2
+      },
+      {
+        "name": "数值逻辑校验",
+        "level": 2
+      },
+      {
+        "name": "规则模拟推演",
+        "level": 2
+      },
+      {
+        "name": "数据可视化解读",
+        "level": 1
+      },
+      {
+        "name": "公式辅助编写",
+        "level": 2
+      },
+      {
+        "name": "数值文档整理",
+        "level": 2
+      }
+    ],
+    "scenarios": [
+      {
+        "title": "数值表检查与校验",
+        "desc": "将数值配置表输入AI，自动检查异常值和逻辑矛盾",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "经济系统平衡分析",
+        "desc": "AI辅助模拟经济系统运行，预测潜在的数值问题",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "参数影响推演",
+        "desc": "调整某个参数后，AI预测对整体系统的连锁影响",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "数值文档说明整理",
+        "desc": "AI将复杂的数值逻辑整理为易读的文档说明",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "公式编写辅助",
+        "desc": "AI辅助编写Excel/Sheets公式，处理复杂计算逻辑",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "brand-manager",
+    "name": "品牌经理",
+    "icon": "💎",
+    "color": "#ec4899",
+    "tagline": "AI品牌内容、传播方案、创意辅助",
+    "desc": "用AI辅助品牌策略制定和内容创作，从Campaign创意到传播方案，提升品牌工作效率",
+    "capabilities": [
+      {
+        "name": "品牌策略辅助",
+        "level": 2
+      },
+      {
+        "name": "传播方案生成",
+        "level": 3
+      },
+      {
+        "name": "Campaign创意",
+        "level": 2
+      },
+      {
+        "name": "品牌文案撰写",
+        "level": 3
+      },
+      {
+        "name": "竞品品牌分析",
+        "level": 2
+      },
+      {
+        "name": "海外传播调研",
+        "level": 2
+      }
+    ],
+    "scenarios": [
+      {
+        "title": "Campaign Brainstorm",
+        "desc": "AI辅助头脑风暴，快速生成多种Campaign创意方向",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "品牌传播策略制定",
+        "desc": "输入品牌目标和资源，AI生成传播策略框架",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "品牌口径梳理",
+        "desc": "AI辅助整理品牌核心信息和对外口径文档",
+        "tools": [
+          "claude",
+          "notion-ai"
+        ]
+      },
+      {
+        "title": "海外品牌案例调研",
+        "desc": "使用AI快速调研海外同类游戏的品牌策略和营销案例",
+        "tools": [
+          "perplexity",
+          "chatgpt"
+        ]
+      },
+      {
+        "title": "Brief优化与完善",
+        "desc": "AI辅助完善创意Brief，确保信息完整且方向明确",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "new-media",
+    "name": "新媒体",
+    "icon": "📱",
+    "color": "#10b981",
+    "tagline": "AI选题、脚本、标题、内容批量生产",
+    "desc": "用AI加速新媒体内容生产，从选题策划到内容分发，实现高效内容矩阵运营",
+    "capabilities": [
+      {
+        "name": "选题策划生成",
+        "level": 3
+      },
+      {
+        "name": "爆款标题创作",
+        "level": 3
+      },
+      {
+        "name": "视频脚本撰写",
+        "level": 3
+      },
+      {
+        "name": "图文内容提效",
+        "level": 2
+      },
+      {
+        "name": "评论区运营",
+        "level": 1
+      },
+      {
+        "name": "多平台内容改写",
+        "level": 2
+      }
+    ],
+    "scenarios": [
+      {
+        "title": "选题策划与热点追踪",
+        "desc": "AI辅助分析热点趋势，生成与游戏相关的选题方向",
+        "tools": [
+          "chatgpt",
+          "perplexity"
+        ]
+      },
+      {
+        "title": "短视频脚本批量生成",
+        "desc": "AI快速生成多个短视频脚本，适配不同平台风格",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "标题优化与A/B测试",
+        "desc": "AI生成多个标题版本，辅助选择最有吸引力的标题",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "内容改写与多平台分发",
+        "desc": "一篇内容通过AI改写适配小红书、公众号、抖音等平台",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "口播文案快速产出",
+        "desc": "AI根据要点快速生成口播稿，配合AI字幕工具",
+        "tools": [
+          "chatgpt",
+          "capcut-ai"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ad-manager",
+    "name": "投放经理",
+    "icon": "📈",
+    "color": "#8b5cf6",
+    "tagline": "AI素材分析、广告文案、投放复盘",
+    "desc": "用AI提升广告投放效率，从素材分析、文案创作到数据复盘，优化投放ROI",
+    "capabilities": [
+      {
+        "name": "广告文案生成",
+        "level": 3
+      },
+      {
+        "name": "素材方向分析",
+        "level": 2
+      },
+      {
+        "name": "竞品广告拆解",
+        "level": 2
+      },
+      {
+        "name": "受众分析假设",
+        "level": 2
+      },
+      {
+        "name": "投放数据复盘",
+        "level": 2
+      },
+      {
+        "name": "素材测试策略",
+        "level": 1
+      }
+    ],
+    "scenarios": [
+      {
+        "title": "广告文案批量生成",
+        "desc": "AI根据卖点快速生成多版广告文案，用于A/B测试",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "视频广告卖点拆解",
+        "desc": "AI分析竞品视频广告，提炼卖点和创意策略",
+        "tools": [
+          "chatgpt",
+          "perplexity"
+        ]
+      },
+      {
+        "title": "投放数据周报生成",
+        "desc": "将投放数据输入AI，自动生成分析报告和优化建议",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "竞品素材分析总结",
+        "desc": "AI辅助整理竞品广告素材特征和投放趋势",
+        "tools": [
+          "perplexity",
+          "chatgpt"
+        ]
+      },
+      {
+        "title": "素材测试框架制定",
+        "desc": "AI辅助制定素材A/B测试框架和评估标准",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "publishing-manager",
+    "name": "发行经理",
+    "icon": "🚀",
+    "color": "#0ea5e9",
+    "tagline": "AI市场调研、本地化、发行方案生成",
+    "desc": "用AI辅助游戏发行全流程，从市场调研到本地化，从KOL管理到发行方案制定",
+    "capabilities": [
+      {
+        "name": "海外市场调研",
+        "level": 3
+      },
+      {
+        "name": "本地化辅助",
+        "level": 2
+      },
+      {
+        "name": "发行方案生成",
+        "level": 2
+      },
+      {
+        "name": "KOL管理辅助",
+        "level": 2
+      },
+      {
+        "name": "商务材料撰写",
+        "level": 2
+      },
+      {
+        "name": "国家策略分析",
+        "level": 2
+      }
+    ],
+    "scenarios": [
+      {
+        "title": "海外市场分析报告",
+        "desc": "AI快速生成目标市场的玩家画像、竞品格局和机会分析",
+        "tools": [
+          "perplexity",
+          "chatgpt"
+        ]
+      },
+      {
+        "title": "发行节奏规划",
+        "desc": "AI辅助制定预热-上线-长线运营的发行节奏方案",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "KOL合作方案生成",
+        "desc": "AI根据市场和预算生成KOL合作策略和执行方案",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "本地化内容审校",
+        "desc": "AI辅助检查本地化文本的文化适配性和表达准确性",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "title": "商务材料初稿",
+        "desc": "AI快速生成商务合作提案、发行PPT等材料初稿",
+        "tools": [
+          "chatgpt",
+          "claude"
+        ]
+      }
+    ]
+  }
+]

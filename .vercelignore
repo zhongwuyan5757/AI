@@ -1,0 +1,12 @@
+node_modules
+scripts
+logs
+docs
+skills
+.claude
+.env
+.env.example
+*.sh
+icon-preview.html
+package.json
+package-lock.json

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "upd-001",
+    "type": "tool-analysis",
+    "title": "Gamma AI 深度解析：为什么它是最适合非设计师的 PPT 工具",
+    "date": "2026-03-07",
+    "summary": "Gamma AI 让不懂设计的人也能在 5 分钟内生成专业级演示文稿。我们从操作难度、输出质量、模板丰富度三个维度做了详细测评。",
+    "tags": ["工具测评", "PPT", "效率"],
+    "relatedPaths": ["7day-beginner"],
+    "relatedTutorials": ["t026"],
+    "content": {
+      "toolName": "Gamma AI",
+      "verdict": "非设计师做 PPT 的最佳选择，5 分钟出稿，质量超过 80% 手工制作",
+      "pros": ["零学习成本，输入主题即可生成", "设计质量专业，配色排版自动优化", "支持中文，模板适配商务场景"],
+      "cons": ["自定义程度有限，高级排版需手动调整", "免费版有生成次数限制", "导出格式选择较少"],
+      "bestFor": "需要快速出方案的产品经理、运营、市场人员",
+      "tip": "先用 AI 对话工具整理好大纲，再粘贴到 Gamma 中生成，效果翻倍"
+    }
+  },
+  {
+    "id": "upd-002",
+    "type": "model-explain",
+    "title": "GPT-5 vs Claude 4.6：2026 年该选哪个？",
+    "date": "2026-03-06",
+    "summary": "两大主流模型各有所长。GPT-5 在创意生成和多模态上领先，Claude 4.6 在长文本理解和代码能力上更强。一文帮你选对工具。",
+    "tags": ["模型对比", "选型指南"],
+    "relatedPaths": ["7day-beginner", "5day-efficiency"],
+    "relatedTutorials": ["t001", "t002"],
+    "content": {
+      "modelName": "GPT-5 与 Claude 4.6",
+      "whatChanged": "GPT-5 引入原生多模态和更强的推理链；Claude 4.6 大幅提升上下文窗口和代码生成质量",
+      "impact": "日常对话两者差距缩小，但在专业场景（长文档分析、代码开发）选择正确的模型能节省 30%+ 时间",
+      "tryThis": "用同一个复杂任务分别在两个模型中测试，对比输出质量和速度，找到你的首选"
+    }
+  },
+  {
+    "id": "upd-003",
+    "type": "case-study",
+    "title": "案例：某游戏公司如何用 AI 将周报制作时间从 4 小时缩短到 30 分钟",
+    "date": "2026-03-05",
+    "summary": "一位游戏运营用 ChatGPT + 数据模板的组合，将每周数据报告的制作流程自动化了 85%。以下是完整复盘。",
+    "tags": ["实战案例", "数据分析", "运营"],
+    "relatedPaths": ["5day-efficiency"],
+    "relatedTutorials": ["t016"],
+    "content": {
+      "scenario": "游戏运营团队每周需要制作包含 DAU、留存、付费等指标的数据周报，传统流程耗时 4 小时",
+      "before": "手动从后台导出数据 → Excel 整理 → 写分析结论 → 排版 PPT → 邮件发送",
+      "after": "导出数据 → 粘贴到 ChatGPT 预设模板 → AI 自动生成分析结论和建议 → Gamma 生成 PPT → 30 分钟完成",
+      "lessonsLearned": ["Prompt 模板是关键——写好一次，反复复用", "AI 不替代判断力，但能替代 80% 的格式化工作", "先从最痛的流程开始自动化，ROI 最高"]
+    }
+  },
+  {
+    "id": "upd-004",
+    "type": "weekly-brief",
+    "title": "AI 周报 #1：本周值得关注的 3 件事",
+    "date": "2026-03-08",
+    "summary": "Anthropic 发布 Claude 4.6 Opus、Google 更新 Gemini 2.5 Pro、n8n 推出 AI Agent 节点——本周最值得游戏行业关注的 AI 动态。",
+    "tags": ["周报", "行业动态"],
+    "relatedPaths": ["5day-advanced"],
+    "relatedTutorials": ["t017", "t037"],
+    "content": {
+      "highlights": [
+        "Anthropic 发布 Claude 4.6 Opus，代码和长文本能力大幅提升",
+        "Google Gemini 2.5 Pro 开放 API，多模态推理更强",
+        "n8n 新增 AI Agent 节点，工作流自动化门槛再降"
+      ],
+      "toolUpdates": ["Gamma AI 新增团队协作功能", "Perplexity 支持深度研究模式"],
+      "modelUpdates": ["Claude 4.6 Opus 正式上线", "Gemini 2.5 Pro API 开放"],
+      "oneAction": "试试用 Claude 4.6 处理一个超长文档（10 万字以上），感受新模型的上下文能力提升"
+    }
+  }
+]

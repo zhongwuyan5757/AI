@@ -1,0 +1,24 @@
+{
+  "name": "fiveseven-ai-platform",
+  "version": "1.0.0",
+  "description": "FiveSeven AI — 岗位级 AI 生产力平台，自动化内容系统",
+  "private": true,
+  "scripts": {
+    "migrate": "node scripts/migrate.js",
+    "fetch:news": "node scripts/fetch_news.js",
+    "fetch:tools": "node scripts/fetch_tools.js",
+    "fetch:models": "node scripts/fetch_models.js",
+    "fetch:all": "node scripts/run_all.js",
+    "cron:install": "bash scripts/setup-cron.sh",
+    "cron:status": "bash scripts/setup-cron.sh --status",
+    "cron:remove": "bash scripts/setup-cron.sh --remove",
+    "serve": "npx serve -l 8080"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0",
+    "dotenv": "^16.4.0"
+  },
+  "optionalDependencies": {
+    "@anthropic-ai/sdk": "^0.39.0"
+  }
+}

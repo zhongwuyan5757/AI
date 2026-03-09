@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NekoCalc 猫算酱 - 面向土木工程的二次元科学计算器，支持科学计算、单位换算、混凝土/钢筋/简支梁工程计算">
+    <meta property="og:title" content="NekoCalc 猫算酱 - 土木工程科学计算器">
+    <meta property="og:description" content="二次元风格的全能土木工程计算器，科学计算、单位换算、混凝土/钢筋/简支梁工程计算一站搞定">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none';">
+    <title>NekoCalc 猫算酱 - 土木工程科学计算器</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-primary: #B388FF;
+            --brand-primary-light: #D1B3FF;
+            --brand-primary-dark: #7C4DFF;
+            --brand-secondary: #FF80AB;
+            --brand-secondary-light: #FFB2CC;
+            --brand-accent: #FFD54F;
+            --brand-neutral-50: #FFF5FE;
+            --brand-neutral-100: #F3E5F5;
+            --brand-neutral-700: #4A148C;
+            --brand-neutral-900: #1A0033;
+            --brand-error: #FF8A80;
+            --brand-glass-bg: rgba(255, 255, 255, 0.6);
+            --brand-glass-border: rgba(255, 255, 255, 0.35);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #E1BEE7 0%, #D1B3FF 30%, #B388FF 60%, #CE93D8 100%);
+            font-family: 'Zen Maru Gothic', 'PingFang SC', sans-serif;
+            overflow-x: hidden;
+            padding: 12px;
+        }
+        /* ===== 星空 ===== */
+        .stars { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; }
+        .star { position: absolute; color: var(--brand-accent); animation: float-star 5s ease-in-out infinite; opacity:.6; filter: drop-shadow(0 0 4px rgba(255,213,79,.5)); }
+        .star:nth-child(1){top:6%;left:4%;font-size:14px;animation-delay:0s}
+        .star:nth-child(2){top:15%;left:88%;font-size:20px;animation-delay:1.2s}
+        .star:nth-child(3){top:55%;left:7%;font-size:16px;animation-delay:2.4s}
+        .star:nth-child(4){top:78%;left:92%;font-size:18px;animation-delay:.8s}
+        .star:nth-child(5){top:35%;left:96%;font-size:12px;animation-delay:3.2s}
+        .star:nth-child(6){top:88%;left:45%;font-size:16px;animation-delay:1.6s}
+        .star:nth-child(7){top:3%;left:50%;font-size:14px;animation-delay:2.8s}
+        .star:nth-child(8){top:45%;left:2%;font-size:22px;animation-delay:4s}
+        @keyframes float-star { 0%,100%{transform:translateY(0) rotate(0) scale(1);opacity:.4} 50%{transform:translateY(-18px) rotate(20deg) scale(1.2);opacity:.9} }
+        /* ===== 樱花 ===== */
+        .sakura { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; }
+        .petal { position:absolute; top:-30px; color:var(--brand-secondary-light); animation:fall-petal linear infinite; opacity:.5; }
+        .petal:nth-child(1){left:10%;animation-duration:8s;font-size:16px}
+        .petal:nth-child(2){left:30%;animation-duration:10s;animation-delay:2s;font-size:14px}
+        .petal:nth-child(3){left:55%;animation-duration:9s;animation-delay:4s;font-size:20px}
+        .petal:nth-child(4){left:75%;animation-duration:11s;animation-delay:1s;font-size:12px}
+        .petal:nth-child(5){left:90%;animation-duration:7s;animation-delay:3s;font-size:18px}
+        @keyframes fall-petal { 0%{transform:translateY(-30px) rotate(0) translateX(0);opacity:0} 10%{opacity:.5} 90%{opacity:.4} 100%{transform:translateY(105vh) rotate(360deg) translateX(60px);opacity:0} }
+
+        /* ===== 主容器 ===== */
+        .calculator {
+            width: 480px;
+            max-width: 100%;
+            /* P1-5: backdrop-filter fallback - solid color for browsers without support */
+            background: rgba(230, 210, 245, 0.92);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-radius: 28px;
+            padding: 18px 16px 14px;
+            box-shadow: 0 12px 48px rgba(124,77,255,.2), 0 0 0 1.5px var(--brand-glass-border), inset 0 1px 0 rgba(255,255,255,.6);
+            position: relative;
+            z-index: 1;
+        }
+        @supports (backdrop-filter: blur(24px)) or (-webkit-backdrop-filter: blur(24px)) {
+            .calculator {
+                background: var(--brand-glass-bg);
+            }
+        }
+        /* ===== Header ===== */
+        .header { text-align:center; margin-bottom:4px; }
+        .mascot { font-size:40px; display:inline-block; animation:mascot-idle 2.5s ease-in-out infinite; transition:all .3s; }
+        @keyframes mascot-idle { 0%,100%{transform:translateY(0) rotate(0)} 25%{transform:translateY(-4px) rotate(-3deg)} 75%{transform:translateY(-4px) rotate(3deg)} }
+        @keyframes mascot-happy { 0%,100%{transform:scale(1) rotate(0)} 25%{transform:scale(1.15) rotate(-5deg)} 50%{transform:scale(1.1) rotate(5deg)} 75%{transform:scale(1.15) rotate(-3deg)} }
+        @keyframes mascot-error { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-6px)} 40%{transform:translateX(6px)} 60%{transform:translateX(-4px)} 80%{transform:translateX(4px)} }
+        .mascot.happy{animation:mascot-happy .6s ease-in-out}
+        .mascot.error{animation:mascot-error .5s ease-in-out}
+        /* P1-7: deeper gradient for brand-name for better contrast */
+        .brand-name { font-size:11px; font-weight:900; background:linear-gradient(135deg,#D81B60,#7E57C2,#512DA8); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; letter-spacing:3px; }
+        /* ===== 气泡 ===== */
+        .speech-bubble { background:#fff; border-radius:14px 14px 14px 4px; padding:7px 12px; margin:6px auto 8px; max-width:90%; font-size:12px; font-weight:500; color:var(--brand-neutral-700); box-shadow:0 3px 12px rgba(124,77,255,.12); position:relative; text-align:center; min-height:30px; display:flex; align-items:center; justify-content:center; }
+        .speech-bubble::after { content:''; position:absolute; top:-5px; left:24px; width:10px; height:10px; background:#fff; transform:rotate(45deg); border-radius:2px; }
+        .speech-bubble.success{background:linear-gradient(135deg,#f0fff4,#e8faf0)}
+        .speech-bubble.success::after{background:#f0fff4}
+        .speech-bubble.error-msg{background:linear-gradient(135deg,#fff5f5,#fff0f0)}
+        .speech-bubble.error-msg::after{background:#fff5f5}
+        /* ===== 标签页 ===== */
+        .tab-nav { display:flex; gap:3px; margin-bottom:8px; background:rgba(255,255,255,.3); border-radius:12px; padding:3px; }
+        .tab-btn { flex:1; height:32px; border:none; border-radius:10px; font-size:12px; font-weight:700; cursor:pointer; font-family:inherit; background:transparent; color:var(--brand-primary); transition:all .2s; }
+        .tab-btn.active { background:linear-gradient(145deg,#fff,#f5eeff); color:var(--brand-neutral-700); box-shadow:0 2px 8px rgba(179,136,255,.2); }
+        .tab-btn:hover:not(.active) { background:rgba(255,255,255,.3); }
+        .tab-content { display:none; }
+        .tab-content.active { display:block; }
+        /* ===== 显示屏 ===== */
+        .display { background:linear-gradient(145deg,rgba(255,245,254,.8),rgba(209,179,255,.25)); border-radius:16px; padding:10px 14px; margin-bottom:10px; text-align:right; min-height:70px; display:flex; flex-direction:column; justify-content:flex-end; border:2px solid rgba(179,136,255,.2); position:relative; overflow:hidden; }
+        /* P1-7: expression color changed from #B388FF to #7E57C2 for contrast > 4.5:1 */
+        .display .expression { color:#7E57C2; font-size:13px; font-weight:600; min-height:18px; word-break:break-all; font-family:'Quicksand','Zen Maru Gothic',sans-serif; overflow-x:auto; white-space:nowrap; }
+        .display .result { color:var(--brand-neutral-700); font-size:32px; font-weight:700; margin-top:2px; overflow:hidden; text-overflow:ellipsis; font-family:'Quicksand','Zen Maru Gothic',sans-serif; transition:color .2s; }
+        .display .result.has-result { color:var(--brand-primary-dark); }
+        /* ===== 按钮通用 ===== */
+        .buttons { display:grid; gap:6px; }
+        .sci-buttons { grid-template-columns:repeat(6,1fr); }
+        button { border:none; border-radius:12px; font-weight:700; cursor:pointer; transition:all .15s cubic-bezier(.34,1.56,.64,1); font-family:'Quicksand','Zen Maru Gothic',sans-serif; position:relative; overflow:hidden; -webkit-tap-highlight-color:transparent; }
+        button:hover { transform:translateY(-2px) scale(1.03); }
+        button:active { transform:translateY(1px) scale(.96); transition-duration:.08s; }
+        .sci-buttons button { height:42px; font-size:14px; }
+        .btn-num { background:linear-gradient(145deg,#fff,#f5eeff); color:var(--brand-neutral-700); box-shadow:0 2px 6px rgba(179,136,255,.12), 0 0 0 1px rgba(179,136,255,.08); }
+        .btn-op { background:linear-gradient(145deg,#FF99BC,var(--brand-secondary)); color:#fff; box-shadow:0 3px 10px rgba(255,128,171,.35); text-shadow:0 1px 2px rgba(0,0,0,.08); }
+        .btn-fn { background:linear-gradient(145deg,var(--brand-primary-light),var(--brand-primary)); color:#fff; box-shadow:0 2px 8px rgba(179,136,255,.3); text-shadow:0 1px 2px rgba(0,0,0,.08); font-size:12px !important; }
+        .btn-eq { background:linear-gradient(145deg,#9575CD,var(--brand-primary-dark)); color:#fff; box-shadow:0 3px 10px rgba(124,77,255,.35); }
+        .btn-ac { background:linear-gradient(145deg,var(--brand-error),#FF6B6B); color:#fff; }
+        .btn-zero { grid-column:span 2; }
+        .btn-eq-wide { grid-column:span 6; height:38px; font-size:18px !important; }
+        /* 涟漪 */
+        .ripple { position:absolute; border-radius:50%; background:rgba(255,255,255,.4); transform:scale(0); animation:ripple-anim .4s ease-out; pointer-events:none; }
+        @keyframes ripple-anim { to{transform:scale(3.5);opacity:0} }
+        /* 结果闪光 */
+        @keyframes result-flash { 0%{text-shadow:0 0 0 transparent} 50%{text-shadow:0 0 16px rgba(179,136,255,.5)} 100%{text-shadow:0 0 0 transparent} }
+        .result-flash { animation:result-flash .6s ease; }
+        @keyframes easter-glow { 0%,100%{text-shadow:0 0 0 transparent} 50%{text-shadow:0 0 20px rgba(255,213,79,.6)} }
+        .easter-glow { animation:easter-glow 1s ease infinite; color:var(--brand-accent)!important; }
+
+        /* ===== 换算标签页 ===== */
+        .converter-section { padding:4px 0; }
+        .conv-type-nav { display:flex; gap:3px; margin-bottom:8px; }
+        .conv-type-btn { flex:1; height:30px; border:none; border-radius:8px; font-size:11px; font-weight:700; cursor:pointer; font-family:inherit; background:rgba(255,255,255,.4); color:var(--brand-primary); transition:all .2s; }
+        .conv-type-btn.active { background:linear-gradient(145deg,var(--brand-primary-light),var(--brand-primary)); color:#fff; box-shadow:0 2px 8px rgba(179,136,255,.3); }
+        .conv-row { display:flex; gap:8px; align-items:center; margin-bottom:8px; }
+        .conv-row select { flex:1; height:36px; border:1.5px solid rgba(179,136,255,.25); border-radius:10px; padding:0 8px; font-family:inherit; font-size:13px; font-weight:600; background:#fff; color:var(--brand-neutral-700); outline:none; }
+        .conv-row select:focus { border-color:var(--brand-primary); box-shadow:0 0 0 3px rgba(179,136,255,.15); }
+        .conv-row input { flex:1; height:36px; border:1.5px solid rgba(179,136,255,.25); border-radius:10px; padding:0 10px; font-family:'Quicksand',sans-serif; font-size:16px; font-weight:700; color:var(--brand-neutral-700); outline:none; background:#fff; }
+        .conv-row input:focus { border-color:var(--brand-primary); box-shadow:0 0 0 3px rgba(179,136,255,.15); }
+        .conv-swap { width:36px; height:36px; border:none; border-radius:50%; background:linear-gradient(145deg,var(--brand-primary-light),var(--brand-primary)); color:#fff; font-size:16px; cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+        .conv-result-box { background:linear-gradient(145deg,rgba(255,245,254,.8),rgba(209,179,255,.2)); border-radius:14px; padding:14px; text-align:center; margin-top:4px; }
+        .conv-result-box .val { font-size:28px; font-weight:700; color:var(--brand-primary-dark); font-family:'Quicksand',sans-serif; }
+        .conv-result-box .label { font-size:11px; color:var(--brand-primary); margin-top:2px; font-weight:600; }
+
+        /* ===== 工程标签页 ===== */
+        .eng-cards { display:flex; flex-direction:column; gap:8px; }
+        .eng-card { background:rgba(255,255,255,.5); border-radius:14px; padding:12px; border:1.5px solid rgba(179,136,255,.15); }
+        .eng-card h3 { font-size:13px; color:var(--brand-neutral-700); margin-bottom:8px; }
+        .eng-card h3 span { font-size:16px; }
+        .eng-grid { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:8px; }
+        .eng-grid.cols-3 { grid-template-columns:1fr 1fr 1fr; }
+        .eng-field { display:flex; flex-direction:column; gap:2px; }
+        .eng-field label { font-size:10px; font-weight:700; color:var(--brand-primary); }
+        .eng-field input, .eng-field select { height:32px; border:1.5px solid rgba(179,136,255,.2); border-radius:8px; padding:0 8px; font-family:'Quicksand',sans-serif; font-size:13px; font-weight:600; color:var(--brand-neutral-700); background:#fff; outline:none; width:100%; }
+        .eng-field input:focus, .eng-field select:focus { border-color:var(--brand-primary); }
+        .eng-calc-btn { width:100%; height:34px; border:none; border-radius:10px; background:linear-gradient(145deg,var(--brand-primary-light),var(--brand-primary)); color:#fff; font-size:13px; font-weight:700; cursor:pointer; font-family:inherit; margin-bottom:6px; }
+        .eng-result { background:linear-gradient(145deg,rgba(255,245,254,.6),rgba(209,179,255,.15)); border-radius:10px; padding:8px 10px; }
+        .eng-result-row { display:flex; justify-content:space-between; padding:3px 0; font-size:12px; border-bottom:1px dashed rgba(179,136,255,.15); }
+        .eng-result-row:last-child { border-bottom:none; }
+        .eng-result-row .k { color:var(--brand-primary); font-weight:600; }
+        .eng-result-row .v { color:var(--brand-neutral-700); font-weight:700; font-family:'Quicksand',sans-serif; }
+
+        /* ===== 历史标签页 ===== */
+        .history-list { max-height:360px; overflow-y:auto; }
+        .history-item { display:flex; justify-content:space-between; align-items:center; padding:8px 10px; background:rgba(255,255,255,.4); border-radius:10px; margin-bottom:4px; cursor:pointer; transition:all .15s; }
+        .history-item:hover { background:rgba(255,255,255,.7); transform:translateX(4px); }
+        .history-expr { font-size:12px; color:#7E57C2; font-weight:600; }
+        .history-val { font-size:16px; color:var(--brand-neutral-700); font-weight:700; font-family:'Quicksand',sans-serif; }
+        .history-time { font-size:10px; color:var(--brand-primary-light); }
+        .history-empty { text-align:center; padding:40px 0; color:var(--brand-primary); font-size:13px; font-weight:600; }
+        .history-clear { width:100%; height:34px; border:none; border-radius:10px; background:linear-gradient(145deg,var(--brand-error),#FF6B6B); color:#fff; font-size:12px; font-weight:700; cursor:pointer; font-family:inherit; margin-top:8px; }
+
+        /* ===== Footer ===== */
+        .footer { text-align:center; margin-top:10px; font-size:10px; font-weight:700; background:linear-gradient(90deg,#D81B60,#7E57C2); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; letter-spacing:1.5px; }
+        .disclaimer { text-align:center; margin-top:6px; font-size:9px; color:#9575CD; font-weight:500; }
+
+        @media(max-width:500px) {
+            .calculator { border-radius:20px; padding:12px 10px 10px; }
+            .sci-buttons button { height:38px; font-size:12px; }
+            .sci-buttons { gap:4px; }
+        }
+        /* P1-6: mobile 375px breakpoint */
+        @media(max-width:400px) {
+            .sci-buttons { grid-template-columns:repeat(5,1fr); gap:3px; }
+            .sci-buttons button { height:36px; font-size:11px; }
+            .btn-eq-wide { grid-column:span 5; }
+            .btn-zero { grid-column:span 1; }
+            .eng-grid.cols-3 { grid-template-columns:1fr; }
+            .eng-grid { grid-template-columns:1fr; }
+        }
+        /* prefers-reduced-motion: disable all animations */
+        @media(prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- aria-hidden on decorative elements -->
+<div class="stars" aria-hidden="true">
+    <div class="star">&#10022;</div><div class="star">&#10023;</div><div class="star">&#10022;</div><div class="star">&#10023;</div>
+    <div class="star">&#10022;</div><div class="star">&#10023;</div><div class="star">&#10022;</div><div class="star">&#10023;</div>
+</div>
+<div class="sakura" aria-hidden="true">
+    <div class="petal">&#127800;</div><div class="petal">&#127800;</div><div class="petal">&#127800;</div><div class="petal">&#127800;</div><div class="petal">&#127800;</div>
+</div>
+
+<div class="calculator">
+    <div class="header">
+        <div class="mascot" id="mascot" aria-hidden="true">&#128049;</div>
+        <div class="brand-name">NEKO CALC &middot; ENGINEERING</div>
+    </div>
+    <!-- P0-2: aria-live on speech bubble -->
+    <div class="speech-bubble" id="speech" aria-live="polite" role="status">&#127775; 交给猫算酱吧！喵~</div>
+
+    <!-- P0-3: tablist ARIA roles -->
+    <div class="tab-nav" role="tablist" aria-label="功能标签页">
+        <button class="tab-btn active" role="tab" id="tabBtn-scientific" aria-selected="true" aria-controls="tab-scientific" onclick="switchTab('scientific')">&#128300; 科学</button>
+        <button class="tab-btn" role="tab" id="tabBtn-converter" aria-selected="false" aria-controls="tab-converter" onclick="switchTab('converter')">&#128208; 换算</button>
+        <button class="tab-btn" role="tab" id="tabBtn-engineering" aria-selected="false" aria-controls="tab-engineering" onclick="switchTab('engineering')">&#127959; 工程</button>
+        <button class="tab-btn" role="tab" id="tabBtn-history" aria-selected="false" aria-controls="tab-history" onclick="switchTab('history')">&#128203; 记录</button>
+    </div>
+
+    <!-- 显示屏 -->
+    <div class="display" id="mainDisplay">
+        <div class="expression" id="expression"></div>
+        <!-- P0-2: aria-live on result -->
+        <div class="result" id="result" aria-live="polite" role="status">0</div>
+    </div>
+
+    <!-- ===== 科学计算 ===== -->
+    <div class="tab-content active" id="tab-scientific" role="tabpanel" aria-labelledby="tabBtn-scientific">
+        <div class="buttons sci-buttons">
+            <button class="btn-fn" onclick="insertFunc('sin(')">sin</button>
+            <button class="btn-fn" onclick="insertFunc('cos(')">cos</button>
+            <button class="btn-fn" onclick="insertFunc('tan(')">tan</button>
+            <button class="btn-fn" onclick="insertChar('(')">(</button>
+            <button class="btn-fn" onclick="insertChar(')')">)</button>
+            <button class="btn-ac" onclick="sciClear()">AC</button>
+
+            <button class="btn-fn" onclick="insertFunc('ln(')">ln</button>
+            <button class="btn-fn" onclick="insertFunc('log(')">log</button>
+            <button class="btn-fn" onclick="insertOp('^2')">x&sup2;</button>
+            <button class="btn-fn" onclick="insertFunc('sqrt(')">&#8730;</button>
+            <!-- P1-1: use insertConst for PI -->
+            <button class="btn-fn" onclick="insertConst('PI')">&#960;</button>
+            <button class="btn-fn" onclick="sciBackspace()">&#9003;</button>
+
+            <button class="btn-fn" onclick="insertFunc('exp(')">e&#739;</button>
+            <button class="btn-fn" onclick="insertOp('^')">x&#8319;</button>
+            <button class="btn-fn" onclick="insertFunc('fact(')">n!</button>
+            <button class="btn-num" onclick="insertChar('7')">7</button>
+            <button class="btn-num" onclick="insertChar('8')">8</button>
+            <button class="btn-num" onclick="insertChar('9')">9</button>
+
+            <button class="btn-fn" onclick="insertFunc('1/(')">1/x</button>
+            <button class="btn-fn" onclick="insertOp('%')">%</button>
+            <button class="btn-fn" onclick="insertAns()">Ans</button>
+            <button class="btn-num" onclick="insertChar('4')">4</button>
+            <button class="btn-num" onclick="insertChar('5')">5</button>
+            <button class="btn-num" onclick="insertChar('6')">6</button>
+
+            <button class="btn-op" onclick="insertOp('/')">&#247;</button>
+            <button class="btn-op" onclick="insertOp('*')">&#215;</button>
+            <!-- P1-1: use insertConst for E -->
+            <button class="btn-fn" onclick="insertConst('E')">e</button>
+            <button class="btn-num" onclick="insertChar('1')">1</button>
+            <button class="btn-num" onclick="insertChar('2')">2</button>
+            <button class="btn-num" onclick="insertChar('3')">3</button>
+
+            <button class="btn-op" onclick="insertOp('-')">-</button>
+            <button class="btn-op" onclick="insertOp('+')">+</button>
+            <button class="btn-fn" onclick="toggleSign2()">&#177;</button>
+            <button class="btn-num btn-zero" onclick="insertChar('0')">0</button>
+            <button class="btn-num" onclick="insertChar('.')">.</button>
+
+            <button class="btn-eq btn-eq-wide" onclick="sciCalculate()">=</button>
+        </div>
+    </div>
+
+    <!-- ===== 单位换算 ===== -->
+    <div class="tab-content" id="tab-converter" role="tabpanel" aria-labelledby="tabBtn-converter">
+        <div class="converter-section">
+            <div class="conv-type-nav">
+                <button class="conv-type-btn active" onclick="setConvType('length')">&#128207; 长度</button>
+                <button class="conv-type-btn" onclick="setConvType('area')">&#11036; 面积</button>
+                <button class="conv-type-btn" onclick="setConvType('volume')">&#129523; 体积</button>
+                <button class="conv-type-btn" onclick="setConvType('weight')">&#9878; 重量</button>
+            </div>
+            <div class="conv-row">
+                <input type="number" id="convInput" value="1" oninput="doConvert()">
+                <select id="convFrom" onchange="doConvert()"></select>
+            </div>
+            <div style="text-align:center;margin:4px 0">
+                <button class="conv-swap" onclick="swapConv()">&#8645;</button>
+            </div>
+            <div class="conv-row">
+                <input type="text" id="convOutput" readonly>
+                <select id="convTo" onchange="doConvert()"></select>
+            </div>
+            <div class="conv-result-box">
+                <div class="val" id="convResultVal">--</div>
+                <div class="label" id="convResultLabel">输入数值开始换算喵~</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 工程工具 ===== -->
+    <div class="tab-content" id="tab-engineering" role="tabpanel" aria-labelledby="tabBtn-engineering">
+        <div class="eng-cards">
+            <!-- 混凝土 -->
+            <div class="eng-card">
+                <h3><span>&#127959;</span> 混凝土用量计算</h3>
+                <div class="eng-grid cols-3">
+                    <!-- P1-2: min attribute on inputs -->
+                    <div class="eng-field"><label>长度 (m)</label><input type="number" id="concL" value="10" min="0.001"></div>
+                    <div class="eng-field"><label>宽度 (m)</label><input type="number" id="concW" value="5" min="0.001"></div>
+                    <div class="eng-field"><label>厚度 (m)</label><input type="number" id="concH" value="0.3" min="0.001"></div>
+                </div>
+                <button class="eng-calc-btn" onclick="calcConcrete()">&#128049; 猫算酱开算！</button>
+                <div class="eng-result" id="concResult"></div>
+            </div>
+            <!-- 钢筋 -->
+            <div class="eng-card">
+                <h3><span>&#128297;</span> 钢筋重量计算</h3>
+                <div class="eng-grid">
+                    <div class="eng-field"><label>直径 (mm)</label>
+                        <select id="rebarD">
+                            <option value="6">&#966;6</option><option value="8">&#966;8</option><option value="10">&#966;10</option>
+                            <option value="12">&#966;12</option><option value="14">&#966;14</option><option value="16">&#966;16</option>
+                            <option value="18">&#966;18</option><option value="20">&#966;20</option><option value="22">&#966;22</option>
+                            <option value="25" selected>&#966;25</option><option value="28">&#966;28</option><option value="32">&#966;32</option>
+                        </select>
+                    </div>
+                    <div class="eng-field"><label>长度 (m)</label><input type="number" id="rebarL" value="12" min="0.001"></div>
+                </div>
+                <button class="eng-calc-btn" onclick="calcRebar()">&#128049; 猫算酱开算！</button>
+                <div class="eng-result" id="rebarResult"></div>
+            </div>
+            <!-- 简支梁 -->
+            <div class="eng-card">
+                <h3><span>&#128736;</span> 简支梁计算</h3>
+                <div class="eng-grid">
+                    <div class="eng-field"><label>荷载类型</label>
+                        <select id="beamType" onchange="toggleBeamFields()">
+                            <option value="uniform">均布荷载</option>
+                            <option value="point">集中荷载</option>
+                        </select>
+                    </div>
+                    <div class="eng-field"><label id="beamLoadLabel">荷载 q (kN/m)</label><input type="number" id="beamQ" value="10" min="0.001"></div>
+                    <div class="eng-field"><label>跨度 L (m)</label><input type="number" id="beamL" value="6" min="0.001"></div>
+                    <div class="eng-field"><label>EI (kN&middot;m&sup2;)</label><input type="number" id="beamEI" value="50000" min="0.001"></div>
+                </div>
+                <button class="eng-calc-btn" onclick="calcBeam()">&#128049; 猫算酱开算！</button>
+                <div class="eng-result" id="beamResult"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 历史记录 ===== -->
+    <div class="tab-content" id="tab-history" role="tabpanel" aria-labelledby="tabBtn-history">
+        <div class="history-list" id="historyList"></div>
+        <button class="history-clear" onclick="clearHistory()">&#128465; 清除全部记录</button>
+    </div>
+
+    <div class="footer">算力满满，猫力满满喵~</div>
+    <div class="disclaimer">计算结果仅供参考，不作为工程决策依据</div>
+</div>
+
+<script>
+/* =====================================================
+   科学计算器 -- 表达式解析引擎
+   ===================================================== */
+var expr = '';
+var lastAns = 0;
+var expressionEl = document.getElementById('expression');
+var resultEl = document.getElementById('result');
+var speechEl = document.getElementById('speech');
+var mascotEl = document.getElementById('mascot');
+
+function setSpeech(t, type) {
+    speechEl.className = 'speech-bubble';
+    if (type) speechEl.classList.add(type);
+    speechEl.textContent = t;
+}
+function mascotReact(type) {
+    mascotEl.className = 'mascot';
+    void mascotEl.offsetWidth;
+    mascotEl.classList.add(type);
+    setTimeout(function() { mascotEl.className = 'mascot'; }, 800);
+}
+
+function updateExprDisplay() {
+    expressionEl.textContent = expr;
+    // 实时预览
+    try {
+        var val = evalExpr(expr);
+        if (!isNaN(val) && isFinite(val)) {
+            resultEl.textContent = formatNum(val);
+        }
+    } catch(e) {}
+}
+
+function insertChar(c) { expr += c; updateExprDisplay(); }
+
+/* P0-4: 连续操作符保护 -- 如果最后一个字符是运算符则替换 */
+function insertOp(op) {
+    if (expr.length > 0 && /[+\-*/^%]$/.test(expr)) {
+        expr = expr.replace(/[+\-*/^%]+$/, '');
+    }
+    expr += op;
+    updateExprDisplay();
+}
+
+function insertFunc(fn) { expr += fn; updateExprDisplay(); }
+function insertAns() { expr += lastAns.toString(); updateExprDisplay(); }
+
+/* P1-1: insertConst -- 如果最后字符是数字或常量名末尾，先插入 * */
+function insertConst(name) {
+    if (expr.length > 0 && /[0-9.)EI]$/.test(expr)) {
+        expr += '*';
+    }
+    expr += name;
+    updateExprDisplay();
+}
+
+function sciBackspace() {
+    // 尝试删除常量 token
+    if (expr.endsWith('PI')) { expr = expr.slice(0, -2); updateExprDisplay(); return; }
+    if (expr.endsWith('E') && !/[0-9.eE]/.test(expr.charAt(expr.length - 2))) { expr = expr.slice(0, -1); updateExprDisplay(); return; }
+    // 尝试删除完整函数名
+    var fns = ['sin(','cos(','tan(','asin(','acos(','atan(','ln(','log(','sqrt(','exp(','fact(','1/('];
+    for (var fi = 0; fi < fns.length; fi++) {
+        if (expr.endsWith(fns[fi])) { expr = expr.slice(0, -fns[fi].length); updateExprDisplay(); return; }
+    }
+    if (expr.endsWith('^2') || expr.endsWith('^3')) { expr = expr.slice(0, -2); }
+    else { expr = expr.slice(0, -1); }
+    updateExprDisplay();
+    if (!expr) resultEl.textContent = '0';
+}
+
+function sciClear() {
+    expr = '';
+    expressionEl.textContent = '';
+    resultEl.textContent = '0';
+    resultEl.classList.remove('has-result', 'result-flash', 'easter-glow');
+    setSpeech('\uD83D\uDC3E 全部清掉喵~ 重新开始吧!');
+}
+
+/* P1-3: toggleSign2 -- 对表达式末尾的数字/常量取反，而不是整个表达式 */
+function toggleSign2() {
+    if (!expr) {
+        expr = '(-';
+        updateExprDisplay();
+        return;
+    }
+    // 找到末尾的数字或常量
+    var match = expr.match(/([\d.]+|PI|E)$/);
+    if (match) {
+        var numStr = match[0];
+        var prefix = expr.slice(0, expr.length - numStr.length);
+        // 如果前面已经有 "(-" 组合，去掉取反
+        if (prefix.endsWith('(-')) {
+            // 去掉 (-，再检查是否有配对的 )
+            expr = prefix.slice(0, -2) + numStr;
+        } else {
+            expr = prefix + '(-' + numStr + ')';
+        }
+    } else {
+        // 如果末尾不是数字，直接在末尾插入 (-
+        expr += '(-';
+    }
+    updateExprDisplay();
+}
+
+function formatNum(n) {
+    if (Number.isInteger(n) && Math.abs(n) < 1e15) return n.toString();
+    var s = parseFloat(n.toPrecision(10));
+    if (Math.abs(s) < 1e-10 && s !== 0) return n.toExponential(4);
+    if (Math.abs(s) >= 1e12) return n.toExponential(4);
+    return s.toString();
+}
+
+/* --- 表达式求值引擎 --- */
+/* P1-1: tokenizer 新增识别 PI 和 E 常量 token */
+function tokenize(s) {
+    var tokens = [];
+    var i = 0;
+    while (i < s.length) {
+        if (' ' === s[i]) { i++; continue; }
+        // PI 常量
+        if (s[i] === 'P' && s[i+1] === 'I') {
+            tokens.push({ type: 'num', value: Math.PI });
+            i += 2;
+            continue;
+        }
+        // E 常量 (独立的 E，不是数字的科学记数法 e/E)
+        if (s[i] === 'E' && (i + 1 >= s.length || !/[0-9.]/.test(s[i+1]))) {
+            // 确保前面不是数字的科学记数法
+            if (tokens.length === 0 || tokens[tokens.length-1].type !== 'num') {
+                tokens.push({ type: 'num', value: Math.E });
+                i += 1;
+                continue;
+            }
+        }
+        // 数字
+        if (/[0-9.]/.test(s[i])) {
+            var n = '';
+            while (i < s.length && /[0-9.eE\-+]/.test(s[i])) {
+                if ((s[i] === '-' || s[i] === '+') && n.length > 0 && !/[eE]/.test(n[n.length-1])) break;
+                n += s[i++];
+            }
+            tokens.push({ type: 'num', value: parseFloat(n) });
+            continue;
+        }
+        // 函数
+        var funcs = ['sin','cos','tan','asin','acos','atan','ln','log','sqrt','exp','fact'];
+        var matched = false;
+        for (var fi = 0; fi < funcs.length; fi++) {
+            var fn = funcs[fi];
+            if (s.substring(i, i+fn.length) === fn && s[i+fn.length] === '(') {
+                tokens.push({ type: 'func', value: fn });
+                i += fn.length;
+                matched = true;
+                break;
+            }
+        }
+        if (matched) continue;
+        // 运算符
+        if ('+-*/^%'.indexOf(s[i]) !== -1) {
+            // 处理负号（一元）
+            if (s[i] === '-' && (tokens.length === 0 || tokens[tokens.length-1].type === 'op' || tokens[tokens.length-1].type === 'lparen')) {
+                tokens.push({ type: 'unary', value: 'neg' });
+            } else {
+                tokens.push({ type: 'op', value: s[i] });
+            }
+            i++; continue;
+        }
+        if (s[i] === '(') { tokens.push({ type: 'lparen' }); i++; continue; }
+        if (s[i] === ')') { tokens.push({ type: 'rparen' }); i++; continue; }
+        i++; // 跳过未知字符
+    }
+    return tokens;
+}
+
+function shuntingYard(tokens) {
+    var output = [], opStack = [];
+    var prec = { '+':1, '-':1, '*':2, '/':2, '%':2, '^':3 };
+    var rightAssoc = { '^': true };
+    for (var ti = 0; ti < tokens.length; ti++) {
+        var tok = tokens[ti];
+        if (tok.type === 'num') { output.push(tok); continue; }
+        if (tok.type === 'func') { opStack.push(tok); continue; }
+        if (tok.type === 'unary') { opStack.push(tok); continue; }
+        if (tok.type === 'op') {
+            while (opStack.length) {
+                var top = opStack[opStack.length - 1];
+                if (top.type === 'op' && ((prec[top.value] > prec[tok.value]) || (prec[top.value] === prec[tok.value] && !rightAssoc[tok.value]))) {
+                    output.push(opStack.pop());
+                } else break;
+            }
+            opStack.push(tok); continue;
+        }
+        if (tok.type === 'lparen') { opStack.push(tok); continue; }
+        if (tok.type === 'rparen') {
+            while (opStack.length && opStack[opStack.length-1].type !== 'lparen') {
+                output.push(opStack.pop());
+            }
+            if (opStack.length) opStack.pop(); // 弹出 lparen
+            if (opStack.length && opStack[opStack.length-1].type === 'func') {
+                output.push(opStack.pop());
+            }
+            continue;
+        }
+    }
+    while (opStack.length) output.push(opStack.pop());
+    return output;
+}
+
+function factorial(n) {
+    if (n < 0 || !Number.isInteger(n)) return NaN;
+    if (n > 170) return Infinity;
+    var r = 1;
+    for (var i = 2; i <= n; i++) r *= i;
+    return r;
+}
+
+function evalRPN(rpn) {
+    var stack = [];
+    for (var ri = 0; ri < rpn.length; ri++) {
+        var tok = rpn[ri];
+        if (tok.type === 'num') { stack.push(tok.value); continue; }
+        if (tok.type === 'unary' && tok.value === 'neg') {
+            stack.push(-stack.pop()); continue;
+        }
+        if (tok.type === 'func') {
+            var a = stack.pop();
+            switch(tok.value) {
+                case 'sin':  stack.push(Math.sin(a * Math.PI / 180)); break;
+                case 'cos':  stack.push(Math.cos(a * Math.PI / 180)); break;
+                case 'tan':  stack.push(Math.tan(a * Math.PI / 180)); break;
+                case 'asin': stack.push(Math.asin(a) * 180 / Math.PI); break;
+                case 'acos': stack.push(Math.acos(a) * 180 / Math.PI); break;
+                case 'atan': stack.push(Math.atan(a) * 180 / Math.PI); break;
+                case 'ln':   stack.push(Math.log(a)); break;
+                case 'log':  stack.push(Math.log10(a)); break;
+                case 'sqrt': stack.push(Math.sqrt(a)); break;
+                case 'exp':  stack.push(Math.exp(a)); break;
+                case 'fact': stack.push(factorial(Math.round(a))); break;
+            }
+            continue;
+        }
+        if (tok.type === 'op') {
+            var b = stack.pop(), a2 = stack.pop();
+            switch(tok.value) {
+                case '+': stack.push(a2 + b); break;
+                case '-': stack.push(a2 - b); break;
+                case '*': stack.push(a2 * b); break;
+                case '/': if(b===0) throw 'DivZero'; stack.push(a2 / b); break;
+                case '^': stack.push(Math.pow(a2, b)); break;
+                case '%': stack.push(a2 % b); break;
+            }
+            continue;
+        }
+    }
+    return stack[0];
+}
+
+function evalExpr(s) {
+    if (!s) return NaN;
+    // 自动补全右括号
+    var open = (s.match(/\(/g) || []).length;
+    var close = (s.match(/\)/g) || []).length;
+    s += ')'.repeat(Math.max(0, open - close));
+    var tokens = tokenize(s);
+    var rpn = shuntingYard(tokens);
+    return evalRPN(rpn);
+}
+
+/* --- 彩蛋 --- */
+function checkEasterEgg(n) {
+    var eggs = {
+        7: '\uD83C\uDF1F Lucky Seven! 今天运气很好喵~',
+        42: '\uD83C\uDF0C 生命、宇宙以及一切的答案喵!',
+        100: '\uD83D\uDCAF 满分! 猫算酱给你比心喵~',
+        520: '\uD83D\uDC97 520! 猫算酱也喜欢你喵!',
+        1314: '\uD83D\uDC8D 一生一世! 好浪漫喵~',
+        666: '\uD83D\uDD25 太厉害了喵! 666!',
+        233: '\uD83D\uDE02 233 哈哈哈喵~'
+    };
+    if (eggs[n]) {
+        setSpeech(eggs[n], 'success');
+        resultEl.classList.add('easter-glow');
+        setTimeout(function() { resultEl.classList.remove('easter-glow'); }, 3000);
+        return true;
+    }
+    return false;
+}
+
+function sciCalculate() {
+    if (!expr) return;
+    try {
+        var val = evalExpr(expr);
+        if (isNaN(val)) throw 'NaN';
+        if (!isFinite(val)) throw 'Infinity';
+        var display = formatNum(val);
+        expressionEl.textContent = expr + ' =';
+        resultEl.textContent = display;
+        resultEl.classList.add('has-result', 'result-flash');
+        mascotReact('happy');
+        lastAns = val;
+        addHistory(expr, display);
+        if (!checkEasterEgg(val)) {
+            var msgs = ['\uD83C\uDF89 算好了喵! 轻轻松松~', '\u2728 嘿嘿，答案在这里喵!', '\uD83D\uDC3E 哼，这种程度...才不难呢! (脸红)', '\uD83C\uDF1F 猫算酱出动，一个顶俩喵!'];
+            setSpeech(msgs[Math.floor(Math.random() * msgs.length)], 'success');
+        }
+        expr = display;
+    } catch(e) {
+        if (e === 'DivZero') {
+            resultEl.textContent = 'NG!';
+            mascotReact('error');
+            setSpeech('\uD83D\uDE40 呜...不能除以零啦! 猫算酱会坏掉的 >_<', 'error-msg');
+        } else {
+            resultEl.textContent = 'ERR';
+            mascotReact('error');
+            setSpeech('\uD83D\uDE40 呜...这个表达式猫算酱看不懂 >_<', 'error-msg');
+        }
+        expr = '';
+    }
+}
+
+/* --- 键盘支持 --- */
+document.addEventListener('keydown', function(e) {
+    var activeTab = document.querySelector('.tab-content.active');
+    if (!activeTab || activeTab.id !== 'tab-scientific') return;
+    if (e.key >= '0' && e.key <= '9') { insertChar(e.key); return; }
+    if (e.key === '.') { insertChar('.'); return; }
+    if ('+-*/%'.indexOf(e.key) !== -1) { insertOp(e.key); return; }
+    if (e.key === '(') { insertChar('('); return; }
+    if (e.key === ')') { insertChar(')'); return; }
+    if (e.key === '^') { insertOp('^'); return; }
+    if (e.key === 'Enter' || e.key === '=') { e.preventDefault(); sciCalculate(); return; }
+    if (e.key === 'Escape') { sciClear(); return; }
+    if (e.key === 'Backspace') { sciBackspace(); return; }
+});
+
+/* =====================================================
+   标签页切换 -- P0-3: update ARIA attributes
+   ===================================================== */
+function switchTab(name) {
+    var tabNames = ['scientific', 'converter', 'engineering', 'history'];
+    for (var i = 0; i < tabNames.length; i++) {
+        var tn = tabNames[i];
+        var btn = document.getElementById('tabBtn-' + tn);
+        var panel = document.getElementById('tab-' + tn);
+        if (tn === name) {
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+            panel.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+            panel.classList.remove('active');
+        }
+    }
+    var msgs = {
+        scientific: '\uD83D\uDD2C 科学计算模式! 猫算酱全力以赴喵~',
+        converter: '\uD83D\uDCD0 单位换算交给猫算酱喵~',
+        engineering: '\uD83C\uDFD7 猫算酱也会搞建筑喵!',
+        history: '\uD83D\uDCCB 猫算酱的小本本~'
+    };
+    setSpeech(msgs[name]);
+    // 工程/换算时隐藏科学显示屏
+    document.getElementById('mainDisplay').style.display = (name === 'engineering' || name === 'converter') ? 'none' : 'flex';
+}
+
+/* =====================================================
+   单位换算
+   ===================================================== */
+var units = {
+    length: { mm:0.001, cm:0.01, m:1, km:1000, 'in':0.0254, ft:0.3048, yd:0.9144 },
+    area: { 'mm\u00B2':1e-6, 'cm\u00B2':1e-4, 'm\u00B2':1, 'km\u00B2':1e6, 'ft\u00B2':0.092903, '\u4EA9':666.667, '\u516C\u9877':10000 },
+    volume: { mL:1e-6, L:0.001, 'm\u00B3':1, gal:0.003785, 'ft\u00B3':0.028317 },
+    weight: { g:0.001, kg:1, t:1000, lb:0.453592, oz:0.028350 }
+};
+var convType = 'length';
+
+function setConvType(type) {
+    convType = type;
+    document.querySelectorAll('.conv-type-btn').forEach(function(b) {
+        b.classList.toggle('active', b.getAttribute('onclick').indexOf(type) !== -1);
+    });
+    populateConvSelects();
+    doConvert();
+}
+
+function populateConvSelects() {
+    var keys = Object.keys(units[convType]);
+    var fromSel = document.getElementById('convFrom');
+    var toSel = document.getElementById('convTo');
+    fromSel.innerHTML = '';
+    toSel.innerHTML = '';
+    for (var i = 0; i < keys.length; i++) {
+        var opt1 = document.createElement('option');
+        opt1.value = keys[i];
+        opt1.textContent = keys[i];
+        fromSel.appendChild(opt1);
+        var opt2 = document.createElement('option');
+        opt2.value = keys[i];
+        opt2.textContent = keys[i];
+        toSel.appendChild(opt2);
+    }
+    if (keys.length > 2) toSel.selectedIndex = 2;
+}
+
+function doConvert() {
+    var val = parseFloat(document.getElementById('convInput').value);
+    var from = document.getElementById('convFrom').value;
+    var to = document.getElementById('convTo').value;
+    if (isNaN(val)) { document.getElementById('convResultVal').textContent = '--'; return; }
+    var base = val * units[convType][from];
+    var result = base / units[convType][to];
+    var display = formatNum(result);
+    document.getElementById('convOutput').value = display;
+    document.getElementById('convResultVal').textContent = display + ' ' + to;
+    document.getElementById('convResultLabel').textContent = val + ' ' + from + ' = ' + display + ' ' + to;
+}
+
+function swapConv() {
+    var fromSel = document.getElementById('convFrom');
+    var toSel = document.getElementById('convTo');
+    var tmp = fromSel.value;
+    fromSel.value = toSel.value;
+    toSel.value = tmp;
+    doConvert();
+}
+
+// 初始化换算
+populateConvSelects();
+
+/* =====================================================
+   工程计算
+   ===================================================== */
+
+/* P1-2: 输入校验 -- validatePositive */
+function validatePositive(value, name, maxVal) {
+    if (isNaN(value)) {
+        setSpeech('\uD83D\uDE40 ' + name + ' 数据不对喵~ 请输入有效数字!', 'error-msg');
+        return false;
+    }
+    if (value <= 0) {
+        setSpeech('\uD83D\uDE40 ' + name + ' 必须大于零喵~', 'error-msg');
+        return false;
+    }
+    if (maxVal && value > maxVal) {
+        setSpeech('\uD83D\uDE40 ' + name + ' 超出合理范围了喵~ (最大 ' + maxVal + ')', 'error-msg');
+        return false;
+    }
+    return true;
+}
+
+/* 工程计算结果 DOM 安全构建辅助函数 */
+function createEngResultRow(label, value) {
+    var row = document.createElement('div');
+    row.className = 'eng-result-row';
+    var kSpan = document.createElement('span');
+    kSpan.className = 'k';
+    kSpan.textContent = label;
+    var vSpan = document.createElement('span');
+    vSpan.className = 'v';
+    vSpan.textContent = value;
+    row.appendChild(kSpan);
+    row.appendChild(vSpan);
+    return row;
+}
+
+function calcConcrete() {
+    var L = parseFloat(document.getElementById('concL').value);
+    var W = parseFloat(document.getElementById('concW').value);
+    var H = parseFloat(document.getElementById('concH').value);
+    if (!validatePositive(L, '长度', 10000)) return;
+    if (!validatePositive(W, '宽度', 10000)) return;
+    if (!validatePositive(H, '厚度', 100)) return;
+    var V = L * W * H;
+    var weight = V * 2.4;
+    // C30 配比 水泥:砂:石 = 1:1.49:2.63 (每m3约461kg水泥)
+    var cement = V * 461;
+    var sand = V * 687;
+    var gravel = V * 1212;
+    var container = document.getElementById('concResult');
+    container.innerHTML = '';
+    container.appendChild(createEngResultRow('体积', formatNum(V) + ' m\u00B3'));
+    container.appendChild(createEngResultRow('预估重量', formatNum(weight) + ' t'));
+    container.appendChild(createEngResultRow('水泥 (C30)', formatNum(cement) + ' kg'));
+    container.appendChild(createEngResultRow('砂', formatNum(sand) + ' kg'));
+    container.appendChild(createEngResultRow('碎石', formatNum(gravel) + ' kg'));
+    mascotReact('happy');
+    setSpeech('\uD83C\uDFD7 混凝土用量算好了喵! 要好好浇筑哦~', 'success');
+}
+
+function calcRebar() {
+    var d = parseFloat(document.getElementById('rebarD').value);
+    var L = parseFloat(document.getElementById('rebarL').value);
+    if (!validatePositive(d, '直径', 100)) return;
+    if (!validatePositive(L, '长度', 100000)) return;
+    var wPerM = d * d * 0.00617;
+    var total = wPerM * L;
+    var container = document.getElementById('rebarResult');
+    container.innerHTML = '';
+    container.appendChild(createEngResultRow('理论重量', formatNum(wPerM) + ' kg/m'));
+    container.appendChild(createEngResultRow('总重量 (' + L + 'm)', formatNum(total) + ' kg'));
+    container.appendChild(createEngResultRow('截面积', formatNum(Math.PI * (d/2) * (d/2)) + ' mm\u00B2'));
+    mascotReact('happy');
+    setSpeech('\uD83D\uDD29 \u03C6' + d + ' 钢筋算好了喵! 结实耐用~', 'success');
+}
+
+function toggleBeamFields() {
+    var type = document.getElementById('beamType').value;
+    document.getElementById('beamLoadLabel').textContent = type === 'uniform' ? '荷载 q (kN/m)' : '荷载 P (kN)';
+}
+
+function calcBeam() {
+    var type = document.getElementById('beamType').value;
+    var q = parseFloat(document.getElementById('beamQ').value);
+    var L = parseFloat(document.getElementById('beamL').value);
+    var EI = parseFloat(document.getElementById('beamEI').value);
+    if (!validatePositive(q, '荷载', 1e8)) return;
+    if (!validatePositive(L, '跨度', 10000)) return;
+    if (!validatePositive(EI, 'EI', 1e12)) return;
+    var Mmax, dmax, Ra;
+    if (type === 'uniform') {
+        Mmax = q * L * L / 8;
+        dmax = 5 * q * Math.pow(L, 4) / (384 * EI);
+        Ra = q * L / 2;
+    } else {
+        Mmax = q * L / 4;
+        dmax = q * Math.pow(L, 3) / (48 * EI);
+        Ra = q / 2;
+    }
+    var container = document.getElementById('beamResult');
+    container.innerHTML = '';
+    container.appendChild(createEngResultRow('最大弯矩 Mmax', formatNum(Mmax) + ' kN\u00B7m'));
+    container.appendChild(createEngResultRow('最大挠度 \u03B4max', formatNum(dmax * 1000) + ' mm'));
+    container.appendChild(createEngResultRow('支座反力 RA', formatNum(Ra) + ' kN'));
+    mascotReact('happy');
+    setSpeech('\uD83C\uDFD7 简支梁算好了喵! 结构安全第一~', 'success');
+}
+
+/* =====================================================
+   历史记录
+   ===================================================== */
+
+/* P1-4: localStorage try-catch + 数据结构校验 */
+/* 注意: 不能用 "history" 作变量名，会与 window.history (浏览器 History API) 冲突 */
+var calcHistory = (function() {
+    try {
+        var raw = localStorage.getItem('nekocalc_history');
+        if (!raw) return [];
+        var data = JSON.parse(raw);
+        if (!Array.isArray(data)) return [];
+        // 校验每项结构并限制长度
+        var validated = [];
+        for (var i = 0; i < Math.min(data.length, 50); i++) {
+            var item = data[i];
+            if (item && typeof item.expr === 'string' && typeof item.result === 'string' && typeof item.time === 'string'
+                && item.expr.length < 1000 && item.result.length < 100 && item.time.length < 50) {
+                validated.push(item);
+            }
+        }
+        return validated;
+    } catch(e) {
+        return [];
+    }
+})();
+
+function addHistory(exprStr, result) {
+    calcHistory.unshift({ expr: exprStr, result: result, time: new Date().toLocaleString('zh-CN', { hour12: false }) });
+    if (calcHistory.length > 50) calcHistory.pop();
+    try {
+        localStorage.setItem('nekocalc_history', JSON.stringify(calcHistory));
+    } catch(e) { /* quota exceeded or disabled -- ignore */ }
+    renderHistory();
+}
+
+/* P0-1: renderHistory -- 使用 DOM API 替代 innerHTML，防止 XSS */
+function renderHistory() {
+    var list = document.getElementById('historyList');
+    list.innerHTML = '';
+    if (!calcHistory.length) {
+        var emptyDiv = document.createElement('div');
+        emptyDiv.className = 'history-empty';
+        emptyDiv.textContent = '\uD83D\uDC3E 还没有算过东西呢~ 来试试吧!';
+        list.appendChild(emptyDiv);
+        return;
+    }
+    for (var i = 0; i < calcHistory.length; i++) {
+        var h = calcHistory[i];
+        var item = document.createElement('div');
+        item.className = 'history-item';
+        item.setAttribute('data-index', i);
+        item.addEventListener('click', (function(idx) {
+            return function() { useHistory(idx); };
+        })(i));
+
+        var leftDiv = document.createElement('div');
+
+        var exprDiv = document.createElement('div');
+        exprDiv.className = 'history-expr';
+        exprDiv.textContent = h.expr;
+
+        var timeDiv = document.createElement('div');
+        timeDiv.className = 'history-time';
+        timeDiv.textContent = h.time;
+
+        leftDiv.appendChild(exprDiv);
+        leftDiv.appendChild(timeDiv);
+
+        var valDiv = document.createElement('div');
+        valDiv.className = 'history-val';
+        valDiv.textContent = h.result;
+
+        item.appendChild(leftDiv);
+        item.appendChild(valDiv);
+        list.appendChild(item);
+    }
+}
+
+function useHistory(i) {
+    expr = calcHistory[i].result;
+    switchTab('scientific');
+    updateExprDisplay();
+    setSpeech('\uD83D\uDC3E 已经帮你调出来了喵~');
+}
+
+function clearHistory() {
+    calcHistory = [];
+    try {
+        localStorage.removeItem('nekocalc_history');
+    } catch(e) {}
+    renderHistory();
+    setSpeech('\uD83D\uDDD1 小本本清空了喵~');
+}
+
+renderHistory();
+
+/* ===== 涟漪效果 ===== */
+document.addEventListener('click', function(e) {
+    var btn = e.target.closest('button');
+    if (!btn) return;
+    var ripple = document.createElement('span');
+    ripple.classList.add('ripple');
+    var rect = btn.getBoundingClientRect();
+    ripple.style.cssText = 'left:' + (e.clientX-rect.left-20) + 'px;top:' + (e.clientY-rect.top-20) + 'px;width:40px;height:40px;';
+    btn.appendChild(ripple);
+    setTimeout(function() { ripple.remove(); }, 400);
+});
+</script>
+</body>
+</html>
