@@ -1,9 +1,30 @@
+# ============================================================
+# FiveSeven AI — 自动内容更新工作流
+#
+# 触发方式:
+#   1. 定时: 每天 UTC 00:00 (北京时间 08:00)
+#   2. 手动: GitHub Actions 页面点击 "Run workflow"
+#
+# 流程:
+#   抓取最新内容 → 裁剪到50篇 → 比较哈希 → 有变化才提交 → push 触发 Vercel 部署
+#
+# 所需 Secrets (均为可选):
+#   ANTHROPIC_API_KEY       — Claude API, 用于 AI 分类和翻译 (无则降级为规则)
+#   VERCEL_DEPLOY_HOOK_URL  — Vercel Deploy Hook (仅在未连接 Git 集成时需要)
+# ============================================================
+
 name: Update AI Pulse Content
 
 on:
   schedule:
-    - cron: '0 0,12 * * *'  # UTC 00:00 & 12:00 = Beijing 08:00 & 20:00
-  workflow_dispatch:          # Manual trigger button
+    # 每天 UTC 00:00 = 北京时间 08:00
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+# 同一工作流同时只允许一个实例运行, 后触发的排队等待
+concurrency:
+  group: content-update
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -14,35 +35,71 @@ jobs:
     timeout-minutes: 10
 
     steps:
+      # ---- 检出代码 ----
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
+      # ---- Node.js 环境 ----
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci --include=optional 2>/dev/null || npm install
 
-      - name: Fetch all content
-        run: npm run fetch:all
+      # ---- 抓取最新内容 ----
+      - name: Fetch latest content (50 articles)
+        run: npm run fetch:latest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
-      - name: Bump data version
+      # ---- 更新缓存版本号 ----
+      - name: Bump data-loader VERSION
         run: |
           NEW_VERSION=$(date -u +%Y.%m.%d.%H%M)
           sed -i "s/const VERSION = .*/const VERSION = '${NEW_VERSION}';/" js/data-loader.js
+          echo "VERSION=${NEW_VERSION}" >> "$GITHUB_OUTPUT"
 
+      # ---- 检测变更 & 提交 ----
       - name: Commit and push if changed
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ js/data-loader.js
           if git diff --cached --quiet; then
-            echo "No content changes detected, skipping commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "📭 No content changes, skipping commit."
           else
-            git commit -m "chore: auto-update content $(date -u +%Y-%m-%d)"
+            ADDED=$(git diff --cached --numstat data/news.json | awk '{print $1}')
+            git commit -m "chore: auto-update content $(date -u +%Y-%m-%d) [+${ADDED:-0} lines]"
             git push
-            echo "Content updated and pushed!"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "✅ Content updated and pushed!"
+          fi
+
+      # ---- 备选: Deploy Hook (仅在未连接 Vercel Git 集成时使用) ----
+      - name: Trigger Vercel Deploy Hook (fallback)
+        if: steps.commit.outputs.changed == 'true' && env.VERCEL_DEPLOY_HOOK_URL != ''
+        env:
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          echo "🚀 Triggering Vercel deploy via hook..."
+          curl -s -X POST "$VERCEL_DEPLOY_HOOK_URL" | head -c 200
+          echo ""
+          echo "✅ Deploy hook triggered."
+
+      # ---- 运行摘要 ----
+      - name: Summary
+        run: |
+          echo "## 🤖 内容更新摘要" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **时间**: $(date -u '+%Y-%m-%d %H:%M UTC')" >> "$GITHUB_STEP_SUMMARY"
+          if [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
+            echo "- **状态**: ✅ 内容已更新并推送" >> "$GITHUB_STEP_SUMMARY"
+            echo "- **部署**: Vercel 自动触发" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "- **状态**: 📭 无新内容，跳过提交" >> "$GITHUB_STEP_SUMMARY"
           fi

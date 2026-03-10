@@ -1,0 +1,140 @@
+#!/usr/bin/env node
+/**
+ * fetch_latest.js — 轻量级统一入口
+ *
+ * 功能：
+ *   1. 运行完整抓取流水线（新闻 + 工具 + 模型）
+ *   2. 最终 news.json 只保留最新 50 篇（按日期倒序）
+ *   3. 对比写入前后内容哈希，无变化则跳过写入
+ *   4. 输出 JSON 摘要供 CI 判断是否需要提交
+ *
+ * Usage:
+ *   node scripts/fetch_latest.js           # 正常运行
+ *   node scripts/fetch_latest.js --dry-run # 只输出不写入
+ *   npm run fetch:latest                   # 通过 npm script
+ */
+const { execSync } = require('child_process');
+const fs = require('fs');
+const crypto = require('crypto');
+const path = require('path');
+
+const ROOT = path.resolve(__dirname, '..');
+const DATA_DIR = path.join(ROOT, 'data');
+const DRY_RUN = process.argv.includes('--dry-run');
+const MAX_LATEST = 50;
+
+function fileHash(filePath) {
+  if (!fs.existsSync(filePath)) return '';
+  return crypto.createHash('sha256').update(fs.readFileSync(filePath)).digest('hex');
+}
+
+function main() {
+  console.log('╔══════════════════════════════════════════════╗');
+  console.log('║  FiveSeven AI — fetch:latest 统一入口        ║');
+  console.log('╚══════════════════════════════════════════════╝');
+  console.log(`📅 ${new Date().toISOString()}`);
+  if (DRY_RUN) console.log('⚠️  DRY RUN 模式\n');
+
+  // ====== 记录写入前哈希 ======
+  const dataFiles = ['news.json', 'tools.json', 'models.json'];
+  const beforeHashes = {};
+  for (const f of dataFiles) {
+    beforeHashes[f] = fileHash(path.join(DATA_DIR, f));
+  }
+
+  // ====== 执行完整抓取流水线 ======
+  const dryFlag = DRY_RUN ? ' --dry-run' : '';
+  const scripts = [
+    { name: '📰 新闻抓取', cmd: `node scripts/fetch_news.js${dryFlag}` },
+    { name: '🔧 工具发现', cmd: `node scripts/fetch_tools.js${dryFlag}` },
+    { name: '🤖 模型追踪', cmd: `node scripts/fetch_models.js${dryFlag}` },
+  ];
+
+  const results = [];
+  for (const script of scripts) {
+    console.log(`\n${'─'.repeat(50)}`);
+    console.log(`▶ ${script.name}`);
+    const t0 = Date.now();
+    try {
+      execSync(script.cmd, { cwd: ROOT, stdio: 'inherit', timeout: 120000 });
+      results.push({ name: script.name, ok: true, time: Date.now() - t0 });
+    } catch {
+      results.push({ name: script.name, ok: false, time: Date.now() - t0 });
+      console.error(`❌ ${script.name} 执行失败，继续下一个`);
+    }
+  }
+
+  // ====== 裁剪 news.json 到最新 50 篇 ======
+  if (!DRY_RUN) {
+    const newsFile = path.join(DATA_DIR, 'news.json');
+    try {
+      const news = JSON.parse(fs.readFileSync(newsFile, 'utf-8'));
+      if (Array.isArray(news)) {
+        // 按日期倒序排列
+        const sorted = [...news].sort((a, b) => {
+          const da = new Date(a.date || 0);
+          const db = new Date(b.date || 0);
+          return db - da;
+        });
+        const trimmed = sorted.slice(0, MAX_LATEST);
+
+        // 仅在实际裁剪时写入
+        if (news.length !== trimmed.length || JSON.stringify(news) !== JSON.stringify(trimmed)) {
+          const tmpPath = newsFile + '.tmp';
+          fs.writeFileSync(tmpPath, JSON.stringify(trimmed, null, 2), 'utf-8');
+          fs.renameSync(tmpPath, newsFile);
+          console.log(`\n✂️  news.json 裁剪: ${news.length} → ${trimmed.length} 条`);
+        }
+      }
+    } catch (err) {
+      console.error(`裁剪失败: ${err.message}`);
+    }
+  }
+
+  // ====== 对比写入后哈希，判断是否有实际变化 ======
+  const afterHashes = {};
+  let changed = false;
+  const changedFiles = [];
+  for (const f of dataFiles) {
+    afterHashes[f] = fileHash(path.join(DATA_DIR, f));
+    if (beforeHashes[f] !== afterHashes[f]) {
+      changed = true;
+      changedFiles.push(f);
+    }
+  }
+
+  // ====== 输出摘要 ======
+  console.log(`\n${'═'.repeat(50)}`);
+  console.log('📊 fetch:latest 运行摘要');
+  console.log('═'.repeat(50));
+  for (const r of results) {
+    const status = r.ok ? '✅' : '❌';
+    console.log(`  ${status} ${r.name} (${(r.time / 1000).toFixed(1)}s)`);
+  }
+  console.log('─'.repeat(50));
+  if (changed) {
+    console.log(`📝 数据变更: ${changedFiles.join(', ')}`);
+  } else {
+    console.log('📭 无数据变更');
+  }
+
+  // 写入摘要文件供 CI 读取
+  const summary = {
+    timestamp: new Date().toISOString(),
+    changed,
+    changedFiles,
+    scripts: results.map(r => ({ name: r.name, ok: r.ok, ms: r.time })),
+  };
+  if (!DRY_RUN) {
+    fs.writeFileSync(path.join(ROOT, '.fetch-summary.json'), JSON.stringify(summary, null, 2));
+  }
+
+  const failed = results.filter(r => !r.ok);
+  if (failed.length === results.length) {
+    console.error('\n❌ 所有脚本均失败');
+    process.exit(1);
+  }
+  console.log('\n✅ fetch:latest 完成');
+}
+
+main();

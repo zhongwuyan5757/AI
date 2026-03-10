@@ -9,6 +9,7 @@
     "fetch:tools": "node scripts/fetch_tools.js",
     "fetch:models": "node scripts/fetch_models.js",
     "fetch:all": "node scripts/run_all.js",
+    "fetch:latest": "node scripts/fetch_latest.js",
     "cron:install": "bash scripts/setup-cron.sh",
     "cron:status": "bash scripts/setup-cron.sh --status",
     "cron:remove": "bash scripts/setup-cron.sh --remove",
