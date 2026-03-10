@@ -212,6 +212,7 @@ function handleRoute() {
     case 'resources': renderResourcesPage(); break;
     case 'path':      renderLearningPath(param); break;
     case 'diagnosis': renderDiagnosis(); break;
+    case 'video-tool': renderVideoTool(); break;
     default:          renderHome();
   }
 
@@ -232,7 +233,8 @@ const SECTION_TITLES = {
   prompts: 'Prompt 库',
   resources: '资源库',
   path: '学习路径',
-  diagnosis: 'AI 能力诊断'
+  diagnosis: 'AI 能力诊断',
+  'video-tool': '视频学习助手'
 };
 
 function updatePageTitle(section, param) {
@@ -275,6 +277,7 @@ function renderHome() {
     ${renderHomeUpdates()}
     ${renderJobEntryCards()}
     ${renderPlatformValue()}
+    ${renderVideoToolEntry()}
     ${renderHomeCTA()}
   `;
   setupHomeEvents();
@@ -427,8 +430,30 @@ function renderPlatformValue() {
   `;
 }
 
-
-
+function renderVideoToolEntry() {
+  return `
+    <div class="home-section">
+      <div class="vt-entry-banner" onclick="trackEvent('video_tool_entry', {source:'homepage'}); navigate('video-tool')">
+        <div class="vt-entry-left">
+          <div class="vt-entry-icon"><i class="fa-brands fa-youtube"></i></div>
+          <div class="vt-entry-text">
+            <div class="vt-entry-title">
+              YouTube 视频学习助手
+              <span class="nav-badge" style="margin-left:8px">新</span>
+            </div>
+            <div class="vt-entry-desc">粘贴任意 YouTube 链接，用 AI 帮你精简、提炼、翻译——把长视频变成可消化的知识</div>
+          </div>
+        </div>
+        <div class="vt-entry-tags">
+          <span class="vt-entry-tag">精简</span>
+          <span class="vt-entry-tag">提炼</span>
+          <span class="vt-entry-tag">翻译</span>
+        </div>
+        <span class="vt-entry-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+    </div>
+  `;
+}
 
 function renderQuickStart() {
   const tiers = [
