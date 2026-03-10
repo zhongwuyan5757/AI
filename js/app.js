@@ -868,7 +868,7 @@ function renderNews() {
   let searchQuery = '';
   let currentPage = 1;
   let authorFilter = 'all';  // 博主筛选状态
-  const PAGE_SIZE = 9;
+  const PAGE_SIZE = 18;
 
   // 静态数据缓存 — 计算一次，render 内部直接引用
   const tabCounts = {
@@ -1241,7 +1241,7 @@ function renderNewsPagination(current, total, itemCount, tabLabel) {
   }
 
   // Context-rich range info
-  const PAGE_SIZE = 9;
+  const PAGE_SIZE = 18;
   const rangeStart = (current - 1) * PAGE_SIZE + 1;
   const rangeEnd = Math.min(current * PAGE_SIZE, itemCount);
 

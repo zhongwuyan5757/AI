@@ -84,7 +84,7 @@ GitHub Actions (每天 08:00 北京时间)
 
 | 文件 | 内容 | 最大条数 |
 |------|------|---------|
-| `data/news.json` | AI行业新闻 | 50 (fetch:latest) / 200 (fetch:all) |
+| `data/news.json` | AI行业新闻 | 7天内累积（每次更新100条，超7天自动清理） |
 | `data/tools.json` | AI工具库 | 50 |
 | `data/models.json` | AI模型库 | 30 |
 | `data/tutorials.json` | 实战教程 | 手动维护 |

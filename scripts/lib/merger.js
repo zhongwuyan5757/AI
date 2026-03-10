@@ -29,7 +29,7 @@ function readExisting(filePath) {
  * @param {number} maxItems - 最大保留条数
  * @returns {Array}
  */
-function mergeNews(newItems, existing, maxItems = 100) {
+function mergeNews(newItems, existing, maxItems = 700) {
   const merged = [...newItems, ...existing];
 
   // 按日期降序排列

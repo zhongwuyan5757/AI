@@ -4,9 +4,11 @@
  *
  * 功能：
  *   1. 运行完整抓取流水线（新闻 + 工具 + 模型）
- *   2. 最终 news.json 只保留最新 50 篇（按日期倒序）
- *   3. 对比写入前后内容哈希，无变化则跳过写入
- *   4. 输出 JSON 摘要供 CI 判断是否需要提交
+ *   2. 每次更新最多新增 100 条新闻
+ *   3. 自动清理超过 7 天的旧新闻
+ *   4. 7 天内新闻累积保留供用户翻阅
+ *   5. 对比写入前后内容哈希，无变化则跳过写入
+ *   6. 输出 JSON 摘要供 CI 判断是否需要提交
  *
  * Usage:
  *   node scripts/fetch_latest.js           # 正常运行
@@ -21,7 +23,8 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data');
 const DRY_RUN = process.argv.includes('--dry-run');
-const MAX_LATEST = 50;
+const MAX_PER_FETCH = 100;   // 每次更新保留的最大新条目数
+const RETENTION_DAYS = 7;    // 新闻保留天数，超过自动清理
 
 function fileHash(filePath) {
   if (!fs.existsSync(filePath)) return '';
@@ -64,30 +67,47 @@ function main() {
     }
   }
 
-  // ====== 裁剪 news.json 到最新 50 篇 ======
+  // ====== 7天清理 + 累积保留 ======
   if (!DRY_RUN) {
     const newsFile = path.join(DATA_DIR, 'news.json');
     try {
       const news = JSON.parse(fs.readFileSync(newsFile, 'utf-8'));
       if (Array.isArray(news)) {
-        // 按日期倒序排列
+        const beforeCount = news.length;
+
+        // 1. 按日期倒序排列
         const sorted = [...news].sort((a, b) => {
           const da = new Date(a.date || 0);
           const db = new Date(b.date || 0);
           return db - da;
         });
-        const trimmed = sorted.slice(0, MAX_LATEST);
 
-        // 仅在实际裁剪时写入
-        if (news.length !== trimmed.length || JSON.stringify(news) !== JSON.stringify(trimmed)) {
+        // 2. 删除超过 7 天的旧新闻
+        const cutoffDate = new Date(Date.now() - RETENTION_DAYS * 86400000)
+          .toISOString().slice(0, 10);
+        const retained = sorted.filter(item => {
+          const itemDate = item.date || '';
+          return itemDate >= cutoffDate;
+        });
+        const expiredCount = sorted.length - retained.length;
+
+        // 3. 安全上限（7天内最多保留 MAX_PER_FETCH * RETENTION_DAYS 条，防止异常膨胀）
+        const safeCap = MAX_PER_FETCH * RETENTION_DAYS;
+        const trimmed = retained.slice(0, safeCap);
+
+        // 仅在实际变更时写入
+        if (beforeCount !== trimmed.length || JSON.stringify(news) !== JSON.stringify(trimmed)) {
           const tmpPath = newsFile + '.tmp';
           fs.writeFileSync(tmpPath, JSON.stringify(trimmed, null, 2), 'utf-8');
           fs.renameSync(tmpPath, newsFile);
-          console.log(`\n✂️  news.json 裁剪: ${news.length} → ${trimmed.length} 条`);
+          console.log(`\n📰 news.json 处理结果:`);
+          console.log(`   原始: ${beforeCount} 条`);
+          if (expiredCount > 0) console.log(`   🗑️  清理过期(>${RETENTION_DAYS}天): ${expiredCount} 条`);
+          console.log(`   ✅ 保留: ${trimmed.length} 条 (${RETENTION_DAYS}天内累积)`);
         }
       }
     } catch (err) {
-      console.error(`裁剪失败: ${err.message}`);
+      console.error(`清理失败: ${err.message}`);
     }
   }
 

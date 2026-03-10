@@ -58,8 +58,8 @@ module.exports = {
     minTitleLength: 8,
     // 描述最低长度
     minDescLength: 20,
-    // 最大保留条目数（防止JSON过大）
-    maxNewsItems: 200,
+    // 最大保留条目数（7天累积，每天约100条）
+    maxNewsItems: 700,
     maxToolsItems: 50,
     maxModelsItems: 30,
   },
