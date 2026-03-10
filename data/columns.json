@@ -46,7 +46,7 @@
     "icon": "\ud83c\udf4c",
     "color": "#F59E0B",
     "gradient": "linear-gradient(135deg, #F59E0B 0%, #D97706 100%)",
-    "status": "coming-soon",
+    "status": "active",
     "totalTutorials": 6,
     "learningPath": [
       {
@@ -66,6 +66,39 @@
         "difficulty": "advanced",
         "desc": "\u6a21\u578b\u6df7\u7528\u4e0e\u6210\u672c\u4f18\u5316",
         "tutorialIds": ["t-nb-05", "t-nb-06"]
+      }
+    ],
+    "targetJobs": ["all"],
+    "featured": true
+  },
+  {
+    "id": "col-openclaw",
+    "title": "OpenClaw 自动化实战",
+    "subtitle": "AI Agent 编排与自动化工作流",
+    "desc": "深入 OpenClaw 的 Agent 编排能力——从单任务自动化到多 Agent 协作流水线，帮助发行团队构建可复用的自动化工作流，释放重复劳动力。",
+    "icon": "🦞",
+    "color": "#EF4444",
+    "gradient": "linear-gradient(135deg, #EF4444 0%, #B91C1C 100%)",
+    "status": "coming-soon",
+    "totalTutorials": 6,
+    "learningPath": [
+      {
+        "phase": "入门与概念",
+        "difficulty": "beginner",
+        "desc": "理解 Agent 编排的核心概念与 OpenClaw 架构",
+        "tutorialIds": ["t-oc-01", "t-oc-02"]
+      },
+      {
+        "phase": "场景实战",
+        "difficulty": "intermediate",
+        "desc": "构建常见自动化工作流与多 Agent 协作",
+        "tutorialIds": ["t-oc-03", "t-oc-04"]
+      },
+      {
+        "phase": "进阶与优化",
+        "difficulty": "advanced",
+        "desc": "流水线编排、容错策略与性能调优",
+        "tutorialIds": ["t-oc-05", "t-oc-06"]
       }
     ],
     "targetJobs": ["all"],
