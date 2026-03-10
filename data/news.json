@@ -943,6 +943,28 @@
     "summaryZh": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Is the Pentagon allowed to surveil Americans with AI? The ongoing public feud between the Department of Defense and the AI company Anthropic has raised a deep and"
   },
   {
+    "id": "auto-mmkrqry5",
+    "title": "Google just gave Sundar Pichai a $692M pay package",
+    "url": "https://techcrunch.com/2026/03/07/google-just-gave-sundar-pichai-a-692m-pay-package/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-08",
+    "summary": "Most of it is tied to performance, including new stock incentives linked to Waymo and Wing, its drone delivery venture.",
+    "category": "industry-product",
+    "tags": [
+      "Google"
+    ],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "大额资本事件，反映行业信心方向",
+    "titleZh": "[EN] Google just gave Sundar Pichai a $692M pay package",
+    "summaryZh": "Most of it is tied to performance, including new stock incentives linked to Waymo and Wing, its drone delivery venture."
+  },
+  {
     "id": "auto-mmkq79zy",
     "title": "Will the Pentagon’s Anthropic controversy scare startups away from defense work?",
     "url": "https://techcrunch.com/2026/03/08/will-the-pentagons-anthropic-controversy-scare-startups-away-from-defense-work/",
@@ -1060,27 +1082,5 @@
     ],
     "recommended_path": null,
     "editor_note": "新品发布，建议第一时间体验"
-  },
-  {
-    "id": "auto-mmhgck1h",
-    "title": "A roadmap for AI, if anyone will listen",
-    "url": "https://techcrunch.com/2026/03/07/a-roadmap-for-ai-if-anyone-will-listen/",
-    "source": "AI News & Artificial Intelligence | TechCrunch",
-    "date": "2026-03-08",
-    "summary": "The Pro-Human Declaration was finalized before last week's Pentagon-Anthropic standoff, but the collision of the two events wasn’t lost on anyone involved.",
-    "category": "deep-insight",
-    "tags": [
-      "Anthropic"
-    ],
-    "relatedJobs": [],
-    "isHot": false,
-    "titleZh": "AI 发展路线图：如果还有人愿意倾听",
-    "summaryZh": "《亲人类宣言》在上周五角大楼与 Anthropic 对峙之前就已定稿，但这两件事的碰撞对所有参与者来说都意味深长。文章探讨了 AI 发展的伦理边界和政策走向。",
-    "why_it_matters": "可能影响AI使用边界",
-    "fit_for": [
-      "全员"
-    ],
-    "recommended_path": null,
-    "editor_note": "最新动态，保持信息同步"
   }
 ]
