@@ -92,25 +92,37 @@
     "color": "#EF4444",
     "gradient": "linear-gradient(135deg, #EF4444 0%, #B91C1C 100%)",
     "status": "active",
-    "totalTutorials": 6,
+    "totalTutorials": 21,
     "learningPath": [
       {
         "phase": "入门与概念",
         "difficulty": "beginner",
         "desc": "理解 Agent 编排的核心概念与 OpenClaw 架构",
-        "tutorialIds": ["t-oc-01", "t-oc-02"]
+        "tutorialIds": ["t-oc-01", "t-oc-02", "t-oc-07", "t-oc-08"]
       },
       {
-        "phase": "场景实战",
+        "phase": "岗位场景实战",
         "difficulty": "intermediate",
-        "desc": "构建常见自动化工作流与多 Agent 协作",
-        "tutorialIds": ["t-oc-03", "t-oc-04"]
+        "desc": "9 大岗位的高频自动化场景，拿来即用",
+        "tutorialIds": ["t-oc-03", "t-oc-04", "t-oc-09", "t-oc-10", "t-oc-11", "t-oc-12", "t-oc-13"]
       },
       {
         "phase": "进阶与优化",
         "difficulty": "advanced",
         "desc": "流水线编排、容错策略与性能调优",
-        "tutorialIds": ["t-oc-05", "t-oc-06"]
+        "tutorialIds": ["t-oc-05", "t-oc-06", "t-oc-14", "t-oc-15", "t-oc-16"]
+      },
+      {
+        "phase": "专业流水线",
+        "difficulty": "advanced",
+        "desc": "团队级自动化流水线与跨系统集成",
+        "tutorialIds": ["t-oc-17", "t-oc-18", "t-oc-19"]
+      },
+      {
+        "phase": "专家工程化",
+        "difficulty": "expert",
+        "desc": "从工具使用到组织级 AI Agent 能力建设",
+        "tutorialIds": ["t-oc-20", "t-oc-21"]
       }
     ],
     "targetJobs": ["all"],
