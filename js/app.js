@@ -144,6 +144,13 @@ function getToolIcon(toolId) {
 
 let currentSection = 'home';
 
+// 页面清理注册表 — 路由切换时释放前页面资源
+const _pageCleanups = [];
+function registerCleanup(fn) { _pageCleanups.push(fn); }
+function runCleanups() {
+  while (_pageCleanups.length) { try { _pageCleanups.pop()(); } catch(e) { /* ignore */ } }
+}
+
 function navigate(section, param) {
   trackEvent('navigate', { section, param: param || '' });
   if (param) {
@@ -154,6 +161,9 @@ function navigate(section, param) {
 }
 
 function handleRoute() {
+  // 清理前一个页面的资源（observer、定时器等）
+  runCleanups();
+
   const hash = window.location.hash.slice(1) || 'home';
   const parts = hash.split('/');
   const section = parts[0] || 'home';
@@ -333,11 +343,13 @@ function renderHomeHero() {
 }
 
 function animateCounters() {
+  let cancelled = false;
   $$('.stat-number[data-target]').forEach(el => {
     const target = parseInt(el.dataset.target);
     const duration = 1200;
     const startTime = performance.now();
     function update(now) {
+      if (cancelled) return; // 路由切换时停止
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
@@ -346,6 +358,8 @@ function animateCounters() {
     }
     requestAnimationFrame(update);
   });
+  // 路由切换时取消所有动画帧
+  registerCleanup(() => { cancelled = true; });
 }
 
 function renderJobEntryCards() {
@@ -566,24 +580,23 @@ function renderHomeCTA() {
 }
 
 function setupHomeEvents() {
-  // 岗位卡片点击
-  $$('.job-entry-card').forEach(card => {
-    card.addEventListener('click', () => navigate('jobs', card.dataset.job));
-  });
-
-  // Tab 切换
-  const tabNav = $('#recTabs');
-  if (tabNav) {
-    tabNav.addEventListener('click', e => {
-      const btn = e.target.closest('.tab-btn');
-      if (!btn) return;
+  // 事件委托 — 岗位卡片 + Tab 切换
+  const container = $('#homeContent');
+  if (container._clickHandler) container.removeEventListener('click', container._clickHandler);
+  container._clickHandler = function(e) {
+    // 岗位卡片
+    const jobCard = e.target.closest('.job-entry-card');
+    if (jobCard) { navigate('jobs', jobCard.dataset.job); return; }
+    // Tab 切换
+    const tabBtn = e.target.closest('#recTabs .tab-btn');
+    if (tabBtn) {
+      const tabNav = $('#recTabs');
       tabNav.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      $$('#recPanels .tab-panel').forEach(p => p.classList.toggle('active', p.dataset.tab === btn.dataset.tab));
-    });
-  }
-
-  setupCopyButtons();
+      tabBtn.classList.add('active');
+      $$('#recPanels .tab-panel').forEach(p => p.classList.toggle('active', p.dataset.tab === tabBtn.dataset.tab));
+    }
+  };
+  container.addEventListener('click', container._clickHandler);
 }
 
 
@@ -643,9 +656,14 @@ function renderJobSelector() {
     <div class="job-selector-grid">${cards}</div>
   `;
 
-  $$('.job-selector-card').forEach(card => {
-    card.addEventListener('click', () => navigate('jobs', card.dataset.job));
-  });
+  // 事件委托
+  const container = $('#jobsContent');
+  if (container._selectorHandler) container.removeEventListener('click', container._selectorHandler);
+  container._selectorHandler = function(e) {
+    const card = e.target.closest('.job-selector-card');
+    if (card) navigate('jobs', card.dataset.job);
+  };
+  container.addEventListener('click', container._selectorHandler);
 }
 
 function renderJobZoneHeader(job) {
@@ -970,66 +988,67 @@ function renderNews() {
       ${contentAreaHtml}
       ${paginationHtml}
     `;
-
-    // Bind tab clicks
-    $$('#newsFilters .news-tab').forEach(btn => {
-      btn.addEventListener('click', () => {
-        currentFilter = btn.dataset.filter;
-        currentPage = 1;
-        authorFilter = 'all';  // 切 tab 时重置博主筛选
-        render();
-        // Scroll to top of news content
-        const el = $('#newsContent');
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-
-    // Bind search
-    const searchInput = $('#newsSearch');
-    if (searchInput) {
-      searchInput.addEventListener('input', debounce(e => {
-        searchQuery = e.target.value;
-        currentPage = 1;
-        render();
-      }, 300));
-    }
-
-    // Bind pagination
-    $$('.news-page-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const page = parseInt(btn.dataset.page);
-        if (page && page !== currentPage) {
-          currentPage = page;
-          render();
-          const el = $('#newsContent');
-          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-
-    // Bind digest author filter chips
-    $$('.digest-author-chip').forEach(chip => {
-      chip.addEventListener('click', () => {
-        authorFilter = chip.dataset.author;
-        currentPage = 1;
-        render();
-        const el = $('#newsContent');
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-
-    // Bind digest card author name clicks
-    $$('.digest-author-link').forEach(el => {
-      el.addEventListener('click', (e) => {
-        e.stopPropagation();
-        authorFilter = el.dataset.author;
-        currentPage = 1;
-        render();
-        const target = $('#newsContent');
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
   }
+
+  // 事件委托 — 替代 render 内部的所有 addEventListener
+  const container = $('#newsContent');
+  if (container._clickHandler) container.removeEventListener('click', container._clickHandler);
+  container._clickHandler = function(e) {
+    // Tab 切换
+    const tabBtn = e.target.closest('#newsFilters .news-tab');
+    if (tabBtn) {
+      currentFilter = tabBtn.dataset.filter;
+      currentPage = 1;
+      authorFilter = 'all';
+      render();
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+    // 分页
+    const pageBtn = e.target.closest('.news-page-btn');
+    if (pageBtn) {
+      const page = parseInt(pageBtn.dataset.page);
+      if (page && page !== currentPage) {
+        currentPage = page;
+        render();
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      return;
+    }
+    // 博主筛选 chips
+    const authorChip = e.target.closest('.digest-author-chip');
+    if (authorChip) {
+      authorFilter = authorChip.dataset.author;
+      currentPage = 1;
+      render();
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+    // 博主名链接
+    const authorLink = e.target.closest('.digest-author-link');
+    if (authorLink) {
+      e.stopPropagation();
+      authorFilter = authorLink.dataset.author;
+      currentPage = 1;
+      render();
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+  };
+  container.addEventListener('click', container._clickHandler);
+
+  // 搜索输入（input 事件委托）
+  if (container._inputHandler) container.removeEventListener('input', container._inputHandler);
+  const debouncedSearch = debounce(e => {
+    if (e.target.id === 'newsSearch') {
+      searchQuery = e.target.value;
+      currentPage = 1;
+      render();
+    }
+  }, 300);
+  container._inputHandler = debouncedSearch;
+  container.addEventListener('input', container._inputHandler);
+
   render();
 }
 
@@ -1242,14 +1261,19 @@ function renderTools() {
         <div class="models-grid">${cards}</div>
       </div>
     `;
-
-    $$('#toolCatFilter .filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => { catFilter = btn.dataset.filter; render(); });
-    });
-    $$('#toolJobFilter .filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => { jobFilter = btn.dataset.filter; render(); });
-    });
   }
+
+  // 事件委托
+  const container = $('#toolsContent');
+  if (container._clickHandler) container.removeEventListener('click', container._clickHandler);
+  container._clickHandler = function(e) {
+    const catBtn = e.target.closest('#toolCatFilter .filter-btn');
+    if (catBtn) { catFilter = catBtn.dataset.filter; render(); return; }
+    const jobBtn = e.target.closest('#toolJobFilter .filter-btn');
+    if (jobBtn) { jobFilter = jobBtn.dataset.filter; render(); return; }
+  };
+  container.addEventListener('click', container._clickHandler);
+
   render();
 }
 
@@ -1292,14 +1316,19 @@ function renderModels() {
       <div class="filter-group"><div class="filter-label">核心能力：</div><div class="filter-bar" id="modelCapFilter">${capBtns}</div></div>
       <div class="models-grid">${cards}</div>
     `;
-
-    $$('#modelTypeFilter .filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => { typeFilter = btn.dataset.filter; render(); });
-    });
-    $$('#modelCapFilter .filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => { capFilter = btn.dataset.filter; render(); });
-    });
   }
+
+  // 事件委托
+  const container = $('#modelsContent');
+  if (container._clickHandler) container.removeEventListener('click', container._clickHandler);
+  container._clickHandler = function(e) {
+    const typeBtn = e.target.closest('#modelTypeFilter .filter-btn');
+    if (typeBtn) { typeFilter = typeBtn.dataset.filter; render(); return; }
+    const capBtn = e.target.closest('#modelCapFilter .filter-btn');
+    if (capBtn) { capFilter = capBtn.dataset.filter; render(); return; }
+  };
+  container.addEventListener('click', container._clickHandler);
+
   render();
 }
 
@@ -1434,22 +1463,26 @@ function renderTutorials(initialTier) {
       <div class="filter-group"><div class="filter-label">适用岗位：</div><div class="filter-bar" id="tutJobFilter">${jobBtns}</div></div>
       <div class="tutorials-grid">${cards}</div>
     `;
-
-    $$('#tutIntentNav .tut-intent-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const key = btn.dataset.intent;
-        if (intentFilter === key) { intentFilter = null; tierFilter = 'all'; }
-        else { intentFilter = key; tierFilter = 'all'; }
-        render();
-      });
-    });
-    $$('#tutTierFilter .filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => { tierFilter = btn.dataset.filter; intentFilter = null; render(); });
-    });
-    $$('#tutJobFilter .filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => { jobFilter = btn.dataset.filter; render(); });
-    });
   }
+
+  // 事件委托
+  const container = $('#tutorialsContent');
+  if (container._clickHandler) container.removeEventListener('click', container._clickHandler);
+  container._clickHandler = function(e) {
+    const intentBtn = e.target.closest('#tutIntentNav .tut-intent-btn');
+    if (intentBtn) {
+      const key = intentBtn.dataset.intent;
+      if (intentFilter === key) { intentFilter = null; tierFilter = 'all'; }
+      else { intentFilter = key; tierFilter = 'all'; }
+      render(); return;
+    }
+    const tierBtn = e.target.closest('#tutTierFilter .filter-btn');
+    if (tierBtn) { tierFilter = tierBtn.dataset.filter; intentFilter = null; render(); return; }
+    const jobBtn = e.target.closest('#tutJobFilter .filter-btn');
+    if (jobBtn) { jobFilter = jobBtn.dataset.filter; render(); return; }
+  };
+  container.addEventListener('click', container._clickHandler);
+
   render();
 }
 
@@ -1759,15 +1792,19 @@ function renderPrompts() {
       <div class="filter-group"><div class="filter-label">按场景：</div><div class="filter-bar" id="promptScenarioFilter">${scenarioBtns}</div></div>
       <div class="prompts-grid">${cards}</div>
     `;
-
-    $$('#promptJobFilter .filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => { jobFilter = btn.dataset.filter; render(); });
-    });
-    $$('#promptScenarioFilter .filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => { scenarioFilter = btn.dataset.filter; render(); });
-    });
-    setupCopyButtons();
   }
+
+  // 事件委托
+  const container = $('#promptsContent');
+  if (container._clickHandler) container.removeEventListener('click', container._clickHandler);
+  container._clickHandler = function(e) {
+    const jobBtn = e.target.closest('#promptJobFilter .filter-btn');
+    if (jobBtn) { jobFilter = jobBtn.dataset.filter; render(); return; }
+    const scenarioBtn = e.target.closest('#promptScenarioFilter .filter-btn');
+    if (scenarioBtn) { scenarioFilter = scenarioBtn.dataset.filter; render(); return; }
+  };
+  container.addEventListener('click', container._clickHandler);
+
   render();
 }
 
@@ -1828,14 +1865,19 @@ function renderResourcesPage() {
       <div class="filter-group"><div class="filter-label">相关岗位：</div><div class="filter-bar" id="resJobFilter">${jobBtns}</div></div>
       <div class="download-list">${list}</div>
     `;
-
-    $$('#resCatFilter .filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => { catFilter = btn.dataset.filter; render(); });
-    });
-    $$('#resJobFilter .filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => { jobFilter = btn.dataset.filter; render(); });
-    });
   }
+
+  // 事件委托 — 单个监听器，不会累积
+  const container = $('#resourcesContent');
+  if (container._clickHandler) container.removeEventListener('click', container._clickHandler);
+  container._clickHandler = function(e) {
+    const catBtn = e.target.closest('#resCatFilter .filter-btn');
+    if (catBtn) { catFilter = catBtn.dataset.filter; render(); return; }
+    const jobBtn = e.target.closest('#resJobFilter .filter-btn');
+    if (jobBtn) { jobFilter = jobBtn.dataset.filter; render(); return; }
+  };
+  container.addEventListener('click', container._clickHandler);
+
   render();
 }
 
@@ -1972,24 +2014,29 @@ function renderPromptCardCompact(p) {
 }
 
 
-// ===== 复制按钮 =====
+// ===== 复制按钮（事件委托，绑定一次，永不累积） =====
 
-function setupCopyButtons() {
-  $$('.copy-btn, .copy-btn-mini').forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.stopPropagation();
-      const text = btn.dataset.copy;
-      copyToClipboard(text);
-      trackEvent('copy', { textLength: text?.length || 0 });
-      btn.innerHTML = '<i class="fa-solid fa-check"></i> 已复制';
-      btn.classList.add('copied');
-      setTimeout(() => {
-        btn.innerHTML = '<i class="fa-solid fa-copy"></i> 复制';
-        btn.classList.remove('copied');
-      }, 2000);
-    });
-  });
+function setupCopyButtonsDelegation() {
+  if (document.body._copyHandler) return; // 已绑定
+  document.body._copyHandler = function(e) {
+    const btn = e.target.closest('.copy-btn, .copy-btn-mini');
+    if (!btn) return;
+    e.stopPropagation();
+    const text = btn.dataset.copy;
+    copyToClipboard(text);
+    trackEvent('copy', { textLength: text?.length || 0 });
+    btn.innerHTML = '<i class="fa-solid fa-check"></i> 已复制';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.innerHTML = '<i class="fa-solid fa-copy"></i> 复制';
+      btn.classList.remove('copied');
+    }, 2000);
+  };
+  document.body.addEventListener('click', document.body._copyHandler);
 }
+
+// 兼容旧调用点（不再重复绑定）
+function setupCopyButtons() { /* noop — delegation handles it */ }
 
 
 // ===== 全局搜索（智能导航中枢） =====
@@ -2350,9 +2397,7 @@ function setupGlobalSearch() {
   function showSearchPanel() {
     const q = input.value.trim();
     if (!q) {
-      // 零输入推荐
       resultsContainer.innerHTML = renderZeroInputPanel();
-      bindZeroInputEvents();
     } else {
       performSearch(q);
     }
@@ -2380,74 +2425,70 @@ function setupGlobalSearch() {
     const filterBarHtml = renderFilterBar(results);
     const resultsHtml = renderGroupedResults(results, q);
     resultsContainer.innerHTML = filterBarHtml + resultsHtml;
-
-    // 绑定过滤按钮
-    resultsContainer.querySelectorAll('.search-filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        activeFilter = btn.dataset.filter;
-        resultsContainer.querySelectorAll('.search-filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        performSearch(input.value.trim());
-      });
-    });
-
-    // 绑定结果点击
-    resultsContainer.querySelectorAll('.search-result-item').forEach(el => {
-      el.addEventListener('click', () => {
-        const idx = parseInt(el.dataset.globalIdx);
-        if (flatResults[idx]) {
-          flatResults[idx].action();
-          closeSearch();
-          input.value = '';
-        }
-      });
-    });
-
-    // 绑定空状态链接
-    resultsContainer.querySelectorAll('.search-link').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        navigate(a.dataset.nav);
-        closeSearch();
-        input.value = '';
-      });
-    });
+    // 不再在此处绑定事件 — 由 resultsContainer 上的事件委托处理
   }
 
-  // ===== 绑定零输入面板事件 =====
-  function bindZeroInputEvents() {
+  // ===== 搜索结果事件委托（绑定一次，永不累积） =====
+  resultsContainer.addEventListener('click', function(e) {
+    // 过滤按钮
+    const filterBtn = e.target.closest('.search-filter-btn');
+    if (filterBtn) {
+      activeFilter = filterBtn.dataset.filter;
+      resultsContainer.querySelectorAll('.search-filter-btn').forEach(b => b.classList.remove('active'));
+      filterBtn.classList.add('active');
+      performSearch(input.value.trim());
+      return;
+    }
+    // 搜索结果项
+    const resultItem = e.target.closest('.search-result-item');
+    if (resultItem) {
+      const idx = parseInt(resultItem.dataset.globalIdx);
+      if (flatResults[idx]) {
+        flatResults[idx].action();
+        closeSearch();
+        input.value = '';
+      }
+      return;
+    }
+    // 空状态链接
+    const searchLink = e.target.closest('.search-link');
+    if (searchLink) {
+      e.preventDefault();
+      navigate(searchLink.dataset.nav);
+      closeSearch();
+      input.value = '';
+      return;
+    }
     // 热门搜索标签
-    resultsContainer.querySelectorAll('.search-hot-tag[data-keyword]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        input.value = btn.dataset.keyword;
-        activeFilter = 'all';
-        performSearch(btn.dataset.keyword);
-        input.focus();
-      });
-    });
-
+    const hotTag = e.target.closest('.search-hot-tag[data-keyword]');
+    if (hotTag) {
+      input.value = hotTag.dataset.keyword;
+      activeFilter = 'all';
+      performSearch(hotTag.dataset.keyword);
+      input.focus();
+      return;
+    }
     // 工具标签
-    resultsContainer.querySelectorAll('.search-hot-tag[data-tool]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        navigate('tools');
-        scrollToCard('tool', btn.dataset.tool);
-        closeSearch();
-        input.value = '';
-      });
-    });
-
+    const toolTag = e.target.closest('.search-hot-tag[data-tool]');
+    if (toolTag) {
+      navigate('tools');
+      scrollToCard('tool', toolTag.dataset.tool);
+      closeSearch();
+      input.value = '';
+      return;
+    }
     // 推荐条目
-    resultsContainer.querySelectorAll('.search-zero-item[data-action]').forEach(el => {
-      el.addEventListener('click', () => {
-        const [type, id] = el.dataset.action.split(':');
-        if (type === 'path') navigate('path', id);
-        else if (type === 'tutorial') navigate('tutorials', id);
-        else if (type === 'news') { navigate('news'); scrollToCard('news', id); }
-        closeSearch();
-        input.value = '';
-      });
-    });
-  }
+    const zeroItem = e.target.closest('.search-zero-item[data-action]');
+    if (zeroItem) {
+      const [type, id] = zeroItem.dataset.action.split(':');
+      if (type === 'path') navigate('path', id);
+      else if (type === 'tutorial') navigate('tutorials', id);
+      else if (type === 'news') { navigate('news'); scrollToCard('news', id); }
+      closeSearch();
+      input.value = '';
+      return;
+    }
+  });
 
   // ===== 键盘导航 =====
   function updateHighlight() {
@@ -2593,6 +2634,9 @@ function setupScrollAnimations() {
   els.forEach(el => {
     if (!el.classList.contains('visible')) observer.observe(el);
   });
+
+  // 路由切换时断开 observer，防止累积
+  registerCleanup(() => observer.disconnect());
 }
 
 // ===== 键盘快捷键 =====
@@ -3290,6 +3334,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   $$('.nav-btn').forEach(btn => {
     btn.addEventListener('click', () => navigate(btn.dataset.section));
   });
+
+  // 复制按钮事件委托（全局绑定一次）
+  setupCopyButtonsDelegation();
 
   // 全局搜索
   setupGlobalSearch();

@@ -65,7 +65,7 @@
 
   /* 统一卡片系统 */
   --card-padding: 22px;
-  --card-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --card-transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   --hover-lift: -4px;
   --hover-shadow: 0 12px 36px rgba(0,0,0,0.3), 0 0 15px rgba(105,234,203,0.06);
   --hover-border: rgba(105,234,203,0.2);
@@ -112,9 +112,11 @@ a { text-decoration: none; color: inherit; }
   height: var(--header-h);
   z-index: 1000;
   background: rgba(9, 9, 11, 0.80);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
   border-bottom: 1px solid var(--border);
+  will-change: backdrop-filter;
+  contain: layout style;
 }
 
 .header-inner {
@@ -175,7 +177,7 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font);
   border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.2s, color 0.2s;
   position: relative;
   white-space: nowrap;
 }
@@ -224,7 +226,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 13px;
   font-family: var(--font);
   width: 200px;
-  transition: all 0.25s;
+  transition: width 0.25s, border-color 0.25s, box-shadow 0.25s;
   outline: none;
 }
 .search-wrap input::placeholder { color: var(--text-muted); }
@@ -289,7 +291,7 @@ a { text-decoration: none; color: inherit; }
   border-radius: var(--radius-pill);
   cursor: pointer;
   white-space: nowrap;
-  transition: all 0.15s;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
   font-family: var(--font);
 }
 .search-filter-btn:hover { border-color: var(--primary); color: var(--text-primary); }
@@ -440,7 +442,7 @@ a { text-decoration: none; color: inherit; }
   padding: 4px 12px;
   border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: all 0.15s;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
   font-family: var(--font);
 }
 .search-hot-tag:hover {
@@ -481,6 +483,9 @@ a { text-decoration: none; color: inherit; }
 }
 .section.active { display: block; }
 
+/* 性能优化：非活动 section 内的所有动画暂停，节省 GPU */
+.section:not(.active) * { animation-play-state: paused !important; }
+
 @keyframes sectionFadeIn {
   from { opacity: 0; filter: blur(4px); transform: translateY(16px); }
   to   { opacity: 1; filter: blur(0); transform: translateY(0); }
@@ -500,7 +505,7 @@ a { text-decoration: none; color: inherit; }
   border: none;
   border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: all 0.25s;
+  transition: transform 0.25s, box-shadow 0.25s;
   position: relative;
   overflow: hidden;
 }
@@ -538,7 +543,7 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid var(--border-bright);
   border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: all 0.25s;
+  transition: border-color 0.25s, color 0.25s, transform 0.25s;
 }
 .btn-secondary:hover {
   border-color: var(--primary);
@@ -559,7 +564,7 @@ a { text-decoration: none; color: inherit; }
   border: none;
   border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: color 0.2s;
 }
 .btn-ghost:hover { color: var(--text-primary); }
 
@@ -587,7 +592,7 @@ a { text-decoration: none; color: inherit; }
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
 }
 .card:hover {
@@ -601,7 +606,7 @@ a { text-decoration: none; color: inherit; }
   position: relative;
   background: var(--bg-card);
   border-radius: var(--radius);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   border: 1px solid var(--border);
 }
@@ -660,14 +665,18 @@ a { text-decoration: none; color: inherit; }
   pointer-events: none;
 }
 
-/* 浮动渐变光球 */
+/* 浮动渐变光球 — 性能优化 */
 .hero-orb {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
   pointer-events: none;
   z-index: 0;
+  will-change: transform;
+  contain: strict;
 }
+/* 非活动 section 内的动画暂停，避免后台 GPU 消耗 */
+.section:not(.active) .hero-orb { animation-play-state: paused; }
 .hero-orb-1 {
   width: 400px; height: 400px;
   background: rgba(105,234,203,0.12);
@@ -855,9 +864,10 @@ a { text-decoration: none; color: inherit; }
   padding: 22px 16px;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+  contain: content;
 }
 .job-entry-card::before {
   content: '';
@@ -900,9 +910,10 @@ a { text-decoration: none; color: inherit; }
   border-radius: var(--radius);
   padding: 28px 24px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+  contain: content;
 }
 .job-selector-card::before {
   content: '';
@@ -996,7 +1007,7 @@ a { text-decoration: none; color: inherit; }
   padding: 4px 12px;
   border: 1px solid var(--border);
   border-radius: var(--radius-pill);
-  transition: all 0.2s;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
   white-space: nowrap;
 }
 .job-quick-link:hover { color: var(--text-primary); border-color: var(--primary-border); }
@@ -1059,7 +1070,7 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   flex-direction: column;
   gap: 10px;
-  transition: all 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 .scenario-card:hover { border-color: var(--hover-border); transform: translateY(var(--hover-lift)); box-shadow: var(--hover-shadow); }
 .scenario-num {
@@ -1115,7 +1126,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 500;
   font-family: var(--font);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: color 0.2s, border-bottom-color 0.2s;
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
   white-space: nowrap;
@@ -1144,7 +1155,7 @@ a { text-decoration: none; color: inherit; }
   border-radius: var(--radius-sm);
   font-size: 13px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
 }
 .mini-card:hover { border-color: var(--primary-border); background: var(--bg-card-hover); color: var(--primary); }
 
@@ -1169,8 +1180,9 @@ a { text-decoration: none; color: inherit; }
   gap: 8px;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
+  contain: content;
 }
 .tool-card:hover {
   border-color: rgba(105,234,203,0.3);
@@ -1220,8 +1232,9 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   flex-direction: column;
   gap: 16px;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
+  contain: content;
 }
 .tool-detail-card::before {
   content: '';
@@ -1254,7 +1267,7 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid rgba(255,255,255,0.08);
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
 }
@@ -1319,7 +1332,7 @@ a { text-decoration: none; color: inherit; }
   color: rgba(105,234,203,0.8);
   border: 1px solid rgba(105,234,203,0.1);
   letter-spacing: 0.01em;
-  transition: all 0.25s;
+  transition: background 0.25s, border-color 0.25s;
 }
 .tool-detail-card:hover .job-tag {
   background: rgba(105,234,203,0.12);
@@ -1366,7 +1379,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, background 0.2s ease;
   font-family: inherit;
 }
 .news-tab:hover {
@@ -1400,7 +1413,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 20px;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .news-featured::before {
   content: '';
@@ -1530,7 +1543,7 @@ a { text-decoration: none; color: inherit; }
   border-radius: var(--radius-pill);
   padding: 5px 14px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
   white-space: nowrap;
 }
 .news-path-link:hover {
@@ -1562,10 +1575,11 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   flex-direction: column;
   gap: 10px;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
   cursor: default;
+  contain: content;
 }
 .news-card::before {
   content: '';
@@ -1729,7 +1743,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
   font-family: inherit;
   padding: 0 8px;
 }
@@ -1836,7 +1850,7 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid var(--border);
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
   flex-shrink: 0;
   min-width: 0;
   color: var(--text-secondary);
@@ -1935,6 +1949,7 @@ a { text-decoration: none; color: inherit; }
   transition: border-color 0.2s, box-shadow 0.2s;
   position: relative;
   overflow: hidden;
+  contain: content;
 }
 .digest-card::before {
   content: '';
@@ -2157,7 +2172,7 @@ a { text-decoration: none; color: inherit; }
   padding: 4px 10px;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.2s, border-color 0.2s;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -2176,7 +2191,7 @@ a { text-decoration: none; color: inherit; }
   padding: 4px 10px;
   border-radius: 6px;
   border: 1px solid var(--border);
-  transition: all 0.2s;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 .digest-source-link:hover {
   color: var(--primary);
@@ -2213,16 +2228,15 @@ a { text-decoration: none; color: inherit; }
 .filter-btn {
   padding: 8px 18px;
   border: 1px solid rgba(255,255,255,0.07);
-  background: rgba(255,255,255,0.025);
+  background: rgba(18, 18, 23, 0.65);
   color: var(--text-secondary);
   font-size: 13px;
   font-weight: 500;
   font-family: var(--font);
   border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: border-color 0.28s cubic-bezier(0.16, 1, 0.3, 1), color 0.28s cubic-bezier(0.16, 1, 0.3, 1), background 0.28s cubic-bezier(0.16, 1, 0.3, 1), transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
-  backdrop-filter: blur(6px);
 }
 .filter-btn:hover {
   border-color: rgba(105,234,203,0.22);
@@ -2272,7 +2286,8 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  contain: content;
 }
 .model-card:hover {
   border-color: var(--hover-border);
@@ -2353,7 +2368,8 @@ a { text-decoration: none; color: inherit; }
   flex-direction: column;
   gap: 10px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  contain: content;
 }
 .tutorial-card:hover {
   border-color: var(--hover-border);
@@ -2398,7 +2414,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--text-secondary);
   font-size: 13px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
   margin-bottom: 20px;
 }
 .back-btn:hover {
@@ -2566,7 +2582,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.25s;
+  transition: border-color 0.25s, color 0.25s, background 0.25s;
   line-height: 1.4;
 }
 .tut-intent-btn:hover {
@@ -2687,7 +2703,7 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid var(--border);
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.25s;
+  transition: border-color 0.25s, background 0.25s;
 }
 .tut-next-card:hover {
   border-color: rgba(105,234,203,0.3);
@@ -2762,7 +2778,8 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: all 0.25s;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  contain: content;
 }
 .prompt-card:hover { border-color: var(--hover-border); transform: translateY(var(--hover-lift)); box-shadow: var(--hover-shadow); }
 .prompt-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
@@ -2807,7 +2824,7 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font);
   border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -2875,7 +2892,7 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   gap: 16px;
-  transition: all 0.25s;
+  transition: border-color 0.25s, background 0.25s;
 }
 .download-item:hover { border-color: var(--primary-border); background: var(--bg-card-hover); }
 
@@ -2911,7 +2928,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   font-family: var(--font);
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
   letter-spacing: 0.02em;
 }
@@ -2963,7 +2980,7 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
-  transition: all 0.3s;
+  transition: border-color 0.3s, transform 0.3s;
 }
 .path-card:hover {
   border-color: rgba(105,234,203,0.2);
@@ -3019,7 +3036,7 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 32px 24px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
 }
@@ -3090,7 +3107,7 @@ a { text-decoration: none; color: inherit; }
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: all 0.25s;
+  transition: border-color 0.25s, background 0.25s, transform 0.25s;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
@@ -3116,7 +3133,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 11px;
   color: var(--text-muted);
   flex-shrink: 0;
-  transition: all 0.2s;
+  transition: color 0.2s, transform 0.2s;
 }
 .picks-news-item:hover .picks-news-arrow { color: var(--primary); transform: translateX(2px); }
 
@@ -3358,7 +3375,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   font-family: var(--font);
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 9999;
   pointer-events: none;
   box-shadow: 0 4px 20px rgba(105,234,203,0.3);
@@ -3391,7 +3408,7 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s;
+  transition: opacity 0.2s, background 0.2s, color 0.2s, transform 0.2s;
   z-index: 3;
   opacity: 0;
   backdrop-filter: blur(4px);
@@ -3431,7 +3448,7 @@ a { text-decoration: none; color: inherit; }
   opacity: 0;
   visibility: hidden;
   transform: translateY(16px);
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -3608,7 +3625,7 @@ footer {
   height: 2px;
   background: var(--text-secondary);
   border-radius: 1px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: center;
 }
 .mobile-menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
@@ -3640,7 +3657,7 @@ footer {
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 999;
   }
   .main-nav.open {
@@ -3791,7 +3808,7 @@ footer {
   border-radius: 16px;
   padding: 28px 24px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -3994,7 +4011,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s;
+  transition: border-color 0.3s, background 0.3s, color 0.3s;
   flex-shrink: 0;
 }
 
@@ -4029,7 +4046,7 @@ footer {
   border-radius: 14px;
   margin-bottom: 16px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: border-color 0.3s, background 0.3s, transform 0.3s;
 }
 
 .lp-day-card:hover {
@@ -4168,7 +4185,7 @@ footer {
   border: 1px solid var(--border, rgba(255,255,255,0.08));
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: border-color 0.3s, background 0.3s, transform 0.3s;
 }
 
 .lp-bridge-card:hover {
@@ -4241,7 +4258,7 @@ footer {
   border: 1px solid var(--border, rgba(255,255,255,0.08));
   border-radius: 16px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: border-color 0.3s, background 0.3s, transform 0.3s;
   position: relative;
   overflow: hidden;
 }
@@ -4653,7 +4670,7 @@ footer {
   cursor: pointer;
   font-size: 13px;
   font-family: inherit;
-  transition: all 0.2s;
+  transition: border-color 0.2s, color 0.2s;
 }
 .ap-clear:hover { border-color: #ef4444; color: #ef4444; }
 
@@ -4673,7 +4690,7 @@ footer {
   border: 1px solid rgba(16,185,129,0.2);
   border-radius: 14px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
   margin-bottom: 8px;
 }
 .progress-reminder:hover {
@@ -5012,7 +5029,7 @@ footer {
   border: 1px solid rgba(99,102,241,0.15);
   border-radius: 14px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
   margin-bottom: 20px;
 }
 .diag-cta-banner:hover {
@@ -5101,7 +5118,7 @@ footer {
   border: 1px solid var(--border);
   border-radius: 14px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s, box-shadow 0.2s;
   text-align: left;
   width: 100%;
   color: inherit;
@@ -5303,7 +5320,7 @@ footer {
   border: 1px solid var(--border);
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
   margin-bottom: 8px;
 }
 .diag-alt-card:hover {
@@ -5400,7 +5417,7 @@ footer {
   border-radius: 12px;
   cursor: pointer;
   font-family: inherit;
-  transition: all 0.2s;
+  transition: border-color 0.2s, color 0.2s;
 }
 .diag-restart:hover {
   border-color: var(--primary);
@@ -5471,7 +5488,7 @@ footer {
   border-radius: var(--radius);
   border: 1px solid rgba(255,255,255,0.06);
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: border-color 0.25s ease, transform 0.25s ease;
   overflow: hidden;
 }
 .column-showcase-card::before {
@@ -5676,7 +5693,7 @@ footer {
   border: 1px solid rgba(255,255,255,0.05);
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.2s, background 0.2s;
 }
 .column-tut-item:hover {
   border-color: rgba(255,255,255,0.12);
@@ -5769,7 +5786,7 @@ footer {
   border: 1px solid rgba(255,255,255,0.05);
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.2s, background 0.2s;
   text-decoration: none;
 }
 .column-nav-item:hover {
