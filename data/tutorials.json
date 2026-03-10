@@ -5569,14 +5569,18 @@
     "tier": "beginner",
     "difficulty": "beginner",
     "duration": "15分钟",
-    "targetJobs": ["all"],
+    "targetJobs": [
+      "all"
+    ],
     "category": "prompt",
     "icon": "🗺️",
     "editorPick": true,
     "steps": 7,
     "columnId": "col-claude",
     "columnOrder": 2,
-    "prerequisite": ["t002"],
+    "prerequisite": [
+      "t002"
+    ],
     "content": [
       {
         "title": "为什么发行团队需要 AI",
@@ -5615,9 +5619,14 @@
     "solves": "不知道AI能帮自己做什么",
     "outcome": "每个岗位的AI切入点清单和第一个实操任务",
     "fitLevel": "零基础可开始",
-    "nextGuides": ["t-claude-03", "t-claude-04"],
+    "nextGuides": [
+      "t-claude-03",
+      "t-claude-04"
+    ],
     "relatedPath": "Claude 深度使用指南",
-    "fitRoles": ["全岗位"]
+    "fitRoles": [
+      "全岗位"
+    ]
   },
   {
     "id": "t-claude-03",
@@ -5626,14 +5635,20 @@
     "tier": "job-specific",
     "difficulty": "intermediate",
     "duration": "30分钟",
-    "targetJobs": ["publishing-manager", "product-planner", "operation-manager"],
+    "targetJobs": [
+      "publishing-manager",
+      "product-planner",
+      "operation-manager"
+    ],
     "category": "prompt",
     "icon": "🔍",
     "editorPick": true,
     "steps": 8,
     "columnId": "col-claude",
     "columnOrder": 3,
-    "prerequisite": ["t002"],
+    "prerequisite": [
+      "t002"
+    ],
     "content": [
       {
         "title": "为什么用 AI 做竞品分析",
@@ -5681,9 +5696,16 @@
     "solves": "竞品分析耗时长、角度单一的问题",
     "outcome": "一套可复用的AI竞品分析流程和报告模板",
     "fitLevel": "有基本Claude使用经验",
-    "nextGuides": ["t-claude-12", "t-claude-05"],
+    "nextGuides": [
+      "t-claude-12",
+      "t-claude-05"
+    ],
     "relatedPath": "Claude 深度使用指南",
-    "fitRoles": ["发行", "策划", "运营"]
+    "fitRoles": [
+      "发行",
+      "策划",
+      "运营"
+    ]
   },
   {
     "id": "t-claude-04",
@@ -5692,14 +5714,19 @@
     "tier": "job-specific",
     "difficulty": "intermediate",
     "duration": "25分钟",
-    "targetJobs": ["ad-manager", "social-media-manager"],
+    "targetJobs": [
+      "ad-manager",
+      "social-media-manager"
+    ],
     "category": "prompt",
     "icon": "📢",
     "editorPick": true,
     "steps": 7,
     "columnId": "col-claude",
     "columnOrder": 4,
-    "prerequisite": ["t002"],
+    "prerequisite": [
+      "t002"
+    ],
     "content": [
       {
         "title": "AI 文案生成的价值",
@@ -5740,9 +5767,15 @@
     "solves": "广告文案产出慢、变体不够多的问题",
     "outcome": "20+组广告文案变体和科学的A/B测试方案",
     "fitLevel": "有基本投放经验",
-    "nextGuides": ["t-claude-13", "t-claude-09"],
+    "nextGuides": [
+      "t-claude-13",
+      "t-claude-09"
+    ],
     "relatedPath": "Claude 深度使用指南",
-    "fitRoles": ["投放", "新媒体"]
+    "fitRoles": [
+      "投放",
+      "新媒体"
+    ]
   },
   {
     "id": "t-claude-05",
@@ -5751,14 +5784,20 @@
     "tier": "job-specific",
     "difficulty": "intermediate",
     "duration": "35分钟",
-    "targetJobs": ["brand-manager", "operation-manager", "publishing-manager"],
+    "targetJobs": [
+      "brand-manager",
+      "operation-manager",
+      "publishing-manager"
+    ],
     "category": "prompt",
     "icon": "🌍",
     "editorPick": false,
     "steps": 7,
     "columnId": "col-claude",
     "columnOrder": 5,
-    "prerequisite": ["t002"],
+    "prerequisite": [
+      "t002"
+    ],
     "content": [
       {
         "title": "本地化 vs 翻译的区别",
@@ -5799,9 +5838,16 @@
     "solves": "多语言本地化耗时且质量不一致的问题",
     "outcome": "5语种商店页文案和完整的本地化工作流",
     "fitLevel": "有出海业务需求",
-    "nextGuides": ["t-claude-10", "t-claude-07"],
+    "nextGuides": [
+      "t-claude-10",
+      "t-claude-07"
+    ],
     "relatedPath": "Claude 深度使用指南",
-    "fitRoles": ["品牌", "运营", "发行"]
+    "fitRoles": [
+      "品牌",
+      "运营",
+      "发行"
+    ]
   },
   {
     "id": "t-claude-06",
@@ -5810,14 +5856,19 @@
     "tier": "job-specific",
     "difficulty": "intermediate",
     "duration": "25分钟",
-    "targetJobs": ["operation-manager", "product-planner"],
+    "targetJobs": [
+      "operation-manager",
+      "product-planner"
+    ],
     "category": "prompt",
     "icon": "💬",
     "editorPick": false,
     "steps": 7,
     "columnId": "col-claude",
     "columnOrder": 6,
-    "prerequisite": ["t002"],
+    "prerequisite": [
+      "t002"
+    ],
     "content": [
       {
         "title": "评论数据的价值",
@@ -5857,243 +5908,782 @@
     "solves": "用户评论分析耗时且容易遗漏关键问题",
     "outcome": "一套用户评论分析模板和月度洞察报告",
     "fitLevel": "有基本运营经验",
-    "nextGuides": ["t-claude-14", "t-claude-07"],
+    "nextGuides": [
+      "t-claude-14",
+      "t-claude-07"
+    ],
     "relatedPath": "Claude 深度使用指南",
-    "fitRoles": ["运营", "策划"]
+    "fitRoles": [
+      "运营",
+      "策划"
+    ]
   },
   {
     "id": "t-claude-07",
     "title": "游戏活动策划加速器：从创意到执行方案",
     "desc": "用Claude完成从活动主题脑暴到奖励设计、时间线规划和公告文案的全流程",
-    "tier": "job-specific", "difficulty": "intermediate", "duration": "30分钟",
-    "targetJobs": ["product-planner", "operation-manager"], "category": "prompt", "icon": "🎮",
-    "editorPick": false, "steps": 5, "columnId": "col-claude", "columnOrder": 7, "prerequisite": ["t002"],
-    "content": [
-      {"title": "活动策划的 AI 辅助价值", "body": "<p>一个中型手游团队每月至少推出 2-3 个运营活动，每个涉及创意构思、玩法设计、数值规划、文案撰写等多个环节。Claude 可以将方案初稿从 <strong>3-5 天压缩到半天</strong>。</p><ul><li><strong>创意发散</strong>：30秒生成20个活动主题方向</li><li><strong>结构化输出</strong>：一次性生成完整策划文档</li><li><strong>数值推演</strong>：快速估算奖励成本和资源消耗</li></ul>"},
-      {"title": "活动主题创意发散", "body": "<p>用三维度法打开创意空间：节日维度、玩法维度、情感维度。</p>", "example": "你是一位资深手游活动策划。\n\n游戏信息：二次元卡牌RPG，运营14个月，用户18-28岁\n近期已做活动：情人节限定池、元宵灯谜、开学季签到\n\n为春节版本策划活动，请从3个维度各生成5个创意：\n1. 社交互动类（玩家间合作/对抗）\n2. 收集养成类（收集道具换奖励）\n3. 限时挑战类（有时间压力的玩法）\n\n每个创意包含：活动名称 / 核心玩法 / 目标情感 / 参与门槛 / 春节关联点", "tip": "提供最近3个月已做过的活动列表，Claude会自动避开相似方向"},
-      {"title": "奖励体系与资源预算", "body": "<p>活动奖励设计的核心是<strong>控制资源投放量</strong>，避免经济系统通胀。</p>", "example": "请为选定的春节活动设计奖励体系：\n\n活动时长：14天\n目标：DAU提升20%，付费率提升5%\n预算：100万游戏币 + 1个限定SSR\n\n请输出：\n1. 分层奖励表（免费层/付费层/排名层）\n2. 每日任务产出量计算\n3. 资源消耗预估\n4. 是否存在通胀风险分析\n5. 与近期3个活动的资源投放对比"},
-      {"title": "活动时间线与公告文案", "body": "<p>让 Claude 生成完整的运营节奏表和配套文案：</p>", "example": "请为这个14天春节活动生成：\n\n1. 运营时间线表格：\n| 日期 | 事件 | 推送内容 | 社媒配合 |\n\n2. 预热期公告文案（活动开始前3天）\n3. 开启期公告文案\n4. 冲刺期公告文案（最后3天）\n5. 复盘数据追踪指标清单\n\n文案风格：二次元感、有梗、不油腻"},
-      {"title": "完整方案组装与审核", "body": "<p>将以上内容组装成一份可交付的策划方案文档，让 Claude 做最终自审：</p>", "example": "请将以上所有内容整合为一份完整的活动策划方案：\n\n# 春节活动策划方案\n## 一、活动概述\n## 二、活动设计\n## 三、奖励设计\n## 四、运营节奏\n## 五、风险预案\n## 六、数据追踪指标\n\n然后以「产品总监」视角审核这份方案，指出3个最大风险和改进建议。"}
+    "tier": "job-specific",
+    "difficulty": "intermediate",
+    "duration": "30分钟",
+    "targetJobs": [
+      "product-planner",
+      "operation-manager"
     ],
-    "solves": "活动策划方案产出慢、创意枯竭", "outcome": "完整的活动策划方案和可复用的策划流程",
-    "fitLevel": "有基本策划经验", "nextGuides": ["t-claude-12", "t-claude-08"],
-    "relatedPath": "Claude 深度使用指南", "fitRoles": ["策划", "运营"]
+    "category": "prompt",
+    "icon": "🎮",
+    "editorPick": false,
+    "steps": 5,
+    "columnId": "col-claude",
+    "columnOrder": 7,
+    "prerequisite": [
+      "t002"
+    ],
+    "content": [
+      {
+        "title": "活动策划的 AI 辅助价值",
+        "body": "<p>一个中型手游团队每月至少推出 2-3 个运营活动，每个涉及创意构思、玩法设计、数值规划、文案撰写等多个环节。Claude 可以将方案初稿从 <strong>3-5 天压缩到半天</strong>。</p><ul><li><strong>创意发散</strong>：30秒生成20个活动主题方向</li><li><strong>结构化输出</strong>：一次性生成完整策划文档</li><li><strong>数值推演</strong>：快速估算奖励成本和资源消耗</li></ul>"
+      },
+      {
+        "title": "活动主题创意发散",
+        "body": "<p>用三维度法打开创意空间：节日维度、玩法维度、情感维度。</p>",
+        "example": "你是一位资深手游活动策划。\n\n游戏信息：二次元卡牌RPG，运营14个月，用户18-28岁\n近期已做活动：情人节限定池、元宵灯谜、开学季签到\n\n为春节版本策划活动，请从3个维度各生成5个创意：\n1. 社交互动类（玩家间合作/对抗）\n2. 收集养成类（收集道具换奖励）\n3. 限时挑战类（有时间压力的玩法）\n\n每个创意包含：活动名称 / 核心玩法 / 目标情感 / 参与门槛 / 春节关联点",
+        "tip": "提供最近3个月已做过的活动列表，Claude会自动避开相似方向"
+      },
+      {
+        "title": "奖励体系与资源预算",
+        "body": "<p>活动奖励设计的核心是<strong>控制资源投放量</strong>，避免经济系统通胀。</p>",
+        "example": "请为选定的春节活动设计奖励体系：\n\n活动时长：14天\n目标：DAU提升20%，付费率提升5%\n预算：100万游戏币 + 1个限定SSR\n\n请输出：\n1. 分层奖励表（免费层/付费层/排名层）\n2. 每日任务产出量计算\n3. 资源消耗预估\n4. 是否存在通胀风险分析\n5. 与近期3个活动的资源投放对比"
+      },
+      {
+        "title": "活动时间线与公告文案",
+        "body": "<p>让 Claude 生成完整的运营节奏表和配套文案：</p>",
+        "example": "请为这个14天春节活动生成：\n\n1. 运营时间线表格：\n| 日期 | 事件 | 推送内容 | 社媒配合 |\n\n2. 预热期公告文案（活动开始前3天）\n3. 开启期公告文案\n4. 冲刺期公告文案（最后3天）\n5. 复盘数据追踪指标清单\n\n文案风格：二次元感、有梗、不油腻"
+      },
+      {
+        "title": "完整方案组装与审核",
+        "body": "<p>将以上内容组装成一份可交付的策划方案文档，让 Claude 做最终自审：</p>",
+        "example": "请将以上所有内容整合为一份完整的活动策划方案：\n\n# 春节活动策划方案\n## 一、活动概述\n## 二、活动设计\n## 三、奖励设计\n## 四、运营节奏\n## 五、风险预案\n## 六、数据追踪指标\n\n然后以「产品总监」视角审核这份方案，指出3个最大风险和改进建议。"
+      }
+    ],
+    "solves": "活动策划方案产出慢、创意枯竭",
+    "outcome": "完整的活动策划方案和可复用的策划流程",
+    "fitLevel": "有基本策划经验",
+    "nextGuides": [
+      "t-claude-12",
+      "t-claude-08"
+    ],
+    "relatedPath": "Claude 深度使用指南",
+    "fitRoles": [
+      "策划",
+      "运营"
+    ]
   },
   {
     "id": "t-claude-08",
     "title": "数据报告叙事化：让周报月报会说话",
     "desc": "输入原始数据表格，让Claude生成带洞察的叙事化报告，自动识别异常指标",
-    "tier": "job-specific", "difficulty": "intermediate", "duration": "25分钟",
-    "targetJobs": ["data-analyst", "operation-manager"], "category": "prompt", "icon": "📊",
-    "editorPick": false, "steps": 5, "columnId": "col-claude", "columnOrder": 8, "prerequisite": ["t002"],
-    "content": [
-      {"title": "数据报告的常见问题", "body": "<p>大多数周报/月报存在三个问题：</p><ul><li><strong>只有数据没有洞察</strong>：罗列数字但不说明意味着什么</li><li><strong>没有对比基准</strong>：孤立的数字没有意义</li><li><strong>缺少行动建议</strong>：看完不知道下一步该做什么</li></ul><p>Claude 可以帮你从「数据搬运工」升级为「数据叙事者」。</p>"},
-      {"title": "数据格式化与输入技巧", "body": "<p>把数据喂给 Claude 的最佳实践：</p><ul><li>用表格格式（Markdown 或直接粘贴 Excel 文本）</li><li>标注数据的时间范围和对比基准</li><li>注明哪些指标是你最关心的</li></ul>", "example": "请分析以下游戏运营数据并生成周报：\n\n| 指标 | 本周 | 上周 | 环比 | 月均值 |\n| DAU | 12.3万 | 13.0万 | -5.4% | 12.8万 |\n| 新增用户 | 1.8万 | 2.1万 | -14.3% | 1.9万 |\n| 7日留存 | 42% | 44% | -2pp | 43% |\n| 付费率 | 3.2% | 3.1% | +0.1pp | 3.0% |\n| ARPPU | 128元 | 122元 | +4.9% | 125元 |\n\n本周事件：周三维护更新1.9版本，周五开启限时池\n\n请生成一份有洞察的周报，不要只复述数据。"},
-      {"title": "异常指标自动识别", "body": "<p>让 Claude 自动发现数据中的异常：</p>", "example": "基于以上数据，请进一步分析：\n\n1. 哪些指标偏离月均值超过10%？标注为「异常」\n2. DAU下降和新增下降是否有因果关系？\n3. 付费率上升但DAU下降，说明什么？\n4. 1.9版本更新对各指标的可能影响\n5. 如果趋势持续，下周预计数据区间\n\n用「信号灯」标注：🟢正常 🟡关注 🔴预警"},
-      {"title": "叙事化报告撰写", "body": "<p>让 Claude 把数据分析转化为管理层可读的叙事报告：</p>", "example": "请将以上分析整合为一份叙事化周报：\n\n格式要求：\n1. 一句话总结本周（管理层只看这一句）\n2. 三个核心发现（每个用2-3句话解释）\n3. 数据概览表（带信号灯标注）\n4. 归因分析（DAU下降的3个可能原因，按可能性排序）\n5. 下周行动建议（3条，按优先级）\n6. 风险预警（如果有的话）\n\n语气：专业但不枯燥，有观点但有数据支撑"},
-      {"title": "周报月报自动化模板", "body": "<p>在 Claude Projects 中保存你的报告模板和历史数据，每周只需更新数字即可自动生成报告。</p><ul><li>创建「运营周报」Project，上传报告模板和历史3个月数据</li><li>设置 System Prompt 定义报告风格和关注重点</li><li>每周粘贴新数据，30秒出报告</li></ul>", "tip": "保持报告格式一致，这样管理层可以快速找到他们关心的部分"}
+    "tier": "job-specific",
+    "difficulty": "intermediate",
+    "duration": "25分钟",
+    "targetJobs": [
+      "data-analyst",
+      "operation-manager"
     ],
-    "solves": "周报月报只有数字没有洞察", "outcome": "带洞察的叙事化数据报告和自动化模板",
-    "fitLevel": "有基本数据分析经验", "nextGuides": ["t-claude-13", "t-claude-11"],
-    "relatedPath": "Claude 深度使用指南", "fitRoles": ["数值", "运营"]
+    "category": "prompt",
+    "icon": "📊",
+    "editorPick": false,
+    "steps": 5,
+    "columnId": "col-claude",
+    "columnOrder": 8,
+    "prerequisite": [
+      "t002"
+    ],
+    "content": [
+      {
+        "title": "数据报告的常见问题",
+        "body": "<p>大多数周报/月报存在三个问题：</p><ul><li><strong>只有数据没有洞察</strong>：罗列数字但不说明意味着什么</li><li><strong>没有对比基准</strong>：孤立的数字没有意义</li><li><strong>缺少行动建议</strong>：看完不知道下一步该做什么</li></ul><p>Claude 可以帮你从「数据搬运工」升级为「数据叙事者」。</p>"
+      },
+      {
+        "title": "数据格式化与输入技巧",
+        "body": "<p>把数据喂给 Claude 的最佳实践：</p><ul><li>用表格格式（Markdown 或直接粘贴 Excel 文本）</li><li>标注数据的时间范围和对比基准</li><li>注明哪些指标是你最关心的</li></ul>",
+        "example": "请分析以下游戏运营数据并生成周报：\n\n| 指标 | 本周 | 上周 | 环比 | 月均值 |\n| DAU | 12.3万 | 13.0万 | -5.4% | 12.8万 |\n| 新增用户 | 1.8万 | 2.1万 | -14.3% | 1.9万 |\n| 7日留存 | 42% | 44% | -2pp | 43% |\n| 付费率 | 3.2% | 3.1% | +0.1pp | 3.0% |\n| ARPPU | 128元 | 122元 | +4.9% | 125元 |\n\n本周事件：周三维护更新1.9版本，周五开启限时池\n\n请生成一份有洞察的周报，不要只复述数据。"
+      },
+      {
+        "title": "异常指标自动识别",
+        "body": "<p>让 Claude 自动发现数据中的异常：</p>",
+        "example": "基于以上数据，请进一步分析：\n\n1. 哪些指标偏离月均值超过10%？标注为「异常」\n2. DAU下降和新增下降是否有因果关系？\n3. 付费率上升但DAU下降，说明什么？\n4. 1.9版本更新对各指标的可能影响\n5. 如果趋势持续，下周预计数据区间\n\n用「信号灯」标注：🟢正常 🟡关注 🔴预警"
+      },
+      {
+        "title": "叙事化报告撰写",
+        "body": "<p>让 Claude 把数据分析转化为管理层可读的叙事报告：</p>",
+        "example": "请将以上分析整合为一份叙事化周报：\n\n格式要求：\n1. 一句话总结本周（管理层只看这一句）\n2. 三个核心发现（每个用2-3句话解释）\n3. 数据概览表（带信号灯标注）\n4. 归因分析（DAU下降的3个可能原因，按可能性排序）\n5. 下周行动建议（3条，按优先级）\n6. 风险预警（如果有的话）\n\n语气：专业但不枯燥，有观点但有数据支撑"
+      },
+      {
+        "title": "周报月报自动化模板",
+        "body": "<p>在 Claude Projects 中保存你的报告模板和历史数据，每周只需更新数字即可自动生成报告。</p><ul><li>创建「运营周报」Project，上传报告模板和历史3个月数据</li><li>设置 System Prompt 定义报告风格和关注重点</li><li>每周粘贴新数据，30秒出报告</li></ul>",
+        "tip": "保持报告格式一致，这样管理层可以快速找到他们关心的部分"
+      }
+    ],
+    "solves": "周报月报只有数字没有洞察",
+    "outcome": "带洞察的叙事化数据报告和自动化模板",
+    "fitLevel": "有基本数据分析经验",
+    "nextGuides": [
+      "t-claude-13",
+      "t-claude-11"
+    ],
+    "relatedPath": "Claude 深度使用指南",
+    "fitRoles": [
+      "数值",
+      "运营"
+    ]
   },
   {
     "id": "t-claude-09",
     "title": "短视频脚本工厂：从热点到成片脚本",
     "desc": "输入游戏卖点和目标平台，批量生成分镜脚本、口播文案、标题和标签",
-    "tier": "job-specific", "difficulty": "intermediate", "duration": "25分钟",
-    "targetJobs": ["video-creator", "social-media-manager"], "category": "prompt", "icon": "🎬",
-    "editorPick": false, "steps": 5, "columnId": "col-claude", "columnOrder": 9, "prerequisite": ["t002"],
-    "content": [
-      {"title": "短视频内容策略", "body": "<p>游戏短视频的核心不是「展示游戏画面」而是<strong>讲一个让人想玩的故事</strong>。三种高效内容框架：</p><ul><li><strong>Pain-Solution</strong>：玩家痛点 → 游戏如何解决</li><li><strong>WOW Moment</strong>：展示游戏中最惊艳的瞬间</li><li><strong>Community Story</strong>：玩家真实故事和成就展示</li></ul>"},
-      {"title": "游戏卖点提炼", "body": "<p>先让 Claude 从游戏特点中提炼适合短视频的卖点：</p>", "example": "你是一位游戏短视频内容策划专家。\n\n游戏信息：\n- 名称：星痕纪元（二次元卡牌RPG）\n- 核心卖点：200+角色、电影级剧情、实时PVP\n- 近期亮点：新角色「月华」上线\n- 目标平台：抖音、B站\n\n请提炼10个适合做短视频的内容角度：\n每个角度包含：\n1. 内容主题（一句话）\n2. 适合的视频框架（Pain-Solution/WOW/Community）\n3. 预估完播率潜力（高/中/低）\n4. 目标平台推荐"},
-      {"title": "分镜脚本生成", "body": "<p>选定内容方向后，生成完整分镜脚本：</p>", "example": "请为以下内容方向生成一份60秒短视频分镜脚本：\n\n内容方向：新角色「月华」的大招展示 + 获取攻略\n目标平台：抖音\n风格：快节奏、有梗、前3秒hook\n\n分镜格式：\n| 时间 | 画面描述 | 字幕/文案 | 音效/BGM | 备注 |\n| 0-3s | Hook镜头 | | | 必须抓眼球 |\n| 3-10s | | | | |\n...\n\n同时输出：\n1. 封面建议（画面+文字描述）\n2. 标题（3个备选）\n3. 标签组合（10个）\n4. 发布最佳时间建议"},
-      {"title": "口播文案与节奏设计", "body": "<p>如果是口播类内容，节奏控制是关键：</p>", "example": "请为以下抖音口播视频生成完整文案：\n\n主题：「为什么月华是目前版本最值得抽的角色」\n时长：45秒\n风格：懂行的玩家推荐语气，不像广告\n\n要求：\n1. 前3秒hook语（必须制造悬念或争议）\n2. 正文分3个论点，每个10秒\n3. 结尾CTA（引导评论或关注）\n4. 标注语速节奏（快/正常/慢+停顿）\n5. B站版本的口播风格调整建议"},
-      {"title": "批量脚本生产流水线", "body": "<p>建立批量生产机制，一次性产出一周的内容：</p>", "example": "请为本周生成5个短视频脚本（周一至周五各一个）：\n\n内容排期要求：\n- 周一：角色攻略类（实用向）\n- 周二：剧情解读类（情感向）\n- 周三：PVP技巧类（竞技向）\n- 周四：版本资讯类（信息向）\n- 周五：娱乐整活类（轻松向）\n\n每个脚本包含：标题 / 分镜 / 口播文案 / 标签\n目标平台：抖音为主，标注B站需要调整的部分", "tip": "建立内容日历模板，每周只需更新素材细节，整体框架保持不变"}
+    "tier": "job-specific",
+    "difficulty": "intermediate",
+    "duration": "25分钟",
+    "targetJobs": [
+      "video-creator",
+      "social-media-manager"
     ],
-    "solves": "短视频脚本产出慢、创意单一", "outcome": "一周5个短视频脚本和批量生产流水线",
-    "fitLevel": "有短视频运营经验", "nextGuides": ["t-claude-18", "t-claude-10"],
-    "relatedPath": "Claude 深度使用指南", "fitRoles": ["视频", "新媒体"]
+    "category": "prompt",
+    "icon": "🎬",
+    "editorPick": false,
+    "steps": 5,
+    "columnId": "col-claude",
+    "columnOrder": 9,
+    "prerequisite": [
+      "t002"
+    ],
+    "content": [
+      {
+        "title": "短视频内容策略",
+        "body": "<p>游戏短视频的核心不是「展示游戏画面」而是<strong>讲一个让人想玩的故事</strong>。三种高效内容框架：</p><ul><li><strong>Pain-Solution</strong>：玩家痛点 → 游戏如何解决</li><li><strong>WOW Moment</strong>：展示游戏中最惊艳的瞬间</li><li><strong>Community Story</strong>：玩家真实故事和成就展示</li></ul>"
+      },
+      {
+        "title": "游戏卖点提炼",
+        "body": "<p>先让 Claude 从游戏特点中提炼适合短视频的卖点：</p>",
+        "example": "你是一位游戏短视频内容策划专家。\n\n游戏信息：\n- 名称：星痕纪元（二次元卡牌RPG）\n- 核心卖点：200+角色、电影级剧情、实时PVP\n- 近期亮点：新角色「月华」上线\n- 目标平台：抖音、B站\n\n请提炼10个适合做短视频的内容角度：\n每个角度包含：\n1. 内容主题（一句话）\n2. 适合的视频框架（Pain-Solution/WOW/Community）\n3. 预估完播率潜力（高/中/低）\n4. 目标平台推荐"
+      },
+      {
+        "title": "分镜脚本生成",
+        "body": "<p>选定内容方向后，生成完整分镜脚本：</p>",
+        "example": "请为以下内容方向生成一份60秒短视频分镜脚本：\n\n内容方向：新角色「月华」的大招展示 + 获取攻略\n目标平台：抖音\n风格：快节奏、有梗、前3秒hook\n\n分镜格式：\n| 时间 | 画面描述 | 字幕/文案 | 音效/BGM | 备注 |\n| 0-3s | Hook镜头 | | | 必须抓眼球 |\n| 3-10s | | | | |\n...\n\n同时输出：\n1. 封面建议（画面+文字描述）\n2. 标题（3个备选）\n3. 标签组合（10个）\n4. 发布最佳时间建议"
+      },
+      {
+        "title": "口播文案与节奏设计",
+        "body": "<p>如果是口播类内容，节奏控制是关键：</p>",
+        "example": "请为以下抖音口播视频生成完整文案：\n\n主题：「为什么月华是目前版本最值得抽的角色」\n时长：45秒\n风格：懂行的玩家推荐语气，不像广告\n\n要求：\n1. 前3秒hook语（必须制造悬念或争议）\n2. 正文分3个论点，每个10秒\n3. 结尾CTA（引导评论或关注）\n4. 标注语速节奏（快/正常/慢+停顿）\n5. B站版本的口播风格调整建议"
+      },
+      {
+        "title": "批量脚本生产流水线",
+        "body": "<p>建立批量生产机制，一次性产出一周的内容：</p>",
+        "example": "请为本周生成5个短视频脚本（周一至周五各一个）：\n\n内容排期要求：\n- 周一：角色攻略类（实用向）\n- 周二：剧情解读类（情感向）\n- 周三：PVP技巧类（竞技向）\n- 周四：版本资讯类（信息向）\n- 周五：娱乐整活类（轻松向）\n\n每个脚本包含：标题 / 分镜 / 口播文案 / 标签\n目标平台：抖音为主，标注B站需要调整的部分",
+        "tip": "建立内容日历模板，每周只需更新素材细节，整体框架保持不变"
+      }
+    ],
+    "solves": "短视频脚本产出慢、创意单一",
+    "outcome": "一周5个短视频脚本和批量生产流水线",
+    "fitLevel": "有短视频运营经验",
+    "nextGuides": [
+      "t-claude-18",
+      "t-claude-10"
+    ],
+    "relatedPath": "Claude 深度使用指南",
+    "fitRoles": [
+      "视频",
+      "新媒体"
+    ]
   },
   {
     "id": "t-claude-10",
     "title": "品牌声音指南构建：让所有内容听起来像一个人",
     "desc": "用Claude分析品牌内容、提炼调性关键词、生成品牌声音指南并注入到后续内容生产",
-    "tier": "job-specific", "difficulty": "intermediate", "duration": "30分钟",
-    "targetJobs": ["brand-manager", "design-lead"], "category": "prompt", "icon": "🎙️",
-    "editorPick": false, "steps": 5, "columnId": "col-claude", "columnOrder": 10, "prerequisite": ["t002"],
-    "content": [
-      {"title": "品牌一致性的价值", "body": "<p>当团队有 5+ 人在产出内容时，品牌调性容易分裂。品牌声音指南的核心价值：</p><ul><li><strong>统一认知</strong>：所有渠道的内容「听起来像同一个人说的」</li><li><strong>降低决策成本</strong>：新人不用猜「我们应该用什么语气」</li><li><strong>提升 AI 产出质量</strong>：有了品牌声音指南，Claude 的输出直接就是对的风格</li></ul>"},
-      {"title": "收集品牌内容样本", "body": "<p>从现有内容中收集 10-20 个样本给 Claude 分析：</p><ul><li>官方社媒帖子（微博/抖音/公众号）各3-5条</li><li>游戏内公告和活动文案 3-5 条</li><li>商店页描述和广告文案 3-5 条</li></ul>", "tip": "选择你认为最能代表品牌调性的内容，也选几个你觉得不太对味的作为反例"},
-      {"title": "AI 品牌调性分析", "body": "<p>让 Claude 从样本中提炼品牌调性：</p>", "example": "你是一位品牌策略专家。请分析以下品牌内容样本，提炼品牌声音特征：\n\n【粘贴10-20条品牌内容样本】\n\n请输出：\n1. 品牌人格画像（如果品牌是一个人，TA是什么样的？）\n2. 语气关键词（5个，如：专业/幽默/温暖/自信/有梗）\n3. 常用表达模式（句式、节奏、标点习惯）\n4. 避免的表达（与品牌调性冲突的风格）\n5. 与竞品的声音差异点"},
-      {"title": "生成品牌声音指南文档", "body": "<p>将分析结果结构化为正式的品牌声音指南：</p>", "example": "请基于以上分析，生成一份完整的品牌声音指南文档：\n\n# [游戏名] 品牌声音指南\n\n## 一、品牌人格\n## 二、声音三原则（我们是XX / 我们不是XX）\n## 三、语气光谱\n- 正式 ←——→ 随意：我们在哪个位置？\n- 严肃 ←——→ 幽默：我们在哪个位置？\n## 四、场景化用语指南\n- 公告文案应该怎么写\n- 社媒互动应该怎么回\n- 广告文案应该什么风格\n## 五、Do's and Don'ts（附示例）\n## 六、AI 使用时的 System Prompt 模板"},
-      {"title": "将品牌声音注入 Claude System Prompt", "body": "<p>最终目标：让 Claude 直接用你的品牌声音输出内容。</p>", "example": "（在 Claude Project 中设置的 System Prompt 模板）\n\n你是[游戏名]的品牌内容助手。\n\n品牌声音规范：\n- 人格：[从指南中提取]\n- 语气：[关键词]\n- 原则：[三原则]\n- 绝对不要：[禁止事项]\n\n输出要求：\n- 所有内容必须符合以上品牌声音规范\n- 如果我的指令与品牌规范冲突，请提醒我\n- 每次输出后自检是否符合品牌调性\n\n当前任务：[具体任务]", "tip": "将品牌声音指南上传到 Claude Project 的知识库中，所有团队成员共享同一个 Project"}
+    "tier": "job-specific",
+    "difficulty": "intermediate",
+    "duration": "30分钟",
+    "targetJobs": [
+      "brand-manager",
+      "design-lead"
     ],
-    "solves": "多人产出内容时品牌调性不统一", "outcome": "完整的品牌声音指南和AI配套的System Prompt",
-    "fitLevel": "有品牌管理经验", "nextGuides": ["t-claude-15", "t-claude-18"],
-    "relatedPath": "Claude 深度使用指南", "fitRoles": ["品牌", "设计"]
+    "category": "prompt",
+    "icon": "🎙️",
+    "editorPick": false,
+    "steps": 5,
+    "columnId": "col-claude",
+    "columnOrder": 10,
+    "prerequisite": [
+      "t002"
+    ],
+    "content": [
+      {
+        "title": "品牌一致性的价值",
+        "body": "<p>当团队有 5+ 人在产出内容时，品牌调性容易分裂。品牌声音指南的核心价值：</p><ul><li><strong>统一认知</strong>：所有渠道的内容「听起来像同一个人说的」</li><li><strong>降低决策成本</strong>：新人不用猜「我们应该用什么语气」</li><li><strong>提升 AI 产出质量</strong>：有了品牌声音指南，Claude 的输出直接就是对的风格</li></ul>"
+      },
+      {
+        "title": "收集品牌内容样本",
+        "body": "<p>从现有内容中收集 10-20 个样本给 Claude 分析：</p><ul><li>官方社媒帖子（微博/抖音/公众号）各3-5条</li><li>游戏内公告和活动文案 3-5 条</li><li>商店页描述和广告文案 3-5 条</li></ul>",
+        "tip": "选择你认为最能代表品牌调性的内容，也选几个你觉得不太对味的作为反例"
+      },
+      {
+        "title": "AI 品牌调性分析",
+        "body": "<p>让 Claude 从样本中提炼品牌调性：</p>",
+        "example": "你是一位品牌策略专家。请分析以下品牌内容样本，提炼品牌声音特征：\n\n【粘贴10-20条品牌内容样本】\n\n请输出：\n1. 品牌人格画像（如果品牌是一个人，TA是什么样的？）\n2. 语气关键词（5个，如：专业/幽默/温暖/自信/有梗）\n3. 常用表达模式（句式、节奏、标点习惯）\n4. 避免的表达（与品牌调性冲突的风格）\n5. 与竞品的声音差异点"
+      },
+      {
+        "title": "生成品牌声音指南文档",
+        "body": "<p>将分析结果结构化为正式的品牌声音指南：</p>",
+        "example": "请基于以上分析，生成一份完整的品牌声音指南文档：\n\n# [游戏名] 品牌声音指南\n\n## 一、品牌人格\n## 二、声音三原则（我们是XX / 我们不是XX）\n## 三、语气光谱\n- 正式 ←——→ 随意：我们在哪个位置？\n- 严肃 ←——→ 幽默：我们在哪个位置？\n## 四、场景化用语指南\n- 公告文案应该怎么写\n- 社媒互动应该怎么回\n- 广告文案应该什么风格\n## 五、Do's and Don'ts（附示例）\n## 六、AI 使用时的 System Prompt 模板"
+      },
+      {
+        "title": "将品牌声音注入 Claude System Prompt",
+        "body": "<p>最终目标：让 Claude 直接用你的品牌声音输出内容。</p>",
+        "example": "（在 Claude Project 中设置的 System Prompt 模板）\n\n你是[游戏名]的品牌内容助手。\n\n品牌声音规范：\n- 人格：[从指南中提取]\n- 语气：[关键词]\n- 原则：[三原则]\n- 绝对不要：[禁止事项]\n\n输出要求：\n- 所有内容必须符合以上品牌声音规范\n- 如果我的指令与品牌规范冲突，请提醒我\n- 每次输出后自检是否符合品牌调性\n\n当前任务：[具体任务]",
+        "tip": "将品牌声音指南上传到 Claude Project 的知识库中，所有团队成员共享同一个 Project"
+      }
+    ],
+    "solves": "多人产出内容时品牌调性不统一",
+    "outcome": "完整的品牌声音指南和AI配套的System Prompt",
+    "fitLevel": "有品牌管理经验",
+    "nextGuides": [
+      "t-claude-15",
+      "t-claude-18"
+    ],
+    "relatedPath": "Claude 深度使用指南",
+    "fitRoles": [
+      "品牌",
+      "设计"
+    ]
   },
   {
     "id": "t-claude-11",
     "title": "提示词工程进阶：链式推理与结构化输出",
     "desc": "掌握Chain-of-Thought、Few-shot和JSON结构化输出，以自动生成版本更新公告为实战场景",
-    "tier": "advanced", "difficulty": "advanced", "duration": "35分钟",
-    "targetJobs": ["all"], "category": "prompt", "icon": "🔗",
-    "editorPick": true, "steps": 5, "columnId": "col-claude", "columnOrder": 11, "prerequisite": ["t-claude-02"],
-    "content": [
-      {"title": "提示词工程为什么重要", "body": "<p>入门阶段你学会了「给 Claude 清晰的指令」。进阶阶段的核心是<strong>控制 Claude 的思考过程和输出格式</strong>：</p><ul><li><strong>Chain-of-Thought</strong>：让 Claude 展示推理过程，结论更可靠</li><li><strong>Few-shot Learning</strong>：提供示例，让输出精确匹配你要的格式</li><li><strong>结构化输出</strong>：直接输出 JSON/表格，可对接下游系统</li></ul>"},
-      {"title": "Chain-of-Thought 技巧", "body": "<p>让 Claude 「先想清楚再回答」：</p>", "example": "请分析以下游戏版本更新对各项指标的预期影响。\n\n版本更新内容：\n1. 新增5v5竞技模式\n2. 调整3个角色数值（2个加强1个削弱）\n3. 新增月卡系统（30元/月）\n\n请按以下步骤分析（每步都展示你的推理过程）：\n\n步骤1：每个更新项会影响哪些核心指标？\n步骤2：影响是正面还是负面？程度如何？\n步骤3：不同更新项之间是否有交互影响？\n步骤4：综合评估版本更新的整体影响\n步骤5：给出需要重点监控的指标和预警阈值"},
-      {"title": "Few-shot 示例学习", "body": "<p>通过提供 2-3 个示例，让 Claude 精确复制你要的输出风格：</p>", "example": "请按照以下示例的格式和风格，生成游戏版本更新公告：\n\n【示例1】\n标题：1.8版本更新：星际裂隙降临\n开头：指挥官们，新的冒险即将开启！\n正文：[简洁列出更新内容，每项用emoji标注]\n结尾：[日期+维护时间+补偿信息]\n语气：热情但不浮夸，有仪式感\n\n【示例2】\n标题：1.7版本更新：命运的交汇\n...\n\n现在请为以下更新内容生成公告：\n- 新角色「月华」上线\n- 春节限定活动开启\n- 竞技场赛季重置\n- BUG修复3项"},
-      {"title": "结构化 JSON 输出", "body": "<p>让 Claude 输出可编程处理的结构化数据：</p>", "example": "请将以下游戏版本更新内容转换为结构化JSON格式：\n\n更新内容：新角色月华上线、春节活动、竞技场重置、3个BUG修复\n\n输出JSON格式：\n{\n  \"version\": \"1.9\",\n  \"date\": \"2026-02-01\",\n  \"highlights\": [{\"type\": \"new_character|event|system|bugfix\", \"title\": \"\", \"description\": \"\", \"impact\": \"high|medium|low\"}],\n  \"announcements\": {\"title\": \"\", \"body\": \"\", \"platforms\": [\"in_game\", \"weibo\", \"tiktok\"]},\n  \"maintenance\": {\"start\": \"\", \"end\": \"\", \"compensation\": \"\"}\n}\n\n确保JSON格式合法，可直接被程序解析。"},
-      {"title": "建立团队提示词库", "body": "<p>将验证有效的高级提示词固化为团队资产：</p><ul><li>创建一个共享文档/Notion页面存放团队提示词</li><li>每个提示词包含：名称、用途、完整模板、使用示例、适用场景</li><li>定期更新和淘汰效果不好的提示词</li></ul>", "tip": "好的提示词模板能让新人第一天就输出老手水平的内容"}
+    "tier": "advanced",
+    "difficulty": "advanced",
+    "duration": "35分钟",
+    "targetJobs": [
+      "all"
     ],
-    "solves": "AI输出不够精准、格式不可控", "outcome": "一套高级提示词技巧和团队提示词库",
-    "fitLevel": "有一定Claude使用经验", "nextGuides": ["t-claude-16", "t-claude-17"],
-    "relatedPath": "Claude 深度使用指南", "fitRoles": ["全岗位"]
+    "category": "prompt",
+    "icon": "🔗",
+    "editorPick": true,
+    "steps": 5,
+    "columnId": "col-claude",
+    "columnOrder": 11,
+    "prerequisite": [
+      "t-claude-02"
+    ],
+    "content": [
+      {
+        "title": "提示词工程为什么重要",
+        "body": "<p>入门阶段你学会了「给 Claude 清晰的指令」。进阶阶段的核心是<strong>控制 Claude 的思考过程和输出格式</strong>：</p><ul><li><strong>Chain-of-Thought</strong>：让 Claude 展示推理过程，结论更可靠</li><li><strong>Few-shot Learning</strong>：提供示例，让输出精确匹配你要的格式</li><li><strong>结构化输出</strong>：直接输出 JSON/表格，可对接下游系统</li></ul>"
+      },
+      {
+        "title": "Chain-of-Thought 技巧",
+        "body": "<p>让 Claude 「先想清楚再回答」：</p>",
+        "example": "请分析以下游戏版本更新对各项指标的预期影响。\n\n版本更新内容：\n1. 新增5v5竞技模式\n2. 调整3个角色数值（2个加强1个削弱）\n3. 新增月卡系统（30元/月）\n\n请按以下步骤分析（每步都展示你的推理过程）：\n\n步骤1：每个更新项会影响哪些核心指标？\n步骤2：影响是正面还是负面？程度如何？\n步骤3：不同更新项之间是否有交互影响？\n步骤4：综合评估版本更新的整体影响\n步骤5：给出需要重点监控的指标和预警阈值"
+      },
+      {
+        "title": "Few-shot 示例学习",
+        "body": "<p>通过提供 2-3 个示例，让 Claude 精确复制你要的输出风格：</p>",
+        "example": "请按照以下示例的格式和风格，生成游戏版本更新公告：\n\n【示例1】\n标题：1.8版本更新：星际裂隙降临\n开头：指挥官们，新的冒险即将开启！\n正文：[简洁列出更新内容，每项用emoji标注]\n结尾：[日期+维护时间+补偿信息]\n语气：热情但不浮夸，有仪式感\n\n【示例2】\n标题：1.7版本更新：命运的交汇\n...\n\n现在请为以下更新内容生成公告：\n- 新角色「月华」上线\n- 春节限定活动开启\n- 竞技场赛季重置\n- BUG修复3项"
+      },
+      {
+        "title": "结构化 JSON 输出",
+        "body": "<p>让 Claude 输出可编程处理的结构化数据：</p>",
+        "example": "请将以下游戏版本更新内容转换为结构化JSON格式：\n\n更新内容：新角色月华上线、春节活动、竞技场重置、3个BUG修复\n\n输出JSON格式：\n{\n  \"version\": \"1.9\",\n  \"date\": \"2026-02-01\",\n  \"highlights\": [{\"type\": \"new_character|event|system|bugfix\", \"title\": \"\", \"description\": \"\", \"impact\": \"high|medium|low\"}],\n  \"announcements\": {\"title\": \"\", \"body\": \"\", \"platforms\": [\"in_game\", \"weibo\", \"tiktok\"]},\n  \"maintenance\": {\"start\": \"\", \"end\": \"\", \"compensation\": \"\"}\n}\n\n确保JSON格式合法，可直接被程序解析。"
+      },
+      {
+        "title": "建立团队提示词库",
+        "body": "<p>将验证有效的高级提示词固化为团队资产：</p><ul><li>创建一个共享文档/Notion页面存放团队提示词</li><li>每个提示词包含：名称、用途、完整模板、使用示例、适用场景</li><li>定期更新和淘汰效果不好的提示词</li></ul>",
+        "tip": "好的提示词模板能让新人第一天就输出老手水平的内容"
+      }
+    ],
+    "solves": "AI输出不够精准、格式不可控",
+    "outcome": "一套高级提示词技巧和团队提示词库",
+    "fitLevel": "有一定Claude使用经验",
+    "nextGuides": [
+      "t-claude-16",
+      "t-claude-17"
+    ],
+    "relatedPath": "Claude 深度使用指南",
+    "fitRoles": [
+      "全岗位"
+    ]
   },
   {
     "id": "t-claude-12",
     "title": "AI辅助的90天游戏发行计划",
     "desc": "以中度休闲游戏全球发行为例，用Claude串联完成从市场分析到上线物料的完整发行计划",
-    "tier": "advanced", "difficulty": "advanced", "duration": "45分钟",
-    "targetJobs": ["publishing-manager", "operation-manager"], "category": "prompt", "icon": "📋",
-    "editorPick": true, "steps": 5, "columnId": "col-claude", "columnOrder": 12, "prerequisite": ["t-claude-03"],
-    "content": [
-      {"title": "发行计划的 AI 辅助框架", "body": "<p>90天发行计划分为三个阶段：</p><ul><li><strong>Day 1-30 预热期</strong>：市场分析、定位确认、素材准备</li><li><strong>Day 31-60 冲刺期</strong>：预注册、KOL合作、社区建设</li><li><strong>Day 61-90 上线期</strong>：集中投放、活动运营、数据优化</li></ul><p>Claude 在每个阶段都能提供实质性的辅助。</p>"},
-      {"title": "市场规模与竞争格局", "body": "<p>让 Claude 帮你搭建市场分析框架：</p>", "example": "你是一位游戏发行专家。请帮我分析以下游戏的市场机会：\n\n游戏类型：中度休闲合并消除\n目标市场：全球（优先北美和东南亚）\n\n请分析：\n1. 该品类全球市场规模和增长趋势\n2. Top 10竞品及其月流水估算\n3. 市场饱和度评估（红海/蓝海）\n4. 差异化机会空间\n5. 推荐的目标市场优先级排序（带理由）"},
-      {"title": "定价与推广节奏规划", "body": "<p>基于市场分析制定策略：</p>", "example": "基于以上市场分析，请制定推广策略：\n\n1. 定价策略\n   - 内购定价建议（参考竞品定价带）\n   - 首充/月卡/礼包定价\n   - 不同市场的价格本地化建议\n\n2. 90天推广节奏表\n| 阶段 | 时间 | 核心动作 | 预算占比 | KPI |\n| 预热期 | D1-30 | | | |\n| 冲刺期 | D31-60 | | | |\n| 上线期 | D61-90 | | | |\n\n3. 渠道优先级：各渠道的建议预算分配比例"},
-      {"title": "KOL策略与物料准备", "body": "<p>让 Claude 帮你规划 KOL 合作和上线物料：</p>", "example": "请制定KOL合作策略和物料清单：\n\n1. KOL分层策略\n| 层级 | 粉丝量 | 数量 | 合作方式 | 预算/人 |\n| 头部 | 100万+ | 2-3人 | 定制视频 | |\n| 腰部 | 10-100万 | 10-15人 | 试玩评测 | |\n| 尾部 | 1-10万 | 50+ | 体验分享 | |\n\n2. 上线物料清单\n列出所有需要准备的素材及deadline：\n- 商店页资产（截图/视频/描述）\n- 广告素材（各平台尺寸）\n- 社媒预热内容\n- 新闻稿和媒体Kit"},
-      {"title": "90天完整计划组装", "body": "<p>将所有模块整合为一份可执行的发行计划：</p>", "example": "请将以上所有分析整合为一份完整的90天发行计划文档：\n\n# [游戏名] 全球发行计划\n\n## 一、市场机会概要\n## 二、竞争定位\n## 三、目标与KPI\n## 四、定价策略\n## 五、90天行动计划（甘特图格式）\n## 六、预算分配\n## 七、KOL合作方案\n## 八、物料准备清单与timeline\n## 九、风险预案\n## 十、成功标准定义\n\n用Markdown格式输出，团队可直接使用。", "tip": "这份计划是活文档，建议每两周用Claude做一次进度复盘和调整"}
+    "tier": "advanced",
+    "difficulty": "advanced",
+    "duration": "45分钟",
+    "targetJobs": [
+      "publishing-manager",
+      "operation-manager"
     ],
-    "solves": "发行计划制定周期长、容易遗漏关键环节", "outcome": "一份完整的90天发行计划和可复用的规划模板",
-    "fitLevel": "有发行经验或正在筹备发行", "nextGuides": ["t-claude-16", "t-claude-13"],
-    "relatedPath": "Claude 深度使用指南", "fitRoles": ["发行", "运营"]
+    "category": "prompt",
+    "icon": "📋",
+    "editorPick": true,
+    "steps": 5,
+    "columnId": "col-claude",
+    "columnOrder": 12,
+    "prerequisite": [
+      "t-claude-03"
+    ],
+    "content": [
+      {
+        "title": "发行计划的 AI 辅助框架",
+        "body": "<p>90天发行计划分为三个阶段：</p><ul><li><strong>Day 1-30 预热期</strong>：市场分析、定位确认、素材准备</li><li><strong>Day 31-60 冲刺期</strong>：预注册、KOL合作、社区建设</li><li><strong>Day 61-90 上线期</strong>：集中投放、活动运营、数据优化</li></ul><p>Claude 在每个阶段都能提供实质性的辅助。</p>"
+      },
+      {
+        "title": "市场规模与竞争格局",
+        "body": "<p>让 Claude 帮你搭建市场分析框架：</p>",
+        "example": "你是一位游戏发行专家。请帮我分析以下游戏的市场机会：\n\n游戏类型：中度休闲合并消除\n目标市场：全球（优先北美和东南亚）\n\n请分析：\n1. 该品类全球市场规模和增长趋势\n2. Top 10竞品及其月流水估算\n3. 市场饱和度评估（红海/蓝海）\n4. 差异化机会空间\n5. 推荐的目标市场优先级排序（带理由）"
+      },
+      {
+        "title": "定价与推广节奏规划",
+        "body": "<p>基于市场分析制定策略：</p>",
+        "example": "基于以上市场分析，请制定推广策略：\n\n1. 定价策略\n   - 内购定价建议（参考竞品定价带）\n   - 首充/月卡/礼包定价\n   - 不同市场的价格本地化建议\n\n2. 90天推广节奏表\n| 阶段 | 时间 | 核心动作 | 预算占比 | KPI |\n| 预热期 | D1-30 | | | |\n| 冲刺期 | D31-60 | | | |\n| 上线期 | D61-90 | | | |\n\n3. 渠道优先级：各渠道的建议预算分配比例"
+      },
+      {
+        "title": "KOL策略与物料准备",
+        "body": "<p>让 Claude 帮你规划 KOL 合作和上线物料：</p>",
+        "example": "请制定KOL合作策略和物料清单：\n\n1. KOL分层策略\n| 层级 | 粉丝量 | 数量 | 合作方式 | 预算/人 |\n| 头部 | 100万+ | 2-3人 | 定制视频 | |\n| 腰部 | 10-100万 | 10-15人 | 试玩评测 | |\n| 尾部 | 1-10万 | 50+ | 体验分享 | |\n\n2. 上线物料清单\n列出所有需要准备的素材及deadline：\n- 商店页资产（截图/视频/描述）\n- 广告素材（各平台尺寸）\n- 社媒预热内容\n- 新闻稿和媒体Kit"
+      },
+      {
+        "title": "90天完整计划组装",
+        "body": "<p>将所有模块整合为一份可执行的发行计划：</p>",
+        "example": "请将以上所有分析整合为一份完整的90天发行计划文档：\n\n# [游戏名] 全球发行计划\n\n## 一、市场机会概要\n## 二、竞争定位\n## 三、目标与KPI\n## 四、定价策略\n## 五、90天行动计划（甘特图格式）\n## 六、预算分配\n## 七、KOL合作方案\n## 八、物料准备清单与timeline\n## 九、风险预案\n## 十、成功标准定义\n\n用Markdown格式输出，团队可直接使用。",
+        "tip": "这份计划是活文档，建议每两周用Claude做一次进度复盘和调整"
+      }
+    ],
+    "solves": "发行计划制定周期长、容易遗漏关键环节",
+    "outcome": "一份完整的90天发行计划和可复用的规划模板",
+    "fitLevel": "有发行经验或正在筹备发行",
+    "nextGuides": [
+      "t-claude-16",
+      "t-claude-13"
+    ],
+    "relatedPath": "Claude 深度使用指南",
+    "fitRoles": [
+      "发行",
+      "运营"
+    ]
   },
   {
     "id": "t-claude-13",
     "title": "数据驱动的投放优化：Claude + 表格联动",
     "desc": "将投放数据导出，用Claude做素材归因、受众分层和预算再分配建议",
-    "tier": "advanced", "difficulty": "advanced", "duration": "35分钟",
-    "targetJobs": ["ad-manager", "data-analyst"], "category": "prompt", "icon": "📈",
-    "editorPick": false, "steps": 5, "columnId": "col-claude", "columnOrder": 13, "prerequisite": ["t-claude-04"],
-    "content": [
-      {"title": "投放优化的 AI 价值", "body": "<p>传统投放优化依赖优化师的经验直觉，AI 可以提供<strong>数据驱动的系统化分析</strong>：</p><ul><li>从海量数据中发现人眼看不到的模式</li><li>同时分析多个维度的交叉影响</li><li>快速生成可执行的优化建议</li></ul>"},
-      {"title": "数据导出与格式化", "body": "<p>从投放后台导出数据，格式化后喂给 Claude：</p>", "example": "请分析以下Facebook投放数据（最近14天）：\n\n| 广告组 | 素材类型 | 受众 | 展示 | 点击 | 安装 | 付费 | 花费 | CPI | ROAS |\n| A01 | 视频-剧情 | 18-24男 | 50K | 2.1K | 180 | 12 | $500 | $2.78 | 1.8 |\n| A02 | 图片-角色 | 18-24女 | 45K | 1.8K | 150 | 18 | $450 | $3.00 | 2.4 |\n...\n\n请分析：\n1. 各素材类型的效果对比\n2. 各受众群体的响应差异\n3. CPI和ROAS的相关性\n4. 表现最佳和最差的广告组"},
-      {"title": "素材效果归因分析", "body": "<p>深入分析哪些创意元素与高转化相关：</p>", "example": "基于以上投放数据，请做素材效果归因：\n\n1. 按素材类型：视频 vs 图片 vs 轮播的整体效果\n2. 按创意元素：哪些视觉元素/文案元素出现在高转化素材中\n3. 按投放时段：不同时段的效果差异\n4. 交叉分析：最佳「素材类型 x 受众」组合\n\n输出一份「创意指导原则」：下一批素材应该怎么做"},
-      {"title": "预算再分配建议", "body": "<p>基于效果数据优化预算分配：</p>", "example": "当前周预算：$5000\n当前分配：均匀分配到10个广告组\n\n请基于效果数据给出预算再分配建议：\n\n1. 哪些广告组应该加预算？加多少？\n2. 哪些应该减预算或暂停？\n3. 是否需要新建广告组测试新方向？\n4. 优化后的预期效果提升幅度\n\n用表格输出新的预算分配方案。"},
-      {"title": "建立投放-分析闭环", "body": "<p>将投放优化变成系统化流程：</p><ul><li><strong>每日</strong>：快速数据扫描，标注异常</li><li><strong>每周</strong>：完整效果分析 + 预算调整</li><li><strong>每月</strong>：素材归因报告 + 下月策略规划</li></ul><p>在 Claude Projects 中积累历史数据，让分析越来越精准。</p>", "tip": "将每周的分析报告都上传到 Project 知识库，Claude 可以自动做趋势对比"}
+    "tier": "advanced",
+    "difficulty": "advanced",
+    "duration": "35分钟",
+    "targetJobs": [
+      "ad-manager",
+      "data-analyst"
     ],
-    "solves": "投放优化依赖经验直觉、缺少系统分析", "outcome": "数据驱动的投放优化流程和预算分配方案",
-    "fitLevel": "有投放经验", "nextGuides": ["t-claude-16", "t-claude-19"],
-    "relatedPath": "Claude 深度使用指南", "fitRoles": ["投放", "数值"]
+    "category": "prompt",
+    "icon": "📈",
+    "editorPick": false,
+    "steps": 5,
+    "columnId": "col-claude",
+    "columnOrder": 13,
+    "prerequisite": [
+      "t-claude-04"
+    ],
+    "content": [
+      {
+        "title": "投放优化的 AI 价值",
+        "body": "<p>传统投放优化依赖优化师的经验直觉，AI 可以提供<strong>数据驱动的系统化分析</strong>：</p><ul><li>从海量数据中发现人眼看不到的模式</li><li>同时分析多个维度的交叉影响</li><li>快速生成可执行的优化建议</li></ul>"
+      },
+      {
+        "title": "数据导出与格式化",
+        "body": "<p>从投放后台导出数据，格式化后喂给 Claude：</p>",
+        "example": "请分析以下Facebook投放数据（最近14天）：\n\n| 广告组 | 素材类型 | 受众 | 展示 | 点击 | 安装 | 付费 | 花费 | CPI | ROAS |\n| A01 | 视频-剧情 | 18-24男 | 50K | 2.1K | 180 | 12 | $500 | $2.78 | 1.8 |\n| A02 | 图片-角色 | 18-24女 | 45K | 1.8K | 150 | 18 | $450 | $3.00 | 2.4 |\n...\n\n请分析：\n1. 各素材类型的效果对比\n2. 各受众群体的响应差异\n3. CPI和ROAS的相关性\n4. 表现最佳和最差的广告组"
+      },
+      {
+        "title": "素材效果归因分析",
+        "body": "<p>深入分析哪些创意元素与高转化相关：</p>",
+        "example": "基于以上投放数据，请做素材效果归因：\n\n1. 按素材类型：视频 vs 图片 vs 轮播的整体效果\n2. 按创意元素：哪些视觉元素/文案元素出现在高转化素材中\n3. 按投放时段：不同时段的效果差异\n4. 交叉分析：最佳「素材类型 x 受众」组合\n\n输出一份「创意指导原则」：下一批素材应该怎么做"
+      },
+      {
+        "title": "预算再分配建议",
+        "body": "<p>基于效果数据优化预算分配：</p>",
+        "example": "当前周预算：$5000\n当前分配：均匀分配到10个广告组\n\n请基于效果数据给出预算再分配建议：\n\n1. 哪些广告组应该加预算？加多少？\n2. 哪些应该减预算或暂停？\n3. 是否需要新建广告组测试新方向？\n4. 优化后的预期效果提升幅度\n\n用表格输出新的预算分配方案。"
+      },
+      {
+        "title": "建立投放-分析闭环",
+        "body": "<p>将投放优化变成系统化流程：</p><ul><li><strong>每日</strong>：快速数据扫描，标注异常</li><li><strong>每周</strong>：完整效果分析 + 预算调整</li><li><strong>每月</strong>：素材归因报告 + 下月策略规划</li></ul><p>在 Claude Projects 中积累历史数据，让分析越来越精准。</p>",
+        "tip": "将每周的分析报告都上传到 Project 知识库，Claude 可以自动做趋势对比"
+      }
+    ],
+    "solves": "投放优化依赖经验直觉、缺少系统分析",
+    "outcome": "数据驱动的投放优化流程和预算分配方案",
+    "fitLevel": "有投放经验",
+    "nextGuides": [
+      "t-claude-16",
+      "t-claude-19"
+    ],
+    "relatedPath": "Claude 深度使用指南",
+    "fitRoles": [
+      "投放",
+      "数值"
+    ]
   },
   {
     "id": "t-claude-14",
     "title": "用户分层运营策略生成器",
     "desc": "输入用户行为数据，生成分层运营策略，包括触达渠道、内容策略和活动设计",
-    "tier": "advanced", "difficulty": "advanced", "duration": "35分钟",
-    "targetJobs": ["operation-manager", "product-planner"], "category": "prompt", "icon": "👥",
-    "editorPick": false, "steps": 5, "columnId": "col-claude", "columnOrder": 14, "prerequisite": ["t-claude-06"],
-    "content": [
-      {"title": "用户分层的方法论", "body": "<p>常用的游戏用户分层模型：</p><ul><li><strong>RFM模型</strong>：最近登录(Recency)、登录频率(Frequency)、付费金额(Monetary)</li><li><strong>生命周期模型</strong>：新手→成长→成熟→衰退→流失</li><li><strong>付费分层</strong>：免费用户/小R/中R/大R/超R</li></ul>"},
-      {"title": "数据输入与用户画像", "body": "<p>将用户数据摘要提供给 Claude：</p>", "example": "请基于以下用户数据进行分层分析：\n\n总用户：50万\n| 指标 | 数据 |\n| MAU | 18万 |\n| 付费用户占比 | 5% |\n| 大R(月付>500) | 800人，贡献60%收入 |\n| 中R(月付100-500) | 3000人 |\n| 小R(月付<100) | 5200人 |\n| 7日回流率 | 15% |\n| 30日流失用户 | 3.2万 |\n\n请用RFM模型将用户分为6-8个层级，并为每层命名。"},
-      {"title": "每层用户的运营策略", "body": "<p>针对每个用户层级制定差异化策略：</p>", "example": "基于RFM分层结果，请为每层用户制定运营策略：\n\n每层包含：\n1. 用户画像（这群人是谁，行为特征）\n2. 运营目标（留存/付费转化/回流/提升ARPU）\n3. 触达渠道（推送/邮件/站内信/社媒）\n4. 内容策略（给他们看什么、说什么）\n5. 活动设计（什么类型的活动最有效）\n6. 关键指标（如何衡量策略效果）\n\n用表格输出完整的分层运营方案。"},
-      {"title": "效果预估与 A/B 测试", "body": "<p>让 Claude 设计验证方案：</p>", "example": "请为以上分层运营策略设计A/B测试方案：\n\n1. 每层选择一个最关键的策略做A/B测试\n2. 测试组设计（控制组 vs 实验组）\n3. 样本量计算建议\n4. 测试时长建议\n5. 成功判定标准\n6. 预期效果区间估算"},
-      {"title": "自动化运营看板", "body": "<p>设计一个运营看板来追踪分层策略的效果：</p>", "example": "请设计一份分层运营效果看板：\n\n1. 看板结构：哪些指标需要日常监控\n2. 每层用户的核心KPI和预警阈值\n3. 数据更新频率建议\n4. 月度复盘报告模板\n\n用Markdown表格输出看板设计。", "tip": "不要试图同时优化所有用户层级，每月聚焦1-2个层级效果最好"}
+    "tier": "advanced",
+    "difficulty": "advanced",
+    "duration": "35分钟",
+    "targetJobs": [
+      "operation-manager",
+      "product-planner"
     ],
-    "solves": "运营策略一刀切、缺少精细化分层", "outcome": "完整的用户分层运营方案和A/B测试计划",
-    "fitLevel": "有2年以上运营经验", "nextGuides": ["t-claude-16", "t-claude-19"],
-    "relatedPath": "Claude 深度使用指南", "fitRoles": ["运营", "策划"]
+    "category": "prompt",
+    "icon": "👥",
+    "editorPick": false,
+    "steps": 5,
+    "columnId": "col-claude",
+    "columnOrder": 14,
+    "prerequisite": [
+      "t-claude-06"
+    ],
+    "content": [
+      {
+        "title": "用户分层的方法论",
+        "body": "<p>常用的游戏用户分层模型：</p><ul><li><strong>RFM模型</strong>：最近登录(Recency)、登录频率(Frequency)、付费金额(Monetary)</li><li><strong>生命周期模型</strong>：新手→成长→成熟→衰退→流失</li><li><strong>付费分层</strong>：免费用户/小R/中R/大R/超R</li></ul>"
+      },
+      {
+        "title": "数据输入与用户画像",
+        "body": "<p>将用户数据摘要提供给 Claude：</p>",
+        "example": "请基于以下用户数据进行分层分析：\n\n总用户：50万\n| 指标 | 数据 |\n| MAU | 18万 |\n| 付费用户占比 | 5% |\n| 大R(月付>500) | 800人，贡献60%收入 |\n| 中R(月付100-500) | 3000人 |\n| 小R(月付<100) | 5200人 |\n| 7日回流率 | 15% |\n| 30日流失用户 | 3.2万 |\n\n请用RFM模型将用户分为6-8个层级，并为每层命名。"
+      },
+      {
+        "title": "每层用户的运营策略",
+        "body": "<p>针对每个用户层级制定差异化策略：</p>",
+        "example": "基于RFM分层结果，请为每层用户制定运营策略：\n\n每层包含：\n1. 用户画像（这群人是谁，行为特征）\n2. 运营目标（留存/付费转化/回流/提升ARPU）\n3. 触达渠道（推送/邮件/站内信/社媒）\n4. 内容策略（给他们看什么、说什么）\n5. 活动设计（什么类型的活动最有效）\n6. 关键指标（如何衡量策略效果）\n\n用表格输出完整的分层运营方案。"
+      },
+      {
+        "title": "效果预估与 A/B 测试",
+        "body": "<p>让 Claude 设计验证方案：</p>",
+        "example": "请为以上分层运营策略设计A/B测试方案：\n\n1. 每层选择一个最关键的策略做A/B测试\n2. 测试组设计（控制组 vs 实验组）\n3. 样本量计算建议\n4. 测试时长建议\n5. 成功判定标准\n6. 预期效果区间估算"
+      },
+      {
+        "title": "自动化运营看板",
+        "body": "<p>设计一个运营看板来追踪分层策略的效果：</p>",
+        "example": "请设计一份分层运营效果看板：\n\n1. 看板结构：哪些指标需要日常监控\n2. 每层用户的核心KPI和预警阈值\n3. 数据更新频率建议\n4. 月度复盘报告模板\n\n用Markdown表格输出看板设计。",
+        "tip": "不要试图同时优化所有用户层级，每月聚焦1-2个层级效果最好"
+      }
+    ],
+    "solves": "运营策略一刀切、缺少精细化分层",
+    "outcome": "完整的用户分层运营方案和A/B测试计划",
+    "fitLevel": "有2年以上运营经验",
+    "nextGuides": [
+      "t-claude-16",
+      "t-claude-19"
+    ],
+    "relatedPath": "Claude 深度使用指南",
+    "fitRoles": [
+      "运营",
+      "策划"
+    ]
   },
   {
     "id": "t-claude-15",
     "title": "危机公关预案与舆情响应模板",
     "desc": "针对服务器宕机、版本争议等常见危机场景，预生成分级响应模板和FAQ库",
-    "tier": "advanced", "difficulty": "advanced", "duration": "30分钟",
-    "targetJobs": ["brand-manager", "operation-manager"], "category": "prompt", "icon": "🛡️",
-    "editorPick": false, "steps": 5, "columnId": "col-claude", "columnOrder": 15, "prerequisite": ["t-claude-10"],
-    "content": [
-      {"title": "游戏行业常见危机类型", "body": "<p>游戏行业特有的危机场景：</p><ul><li><strong>技术类</strong>：服务器宕机、数据丢失、严重BUG</li><li><strong>内容类</strong>：版本平衡争议、活动设计不公、抽卡概率质疑</li><li><strong>舆论类</strong>：负面报道、KOL差评、玩家联合抵制</li><li><strong>合规类</strong>：版号问题、防沉迷争议、隐私数据泄露</li></ul>"},
-      {"title": "危机分级体系设计", "body": "<p>建立标准化的危机分级体系：</p>", "example": "请为游戏公司设计一套危机分级体系：\n\n分为4个等级（P0-P3），每个等级定义：\n1. 触发条件（什么情况算这个等级）\n2. 响应时限（必须在多长时间内回应）\n3. 决策层级（谁来拍板）\n4. 沟通渠道（在哪里发声）\n5. 标准动作清单\n\n用表格输出，附带2-3个具体案例。"},
-      {"title": "分级响应模板生成", "body": "<p>为每种危机类型预生成响应模板：</p>", "example": "请为以下场景生成危机响应模板：\n\n场景：服务器宕机超过2小时（P1级）\n\n需要生成：\n1. 第一时间公告（宕机后15分钟内发布）\n2. 进展更新公告（每30分钟一次）\n3. 恢复公告\n4. 事后复盘公告（含补偿方案）\n5. 客服话术（FAQ格式，10个常见问题）\n\n语气要求：诚恳、透明、有担当，不推诿"},
-      {"title": "社媒话术矩阵", "body": "<p>不同平台的危机沟通风格不同：</p>", "example": "请为「版本平衡性争议」场景生成多平台响应话术：\n\n| 平台 | 语气 | 模板 | 注意事项 |\n| 微博 | 正式+温暖 | | 不要删评论 |\n| B站 | 真诚+接地气 | | 可以适当自嘲 |\n| TapTap | 专业+详细 | | 需要附技术解释 |\n| 客服工单 | 耐心+解决导向 | | 要有具体补偿方案 |\n\n每个平台生成3种场景的回复模板。"},
-      {"title": "FAQ库自动构建", "body": "<p>提前准备常见问题的标准回答：</p>", "example": "请为以下常见危机场景生成FAQ库（每个场景10个Q&A）：\n\n场景1：服务器宕机\n场景2：抽卡概率质疑\n场景3：版本削弱角色\n\n每个Q&A包含：\n- 玩家可能的提问方式（列2-3种变体）\n- 标准回答\n- 如果玩家继续追问的升级回答\n- 需要转人工的判断标准", "tip": "危机预案要定期演练，不要等到真出事了才翻出来看"}
+    "tier": "advanced",
+    "difficulty": "advanced",
+    "duration": "30分钟",
+    "targetJobs": [
+      "brand-manager",
+      "operation-manager"
     ],
-    "solves": "危机发生时手忙脚乱、回应不专业", "outcome": "完整的危机分级体系和多场景响应模板库",
-    "fitLevel": "有品牌或运营管理经验", "nextGuides": ["t-claude-16", "t-claude-18"],
-    "relatedPath": "Claude 深度使用指南", "fitRoles": ["品牌", "运营"]
+    "category": "prompt",
+    "icon": "🛡️",
+    "editorPick": false,
+    "steps": 5,
+    "columnId": "col-claude",
+    "columnOrder": 15,
+    "prerequisite": [
+      "t-claude-10"
+    ],
+    "content": [
+      {
+        "title": "游戏行业常见危机类型",
+        "body": "<p>游戏行业特有的危机场景：</p><ul><li><strong>技术类</strong>：服务器宕机、数据丢失、严重BUG</li><li><strong>内容类</strong>：版本平衡争议、活动设计不公、抽卡概率质疑</li><li><strong>舆论类</strong>：负面报道、KOL差评、玩家联合抵制</li><li><strong>合规类</strong>：版号问题、防沉迷争议、隐私数据泄露</li></ul>"
+      },
+      {
+        "title": "危机分级体系设计",
+        "body": "<p>建立标准化的危机分级体系：</p>",
+        "example": "请为游戏公司设计一套危机分级体系：\n\n分为4个等级（P0-P3），每个等级定义：\n1. 触发条件（什么情况算这个等级）\n2. 响应时限（必须在多长时间内回应）\n3. 决策层级（谁来拍板）\n4. 沟通渠道（在哪里发声）\n5. 标准动作清单\n\n用表格输出，附带2-3个具体案例。"
+      },
+      {
+        "title": "分级响应模板生成",
+        "body": "<p>为每种危机类型预生成响应模板：</p>",
+        "example": "请为以下场景生成危机响应模板：\n\n场景：服务器宕机超过2小时（P1级）\n\n需要生成：\n1. 第一时间公告（宕机后15分钟内发布）\n2. 进展更新公告（每30分钟一次）\n3. 恢复公告\n4. 事后复盘公告（含补偿方案）\n5. 客服话术（FAQ格式，10个常见问题）\n\n语气要求：诚恳、透明、有担当，不推诿"
+      },
+      {
+        "title": "社媒话术矩阵",
+        "body": "<p>不同平台的危机沟通风格不同：</p>",
+        "example": "请为「版本平衡性争议」场景生成多平台响应话术：\n\n| 平台 | 语气 | 模板 | 注意事项 |\n| 微博 | 正式+温暖 | | 不要删评论 |\n| B站 | 真诚+接地气 | | 可以适当自嘲 |\n| TapTap | 专业+详细 | | 需要附技术解释 |\n| 客服工单 | 耐心+解决导向 | | 要有具体补偿方案 |\n\n每个平台生成3种场景的回复模板。"
+      },
+      {
+        "title": "FAQ库自动构建",
+        "body": "<p>提前准备常见问题的标准回答：</p>",
+        "example": "请为以下常见危机场景生成FAQ库（每个场景10个Q&A）：\n\n场景1：服务器宕机\n场景2：抽卡概率质疑\n场景3：版本削弱角色\n\n每个Q&A包含：\n- 玩家可能的提问方式（列2-3种变体）\n- 标准回答\n- 如果玩家继续追问的升级回答\n- 需要转人工的判断标准",
+        "tip": "危机预案要定期演练，不要等到真出事了才翻出来看"
+      }
+    ],
+    "solves": "危机发生时手忙脚乱、回应不专业",
+    "outcome": "完整的危机分级体系和多场景响应模板库",
+    "fitLevel": "有品牌或运营管理经验",
+    "nextGuides": [
+      "t-claude-16",
+      "t-claude-18"
+    ],
+    "relatedPath": "Claude 深度使用指南",
+    "fitRoles": [
+      "品牌",
+      "运营"
+    ]
   },
   {
     "id": "t-claude-16",
     "title": "发行团队 AI SOP 设计：从个人技巧到团队标准",
     "desc": "将单点AI技巧固化为团队标准流程，包括提示词模板库、质量审核和效率度量",
-    "tier": "advanced", "difficulty": "expert", "duration": "40分钟",
-    "targetJobs": ["all"], "category": "prompt", "icon": "📐",
-    "editorPick": true, "steps": 5, "columnId": "col-claude", "columnOrder": 16, "prerequisite": ["t-claude-11"],
-    "content": [
-      {"title": "为什么需要 AI SOP", "body": "<p>个人使用 AI 靠技巧，团队使用 AI 靠<strong>标准化流程</strong>：</p><ul><li>A同事用Claude写出优秀文案，B同事却不知道怎么用</li><li>好的Prompt没有沉淀，每次都要重新摸索</li><li>AI产出的质量参差不齐，没有统一审核标准</li></ul><p>AI SOP = 让团队中最强的AI使用者的能力<strong>可复制、可传递、可度量</strong>。</p>"},
-      {"title": "识别可标准化的 AI 任务", "body": "<p>不是所有任务都适合做SOP。用这个筛选标准：</p>", "example": "请帮我评估以下任务是否适合制定AI SOP：\n\n1. 周报撰写\n2. 竞品分析\n3. 广告文案生成\n4. 活动策划方案\n5. 用户评论分析\n6. 社媒内容排期\n7. 数值平衡验证\n8. 品牌文案审核\n\n评估维度：\n| 任务 | 频率 | AI可控度 | 标准化难度 | 推荐优先级 |\n\n标记出最适合先做SOP的Top 3任务。"},
-      {"title": "提示词模板库设计", "body": "<p>建立团队统一的提示词模板库：</p>", "example": "请设计一套团队提示词模板库的结构：\n\n每个模板包含：\n1. 模板名称和编号\n2. 适用场景\n3. 完整提示词（含变量占位符[XXX]）\n4. 变量说明（需要替换的部分）\n5. 输出示例\n6. 使用注意事项\n7. 版本号和最后更新日期\n\n请为「周报生成」和「广告文案生成」各设计一个标准模板。"},
-      {"title": "质量审核标准", "body": "<p>AI产出的内容需要人工审核，但审核标准要统一：</p>", "example": "请设计AI产出内容的质量审核标准：\n\n1. 通用审核清单（适用于所有AI产出）\n   - 事实准确性\n   - 品牌调性一致性\n   - 数据敏感信息\n   - 格式规范\n\n2. 分类审核清单\n   - 文案类：[具体审核项]\n   - 数据类：[具体审核项]\n   - 策划类：[具体审核项]\n\n3. 审核评分卡模板（可直接打印使用）"},
-      {"title": "效率提升度量框架", "body": "<p>量化 AI 带来的效率提升，用数据说话：</p>", "example": "请设计一套AI效率度量框架：\n\n1. 时间维度：每项任务AI前后的耗时对比\n2. 质量维度：产出质量的评分对比\n3. 产量维度：单位时间的产出量变化\n4. 成本维度：人力成本的节省估算\n\n设计一份月度AI效能报告模板，包含：\n- 团队AI使用率\n- 各岗位使用频率排名\n- 效率提升数据\n- 最佳实践分享\n- 下月优化建议", "tip": "在推行AI SOP的第一个月，选一个标杆团队先试点，验证后再全团队推广"}
+    "tier": "advanced",
+    "difficulty": "expert",
+    "duration": "40分钟",
+    "targetJobs": [
+      "all"
     ],
-    "solves": "AI能力停留在个人层面、无法团队化", "outcome": "一套完整的团队AI SOP和效率度量体系",
-    "fitLevel": "团队负责人/管理者", "nextGuides": ["t-claude-17", "t-claude-19"],
-    "relatedPath": "Claude 深度使用指南", "fitRoles": ["全岗位"]
+    "category": "prompt",
+    "icon": "📐",
+    "editorPick": true,
+    "steps": 5,
+    "columnId": "col-claude",
+    "columnOrder": 16,
+    "prerequisite": [
+      "t-claude-11"
+    ],
+    "content": [
+      {
+        "title": "为什么需要 AI SOP",
+        "body": "<p>个人使用 AI 靠技巧，团队使用 AI 靠<strong>标准化流程</strong>：</p><ul><li>A同事用Claude写出优秀文案，B同事却不知道怎么用</li><li>好的Prompt没有沉淀，每次都要重新摸索</li><li>AI产出的质量参差不齐，没有统一审核标准</li></ul><p>AI SOP = 让团队中最强的AI使用者的能力<strong>可复制、可传递、可度量</strong>。</p>"
+      },
+      {
+        "title": "识别可标准化的 AI 任务",
+        "body": "<p>不是所有任务都适合做SOP。用这个筛选标准：</p>",
+        "example": "请帮我评估以下任务是否适合制定AI SOP：\n\n1. 周报撰写\n2. 竞品分析\n3. 广告文案生成\n4. 活动策划方案\n5. 用户评论分析\n6. 社媒内容排期\n7. 数值平衡验证\n8. 品牌文案审核\n\n评估维度：\n| 任务 | 频率 | AI可控度 | 标准化难度 | 推荐优先级 |\n\n标记出最适合先做SOP的Top 3任务。"
+      },
+      {
+        "title": "提示词模板库设计",
+        "body": "<p>建立团队统一的提示词模板库：</p>",
+        "example": "请设计一套团队提示词模板库的结构：\n\n每个模板包含：\n1. 模板名称和编号\n2. 适用场景\n3. 完整提示词（含变量占位符[XXX]）\n4. 变量说明（需要替换的部分）\n5. 输出示例\n6. 使用注意事项\n7. 版本号和最后更新日期\n\n请为「周报生成」和「广告文案生成」各设计一个标准模板。"
+      },
+      {
+        "title": "质量审核标准",
+        "body": "<p>AI产出的内容需要人工审核，但审核标准要统一：</p>",
+        "example": "请设计AI产出内容的质量审核标准：\n\n1. 通用审核清单（适用于所有AI产出）\n   - 事实准确性\n   - 品牌调性一致性\n   - 数据敏感信息\n   - 格式规范\n\n2. 分类审核清单\n   - 文案类：[具体审核项]\n   - 数据类：[具体审核项]\n   - 策划类：[具体审核项]\n\n3. 审核评分卡模板（可直接打印使用）"
+      },
+      {
+        "title": "效率提升度量框架",
+        "body": "<p>量化 AI 带来的效率提升，用数据说话：</p>",
+        "example": "请设计一套AI效率度量框架：\n\n1. 时间维度：每项任务AI前后的耗时对比\n2. 质量维度：产出质量的评分对比\n3. 产量维度：单位时间的产出量变化\n4. 成本维度：人力成本的节省估算\n\n设计一份月度AI效能报告模板，包含：\n- 团队AI使用率\n- 各岗位使用频率排名\n- 效率提升数据\n- 最佳实践分享\n- 下月优化建议",
+        "tip": "在推行AI SOP的第一个月，选一个标杆团队先试点，验证后再全团队推广"
+      }
+    ],
+    "solves": "AI能力停留在个人层面、无法团队化",
+    "outcome": "一套完整的团队AI SOP和效率度量体系",
+    "fitLevel": "团队负责人/管理者",
+    "nextGuides": [
+      "t-claude-17",
+      "t-claude-19"
+    ],
+    "relatedPath": "Claude 深度使用指南",
+    "fitRoles": [
+      "全岗位"
+    ]
   },
   {
     "id": "t-claude-17",
     "title": "自定义 Agent 设计思维：为发行场景造工具",
     "desc": "用Claude Projects + System Prompt设计专属AI工作流，以自动化竞品监控Agent为例",
-    "tier": "advanced", "difficulty": "expert", "duration": "45分钟",
-    "targetJobs": ["product-planner", "operation-manager"], "category": "prompt", "icon": "🤖",
-    "editorPick": false, "steps": 5, "columnId": "col-claude", "columnOrder": 17, "prerequisite": ["t-claude-11"],
-    "content": [
-      {"title": "什么是 AI Agent 思维", "body": "<p>Agent 不是简单的「问一个问题得一个答案」，而是设计一个<strong>有固定角色、固定流程、持续记忆</strong>的AI助手：</p><ul><li><strong>角色</strong>：它是谁？专长是什么？</li><li><strong>流程</strong>：每次输入它按什么步骤处理？</li><li><strong>记忆</strong>：它记住什么？知识库包含哪些文档？</li><li><strong>输出</strong>：它的标准输出格式是什么？</li></ul>"},
-      {"title": "发行场景的 Agent 机会", "body": "<p>适合做成 Agent 的发行场景：</p>", "example": "请评估以下场景的Agent化价值：\n\n| 场景 | 频率 | 数据依赖 | Agent化价值 |\n| 竞品周报自动生成 | 每周 | 竞品公开信息 | |\n| 投放日报分析 | 每日 | 投放后台数据 | |\n| 用户评论周报 | 每周 | App Store评论 | |\n| 社媒内容日历 | 每月 | 版本规划文档 | |\n| 活动效果复盘 | 每活动 | 活动数据 | |\n\n评估维度：自动化程度/实现难度/ROI\n推荐最值得先做的Top 2。"},
-      {"title": "设计竞品监控 Agent", "body": "<p>以竞品监控为例，设计完整的 Agent：</p>", "example": "请设计一个「竞品监控Agent」的完整方案：\n\n1. Agent名称和定位\n2. System Prompt（完整版）\n3. 知识库内容清单（需要上传哪些文档）\n4. 标准输入格式（用户每次喂什么信息）\n5. 标准输出格式（Agent固定输出什么）\n6. 使用流程（每周怎么用）\n\n请直接输出可以粘贴到Claude Projects的System Prompt。"},
-      {"title": "输出格式标准化", "body": "<p>好的 Agent 输出格式统一、可预期：</p>", "example": "为竞品监控Agent设计标准输出模板：\n\n# 竞品周报 — 第XX周\n\n## 本周重要变化\n| 竞品 | 变化类型 | 详情 | 影响评估 |\n\n## 威胁预警（如有）\n\n## 机会发现（如有）\n\n## 建议行动项\n\n---\n确保每次输出都严格遵循这个格式。"},
-      {"title": "更多 Agent 场景设计", "body": "<p>一旦掌握了 Agent 设计思维，可以快速复制到其他场景：</p><ul><li><strong>投放日报Agent</strong>：每天输入数据，自动生成分析和建议</li><li><strong>社媒助手Agent</strong>：输入主题，输出多平台适配内容</li><li><strong>品牌审核Agent</strong>：输入文案，自动检查是否符合品牌规范</li></ul>", "tip": "好的Agent设计关键在于System Prompt，花80%的时间打磨它"}
+    "tier": "advanced",
+    "difficulty": "expert",
+    "duration": "45分钟",
+    "targetJobs": [
+      "product-planner",
+      "operation-manager"
     ],
-    "solves": "AI使用停留在单次对话、缺少持续化工具", "outcome": "2-3个可立即使用的AI Agent和设计方法论",
-    "fitLevel": "有一定AI使用经验的进阶用户", "nextGuides": ["t-claude-18", "t-claude-19"],
-    "relatedPath": "Claude 深度使用指南", "fitRoles": ["策划", "运营"]
+    "category": "prompt",
+    "icon": "🤖",
+    "editorPick": false,
+    "steps": 5,
+    "columnId": "col-claude",
+    "columnOrder": 17,
+    "prerequisite": [
+      "t-claude-11"
+    ],
+    "content": [
+      {
+        "title": "什么是 AI Agent 思维",
+        "body": "<p>Agent 不是简单的「问一个问题得一个答案」，而是设计一个<strong>有固定角色、固定流程、持续记忆</strong>的AI助手：</p><ul><li><strong>角色</strong>：它是谁？专长是什么？</li><li><strong>流程</strong>：每次输入它按什么步骤处理？</li><li><strong>记忆</strong>：它记住什么？知识库包含哪些文档？</li><li><strong>输出</strong>：它的标准输出格式是什么？</li></ul>"
+      },
+      {
+        "title": "发行场景的 Agent 机会",
+        "body": "<p>适合做成 Agent 的发行场景：</p>",
+        "example": "请评估以下场景的Agent化价值：\n\n| 场景 | 频率 | 数据依赖 | Agent化价值 |\n| 竞品周报自动生成 | 每周 | 竞品公开信息 | |\n| 投放日报分析 | 每日 | 投放后台数据 | |\n| 用户评论周报 | 每周 | App Store评论 | |\n| 社媒内容日历 | 每月 | 版本规划文档 | |\n| 活动效果复盘 | 每活动 | 活动数据 | |\n\n评估维度：自动化程度/实现难度/ROI\n推荐最值得先做的Top 2。"
+      },
+      {
+        "title": "设计竞品监控 Agent",
+        "body": "<p>以竞品监控为例，设计完整的 Agent：</p>",
+        "example": "请设计一个「竞品监控Agent」的完整方案：\n\n1. Agent名称和定位\n2. System Prompt（完整版）\n3. 知识库内容清单（需要上传哪些文档）\n4. 标准输入格式（用户每次喂什么信息）\n5. 标准输出格式（Agent固定输出什么）\n6. 使用流程（每周怎么用）\n\n请直接输出可以粘贴到Claude Projects的System Prompt。"
+      },
+      {
+        "title": "输出格式标准化",
+        "body": "<p>好的 Agent 输出格式统一、可预期：</p>",
+        "example": "为竞品监控Agent设计标准输出模板：\n\n# 竞品周报 — 第XX周\n\n## 本周重要变化\n| 竞品 | 变化类型 | 详情 | 影响评估 |\n\n## 威胁预警（如有）\n\n## 机会发现（如有）\n\n## 建议行动项\n\n---\n确保每次输出都严格遵循这个格式。"
+      },
+      {
+        "title": "更多 Agent 场景设计",
+        "body": "<p>一旦掌握了 Agent 设计思维，可以快速复制到其他场景：</p><ul><li><strong>投放日报Agent</strong>：每天输入数据，自动生成分析和建议</li><li><strong>社媒助手Agent</strong>：输入主题，输出多平台适配内容</li><li><strong>品牌审核Agent</strong>：输入文案，自动检查是否符合品牌规范</li></ul>",
+        "tip": "好的Agent设计关键在于System Prompt，花80%的时间打磨它"
+      }
+    ],
+    "solves": "AI使用停留在单次对话、缺少持续化工具",
+    "outcome": "2-3个可立即使用的AI Agent和设计方法论",
+    "fitLevel": "有一定AI使用经验的进阶用户",
+    "nextGuides": [
+      "t-claude-18",
+      "t-claude-19"
+    ],
+    "relatedPath": "Claude 深度使用指南",
+    "fitRoles": [
+      "策划",
+      "运营"
+    ]
   },
   {
     "id": "t-claude-18",
     "title": "AI 内容工厂：规模化内容生产的质量控制",
     "desc": "运营10+社媒账号时，构建品牌护栏+批量生成+人工审核的三层内容流水线",
-    "tier": "advanced", "difficulty": "expert", "duration": "40分钟",
-    "targetJobs": ["brand-manager", "social-media-manager"], "category": "prompt", "icon": "🏭",
-    "editorPick": false, "steps": 5, "columnId": "col-claude", "columnOrder": 18, "prerequisite": ["t-claude-10", "t-claude-16"],
-    "content": [
-      {"title": "规模化内容的挑战", "body": "<p>当你需要同时运营 10+ 个社媒账号或管理 50+ 款游戏的内容时：</p><ul><li>内容产量需求远超人力上限</li><li>质量一致性难以保证</li><li>品牌调性容易走样</li><li>审核流程成为瓶颈</li></ul><p>解决方案：<strong>三层内容流水线</strong> = 品牌护栏 + 批量生成 + 人工审核。</p>"},
-      {"title": "品牌护栏设计", "body": "<p>品牌护栏是第一层防线，确保所有AI产出都在品牌框架内：</p>", "example": "请为一个管理20款游戏内容的团队设计品牌护栏系统：\n\n1. 统一品牌规范模板\n   - 每款游戏的品牌调性关键词\n   - 禁用词列表\n   - 敏感话题避让规则\n\n2. Claude Project 配置方案\n   - 每款游戏一个Project还是按类型分组？\n   - System Prompt模板（可批量配置）\n   - 知识库管理策略\n\n给出具体的实施方案和配置示例。"},
-      {"title": "批量生成模板", "body": "<p>设计可复用的批量内容生成流程：</p>", "example": "请设计一套批量内容生成工作流：\n\n输入：本周版本更新列表（20款游戏）\n输出：每款游戏的社媒内容包\n\n每个内容包包含：\n- 微博帖子（1条）\n- 抖音文案（1条）\n- 公众号推送标题（3个备选）\n- 社区公告（1条）\n\n设计一个Prompt模板，只需替换游戏名和更新内容，即可批量产出。"},
-      {"title": "质量审核流程", "body": "<p>批量生成的内容必须经过审核才能发布：</p>", "example": "请设计一套高效的内容审核流程：\n\n1. AI自审（第一层）：让Claude自己检查是否符合品牌规范\n2. 交叉审核（第二层）：团队成员快速扫描\n3. 终审发布（第三层）：负责人抽检确认\n\n为每层设计：\n- 审核清单（5项以内，保证效率）\n- 审核时间标准（每条内容花多长时间）\n- 问题分级（哪些必须修改、哪些可以放行）\n- 效率目标（每人每小时审核多少条）"},
-      {"title": "内容工厂运营指标", "body": "<p>用数据驱动内容工厂的持续优化：</p>", "example": "请设计内容工厂的运营指标看板：\n\n效率指标：\n- 日均内容产出量\n- 平均生产成本（每条内容的时间和人力成本）\n- 审核通过率（一次通过 vs 需要修改）\n\n质量指标：\n- 品牌一致性评分\n- 内容互动率（按平台）\n- 用户投诉/负反馈率\n\n月度报告模板：整合以上指标的可视化报告。", "tip": "内容工厂的核心KPI是「单位时间内的高质量内容产出量」，不要为了数量牺牲质量"}
+    "tier": "advanced",
+    "difficulty": "expert",
+    "duration": "40分钟",
+    "targetJobs": [
+      "brand-manager",
+      "social-media-manager"
     ],
-    "solves": "大规模内容生产的质量和效率矛盾", "outcome": "三层内容流水线体系和运营指标看板",
-    "fitLevel": "管理多账号/多产品内容的负责人", "nextGuides": ["t-claude-19"],
-    "relatedPath": "Claude 深度使用指南", "fitRoles": ["品牌", "新媒体"]
+    "category": "prompt",
+    "icon": "🏭",
+    "editorPick": false,
+    "steps": 5,
+    "columnId": "col-claude",
+    "columnOrder": 18,
+    "prerequisite": [
+      "t-claude-10",
+      "t-claude-16"
+    ],
+    "content": [
+      {
+        "title": "规模化内容的挑战",
+        "body": "<p>当你需要同时运营 10+ 个社媒账号或管理 50+ 款游戏的内容时：</p><ul><li>内容产量需求远超人力上限</li><li>质量一致性难以保证</li><li>品牌调性容易走样</li><li>审核流程成为瓶颈</li></ul><p>解决方案：<strong>三层内容流水线</strong> = 品牌护栏 + 批量生成 + 人工审核。</p>"
+      },
+      {
+        "title": "品牌护栏设计",
+        "body": "<p>品牌护栏是第一层防线，确保所有AI产出都在品牌框架内：</p>",
+        "example": "请为一个管理20款游戏内容的团队设计品牌护栏系统：\n\n1. 统一品牌规范模板\n   - 每款游戏的品牌调性关键词\n   - 禁用词列表\n   - 敏感话题避让规则\n\n2. Claude Project 配置方案\n   - 每款游戏一个Project还是按类型分组？\n   - System Prompt模板（可批量配置）\n   - 知识库管理策略\n\n给出具体的实施方案和配置示例。"
+      },
+      {
+        "title": "批量生成模板",
+        "body": "<p>设计可复用的批量内容生成流程：</p>",
+        "example": "请设计一套批量内容生成工作流：\n\n输入：本周版本更新列表（20款游戏）\n输出：每款游戏的社媒内容包\n\n每个内容包包含：\n- 微博帖子（1条）\n- 抖音文案（1条）\n- 公众号推送标题（3个备选）\n- 社区公告（1条）\n\n设计一个Prompt模板，只需替换游戏名和更新内容，即可批量产出。"
+      },
+      {
+        "title": "质量审核流程",
+        "body": "<p>批量生成的内容必须经过审核才能发布：</p>",
+        "example": "请设计一套高效的内容审核流程：\n\n1. AI自审（第一层）：让Claude自己检查是否符合品牌规范\n2. 交叉审核（第二层）：团队成员快速扫描\n3. 终审发布（第三层）：负责人抽检确认\n\n为每层设计：\n- 审核清单（5项以内，保证效率）\n- 审核时间标准（每条内容花多长时间）\n- 问题分级（哪些必须修改、哪些可以放行）\n- 效率目标（每人每小时审核多少条）"
+      },
+      {
+        "title": "内容工厂运营指标",
+        "body": "<p>用数据驱动内容工厂的持续优化：</p>",
+        "example": "请设计内容工厂的运营指标看板：\n\n效率指标：\n- 日均内容产出量\n- 平均生产成本（每条内容的时间和人力成本）\n- 审核通过率（一次通过 vs 需要修改）\n\n质量指标：\n- 品牌一致性评分\n- 内容互动率（按平台）\n- 用户投诉/负反馈率\n\n月度报告模板：整合以上指标的可视化报告。",
+        "tip": "内容工厂的核心KPI是「单位时间内的高质量内容产出量」，不要为了数量牺牲质量"
+      }
+    ],
+    "solves": "大规模内容生产的质量和效率矛盾",
+    "outcome": "三层内容流水线体系和运营指标看板",
+    "fitLevel": "管理多账号/多产品内容的负责人",
+    "nextGuides": [
+      "t-claude-19"
+    ],
+    "relatedPath": "Claude 深度使用指南",
+    "fitRoles": [
+      "品牌",
+      "新媒体"
+    ]
   },
   {
     "id": "t-claude-19",
     "title": "ROI 衡量：如何向管理层证明 AI 投入的价值",
     "desc": "建立AI效能度量框架，用时间节省、质量提升和成本效益数据制作管理层汇报",
-    "tier": "advanced", "difficulty": "expert", "duration": "30分钟",
-    "targetJobs": ["all"], "category": "prompt", "icon": "💰",
-    "editorPick": false, "steps": 5, "columnId": "col-claude", "columnOrder": 19, "prerequisite": ["t-claude-16"],
-    "content": [
-      {"title": "为什么需要量化 AI 价值", "body": "<p>管理层关心三个问题：</p><ul><li>AI 到底帮团队省了多少时间？</li><li>AI 产出的质量跟人工比如何？</li><li>投入的订阅费用和学习成本值不值？</li></ul><p>如果你不能用<strong>数据回答</strong>这三个问题，AI预算随时可能被砍。</p>"},
-      {"title": "时间节省度量方法", "body": "<p>建立前后对比的度量基线：</p>", "example": "请帮我设计一套时间节省度量方案：\n\n需要度量的任务（发行团队常见）：\n1. 周报撰写\n2. 竞品分析报告\n3. 广告文案生成（20组）\n4. 活动策划方案\n5. 用户评论分析\n\n为每个任务设计：\n| 任务 | AI前耗时 | AI后耗时 | 节省比例 | 度量方法 |\n\n如何收集数据：建议团队记录1个月的使用日志。"},
-      {"title": "产出质量对比框架", "body": "<p>质量不能只靠主观感觉，需要标准化评估：</p>", "example": "请设计AI产出质量的评估框架：\n\n评估方式：盲测对比\n- 准备5份人工撰写的文案和5份AI辅助的文案\n- 让不知情的评审团打分\n\n评估维度：\n1. 信息准确性（1-5分）\n2. 创意水平（1-5分）\n3. 品牌一致性（1-5分）\n4. 可直接使用程度（1-5分）\n5. 综合偏好（二选一）\n\n请设计完整的盲测方案和评分表。"},
-      {"title": "成本效益分析", "body": "<p>计算 AI 的投入产出比：</p>", "example": "请帮我计算AI工具的ROI：\n\n投入成本（月）：\n- Claude Pro订阅：5人 x $20 = $100\n- 学习培训时间：5人 x 8小时 x 首月\n- SOP建设时间：20小时 x 首月\n\n产出收益（月）：\n- 时间节省：XX小时/月（从上面的度量数据）\n- 人力成本换算：XX小时 x 时薪\n- 质量提升带来的业务价值（间接）\n\n请计算：\n1. 月度ROI\n2. 回本周期\n3. 年化净收益\n4. 与招聘1个初级员工的成本对比"},
-      {"title": "制作管理层汇报", "body": "<p>将以上数据整合为一份有说服力的汇报：</p>", "example": "请基于以上数据，生成一份管理层AI效能汇报PPT大纲：\n\n# 发行团队AI效能报告\n\n## Slide 1：一句话总结（最核心的数字）\n## Slide 2：时间节省数据（可视化）\n## Slide 3：质量对比结果（盲测数据）\n## Slide 4：成本效益分析（ROI）\n## Slide 5：团队使用情况（采用率、活跃度）\n## Slide 6：典型案例展示（Before/After）\n## Slide 7：下阶段计划和预算需求\n\n每页Slide列出：核心信息 + 支撑数据 + 视觉建议", "tip": "管理层只看前3页，所以最有说服力的数据放最前面"}
+    "tier": "advanced",
+    "difficulty": "expert",
+    "duration": "30分钟",
+    "targetJobs": [
+      "all"
     ],
-    "solves": "无法量化AI价值、预算难以争取", "outcome": "一份数据驱动的AI效能报告和ROI计算模型",
-    "fitLevel": "团队负责人/部门管理者", "nextGuides": [],
-    "relatedPath": "Claude 深度使用指南", "fitRoles": ["全岗位"]
+    "category": "prompt",
+    "icon": "💰",
+    "editorPick": false,
+    "steps": 5,
+    "columnId": "col-claude",
+    "columnOrder": 19,
+    "prerequisite": [
+      "t-claude-16"
+    ],
+    "content": [
+      {
+        "title": "为什么需要量化 AI 价值",
+        "body": "<p>管理层关心三个问题：</p><ul><li>AI 到底帮团队省了多少时间？</li><li>AI 产出的质量跟人工比如何？</li><li>投入的订阅费用和学习成本值不值？</li></ul><p>如果你不能用<strong>数据回答</strong>这三个问题，AI预算随时可能被砍。</p>"
+      },
+      {
+        "title": "时间节省度量方法",
+        "body": "<p>建立前后对比的度量基线：</p>",
+        "example": "请帮我设计一套时间节省度量方案：\n\n需要度量的任务（发行团队常见）：\n1. 周报撰写\n2. 竞品分析报告\n3. 广告文案生成（20组）\n4. 活动策划方案\n5. 用户评论分析\n\n为每个任务设计：\n| 任务 | AI前耗时 | AI后耗时 | 节省比例 | 度量方法 |\n\n如何收集数据：建议团队记录1个月的使用日志。"
+      },
+      {
+        "title": "产出质量对比框架",
+        "body": "<p>质量不能只靠主观感觉，需要标准化评估：</p>",
+        "example": "请设计AI产出质量的评估框架：\n\n评估方式：盲测对比\n- 准备5份人工撰写的文案和5份AI辅助的文案\n- 让不知情的评审团打分\n\n评估维度：\n1. 信息准确性（1-5分）\n2. 创意水平（1-5分）\n3. 品牌一致性（1-5分）\n4. 可直接使用程度（1-5分）\n5. 综合偏好（二选一）\n\n请设计完整的盲测方案和评分表。"
+      },
+      {
+        "title": "成本效益分析",
+        "body": "<p>计算 AI 的投入产出比：</p>",
+        "example": "请帮我计算AI工具的ROI：\n\n投入成本（月）：\n- Claude Pro订阅：5人 x $20 = $100\n- 学习培训时间：5人 x 8小时 x 首月\n- SOP建设时间：20小时 x 首月\n\n产出收益（月）：\n- 时间节省：XX小时/月（从上面的度量数据）\n- 人力成本换算：XX小时 x 时薪\n- 质量提升带来的业务价值（间接）\n\n请计算：\n1. 月度ROI\n2. 回本周期\n3. 年化净收益\n4. 与招聘1个初级员工的成本对比"
+      },
+      {
+        "title": "制作管理层汇报",
+        "body": "<p>将以上数据整合为一份有说服力的汇报：</p>",
+        "example": "请基于以上数据，生成一份管理层AI效能汇报PPT大纲：\n\n# 发行团队AI效能报告\n\n## Slide 1：一句话总结（最核心的数字）\n## Slide 2：时间节省数据（可视化）\n## Slide 3：质量对比结果（盲测数据）\n## Slide 4：成本效益分析（ROI）\n## Slide 5：团队使用情况（采用率、活跃度）\n## Slide 6：典型案例展示（Before/After）\n## Slide 7：下阶段计划和预算需求\n\n每页Slide列出：核心信息 + 支撑数据 + 视觉建议",
+        "tip": "管理层只看前3页，所以最有说服力的数据放最前面"
+      }
+    ],
+    "solves": "无法量化AI价值、预算难以争取",
+    "outcome": "一份数据驱动的AI效能报告和ROI计算模型",
+    "fitLevel": "团队负责人/部门管理者",
+    "nextGuides": [],
+    "relatedPath": "Claude 深度使用指南",
+    "fitRoles": [
+      "全岗位"
+    ]
   },
   {
     "id": "t-nb-01",
@@ -6102,7 +6692,9 @@
     "tier": "beginner",
     "difficulty": "beginner",
     "duration": "30分钟",
-    "targetJobs": ["all"],
+    "targetJobs": [
+      "all"
+    ],
     "category": "prompt",
     "icon": "🍌",
     "editorPick": true,
@@ -6157,9 +6749,14 @@
     "solves": "不知道Nano Banana 2能做什么、不能做什么",
     "outcome": "对Nano Banana 2能力边界的清晰认知和第一个实操体验",
     "fitLevel": "零基础可开始",
-    "nextGuides": ["t-nb-02", "t-nb-03"],
+    "nextGuides": [
+      "t-nb-02",
+      "t-nb-03"
+    ],
     "relatedPath": "Nano Banana 2 实战指南",
-    "fitRoles": ["全岗位"]
+    "fitRoles": [
+      "全岗位"
+    ]
   },
   {
     "id": "t-nb-02",
@@ -6168,14 +6765,18 @@
     "tier": "intermediate",
     "difficulty": "intermediate",
     "duration": "40分钟",
-    "targetJobs": ["all"],
+    "targetJobs": [
+      "all"
+    ],
     "category": "prompt",
     "icon": "🏭",
     "editorPick": true,
     "steps": 8,
     "columnId": "col-nano-banana",
     "columnOrder": 2,
-    "prerequisite": ["t-nb-01"],
+    "prerequisite": [
+      "t-nb-01"
+    ],
     "content": [
       {
         "title": "为什么批量生成是核心竞争力",
@@ -6226,9 +6827,14 @@
     "solves": "视觉素材产出慢、变体少、跟不上投放和运营消耗速度",
     "outcome": "一套可复用的批量素材生成工作流和提示词模板库",
     "fitLevel": "已完成Nano Banana 2入门教程",
-    "nextGuides": ["t-nb-03", "t-nb-05"],
+    "nextGuides": [
+      "t-nb-03",
+      "t-nb-05"
+    ],
     "relatedPath": "Nano Banana 2 实战指南",
-    "fitRoles": ["全岗位"]
+    "fitRoles": [
+      "全岗位"
+    ]
   },
   {
     "id": "t-nb-03",
@@ -6237,14 +6843,18 @@
     "tier": "intermediate",
     "difficulty": "intermediate",
     "duration": "35分钟",
-    "targetJobs": ["all"],
+    "targetJobs": [
+      "all"
+    ],
     "category": "prompt",
     "icon": "⚡",
     "editorPick": true,
     "steps": 7,
     "columnId": "col-nano-banana",
     "columnOrder": 3,
-    "prerequisite": ["t-nb-01"],
+    "prerequisite": [
+      "t-nb-01"
+    ],
     "content": [
       {
         "title": "什么是「实时辅助」模式",
@@ -6291,9 +6901,14 @@
     "solves": "紧急出图需求无法快速响应，热点窗口来不及追",
     "outcome": "掌握10分钟从零到成品的快速出图能力和个人提示词库",
     "fitLevel": "已完成Nano Banana 2入门教程",
-    "nextGuides": ["t-nb-04", "t-nb-05"],
+    "nextGuides": [
+      "t-nb-04",
+      "t-nb-05"
+    ],
     "relatedPath": "Nano Banana 2 实战指南",
-    "fitRoles": ["全岗位"]
+    "fitRoles": [
+      "全岗位"
+    ]
   },
   {
     "id": "t-nb-04",
@@ -6302,14 +6917,18 @@
     "tier": "intermediate",
     "difficulty": "intermediate",
     "duration": "40分钟",
-    "targetJobs": ["all"],
+    "targetJobs": [
+      "all"
+    ],
     "category": "prompt",
     "icon": "🎨",
     "editorPick": false,
     "steps": 7,
     "columnId": "col-nano-banana",
     "columnOrder": 4,
-    "prerequisite": ["t-nb-01"],
+    "prerequisite": [
+      "t-nb-01"
+    ],
     "content": [
       {
         "title": "什么是视觉资产自动化",
@@ -6355,9 +6974,14 @@
     "solves": "角色视觉资产生产周期长、依赖设计师排期",
     "outcome": "一套从角色概念到周边设计的AI辅助视觉资产生产流程",
     "fitLevel": "已完成Nano Banana 2入门教程",
-    "nextGuides": ["t-nb-05", "t-nb-06"],
+    "nextGuides": [
+      "t-nb-05",
+      "t-nb-06"
+    ],
     "relatedPath": "Nano Banana 2 实战指南",
-    "fitRoles": ["全岗位"]
+    "fitRoles": [
+      "全岗位"
+    ]
   },
   {
     "id": "t-nb-05",
@@ -6366,14 +6990,19 @@
     "tier": "advanced",
     "difficulty": "advanced",
     "duration": "45分钟",
-    "targetJobs": ["all"],
+    "targetJobs": [
+      "all"
+    ],
     "category": "prompt",
     "icon": "🔗",
     "editorPick": true,
     "steps": 7,
     "columnId": "col-nano-banana",
     "columnOrder": 5,
-    "prerequisite": ["t-nb-02", "t002"],
+    "prerequisite": [
+      "t-nb-02",
+      "t002"
+    ],
     "content": [
       {
         "title": "为什么要混用模型：各取所长",
@@ -6419,9 +7048,13 @@
     "solves": "文案和视觉素材需要分别制作，效率低且风格不一致",
     "outcome": "一套Claude+Nano Banana 2的混用工作流和团队SOP",
     "fitLevel": "有Claude和Nano Banana 2的基础使用经验",
-    "nextGuides": ["t-nb-06"],
+    "nextGuides": [
+      "t-nb-06"
+    ],
     "relatedPath": "Nano Banana 2 实战指南",
-    "fitRoles": ["全岗位"]
+    "fitRoles": [
+      "全岗位"
+    ]
   },
   {
     "id": "t-nb-06",
@@ -6430,14 +7063,19 @@
     "tier": "advanced",
     "difficulty": "advanced",
     "duration": "35分钟",
-    "targetJobs": ["all"],
+    "targetJobs": [
+      "all"
+    ],
     "category": "prompt",
     "icon": "💎",
     "editorPick": false,
     "steps": 7,
     "columnId": "col-nano-banana",
     "columnOrder": 6,
-    "prerequisite": ["t-nb-02", "t-nb-05"],
+    "prerequisite": [
+      "t-nb-02",
+      "t-nb-05"
+    ],
     "content": [
       {
         "title": "AI 图像生成的真实成本结构",
@@ -6481,8 +7119,441 @@
     "solves": "AI出图成本失控、不知道哪里在浪费预算",
     "outcome": "一套AI出图成本控制体系和团队级可持续生产流程",
     "fitLevel": "已有一定AI出图经验的团队负责人",
-    "nextGuides": ["t-nb-05"],
+    "nextGuides": [
+      "t-nb-05"
+    ],
     "relatedPath": "Nano Banana 2 实战指南",
-    "fitRoles": ["全岗位"]
+    "fitRoles": [
+      "全岗位"
+    ]
+  },
+  {
+    "id": "t-oc-01",
+    "title": "OpenClaw 是什么：从 AI 对话到 AI 自动执行的跨越",
+    "desc": "全面理解 AI Agent 与传统对话式 AI 的本质区别，掌握 OpenClaw 五大核心概念和游戏行业最佳应用场景",
+    "tier": "beginner",
+    "difficulty": "beginner",
+    "duration": "30分钟",
+    "targetJobs": [
+      "all"
+    ],
+    "category": "prompt",
+    "icon": "🦞",
+    "editorPick": true,
+    "steps": 8,
+    "columnId": "col-openclaw",
+    "columnOrder": 1,
+    "prerequisite": [],
+    "content": [
+      {
+        "title": "AI Agent ≠ AI 对话：一个本质区别",
+        "body": "<p>你用 ChatGPT/Claude 写周报，流程是：<strong>你提问 → AI回答 → 你复制粘贴 → 你发邮件</strong>。每一步都需要你手动操作。</p><p>换成 OpenClaw Agent，流程变成：<strong>你设定目标 → Agent 自动拉数据 → 自动写周报 → 自动发送到 Slack</strong>。你只需要审核结果。</p><ul><li><strong>对话式 AI</strong>：被动响应，你问它答，擅长单次任务</li><li><strong>AI Agent</strong>：主动执行，你设目标它自主规划+执行+反馈，擅长多步骤工作流</li></ul><p>对游戏发行团队来说，这意味着：日报不用每天手写、竞品不用手动盯、评论不用人工翻，Agent 在后台持续运行。</p>",
+        "tip": "判断一个任务是否适合Agent：如果你每次做这件事都超过3步且步骤固定，它就是Agent的绝佳目标"
+      },
+      {
+        "title": "OpenClaw 全景：开源的 AI Agent 框架",
+        "body": "<p>OpenClaw 是 2025-2026 年最火的开源 AI Agent 框架，GitHub 180k+ stars，核心特点：</p><ul><li><strong>本地运行</strong>：Agent 运行在你的电脑上，不是云端。所有编排、记忆、工具调用都在本地，隐私可控</li><li><strong>模型无关</strong>：支持 Claude、GPT、Gemini，甚至通过 Ollama 用完全本地的模型，零数据外泄</li><li><strong>Gateway 架构</strong>：所有 Agent 通过一个 Gateway（网关）进程统一管理，它是 Session 管理、消息路由、Channel 连接的中枢</li><li><strong>开源免费</strong>：框架本身免费，你只需要为 AI 模型 API 付费</li></ul><p>简单说：<strong>OpenClaw 是一个让 AI 不只是聊天、而是真正干活的平台</strong>。</p>",
+        "tip": "Gateway 默认监听 ws://127.0.0.1:18789，是整个系统的\"大脑\"——所有消息、任务、Agent 都通过它调度"
+      },
+      {
+        "title": "五大核心概念（用游戏行业类比）",
+        "body": "<p>掌握这5个概念，你就理解了 OpenClaw 的全部架构：</p><table><tr><th>概念</th><th>类比</th><th>说明</th></tr><tr><td><strong>Gateway</strong></td><td>游戏服务器</td><td>中央进程，管理所有 Agent 的生命周期、消息路由、Session</td></tr><tr><td><strong>Agent</strong></td><td>NPC/自动执行者</td><td>自主运行的智能体，有自己的提示词、记忆、工具权限</td></tr><tr><td><strong>Channel</strong></td><td>聊天频道</td><td>消息通道：Slack、Discord、Telegram、微信等 50+ 平台</td></tr><tr><td><strong>Tool</strong></td><td>技能/能力</td><td>Agent 可调用的工具：Shell命令、文件操作、浏览器、API</td></tr><tr><td><strong>Memory</strong></td><td>存档系统</td><td>跨 Session 的持久记忆，Agent 记得之前的上下文</td></tr></table>",
+        "tip": "记住这个关系：Gateway 管理多个 Agent，每个 Agent 绑定到特定 Channel，拥有特定 Tool，积累 Memory"
+      },
+      {
+        "title": "Heartbeat 机制：Agent 的主动脉搏",
+        "body": "<p>这是 OpenClaw 区别于其他 Agent 框架的核心特性。</p><p><strong>传统 Agent</strong>：你发消息它才响应（被动）<br><strong>OpenClaw Agent</strong>：即使你不说话，它也会按设定的节奏「主动」检查环境并执行任务</p><p>Heartbeat 让 Agent 像心脏跳动一样定期\"醒来\"：</p><ul><li>每2小时检查 App Store 差评，发现新1星评价立即预警</li><li>每天早上9点自动汇总昨日数据生成日报</li><li>每周五下午自动生成周报并推送到工作群</li><li>持续监控竞品官网，发现更新立即通知</li></ul><p>这意味着<strong>Agent 不是等你调用的工具，而是一个7×24小时运行的数字员工</strong>。</p>",
+        "tip": "Heartbeat 使用 cron 语法设置频率，如 \"0 */2 * * *\" 表示每2小时触发一次",
+        "example": "# Heartbeat 配置示例\nheartbeat:\n  enabled: true\n  schedule: \"0 9 * * 1-5\"  # 工作日每天早上9点\n  prompt: |\n    请检查以下数据源的最新数据，生成今日运营日报：\n    1. 从 data/metrics.csv 读取昨日 DAU、新增、付费数据\n    2. 与前日对比，标注异常波动（>5%变化）\n    3. 生成300字以内的日报摘要\n    4. 推送到 #daily-report 频道"
+      },
+      {
+        "title": "横向对比：OpenClaw vs 其他方案",
+        "body": "<table><tr><th>维度</th><th>OpenClaw</th><th>AutoGPT</th><th>n8n/Zapier</th><th>Claude MCP</th></tr><tr><td>定位</td><td>本地Agent框架</td><td>自动化GPT</td><td>可视化自动化</td><td>工具协议</td></tr><tr><td>成熟度</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td></tr><tr><td>多Agent</td><td>原生支持</td><td>有限</td><td>不支持</td><td>不支持</td></tr><tr><td>主动执行</td><td>Heartbeat✅</td><td>需要触发</td><td>触发器</td><td>需要调用</td></tr><tr><td>消息平台</td><td>50+平台</td><td>有限</td><td>丰富</td><td>无</td></tr><tr><td>学习曲线</td><td>中等</td><td>较高</td><td>低</td><td>低</td></tr><tr><td>模型选择</td><td>任意模型</td><td>GPT为主</td><td>无模型</td><td>Claude</td></tr></table><p><strong>结论</strong>：如果你需要一个持续运行、能对接多平台、支持多Agent协作的自动化系统，OpenClaw 是目前最成熟的选择。</p>",
+        "tip": "OpenClaw 和 Claude MCP 不是竞争关系——你可以在 OpenClaw 中使用 Claude 作为底层模型，同时通过 MCP 扩展 Claude 的工具能力"
+      },
+      {
+        "title": "游戏行业 8 大最佳自动化场景",
+        "body": "<p>根据游戏发行团队的真实工作流，这 8 个场景最值得用 OpenClaw 自动化：</p><ol><li><strong>日报/周报自动生成</strong> — 从数据源抓取指标→生成叙事化报告→推送到群聊（节省30分钟/天）</li><li><strong>玩家评论监控预警</strong> — 实时扫描App Store/TapTap差评→分类→预警（从1天延迟→2小时响应）</li><li><strong>社媒内容定时发布</strong> — 按排期自动发布微博/公众号/抖音内容（释放新媒体人力）</li><li><strong>竞品动态追踪</strong> — 监控竞品App更新/官网变化/社媒动态→生成简报（周省3小时）</li><li><strong>多平台消息聚合</strong> — 将Slack/Discord/邮件/企业微信消息汇总到一个看板（不再遗漏）</li><li><strong>投放数据看板</strong> — 自动拉取各渠道投放数据→生成对比分析（实时掌握ROI）</li><li><strong>活动策划辅助</strong> — 输入目标→自动生成活动方案草稿+预算估算（策划效率翻倍）</li><li><strong>Bug报告分类分派</strong> — 自动分析玩家反馈→分类Bug类型→分派到对应开发人员</li></ol>",
+        "tip": "优先自动化\"高频+低创意\"的任务。日报生成是最佳切入点：收益明显、风险低、效果容易感知"
+      },
+      {
+        "title": "OpenClaw 的局限与不适合场景",
+        "body": "<p>诚实说明 OpenClaw <strong>不适合</strong>的场景，避免错误预期：</p><ul><li><strong>精确像素级设计</strong> — Agent 无法替代 Figma/Photoshop 的精确操作，只能辅助生成需求描述</li><li><strong>实时游戏服务</strong> — Agent 不适合处理毫秒级延迟的对战服务器逻辑</li><li><strong>敏感数据直操</strong> — 不建议让 Agent 直接访问生产数据库或支付系统</li><li><strong>一次性简单任务</strong> — 写一封邮件、翻译一段文字，直接用 Claude 对话更高效</li></ul><p><strong>其他需要注意的限制：</strong></p><ul><li>有学习曲线，完全不懂命令行的用户需要额外学习</li><li>本地部署需要一台常开的电脑（或服务器）</li><li>AI模型调用有成本，需要API key</li><li>Agent 可能\"幻觉\"，关键操作需要人工确认环节</li></ul>",
+        "tip": "任何 Agent 执行的结果都应该有\"人工确认\"环节。特别是对外发布的内容，务必审核后再发"
+      },
+      {
+        "title": "行动建议：不同角色的切入路径",
+        "body": "<p>根据你的岗位，建议的学习和落地路径：</p><table><tr><th>岗位</th><th>第一步</th><th>首个自动化</th><th>预期收益</th></tr><tr><td><strong>运营</strong></td><td>搭建Gateway+配置Claude</td><td>日报自动生成</td><td>每天节省30分钟</td></tr><tr><td><strong>投放</strong></td><td>连接数据API</td><td>投放ROI日报</td><td>实时掌握各渠道效果</td></tr><tr><td><strong>新媒体</strong></td><td>绑定Slack Channel</td><td>社媒内容排期发布</td><td>解放重复性发布操作</td></tr><tr><td><strong>品牌</strong></td><td>配置竞品监控</td><td>竞品动态周报</td><td>不再手动翻竞品官网</td></tr><tr><td><strong>策划</strong></td><td>学习Lobster流水线</td><td>活动方案自动生成</td><td>策划效率提升50%</td></tr><tr><td><strong>技术</strong></td><td>全链路部署</td><td>Bug分类分派</td><td>减少人工分拣时间</td></tr></table><p><strong>下一步</strong>：继续学习第二篇教程《30 分钟搭建你的第一个 OpenClaw Agent》，动手跑起来比看100篇介绍文章都有用。</p>",
+        "tip": "建议先完成第二篇教程的实操，拥有一个运行中的Agent后，后面的场景教程才有意义"
+      }
+    ],
+    "solves": "不知道AI Agent是什么、OpenClaw能做什么",
+    "outcome": "完整的OpenClaw知识框架和岗位级落地路径",
+    "fitLevel": "零基础可开始",
+    "nextGuides": [
+      "t-oc-02"
+    ],
+    "relatedPath": "OpenClaw 自动化实战",
+    "fitRoles": [
+      "全岗位"
+    ]
+  },
+  {
+    "id": "t-oc-02",
+    "title": "30 分钟搭建你的第一个 OpenClaw Agent",
+    "desc": "从零安装 OpenClaw Gateway，配置 AI 模型，创建并运行第一个游戏运营 Agent",
+    "tier": "beginner",
+    "difficulty": "beginner",
+    "duration": "30分钟",
+    "targetJobs": [
+      "all"
+    ],
+    "category": "prompt",
+    "icon": "🔧",
+    "editorPick": true,
+    "steps": 7,
+    "columnId": "col-openclaw",
+    "columnOrder": 2,
+    "prerequisite": [
+      "t-oc-01"
+    ],
+    "nextGuides": [
+      "t-oc-03"
+    ],
+    "relatedPath": "OpenClaw 自动化实战",
+    "fitRoles": [
+      "全岗位"
+    ],
+    "solves": "不知道怎么安装和启动OpenClaw",
+    "outcome": "一个运行中的OpenClaw Agent，能自动执行简单任务",
+    "fitLevel": "了解基本命令行操作即可",
+    "content": [
+      {
+        "title": "环境准备：硬件与系统要求",
+        "body": "<p>OpenClaw 对硬件要求不高，<strong>普通笔记本电脑即可运行</strong>：</p><ul><li><strong>CPU</strong>：任意现代处理器（2核以上）</li><li><strong>内存</strong>：4GB以上（推荐8GB）</li><li><strong>存储</strong>：至少2GB可用空间</li><li><strong>系统</strong>：macOS 12+、Ubuntu 20.04+、Windows 10（需WSL2）</li></ul><p><strong>推荐安装方式（二选一）：</strong></p><ol><li><strong>Docker（推荐）</strong>：一键部署，环境隔离，适合大多数用户</li><li><strong>直接安装</strong>：更灵活，适合需要深度定制的技术用户</li></ol>",
+        "tip": "如果你用 Mac，推荐 Docker Desktop；如果你用 Windows，先安装 WSL2 再用 Docker",
+        "example": "# macOS 安装 Docker Desktop\nbrew install --cask docker\n\n# Ubuntu 安装 Docker\ncurl -fsSL https://get.docker.com | sh\nsudo usermod -aG docker superbillionaire\n\n# Windows: 下载 Docker Desktop 并启用 WSL2 集成\n# https://docs.docker.com/desktop/install/windows-install/"
+      },
+      {
+        "title": "安装 OpenClaw Gateway",
+        "body": "<p>Docker 方式是最简单的安装方法，<strong>一条命令搞定</strong>：</p><p>安装完成后，Gateway 会在后台运行，监听 <code>ws://127.0.0.1:18789</code>。</p><p><strong>验证安装成功：</strong></p><ul><li>运行状态检查命令后应看到 \"Gateway is running\"</li><li>如果看到 \"Connection refused\"，说明 Gateway 没启动，检查 Docker 容器状态</li></ul>",
+        "tip": "Gateway 是常驻后台的进程。关闭终端不会停止它，需要用 docker stop 显式停止",
+        "example": "# Docker 一键安装 OpenClaw\ndocker pull openclaw/openclaw:latest\ndocker run -d --name openclaw \\\n  -p 18789:18789 \\\n  -v openclaw-data:/root/.openclaw \\\n  openclaw/openclaw:latest\n\n# 验证安装\ndocker logs openclaw --tail 20\n\n# 检查 Gateway 状态\nopenclaw status"
+      },
+      {
+        "title": "配置 AI 模型（Claude 推荐）",
+        "body": "<p>OpenClaw 是模型无关的，但我们推荐 <strong>Claude</strong> 作为首选模型（长文本处理和中文能力最强）：</p><p><strong>三种模型选择：</strong></p><table><tr><th>模型</th><th>优势</th><th>成本</th><th>适合</th></tr><tr><td>Claude Sonnet 4.6</td><td>中文最佳、推理强</td><td>中等</td><td>日常大部分任务</td></tr><tr><td>GPT-4.1</td><td>生态丰富</td><td>中等</td><td>已有OpenAI key的用户</td></tr><tr><td>Ollama(本地)</td><td>零成本、完全隐私</td><td>免费</td><td>隐私敏感场景</td></tr></table>",
+        "tip": "如果预算有限，可以配置两个模型：Claude处理复杂任务，本地模型处理简单任务。OpenClaw支持按任务类型路由到不同模型",
+        "example": "# 配置 Claude API（推荐）\nopenclaw config set ai.provider anthropic\nopenclaw config set ai.api_key sk-ant-xxxxx\nopenclaw config set ai.model claude-sonnet-4-20250514\n\n# 或配置 OpenAI\nopenclaw config set ai.provider openai\nopenclaw config set ai.api_key sk-xxxxx\nopenclaw config set ai.model gpt-4.1\n\n# 或配置本地 Ollama（零成本）\nopenclaw config set ai.provider ollama\nopenclaw config set ai.model llama3:8b\nopenclaw config set ai.base_url http://localhost:11434"
+      },
+      {
+        "title": "创建第一个 Agent：游戏运营助手",
+        "body": "<p>现在来创建你的第一个 Agent。这个 Agent 将扮演<strong>游戏运营助手</strong>的角色：</p><p>创建命令会要求你填写：</p><ul><li><strong>名称</strong>：Agent 的标识，建议用英文（如 game-ops-assistant）</li><li><strong>描述</strong>：这个 Agent 做什么</li><li><strong>系统提示词</strong>：定义 Agent 的角色、能力和行为规范</li></ul><p>系统提示词是 Agent 的\"灵魂\"，决定了它的专业性和输出质量。</p>",
+        "tip": "系统提示词越具体越好。告诉Agent它是什么角色、负责什么、输出格式要求、哪些事不能做",
+        "example": "# 创建游戏运营助手 Agent\nopenclaw agents add game-ops-assistant\n\n# 以下是推荐的系统提示词（粘贴到配置中）：\n\n你是一名资深游戏运营数据分析师，服务于一家手游发行公司。\n\n## 核心职责\n- 分析游戏运营数据（DAU、留存、付费、LTV）\n- 生成日报和周报（结构化、有洞察、可执行）\n- 监控异常指标并及时预警\n- 辅助活动策划（基于历史数据提出建议）\n\n## 输出要求\n- 使用中文\n- 数据对比必须标注环比和同比\n- 异常数据用 ⚠️ 标注\n- 报告末尾附\"建议行动\"清单\n\n## 限制\n- 不直接修改生产数据\n- 不发布对外内容（仅生成草稿）\n- 重大决策标注为\"需人工确认\""
+      },
+      {
+        "title": "连接消息通道（Slack/Discord/企业微信）",
+        "body": "<p>Agent 创建好后，需要绑定一个 <strong>Channel（消息通道）</strong>，这样你就可以通过日常使用的聊天工具和 Agent 交互。</p><p><strong>支持的主流平台：</strong></p><ul><li>Slack（推荐，配置最简单）</li><li>Discord</li><li>Telegram</li><li>企业微信/飞书</li><li>终端命令行（最简单，适合测试）</li></ul><p>这里以 <strong>Slack</strong> 为例：</p><ol><li>在 Slack 创建一个 App（api.slack.com/apps）</li><li>获取 Bot Token（xoxb-开头）</li><li>邀请 Bot 到目标频道</li><li>在 OpenClaw 中配置绑定</li></ol>",
+        "tip": "如果只是先测试，可以用命令行Channel（terminal），不需要配置任何外部平台",
+        "example": "# 最简单的开始：用终端直接对话\nopenclaw chat game-ops-assistant\n\n# 配置 Slack Channel\nopenclaw channels add slack\nopenclaw config set channels.slack.token xoxb-your-bot-token\nopenclaw config set channels.slack.channel_id C0123456789\n\n# 绑定 Agent 到 Channel\nopenclaw agents bind game-ops-assistant --channel slack\n\n# 验证绑定\nopenclaw agents list --bindings"
+      },
+      {
+        "title": "运行第一个自动化任务",
+        "body": "<p>一切就绪！现在让 Agent 执行第一个实际任务——<strong>整理今日工作计划</strong>：</p><p>在终端或 Slack 中给 Agent 发送消息，它会：</p><ol><li>分析你提供的信息</li><li>按优先级排列任务</li><li>标注预计耗时</li><li>输出格式化的工作计划</li></ol><p>如果输出不满意，直接追问调整，Agent 拥有上下文记忆。</p>",
+        "tip": "第一次使用先从简单任务开始建立信心。确认Agent运行正常后，再逐步升级到定时任务和多步骤工作流",
+        "example": "# 在终端中给 Agent 发送第一个任务\nopenclaw chat game-ops-assistant\n\n> 请帮我整理今天的工作计划。背景信息：\n> - 我们的SLG手游「铁血战歌」下周三更新1.8版本\n> - 昨天DAU 8.5万，比前天下降3%\n> - 今天需要准备版本预热素材\n> - 下午3点有投放复盘会议\n> - TapTap上有15条新差评需要处理\n>\n> 请按P0/P1/P2优先级排列，标注预计耗时。"
+      },
+      {
+        "title": "验证与调试：确保 Agent 正常运行",
+        "body": "<p>首次运行可能遇到问题，以下是<strong>常见问题排查清单</strong>：</p><table><tr><th>问题</th><th>原因</th><th>解决方案</th></tr><tr><td>Connection refused</td><td>Gateway未启动</td><td>docker start openclaw</td></tr><tr><td>API key invalid</td><td>Key配置错误</td><td>检查 openclaw config get ai.api_key</td></tr><tr><td>Agent无响应</td><td>模型调用超时</td><td>检查网络，或切换到本地模型测试</td></tr><tr><td>内存不足</td><td>Docker内存限制</td><td>Docker Desktop → Settings → 增加内存到4GB+</td></tr><tr><td>端口冲突</td><td>18789被占用</td><td>修改Gateway端口或停止占用进程</td></tr></table><p>常用诊断命令：</p>",
+        "tip": "养成习惯：每次修改配置后先用 openclaw status 检查，再用 openclaw chat 简单测试一下",
+        "example": "# 检查 Gateway 状态\nopenclaw status\n\n# 查看最近日志（排查错误）\nopenclaw logs --tail 50\n\n# 测试 AI 模型连接\nopenclaw test-model\n\n# 列出所有 Agent 和绑定\nopenclaw agents list --bindings\n\n# 重启 Gateway（解决大部分问题）\ndocker restart openclaw"
+      }
+    ]
+  },
+  {
+    "id": "t-oc-03",
+    "title": "游戏运营自动化：日报、周报与活动全流程",
+    "desc": "用 OpenClaw Agent 实现运营数据报告自动生成、玩家评论监控预警和活动策划辅助的完整自动化流程",
+    "tier": "intermediate",
+    "difficulty": "intermediate",
+    "duration": "45分钟",
+    "targetJobs": [
+      "all"
+    ],
+    "category": "prompt",
+    "icon": "⚡",
+    "editorPick": false,
+    "steps": 7,
+    "columnId": "col-openclaw",
+    "columnOrder": 3,
+    "prerequisite": [
+      "t-oc-02"
+    ],
+    "nextGuides": [
+      "t-oc-04"
+    ],
+    "relatedPath": "OpenClaw 自动化实战",
+    "fitRoles": [
+      "全岗位"
+    ],
+    "solves": "每天花大量时间在重复性运营工作上",
+    "outcome": "4个可直接使用的运营自动化工作流",
+    "fitLevel": "已搭建好OpenClaw环境",
+    "content": [
+      {
+        "title": "运营自动化全景：哪些工作值得自动化",
+        "body": "<p>游戏运营的日常工作中，有大量<strong>高频低创意</strong>的任务消耗着团队精力：</p><table><tr><th>任务</th><th>手动耗时</th><th>自动化后</th><th>节省</th></tr><tr><td>日报编写</td><td>30-45分钟/天</td><td>5分钟审核</td><td>85%</td></tr><tr><td>差评监控</td><td>每天翻看30分钟</td><td>实时推送</td><td>100%</td></tr><tr><td>周报汇总</td><td>2-3小时/周</td><td>15分钟审核</td><td>90%</td></tr><tr><td>活动方案初稿</td><td>半天-1天</td><td>1小时迭代</td><td>60%</td></tr></table><p>自动化不是让你无事可做，而是<strong>把时间从机械操作中释放出来，用于策略思考和创意工作</strong>。</p>",
+        "tip": "从日报自动化开始，这是收益最明显、风险最低的切入点。一周后你就会感受到巨大差异"
+      },
+      {
+        "title": "场景1：日报自动生成",
+        "body": "<p>这是最经典的运营自动化场景。Agent 在<strong>每天下午6点</strong>自动执行以下流程：</p><ol><li>从数据源（CSV/API/数据库）拉取当日关键指标</li><li>与昨日数据对比，计算环比变化</li><li>识别异常波动（>5%的指标）</li><li>用自然语言生成叙事化日报</li><li>推送到 Slack/企业微信的指定频道</li></ol><p><strong>关键设计点：</strong></p><ul><li>数据模板化：Agent 按固定结构输出，方便团队快速扫读</li><li>异常高亮：超出阈值的指标用 ⚠️ 标注，一眼看到问题</li><li>建议行动：不止列数据，还给出下一步建议</li></ul>",
+        "tip": "日报数据源推荐用CSV文件——每天导出一次放到指定目录，Agent自动读取。这比直连数据库更安全",
+        "example": "# 日报 Agent 的 Heartbeat 配置\nheartbeat:\n  schedule: \"0 18 * * 1-5\"  # 工作日每天18:00\n  prompt: |\n    ## 任务：生成今日运营日报\n    \n    1. 读取 data/daily-metrics.csv 最新一行数据\n    2. 读取前一行作为昨日数据\n    3. 计算以下指标的环比变化：\n       - DAU、新增用户、7日留存、付费率、ARPPU、收入\n    4. 环比变化超过 ±5% 的指标标注 ⚠️\n    \n    ## 输出格式\n    📊 【铁血战歌】X月X日运营日报\n    \n    🔢 核心数据\n    | 指标 | 今日 | 昨日 | 环比 |\n    |------|------|------|------|\n    \n    ⚠️ 异常指标\n    - [列出环比超过±5%的指标及原因假设]\n    \n    📋 建议行动\n    - [基于数据给出2-3条具体建议]\n    \n    5. 将报告推送到 #daily-report 频道"
+      },
+      {
+        "title": "场景2：周报智能汇总",
+        "body": "<p>周报不是简单的日报累加——好的周报需要<strong>趋势分析和洞察</strong>。Agent 在每周五下午自动：</p><ol><li>汇总本周5天的日报数据</li><li>计算周均值和周环比</li><li>找出本周最大的正向/负向变化</li><li>对比上周同期，识别趋势</li><li>生成周报大纲+详细报告</li></ol><p><strong>输出层次：</strong></p><ul><li>第一段：一句话概括本周（\"本周DAU回暖，但付费率持续走低\"）</li><li>第二段：关键数据变化（表格形式）</li><li>第三段：深度分析（为什么DAU回暖？版本更新效果如何？）</li><li>第四段：下周重点工作建议</li></ul>",
+        "tip": "让Agent同时生成\"管理层简版\"（3行结论）和\"执行层详版\"（完整分析）两个版本，满足不同汇报场景",
+        "example": "# 周报 Heartbeat 配置\nheartbeat:\n  schedule: \"0 16 * * 5\"  # 每周五下午4点\n  prompt: |\n    ## 任务：生成本周运营周报\n    \n    1. 读取 data/daily-metrics.csv 最近7天数据\n    2. 读取上周同期7天数据作为对比基线\n    \n    ## 输出两个版本\n    \n    ### 管理层简版（200字以内）\n    - 一句话概括：本周整体表现是…\n    - 3个关键数字变化\n    - 1个核心建议\n    \n    ### 执行层详版\n    📊 本周数据总览（表格：7天趋势+周均+周环比）\n    📈 正向亮点（数据支撑）\n    📉 待关注问题（数据支撑+原因假设）\n    🎯 下周重点工作（按P0/P1优先级）\n    \n    3. 简版推送到 #leadership 频道\n    4. 详版推送到 #ops-team 频道"
+      },
+      {
+        "title": "场景3：玩家评论监控预警",
+        "body": "<p>玩家差评是运营最需要快速响应的信号。Agent 利用 Heartbeat <strong>每2小时自动检查</strong>：</p><ol><li>抓取 App Store / TapTap / Google Play 最新评论</li><li>过滤出1-2星差评</li><li>按问题类型自动分类：Bug/卡顿/付费争议/内容不满/其他</li><li>评估严重性（是否涉及大面积问题）</li><li>生成预警报告并@相关人员</li></ol><p><strong>分类价值</strong>：不只是告诉你\"有差评\"，而是告诉你\"什么类型的差评在增加\"。如果\"卡顿\"类差评突然增加300%，可能是最新版本引入了性能问题。</p>",
+        "tip": "设置分级预警：普通差评每天汇总一次，疑似大面积Bug的差评立即推送。避免告警疲劳",
+        "example": "# 评论监控 Agent 系统提示词\n\n你是游戏评论监控专员，负责实时追踪玩家反馈。\n\n## 评论分类标准\n- 🐛 Bug类：游戏崩溃、闪退、黑屏、数据丢失\n- 🐌 性能类：卡顿、发热、加载慢、掉帧\n- 💰 付费类：扣费异常、性价比质疑、诱导消费\n- 😤 内容类：玩法单调、平衡性、更新太慢\n- 📱 兼容类：特定机型问题\n\n## 预警等级\n- 🔴 紧急：同类差评2小时内>10条，可能是大面积问题\n- 🟡 关注：同类差评日增>5条，趋势异常\n- 🟢 正常：零散差评，无明显聚集\n\n## 输出格式\n⚠️ 【评论预警】X月X日 XX:00\n预警等级：🔴/🟡/🟢\n新增差评：X条（1星X条、2星X条）\n问题分布：Bug X条 | 性能 X条 | 付费 X条\n典型差评摘要：\"...\"\n建议行动：..."
+      },
+      {
+        "title": "场景4：活动策划辅助",
+        "body": "<p>活动策划是创意性较高的工作，Agent 不能完全替代，但可以大幅<strong>加速初稿生成和方案迭代</strong>：</p><p><strong>工作流：</strong></p><ol><li>你输入活动目标（提升DAU 10%、促进付费、回流老玩家）</li><li>Agent 参考历史活动数据（效果好的活动类型+参数）</li><li>自动生成活动方案草稿：主题/时间/玩法/奖励/预算</li><li>你标注修改意见，Agent 迭代优化</li><li>最终方案自动格式化为标准活动文档</li></ol><p><strong>关键</strong>：Agent 的价值不是替你想创意，而是帮你<strong>快速穷举方案空间</strong>，把30分钟发散思维压缩到5分钟。</p>",
+        "tip": "给Agent提供公司过往活动的效果数据（存到Memory中），它的方案建议会越来越精准",
+        "example": "# 活动策划辅助提示词\n\n请为我们的二次元RPG手游「星痕纪元」设计一个春季活动方案。\n\n## 活动目标\n- 主目标：DAU 从12万提升到15万（+25%）\n- 副目标：7日回流率提升到8%\n- 预算上限：50万元\n\n## 约束条件\n- 活动周期：7-14天\n- 不能送S级角色（影响付费生态）\n- 需要兼顾新手和老玩家\n\n## 历史参考\n- 上次\"冬日祭\"活动：DAU +18%，成本40万，玩家好评\n- 上次\"限时池\"活动：DAU +8%，付费率翻倍，但非付费玩家不满\n\n## 请输出\n1. 活动主题（3个方案）\n2. 推荐方案的详细设计：玩法/奖励/时间线/预算分配\n3. 风险评估和应对措施\n4. 预期效果量化估算"
+      },
+      {
+        "title": "避坑指南：运营自动化常见陷阱",
+        "body": "<p>实际运行中最容易遇到的问题和解决方案：</p><ul><li><strong>数据源不稳定</strong> — CSV文件格式变更、API接口改版。<em>解决：Agent配置数据验证步骤，格式异常时发送告警而非生成错误报告</em></li><li><strong>报告格式不一致</strong> — 同一个Agent每次输出的格式略有不同。<em>解决：在提示词中用严格的模板约束，附上\"严格按照以下格式输出，不要添加额外内容\"</em></li><li><strong>Agent 幻觉</strong> — 编造不存在的数据。<em>解决：要求Agent只基于提供的原始数据生成报告，不进行\"推测\"或\"估算\"</em></li><li><strong>权限过大</strong> — Agent能访问不该碰的文件。<em>解决：最小权限原则，只给Agent读取数据目录的权限</em></li><li><strong>告警疲劳</strong> — 每天收到太多不重要的通知。<em>解决：设置分级告警，只有异常超过阈值才推送</em></li></ul>",
+        "tip": "最重要的一条避坑原则：任何自动发布到外部的内容，都必须有\"人工审核\"环节。内部报告可以直接推送，对外内容绝不能"
+      },
+      {
+        "title": "进阶：用 Heartbeat 编排定时任务",
+        "body": "<p>当你有多个自动化任务时，需要合理编排它们的执行时间：</p><table><tr><th>时间</th><th>任务</th><th>Cron</th></tr><tr><td>工作日 9:00</td><td>晨会要点提醒</td><td>0 9 * * 1-5</td></tr><tr><td>每2小时</td><td>评论监控</td><td>0 */2 * * *</td></tr><tr><td>工作日 18:00</td><td>日报生成</td><td>0 18 * * 1-5</td></tr><tr><td>周五 16:00</td><td>周报生成</td><td>0 16 * * 5</td></tr><tr><td>每月1日 10:00</td><td>月报生成</td><td>0 10 1 * *</td></tr></table><p><strong>任务依赖处理</strong>：周报依赖5天的日报数据。如果某天日报没生成（Agent异常），周报也会受影响。设置 fallback：周报Agent在开始时先检查本周日报是否齐全，缺失则先补生成。</p>",
+        "tip": "避免把所有任务都设在整点。如果3个Agent都在18:00触发，会导致API调用峰值。建议错开5-10分钟",
+        "example": "# 多任务 Heartbeat 配置示例\n\n# Agent: 评论监控（高频）\nheartbeat:\n  schedule: \"0 */2 * * *\"\n  prompt: \"检查最近2小时的新差评...\"\n\n# Agent: 日报生成（每日）\nheartbeat:\n  schedule: \"0 18 * * 1-5\"\n  prompt: \"生成今日运营日报...\"\n  depends_on: daily-metrics-updated  # 依赖数据更新完成\n\n# Agent: 周报汇总（每周）\nheartbeat:\n  schedule: \"0 16 * * 5\"\n  prompt: |\n    先检查本周5天日报是否齐全。\n    如果缺失某天的数据，先从原始CSV补充。\n    然后生成周报...\n  fallback: \"数据不完整，请人工检查后手动触发周报\""
+      }
+    ]
+  },
+  {
+    "id": "t-oc-04",
+    "title": "多 Agent 协作：搭建内容生产流水线",
+    "desc": "掌握多Agent架构模式，搭建 Writer→Reviewer→Publisher 三级内容生产线，实现从创作到发布的自动化",
+    "tier": "intermediate",
+    "difficulty": "intermediate",
+    "duration": "50分钟",
+    "targetJobs": [
+      "all"
+    ],
+    "category": "prompt",
+    "icon": "🔗",
+    "editorPick": false,
+    "steps": 7,
+    "columnId": "col-openclaw",
+    "columnOrder": 4,
+    "prerequisite": [
+      "t-oc-03"
+    ],
+    "nextGuides": [
+      "t-oc-05"
+    ],
+    "relatedPath": "OpenClaw 自动化实战",
+    "fitRoles": [
+      "全岗位"
+    ],
+    "solves": "单个Agent能力有限，团队内容生产效率低",
+    "outcome": "一条完整的多Agent内容生产流水线",
+    "fitLevel": "已完成单Agent自动化实践",
+    "content": [
+      {
+        "title": "为什么需要多 Agent：单兵作战的天花板",
+        "body": "<p>单个 Agent 就像一个全栈选手——什么都能做一点，但<strong>专业深度和质量都有上限</strong>。</p><p>真实问题：</p><ul><li>让一个Agent既写文案又审核质量，它往往对自己的内容\"手下留情\"</li><li>让一个Agent处理从数据分析到内容发布的全流程，上下文太长、容易出错</li><li>不同任务需要不同的模型/提示词配置，塞到一个Agent里互相干扰</li></ul><p><strong>多 Agent 的核心价值</strong>：专业化分工 + 相互制衡 + 并行处理。就像游戏团队不会让一个人同时当策划、美术和QA。</p>",
+        "tip": "判断是否需要多Agent：如果一个任务的输入和输出可以清晰分成独立阶段，就适合用多Agent"
+      },
+      {
+        "title": "三种多 Agent 架构模式",
+        "body": "<p>OpenClaw 支持三种常见的多 Agent 协作模式：</p><p><strong>① 主从模式（Orchestrator + Workers）</strong></p><ul><li>一个主Agent分配任务，多个子Agent并行执行</li><li>适合：需要同时处理多个独立子任务（如同时监控5个竞品）</li></ul><p><strong>② 流水线模式（A → B → C 串行）</strong></p><ul><li>每个Agent负责一个阶段，上一个的输出是下一个的输入</li><li>适合：内容生产（写作→审核→发布）、数据处理（采集→清洗→分析）</li></ul><p><strong>③ 对抗模式（Writer ↔ Reviewer 互审）</strong></p><ul><li>两个Agent互相挑战，一个提方案、一个挑毛病</li><li>适合：需要高质量输出的场景（重要文案、策略方案）</li></ul><p>本教程聚焦<strong>流水线模式</strong>，这是游戏内容团队最实用的架构。</p>",
+        "tip": "不要过度设计。大多数场景用2-3个Agent就够了，超过5个Agent的管理成本会急剧上升"
+      },
+      {
+        "title": "实战：搭建 3-Agent 内容生产线",
+        "body": "<p>我们来构建一条完整的内容生产流水线：</p><p><strong>Writer Agent（写手）</strong> → <strong>Reviewer Agent（审核）</strong> → <strong>Publisher Agent（发布）</strong></p><table><tr><th>Agent</th><th>职责</th><th>模型建议</th></tr><tr><td>Writer</td><td>根据主题生成初稿</td><td>Claude Sonnet（创意强）</td></tr><tr><td>Reviewer</td><td>检查质量/品牌合规/敏感词</td><td>Claude Sonnet（推理强）</td></tr><tr><td>Publisher</td><td>格式化+多平台适配+发送</td><td>GPT-4.1-mini（成本低）</td></tr></table><p>流程：Writer 写完 → 自动传给 Reviewer → 审核通过则传给 Publisher → 审核不通过则回退给 Writer 重写。</p>",
+        "tip": "Reviewer 使用与 Writer 不同的模型可以获得更好的审核效果，避免\"自己审自己\"的偏差",
+        "example": "# 创建三个 Agent\nopenclaw agents add content-writer\nopenclaw agents add content-reviewer\nopenclaw agents add content-publisher\n\n# Writer Agent 系统提示词\n你是一名专业的游戏行业内容创作者。\n职责：根据给定的主题和要求生成高质量内容初稿。\n风格：专业、有温度、面向游戏从业者。\n输出时在末尾添加 [DRAFT_COMPLETE] 标记。\n\n# Reviewer Agent 系统提示词\n你是一名严格的内容质量审核官。\n审核标准：\n1. 事实准确性（不允许编造数据）\n2. 品牌调性一致性\n3. 敏感词检查（政治/色情/歧视）\n4. 格式规范性\n审核通过输出 [APPROVED]，不通过输出 [REVISE] + 修改意见。\n\n# Publisher Agent 系统提示词\n你是一名多平台内容发布专员。\n职责：将审核通过的内容适配到不同平台格式。\n- 微博版：120字+话题标签\n- 公众号版：完整长文+配图建议\n- 抖音版：15秒口播脚本"
+      },
+      {
+        "title": "Agent 间通信：sessions_send 机制",
+        "body": "<p>多Agent协作的关键是<strong>消息传递</strong>。OpenClaw 使用 <code>sessions_send</code> 实现Agent间通信：</p><ul><li><strong>发送消息</strong>：Agent A 完成任务后，通过 sessions_send 将结果传给 Agent B</li><li><strong>权限控制</strong>：通过 allow list 限制哪些Agent可以互相通信</li><li><strong>消息格式</strong>：建议使用约定的标记（如 [DRAFT_COMPLETE]）标识任务状态</li></ul><p><strong>防止失控</strong>：Agent间通信默认有轮次上限，防止两个Agent陷入无限对话循环。</p>",
+        "tip": "Agent间通信时使用明确的状态标记（[APPROVED]/[REVISE]/[PUBLISHED]），方便追踪内容在流水线中的位置",
+        "example": "# Agent 间通信配置\n\n# 在 Writer Agent 配置中\nagent_communication:\n  enabled: true\n  allow_send_to: [\"content-reviewer\"]\n  max_turns: 5\n\n# 在 Reviewer Agent 配置中\nagent_communication:\n  enabled: true\n  allow_send_to: [\"content-writer\", \"content-publisher\"]\n  max_turns: 3\n\n# Writer 完成后自动传递给 Reviewer 的触发逻辑\non_output_contains: \"[DRAFT_COMPLETE]\"\naction: sessions_send\ntarget_agent: content-reviewer\nmessage_template: |\n  请审核以下内容初稿：\n  {output}\n  \n  审核通过请输出 [APPROVED]，需修改请输出 [REVISE] + 具体意见。"
+      },
+      {
+        "title": "质量门控：Reviewer Agent 的审核标准",
+        "body": "<p>Reviewer Agent 是整条流水线的<strong>质量守门员</strong>。审核标准必须明确、可量化：</p><p><strong>5项必审清单：</strong></p><ol><li><strong>事实核验</strong> — 文中提到的数据、日期、产品名称是否准确？AI 幻觉在此处最危险</li><li><strong>品牌调性</strong> — 是否符合公司的品牌声音指南？用词是否过于口语化/过于生硬？</li><li><strong>敏感词</strong> — 是否包含政治敏感、竞品贬低、版权风险内容？</li><li><strong>格式规范</strong> — 标题长度、段落结构、标点使用是否符合平台要求？</li><li><strong>可读性</strong> — 目标读者能否快速理解？是否有过多行业术语未解释？</li></ol><p><strong>审核结果分三级</strong>：✅ APPROVED（通过）、🔄 REVISE（退回修改，附具体意见）、❌ REJECT（严重问题，需人工介入）。</p>",
+        "tip": "把公司的品牌指南和敏感词清单存入 Reviewer Agent 的 Memory 中，审核质量会大幅提升"
+      },
+      {
+        "title": "实战案例：游戏版本更新公告流水线",
+        "body": "<p>完整案例：用3-Agent流水线自动生成<strong>游戏版本更新公告</strong>：</p><p><strong>输入</strong>：策划提供的更新清单（新角色/新玩法/Bug修复/平衡性调整）</p><p><strong>流程</strong>：</p><ol><li><strong>Writer Agent</strong>：将更新清单转化为面向玩家的公告文案。重点：把\"修复了战斗系统的数值溢出Bug\"翻译成\"优化了战斗体验，修复了部分技能伤害异常\"</li><li><strong>Reviewer Agent</strong>：检查是否泄露技术细节、是否有负面表述、是否遗漏重要更新项</li><li><strong>Publisher Agent</strong>：生成3个版本——官网完整版、微博精简版、TapTap社区版</li></ol><p><strong>结果</strong>：策划提交更新清单后，30分钟内自动产出3个平台的公告草稿，人工审核确认后即可发布。</p>",
+        "tip": "版本更新公告涉及玩家预期管理，务必人工审核后再发布。Agent生成的是\"草稿\"，不是\"终稿\"",
+        "example": "# 版本更新公告任务触发\n\n请根据以下版本更新清单，生成面向玩家的更新公告：\n\n## 「星痕纪元」v2.1 更新内容\n\n### 新内容\n- 新SSR角色「月华·苍穹」（风属性、辅助型）\n- 新副本「星陨深渊」第3层\n- 新活动「春之回响」（限时14天）\n\n### 平衡性调整\n- 角色「炎帝」技能3伤害系数从2.8下调至2.5\n- 角色「水灵」治疗量上调15%\n\n### Bug修复\n- 修复战斗中技能CD显示异常\n- 修复特定机型闪退问题（影响约2%用户）\n- 修复公会战积分结算延迟\n\n## 要求\n- 语气：积极正面，让玩家期待\n- 平衡性调整的表述要委婉（\"优化\"而非\"削弱\"）\n- Bug修复要体现我们的重视（\"感谢反馈，已紧急修复\"）"
+      },
+      {
+        "title": "监控与调优：多 Agent 运行管理",
+        "body": "<p>多Agent系统比单Agent复杂得多，需要<strong>主动监控</strong>：</p><p><strong>监控要点：</strong></p><ul><li><strong>消息流追踪</strong>：查看内容在Agent间的流转状态，是否有卡住的任务</li><li><strong>审核通过率</strong>：如果Reviewer退回率>50%，说明Writer的提示词需要优化</li><li><strong>端到端耗时</strong>：从Writer收到任务到Publisher完成，整个流水线应该在10分钟内</li><li><strong>子Agent超时</strong>：设置合理超时（如5分钟），防止某个Agent陷入死循环</li></ul><p><strong>常见调优手段：</strong></p><ul><li>Writer输出质量差 → 优化系统提示词，增加具体示例</li><li>Reviewer太严/太松 → 调整审核标准的阈值</li><li>Publisher格式不对 → 提供各平台的精确模板</li></ul>",
+        "tip": "每周回顾一次流水线运行日志，找出退回率最高的问题类型，针对性优化Writer的提示词",
+        "example": "# 监控命令\n\n# 查看所有Agent运行状态\nopenclaw agents list --status\n\n# 查看特定Agent的最近消息\nopenclaw logs content-writer --tail 20\n\n# 查看Agent间消息传递记录\nopenclaw sessions list --agent content-reviewer\n\n# 统计审核通过率（最近7天）\nopenclaw stats content-reviewer --days 7"
+      }
+    ]
+  },
+  {
+    "id": "t-oc-05",
+    "title": "Lobster 工作流引擎：构建确定性自动化流水线",
+    "desc": "掌握 OpenClaw 的 Lobster 声明式 YAML 工作流引擎，构建可复现、可调试的确定性自动化流水线",
+    "tier": "advanced",
+    "difficulty": "advanced",
+    "duration": "50分钟",
+    "targetJobs": [
+      "all"
+    ],
+    "category": "prompt",
+    "icon": "🦞",
+    "editorPick": false,
+    "steps": 7,
+    "columnId": "col-openclaw",
+    "columnOrder": 5,
+    "prerequisite": [
+      "t-oc-04"
+    ],
+    "nextGuides": [
+      "t-oc-06"
+    ],
+    "relatedPath": "OpenClaw 自动化实战",
+    "fitRoles": [
+      "全岗位"
+    ],
+    "solves": "Agent自由度太高导致流程不可控",
+    "outcome": "5个可直接使用的Lobster工作流模板",
+    "fitLevel": "已掌握多Agent协作基础",
+    "content": [
+      {
+        "title": "Lobster 是什么：让流程可控的关键一层",
+        "body": "<p><strong>\"Lobster 之于 OpenClaw，相当于 GitHub Actions 之于 GitHub\"</strong></p><p>Agent 的最大优势是灵活——它可以自主决策。但在生产环境中，你需要的往往是<strong>可预测、可复现、可调试的流程</strong>。</p><p>Lobster 解决了这个矛盾：</p><ul><li><strong>流程由 YAML 定义</strong>：步骤顺序、条件分支、循环全部写在配置文件里，确定性执行</li><li><strong>创意由 AI 完成</strong>：每个步骤内部，Agent 用 AI 做文案、分析等创意工作</li><li><strong>结果</strong>：流程是确定的，AI 在确定的框架内发挥创意</li></ul><p>简单说：<strong>YAML 控制流水线走向，LLM 在每个节点做创意输出</strong>。</p>",
+        "tip": "如果你的自动化需要\"每次执行结果一致\"，用Lobster；如果需要\"灵活应变\"，用纯Agent"
+      },
+      {
+        "title": "YAML 流水线语法详解",
+        "body": "<p>Lobster 的 YAML 语法简洁直观：</p><ul><li><strong>pipeline</strong>：流水线名称和全局配置</li><li><strong>stages</strong>：执行阶段（可串行或并行）</li><li><strong>steps</strong>：每个阶段内的具体步骤</li></ul><p><strong>步骤类型：</strong></p><ul><li><code>llm</code>：调用 AI 模型执行任务（写文案、分析数据）</li><li><code>shell</code>：执行Shell命令（文件操作、API调用）</li><li><code>http</code>：发送 HTTP 请求</li><li><code>condition</code>：条件判断分支</li><li><code>loop</code>：循环执行（遍历列表）</li></ul>",
+        "tip": "先写最简单的三步流水线验证语法，再逐步添加复杂逻辑。避免一上来就写100行YAML",
+        "example": "# 最简单的 Lobster 工作流示例\n# 文件：pipelines/daily-report.yaml\n\npipeline:\n  name: daily-report\n  description: 每日运营日报自动生成\n  schedule: \"0 18 * * 1-5\"\n\nstages:\n  - name: collect-data\n    steps:\n      - type: shell\n        command: \"cat data/daily-metrics.csv | tail -2\"\n        output: raw_data\n\n  - name: analyze\n    steps:\n      - type: llm\n        model: claude-sonnet-4-20250514\n        prompt: |\n          分析以下运营数据，生成日报：\n          {raw_data}\n          要求：标注环比变化，异常指标用⚠️标记\n        output: report\n\n  - name: distribute\n    steps:\n      - type: http\n        method: POST\n        url: \"\"\n        body: \"{ \"text\": \"{report}\" }\""
+      },
+      {
+        "title": "实战：竞品监控流水线",
+        "body": "<p>构建一条<strong>每日自动执行</strong>的竞品监控流水线：</p><ol><li><strong>抓取阶段</strong>：访问5个竞品的App Store页面</li><li><strong>提取阶段</strong>：用AI从页面中提取关键变化（版本号/截图/描述/评分）</li><li><strong>对比阶段</strong>：与上次抓取结果对比，找出差异</li><li><strong>报告阶段</strong>：生成竞品动态简报</li><li><strong>分发阶段</strong>：推送到Slack + 存档到文件</li></ol><p><strong>这条流水线的价值</strong>：替代每天手动查看5个竞品App Store页面的30分钟。且Agent能发现你可能遗漏的细微变化（如副标题微调、截图顺序变化）。</p>",
+        "tip": "竞品监控抓取时注意频率限制（Rate Limit），建议每天只跑1-2次，不要设太高频率",
+        "example": "# 竞品监控 Lobster 工作流\n# pipelines/competitor-monitor.yaml\n\npipeline:\n  name: competitor-monitor\n  schedule: \"0 10 * * 1-5\"\n\nvariables:\n  competitors:\n    - name: \"竞品A\"\n      app_id: \"id123456\"\n    - name: \"竞品B\"\n      app_id: \"id789012\"\n    - name: \"竞品C\"\n      app_id: \"id345678\"\n\nstages:\n  - name: fetch\n    steps:\n      - type: loop\n        items: \"\"\n        steps:\n          - type: shell\n            command: \"curl -s https://app-api/lookup?id={item.app_id}\"\n            output: \"raw_{item.name}\"\n\n  - name: compare\n    steps:\n      - type: llm\n        prompt: |\n          对比以下竞品最新数据与历史数据(data/competitor-history.json)：\n          {raw_竞品A}\n          {raw_竞品B}\n          {raw_竞品C}\n          \n          找出变化项，输出格式：\n          📊 竞品动态日报 X月X日\n          [竞品名] 版本更新/描述变更/评分变化/截图更新\n        output: report\n\n  - name: distribute\n    steps:\n      - type: http\n        url: \"\"\n        body: \"{report}\"\n      - type: shell\n        command: \"echo {report} >> data/competitor-log.md\""
+      },
+      {
+        "title": "条件分支与循环",
+        "body": "<p>Lobster 支持完整的流程控制语法：</p><p><strong>条件分支（if/else）</strong>：根据上一步的输出决定下一步走向</p><ul><li>评分下降 > 0.2 → 触发紧急预警</li><li>评分稳定 → 只记录日志</li></ul><p><strong>循环（loop）</strong>：遍历列表执行相同操作</p><ul><li>遍历5个竞品逐一抓取</li><li>遍历7天数据逐天分析</li></ul><p><strong>子工作流（sub-workflow）</strong>：将复杂逻辑封装为可复用的子流程</p><ul><li>\"数据抓取\"子流程可以被日报、周报、月报三个主流程复用</li></ul>",
+        "tip": "条件分支的判断逻辑尽量用简单规则（数值比较），不要让LLM来判断走哪个分支——那样会引入不确定性",
+        "example": "# 条件分支示例：评分下降预警\nstages:\n  - name: check-rating\n    steps:\n      - type: shell\n        command: \"python scripts/calc_rating_change.py\"\n        output: rating_change\n      - type: condition\n        if: \" < -0.2\"\n        then:\n          - type: llm\n            prompt: \"生成紧急预警报告：评分下降{rating_change}...\"\n          - type: http\n            url: \"\"\n        else:\n          - type: shell\n            command: \"echo 评分正常：{rating_change} >> logs/rating.log\"\n\n# 循环示例：遍历竞品\n  - name: scan-competitors\n    steps:\n      - type: loop\n        items: [\"竞品A\", \"竞品B\", \"竞品C\", \"竞品D\", \"竞品E\"]\n        steps:\n          - type: shell\n            command: \"python scripts/fetch_competitor.py {item}\""
+      },
+      {
+        "title": "错误处理与重试策略",
+        "body": "<p>生产环境的流水线必须能<strong>优雅地处理失败</strong>：</p><table><tr><th>策略</th><th>说明</th><th>适用场景</th></tr><tr><td><strong>retry</strong></td><td>失败后自动重试N次</td><td>网络超时、API限流</td></tr><tr><td><strong>timeout</strong></td><td>步骤超时自动终止</td><td>LLM响应过慢</td></tr><tr><td><strong>fallback</strong></td><td>失败时执行备用方案</td><td>主模型不可用时切换备用</td></tr><tr><td><strong>on_error</strong></td><td>失败时发送通知</td><td>所有步骤</td></tr><tr><td><strong>continue_on_error</strong></td><td>某步失败不阻塞后续</td><td>非关键步骤</td></tr></table><p>最佳实践：<strong>关键路径设 retry + on_error，非关键步骤设 continue_on_error</strong>。</p>",
+        "tip": "每个retry之间加递增延迟（1s → 2s → 4s），避免在API限流时连续快速重试",
+        "example": "# 错误处理配置示例\nstages:\n  - name: fetch-data\n    steps:\n      - type: http\n        url: \"https://api.example.com/metrics\"\n        retry:\n          max_attempts: 3\n          delay: \"2s\"\n          backoff: exponential\n        timeout: 30s\n        on_error:\n          - type: http\n            url: \"\"\n            body: \"⚠️ 数据抓取失败: {error_message}\"\n\n  - name: generate-report\n    steps:\n      - type: llm\n        model: claude-sonnet-4-20250514\n        timeout: 60s\n        fallback:\n          model: gpt-4.1-mini  # Claude不可用时切换到GPT\n        continue_on_error: false  # 报告生成失败则停止整个流水线"
+      },
+      {
+        "title": "混合编排：确定性 + AI 自由度的最佳平衡",
+        "body": "<p>最强大的自动化架构是<strong>Lobster（确定性流程）+ Agent（AI自由发挥）</strong>的混合模式：</p><ul><li><strong>用 Lobster 控制</strong>的部分：流程顺序、条件判断、数据传递、错误处理、定时触发</li><li><strong>用 Agent 自由发挥</strong>的部分：文案撰写、数据分析、策略建议、创意生成</li></ul><p><strong>举例</strong>：竞品监控流水线中——</p><ul><li>Lobster 控制：按顺序访问5个竞品URL → 对比历史数据 → 判断是否有变化 → 决定是否发通知</li><li>Agent 发挥：分析竞品变化的含义 → 生成有洞察的分析报告 → 给出我方应对建议</li></ul><p><strong>原则</strong>：让 YAML 做逻辑，让 LLM 做创意。两者各司其职。</p>",
+        "tip": "什么时候用纯Agent、什么时候用Lobster？关键判断：流程是否需要\"每次一样\"。需要→Lobster，不需要→Agent"
+      },
+      {
+        "title": "实战模板库：5 个开箱即用的 Lobster 工作流",
+        "body": "<p>以下 5 个模板可以直接复制使用，根据你的实际情况修改参数即可：</p><ol><li><strong>日报生成</strong> — 每日18:00抓取数据→AI分析→推送Slack</li><li><strong>竞品监控</strong> — 每日10:00遍历竞品→对比变化→异常预警</li><li><strong>内容审核</strong> — Writer提交→Reviewer检查→通过/退回/人工</li><li><strong>数据预警</strong> — 每2小时检查核心指标→超阈值立即通知</li><li><strong>多平台发布</strong> — 输入一份内容→适配微博/公众号/TapTap→排队发布</li></ol><p>每个模板包含完整的 YAML 配置、变量说明、自定义指南。</p><p>建议从<strong>日报生成</strong>开始——它最简单，成功运行后再逐步尝试其他模板。</p>",
+        "tip": "将这些模板保存到项目的 pipelines/ 目录下，用 Git 管理版本。每次修改都有记录可追溯",
+        "example": "# 模板5：多平台发布工作流\n# pipelines/multi-platform-publish.yaml\n\npipeline:\n  name: multi-platform-publish\n  trigger: manual  # 人工触发（非定时）\n\ninput:\n  content: \"\"  # 原始内容（由人工粘贴）\n  platforms: [\"weibo\", \"wechat\", \"taptap\"]\n\nstages:\n  - name: adapt\n    steps:\n      - type: loop\n        items: \"\"\n        steps:\n          - type: llm\n            prompt: |\n              将以下内容适配为 {item} 平台格式：\n              {content}\n              \n              平台规则：\n              - weibo：120字以内 + 2个话题标签\n              - wechat：完整长文 + 配图建议 + 引导语\n              - taptap：社区帖风格 + 互动问题\n            output: \"adapted_{item}\"\n\n  - name: review\n    steps:\n      - type: llm\n        prompt: \"请审核以下3个平台版本的内容一致性和质量...\"\n        output: review_result\n      - type: condition\n        if: \"review_result contains APPROVED\"\n        then:\n          - type: shell\n            command: \"echo 审核通过，准备发布\"\n        else:\n          - type: http\n            url: \"\"\n            body: \"⚠️ 内容审核未通过，需人工检查\""
+      }
+    ]
+  },
+  {
+    "id": "t-oc-06",
+    "title": "企业级部署：安全、监控与团队治理",
+    "desc": "从个人使用到团队落地的全套方案：安全架构、Mission Control 仪表盘、成本优化和 90 天推广路线图",
+    "tier": "advanced",
+    "difficulty": "advanced",
+    "duration": "40分钟",
+    "targetJobs": [
+      "all"
+    ],
+    "category": "prompt",
+    "icon": "💼",
+    "editorPick": false,
+    "steps": 7,
+    "columnId": "col-openclaw",
+    "columnOrder": 6,
+    "prerequisite": [
+      "t-oc-05"
+    ],
+    "nextGuides": [],
+    "relatedPath": "OpenClaw 自动化实战",
+    "fitRoles": [
+      "全岗位"
+    ],
+    "solves": "个人实验可以但团队落地不知道怎么做",
+    "outcome": "完整的团队级OpenClaw部署和治理方案",
+    "fitLevel": "有团队管理经验或技术负责人",
+    "content": [
+      {
+        "title": "从个人到团队：需要解决的四大问题",
+        "body": "<p>个人用 OpenClaw 很简单，但要让一个10人团队稳定使用，需要解决：</p><ol><li><strong>安全</strong> — Agent 能访问什么数据？API key 谁管？如何防止泄密？</li><li><strong>监控</strong> — 谁在用？用了多少？哪个Agent出问题了？</li><li><strong>成本</strong> — 每月花多少钱？谁在烧钱？如何控制？</li><li><strong>治理</strong> — Agent 怎么命名？配置怎么管理？谁有权修改？</li></ul><p>不解决这四个问题就大规模推广，结果通常是：<strong>乱</strong>（每个人配置不同）、<strong>贵</strong>（无节制调用API）、<strong>险</strong>（Agent访问了不该碰的东西）。</p>",
+        "tip": "在推广前先用2-3人小组试运行2周，验证安全和成本可控后再扩大范围"
+      },
+      {
+        "title": "安全最佳实践：云沙箱与权限隔离",
+        "body": "<p>参考 Global Mofy（2026年3月）的企业部署方案：</p><ul><li><strong>云沙箱架构</strong>：Agent 运行环境与核心数据库严格隔离。Agent 只能通过指定API读取数据，不能直连生产数据库</li><li><strong>API Key 管理</strong>：所有 Key 存在环境变量中，不硬编码到配置文件。使用密钥管理服务（如 Vault）轮转密钥</li><li><strong>工具权限白名单</strong>：每个 Agent 只授予它需要的最小工具集。日报Agent只需要read权限，不需要write</li><li><strong>文件系统隔离</strong>：Agent 的工作目录限制在指定范围内，不能访问 /etc、用户隐私目录</li><li><strong>网络策略</strong>：限制 Agent 能访问的域名白名单，防止数据外泄</li></ul>",
+        "tip": "最关键的一条：永远不要让Agent直接访问生产数据库。用中间层API提供只读、脱敏的数据",
+        "example": "# 安全配置示例\n\n# Agent 工具权限白名单\nagent: game-ops-assistant\ntools:\n  allowed:\n    - file_read    # 允许读文件\n    - http_get     # 允许GET请求\n  denied:\n    - file_write   # 禁止写文件\n    - shell_exec   # 禁止执行Shell命令\n    - http_post    # 禁止POST请求（防止外发数据）\n\n# 文件系统隔离\nfilesystem:\n  allowed_paths:\n    - /data/reports/     # 报告输出目录\n    - /data/metrics/     # 只读数据目录\n  denied_paths:\n    - /etc/\n    - /home/\n    - /var/\n\n# 网络白名单\nnetwork:\n  allowed_domains:\n    - api.anthropic.com\n    - slack.com\n    - hooks.slack.com"
+      },
+      {
+        "title": "Mission Control 仪表盘",
+        "body": "<p>Mission Control 是 OpenClaw 的<strong>统一管理界面</strong>，让团队管理者一目了然：</p><p><strong>核心功能：</strong></p><ul><li><strong>Agent 仪表盘</strong>：所有 Agent 的运行状态、最后活跃时间、错误率</li><li><strong>任务审批</strong>：敏感操作需要管理者确认后才能执行（如发布外部内容）</li><li><strong>运行日志</strong>：每个 Agent 的完整对话记录和工具调用记录</li><li><strong>使用统计</strong>：按 Agent/用户/时间维度的 API 调用量和成本</li><li><strong>告警中心</strong>：Agent 异常、API 配额即将耗尽、任务失败等告警</li></ul><p>Mission Control 是一个独立的 Web 应用，通过 API 连接到你的 OpenClaw Gateway。</p>",
+        "tip": "即使团队只有5个人，也建议装 Mission Control。它的价值不只是管理，更是\"让每个人知道AI在做什么\"的透明度工具",
+        "example": "# 安装 Mission Control\ndocker pull openclaw/mission-control:latest\ndocker run -d --name mission-control \\\n  -p 3000:3000 \\\n  -e GATEWAY_URL=ws://host.docker.internal:18789 \\\n  -e AUTH_SECRET=your-secret-key \\\n  openclaw/mission-control:latest\n\n# 访问 http://localhost:3000 登录管理界面\n# 默认账户：admin / 首次登录时设置密码"
+      },
+      {
+        "title": "成本监控与模型路由优化",
+        "body": "<p>AI API 调用成本是团队最关心的问题之一。<strong>合理的模型路由可以降低60-80%的成本</strong>：</p><table><tr><th>任务类型</th><th>推荐模型</th><th>单次成本</th><th>理由</th></tr><tr><td>日报/周报生成</td><td>Claude Sonnet</td><td>~¥0.3</td><td>需要高质量中文</td></tr><tr><td>格式转换/排版</td><td>GPT-4.1-mini</td><td>~¥0.02</td><td>简单任务不需要强模型</td></tr><tr><td>数据比对/分类</td><td>本地 Ollama</td><td>¥0</td><td>结构化任务本地模型足够</td></tr><tr><td>创意文案</td><td>Claude Sonnet</td><td>~¥0.3</td><td>需要创意能力</td></tr><tr><td>敏感词检查</td><td>本地 Ollama</td><td>¥0</td><td>隐私要求+简单任务</td></tr></table><p><strong>月度成本估算（10人团队）</strong>：</p><ul><li>全部用 Claude：~¥3000-5000/月</li><li>智能路由后：~¥800-1500/月（节省60-70%）</li></ul>",
+        "tip": "设置每个Agent的月度API调用上限。超出后降级到本地模型或暂停非关键任务，避免意外账单",
+        "example": "# 模型路由配置\nmodel_routing:\n  rules:\n    - match: \"task_type == report_generation\"\n      model: claude-sonnet-4-20250514\n      max_tokens: 2000\n    - match: \"task_type == format_conversion\"\n      model: gpt-4.1-mini\n      max_tokens: 500\n    - match: \"task_type == data_comparison\"\n      model: ollama/llama3:8b\n    - match: \"default\"\n      model: gpt-4.1-mini  # 默认用便宜模型\n\n# 预算控制\nbudget:\n  monthly_limit: 1500  # 月上限（元）\n  per_agent_limit: 300  # 单Agent月上限\n  alert_threshold: 80   # 达到80%时预警\n  on_exceed: degrade_to_local  # 超额后降级到本地模型"
+      },
+      {
+        "title": "团队治理 SOP",
+        "body": "<p>让OpenClaw在团队中持续稳定运行，需要一套<strong>治理规范</strong>：</p><p><strong>① Agent 命名规范</strong></p><ul><li>格式：{团队}-{功能}-{版本}，如 ops-daily-report-v2</li><li>禁止：中文名、空格、特殊字符</li></ul><p><strong>② 配置版本管理</strong></p><ul><li>所有Agent配置和Lobster流水线存入 Git 仓库</li><li>修改配置必须提交 PR，至少1人审核</li></ul><p><strong>③ 变更审批流程</strong></p><ul><li>新增Agent → 团队负责人审批</li><li>修改工具权限 → 技术负责人审批</li><li>添加外部Channel → 安全审批</li></ul><p><strong>④ Agent 生命周期管理</strong></p><ul><li>试运行期（2周）→ 正式启用 → 定期review → 下线/升级</li><li>超过30天未使用的Agent自动归档</li></ul>",
+        "tip": "每月做一次\"Agent清理日\"：检查所有Agent的使用频率和效果，关停无用的Agent节约资源"
+      },
+      {
+        "title": "性能调优：让系统稳定运行",
+        "body": "<p>OpenClaw 长期运行会遇到性能问题，提前做好以下优化：</p><ul><li><strong>Gateway 资源分配</strong>：Docker容器建议至少2核CPU+4GB内存。Agent数量超过10个时考虑增加到8GB</li><li><strong>并发控制</strong>：限制同时运行的Agent数量。5个以下并发通常没问题，超过10个需要排队机制</li><li><strong>Memory 清理</strong>：Agent 的持久记忆会不断增长。设置自动归档策略，超过30天的记忆移到冷存储</li><li><strong>日志轮转</strong>：OpenClaw 日志会持续增长，配置 logrotate 每周压缩旧日志</li><li><strong>健康检查</strong>：配置定期健康检查脚本，Gateway挂了自动重启（Docker restart policy）</li></ul>",
+        "tip": "Docker容器设置 restart: unless-stopped 策略，系统重启后Gateway自动恢复运行",
+        "example": "# Docker Compose 生产配置\n# docker-compose.prod.yaml\n\nservices:\n  openclaw:\n    image: openclaw/openclaw:latest\n    restart: unless-stopped\n    ports:\n      - \"18789:18789\"\n    volumes:\n      - openclaw-data:/root/.openclaw\n      - ./pipelines:/root/pipelines\n      - ./data:/root/data:ro  # 数据目录只读挂载\n    deploy:\n      resources:\n        limits:\n          cpus: \"2\"\n          memory: 4G\n    logging:\n      driver: \"json-file\"\n      options:\n        max-size: \"50m\"\n        max-file: \"5\"\n    healthcheck:\n      test: [\"CMD\", \"openclaw\", \"status\"]\n      interval: 60s\n      timeout: 10s\n      retries: 3\n\n  mission-control:\n    image: openclaw/mission-control:latest\n    restart: unless-stopped\n    ports:\n      - \"3000:3000\"\n    environment:\n      - GATEWAY_URL=ws://openclaw:18789"
+      },
+      {
+        "title": "90 天落地路线图",
+        "body": "<p>从零开始到团队稳定使用 OpenClaw 的<strong>推荐路径</strong>：</p><p><strong>第 1 月：个人试点</strong></p><ul><li>1-2名技术意识强的成员率先搭建环境</li><li>选择1个场景验证（推荐：日报自动生成）</li><li>记录效果数据：节省时间、输出质量、稳定性</li><li>产出：一份内部Demo + 效果报告</li></ul><p><strong>第 2 月：团队推广</strong></p><ul><li>部署 Mission Control，建立团队级基础设施</li><li>为3-5个场景创建 Agent 和 Lobster 流水线</li><li>制定治理SOP，培训团队使用</li><li>产出：团队级OpenClaw使用规范文档</li></ul><p><strong>第 3 月：流程固化</strong></p><ul><li>将验证有效的自动化流程写入日常工作SOP</li><li>建立成本监控和预算体系</li><li>收集团队反馈，优化 Agent 配置</li><li>产出：稳定运行的自动化体系 + 月度节省时间报告</li></ul><p><strong>成功指标</strong>：第3月末，团队每周节省的总时间 ≥ 20小时，Agent稳定运行率 ≥ 95%。</p>",
+        "tip": "推广最大的阻力不是技术，而是习惯。第1个月的Demo效果越震撼，后续推广越顺利。选一个人人都痛的场景做Demo"
+      }
+    ]
   }
 ]

@@ -47,25 +47,37 @@
     "color": "#F59E0B",
     "gradient": "linear-gradient(135deg, #F59E0B 0%, #D97706 100%)",
     "status": "active",
-    "totalTutorials": 6,
+    "totalTutorials": 30,
     "learningPath": [
       {
-        "phase": "\u5165\u95e8\u4e0e\u5b9a\u4f4d",
+        "phase": "入门基础",
         "difficulty": "beginner",
-        "desc": "\u4e86\u89e3 Nano Banana 2 \u7684\u80fd\u529b\u8fb9\u754c\u548c\u6700\u4f73\u573a\u666f",
-        "tutorialIds": ["t-nb-01"]
+        "desc": "从零开始，让每个人都能用 AI 出图",
+        "tutorialIds": ["t-nb-01", "t-nb-07", "t-nb-08", "t-nb-09"]
       },
       {
-        "phase": "\u573a\u666f\u5b9e\u6218",
+        "phase": "岗位场景实战",
         "difficulty": "intermediate",
-        "desc": "\u6279\u91cf\u4efb\u52a1\u3001\u5b9e\u65f6\u8f85\u52a9\u3001\u8f7b\u91cf\u81ea\u52a8\u5316",
-        "tutorialIds": ["t-nb-02", "t-nb-03", "t-nb-04"]
+        "desc": "9 大岗位的高频视觉场景，拿来即用",
+        "tutorialIds": ["t-nb-02", "t-nb-03", "t-nb-04", "t-nb-10", "t-nb-11", "t-nb-12", "t-nb-13", "t-nb-14", "t-nb-15", "t-nb-16"]
       },
       {
-        "phase": "\u8fdb\u9636\u7b56\u7565",
+        "phase": "进阶技巧",
         "difficulty": "advanced",
-        "desc": "\u6a21\u578b\u6df7\u7528\u4e0e\u6210\u672c\u4f18\u5316",
-        "tutorialIds": ["t-nb-05", "t-nb-06"]
+        "desc": "精确控制画面质量，从「能出图」到「出好图」",
+        "tutorialIds": ["t-nb-17", "t-nb-18", "t-nb-19", "t-nb-20", "t-nb-21", "t-nb-22"]
+      },
+      {
+        "phase": "专业流水线",
+        "difficulty": "advanced",
+        "desc": "团队级批量生产与自动化协作",
+        "tutorialIds": ["t-nb-05", "t-nb-23", "t-nb-24", "t-nb-25", "t-nb-26", "t-nb-27"]
+      },
+      {
+        "phase": "专家工程化",
+        "difficulty": "expert",
+        "desc": "从工具使用到组织级视觉 AI 能力建设",
+        "tutorialIds": ["t-nb-06", "t-nb-28", "t-nb-29", "t-nb-30"]
       }
     ],
     "targetJobs": ["all"],
@@ -79,7 +91,7 @@
     "icon": "🦞",
     "color": "#EF4444",
     "gradient": "linear-gradient(135deg, #EF4444 0%, #B91C1C 100%)",
-    "status": "coming-soon",
+    "status": "active",
     "totalTutorials": 6,
     "learningPath": [
       {
