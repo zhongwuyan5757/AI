@@ -194,9 +194,64 @@ async function main() {
   log.addDeduped(dupeCount);
   log.info(`🔍 去重: ${dupeCount} 条重复, ${unique.length} 条新增`);
 
+  // ====== Step 6.5: 自动标记 isHot（基于规则） ======
+  // 策略：当天新闻中，按来源权重 + 分类多样性，标记前8条为热门
+  const HOT_SOURCES = ['36kr', 'TechCrunch', 'The Verge', 'VentureBeat', 'MIT Technology Review', '少数派'];
+  const today = new Date().toISOString().slice(0, 10);
+  const todayItems = unique.filter(n => n.date === today);
+
+  if (todayItems.length > 0) {
+    // 评分：优质来源+3, 有分类+1, 标题长度合理+1
+    const scored = todayItems.map(n => {
+      let score = 0;
+      if (HOT_SOURCES.some(s => n.source?.includes(s))) score += 3;
+      if (n.category && n.category !== 'industry-product') score += 1;
+      if (n.title.length >= 15 && n.title.length <= 80) score += 1;
+      if (n.why_it_matters && n.why_it_matters !== '值得了解的行业动态') score += 2;
+      return { item: n, score };
+    });
+    scored.sort((a, b) => b.score - a.score);
+
+    // 取前8条，确保分类多样性（每个分类最多3条）
+    const catCount = {};
+    let hotCount = 0;
+    for (const { item } of scored) {
+      const cat = item.category || 'other';
+      catCount[cat] = (catCount[cat] || 0) + 1;
+      if (catCount[cat] <= 3 && hotCount < 8) {
+        item.isHot = true;
+        hotCount++;
+      }
+    }
+    log.info(`🔥 自动标记热门: ${hotCount} 条 (当天 ${todayItems.length} 条中)`);
+  }
+
   // ====== Step 7: 合并 + 写入 ======
   if (unique.length > 0) {
     log.addAdded(unique.length);
+    // 降级超过1天的旧热门
+    const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+    let demotedCount = 0;
+    for (const item of existing) {
+      if (item.isHot && item.date <= yesterday) {
+        item.isHot = false;
+        demotedCount++;
+      }
+    }
+    if (demotedCount > 0) log.info(`📉 降级过期热门: ${demotedCount} 条`);
+
+    // 如果当天新增不够，从已有的当天条目中也补标热门
+    const todayExisting = existing.filter(n => n.date === today && !n.isHot);
+    if (todayExisting.length > 0) {
+      const todayHotCount = [...unique, ...existing].filter(n => n.date === today && n.isHot).length;
+      if (todayHotCount < 8) {
+        const need = 8 - todayHotCount;
+        const candidates = todayExisting.slice(0, need);
+        candidates.forEach(n => { n.isHot = true; });
+        log.info(`🔥 补标已有条目热门: ${candidates.length} 条`);
+      }
+    }
+
     const merged = mergeNews(unique, existing, config.QUALITY.maxNewsItems);
 
     if (DRY_RUN) {

@@ -9,7 +9,7 @@
     "category": "model-update",
     "tags": [],
     "relatedJobs": [],
-    "isHot": false,
+    "isHot": true,
     "why_it_matters": "新工具/模型可能改变现有工作流",
     "fit_for": [
       "策划",
@@ -30,7 +30,7 @@
       "AIGC"
     ],
     "relatedJobs": [],
-    "isHot": false,
+    "isHot": true,
     "why_it_matters": "新工具/模型可能改变现有工作流",
     "fit_for": [
       "运营",
@@ -53,7 +53,7 @@
       "Meta"
     ],
     "relatedJobs": [],
-    "isHot": false,
+    "isHot": true,
     "why_it_matters": "影响行业资本走向与竞争格局",
     "fit_for": [
       "全员"
@@ -71,7 +71,7 @@
     "category": "model-update",
     "tags": [],
     "relatedJobs": [],
-    "isHot": false,
+    "isHot": true,
     "why_it_matters": "新工具/模型可能改变现有工作流",
     "fit_for": [
       "运营",
@@ -95,7 +95,7 @@
       "ad-optimizer",
       "publishing-manager"
     ],
-    "isHot": false,
+    "isHot": true,
     "why_it_matters": "影响行业资本走向与竞争格局",
     "fit_for": [
       "全员"
@@ -117,7 +117,7 @@
       "ad-optimizer",
       "publishing-manager"
     ],
-    "isHot": false,
+    "isHot": true,
     "why_it_matters": "影响行业资本走向与竞争格局",
     "fit_for": [
       "策划",
@@ -141,7 +141,7 @@
       "ad-optimizer",
       "publishing-manager"
     ],
-    "isHot": false,
+    "isHot": true,
     "why_it_matters": "值得了解的行业动态",
     "fit_for": [
       "运营",
@@ -164,7 +164,7 @@
       "Anthropic"
     ],
     "relatedJobs": [],
-    "isHot": false,
+    "isHot": true,
     "why_it_matters": "值得了解的行业动态",
     "fit_for": [
       "全员"
@@ -926,7 +926,7 @@
     "category": "model-update",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "影响投放和增长策略",
     "fit_for": [
       "发行"
@@ -944,7 +944,7 @@
     "category": "model-update",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "提升开发与技术效率",
     "fit_for": [
       "策划",
@@ -963,7 +963,7 @@
     "category": "model-update",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "反映AI行业资本走向",
     "fit_for": [
       "全员"
@@ -981,7 +981,7 @@
     "category": "model-update",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
       "发行"
@@ -1001,7 +1001,7 @@
       "Anthropic"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "AI 发展路线图：如果还有人愿意倾听",
     "summaryZh": "《亲人类宣言》在上周五角大楼与 Anthropic 对峙之前就已定稿，但这两件事的碰撞对所有参与者来说都意味深长。文章探讨了 AI 发展的伦理边界和政策走向。",
     "why_it_matters": "可能影响AI使用边界",
@@ -1023,7 +1023,7 @@
       "Google"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "Google 给劈柴哥开出 6.92 亿美元薪酬方案",
     "summaryZh": "其中大部分与业绩挂钩，包括与 Waymo 自动驾驶和 Wing 无人机配送业务相关的新股权激励。这反映了 Google 对 AI 战略布局的重视。",
     "why_it_matters": "值得了解的AI行业动态",
@@ -1045,7 +1045,7 @@
       "OpenAI"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "OpenAI 机器人负责人因五角大楼交易辞职",
     "summaryZh": "硬件高管 Caitlin Kalinowski 宣布，因 OpenAI 与美国国防部的争议性协议，她已辞去领导公司机器人团队的职务。此事反映了 AI 公司内部对军事合作的分歧。",
     "why_it_matters": "值得了解的AI行业动态",
@@ -1068,7 +1068,7 @@
       "OpenAI"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "OpenAI 再次推迟 ChatGPT「成人模式」上线",
     "summaryZh": "该功能将允许经过验证的成年用户访问成人内容，此前已从12月推迟。这反映了 AI 内容安全治理的复杂性。",
     "why_it_matters": "影响模型选型策略",
@@ -1092,7 +1092,7 @@
     "relatedJobs": [
       "all"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-dbcb67d4",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
@@ -1117,7 +1117,7 @@
       "graphic-designer",
       "brand-manager"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-32d883b0",
     "why_it_matters": "可能改变你的工作流",
     "fit_for": [
@@ -1141,7 +1141,7 @@
     "relatedJobs": [
       "video-designer"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-7efcef4d",
     "why_it_matters": "可能改变你的工作流",
     "fit_for": [
@@ -1164,7 +1164,7 @@
     "relatedJobs": [
       "all"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-481dbd8f",
     "why_it_matters": "值得了解的AI行业动态",
     "fit_for": [
@@ -1190,7 +1190,7 @@
       "ad-optimizer",
       "publishing-manager"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-1ed8546a",
     "why_it_matters": "影响投放和增长策略",
     "fit_for": [
@@ -1211,7 +1211,7 @@
     "category": "industry-product",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "值得了解的AI行业动态",
     "fit_for": [
       "全员"
@@ -1229,7 +1229,7 @@
     "category": "industry-product",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "马斯克未能阻止加州数据披露法：AI 训练数据或将被公开",
     "summaryZh": "马斯克试图阻止加州一项数据披露法案，该法案可能要求 AI 公司公开训练数据来源。法院裁定马斯克的请求不成立，AI 训练数据透明度问题再次成为焦点。",
     "why_it_matters": "值得了解的AI行业动态",
@@ -1249,7 +1249,7 @@
     "category": "industry-product",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "AI 初创公司起诉前 CEO：带走 41GB 邮件数据并谎话连篇",
     "summaryZh": "一家 AI 初创公司起诉其前 CEO，指控其窃取了 41GB 的公司邮件数据并在多项事务上撒谎。此案例为 AI 行业的公司治理和数据安全敲响警钟。",
     "why_it_matters": "可能影响AI使用边界",
@@ -1271,7 +1271,7 @@
       "Anthropic"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "五角大楼能用 AI 监控美国公民吗？",
     "summaryZh": "深度探讨美国军方使用 AI 进行国内监控的法律边界。随着 AI 能力的提升，军事 AI 应用与公民隐私之间的张力日益突出。",
     "why_it_matters": "值得了解的AI行业动态",
@@ -1293,7 +1293,7 @@
       "Anthropic"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "每日速递：AI 领域10件大事 + Anthropic 五角大楼风波后续",
     "summaryZh": "MIT Technology Review 每日精选：涵盖 AI 领域最重要的10个进展，以及 Anthropic 与五角大楼合作破裂后的最新影响。",
     "why_it_matters": "值得了解的AI行业动态",
@@ -1313,7 +1313,7 @@
     "category": "industry-product",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "反映AI行业资本走向",
     "fit_for": [
       "新媒体",
@@ -1334,7 +1334,7 @@
     "relatedJobs": [
       "graphic-designer"
     ],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
       "设计"
@@ -1352,7 +1352,7 @@
     "category": "deep-insight",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "AI 纪录片过度渲染：末日论者和加速派都不满意",
     "summaryZh": "影评分析了最新 AI 纪录片《或我如何成为末日乐观主义者》，认为该片同时迎合了 AI 末日论者和加速主义者，但缺乏深度和客观性。",
     "why_it_matters": "影响视频创作工作流",
@@ -1376,7 +1376,7 @@
       "Google"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "微软、谷歌、亚马逊表示：Claude 对非国防客户仍然可用",
     "summaryZh": "特朗普政府国防部与 Anthropic 的纠纷不会影响其他使用 Claude 的企业客户。微软和谷歌均确认其云平台上的 Claude 服务不受影响。",
     "why_it_matters": "影响模型选型策略",
@@ -1398,7 +1398,7 @@
       "Anthropic"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "Anthropic 五角大楼事件：追逐政府合同的初创公司需引以为戒",
     "summaryZh": "五角大楼将 Anthropic 列为供应链风险后，这一 2 亿美元合同的破裂为追逐联邦合同的科技初创公司敲响了警钟。",
     "why_it_matters": "值得了解的AI行业动态",
@@ -1420,7 +1420,7 @@
       "Anthropic"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "Anthropic 对抗五角大楼、SaaS 末日论，以及为什么竞争是好事",
     "summaryZh": "播客深度讨论：Anthropic 与五角大楼的对峙、SaaS 行业的 AI 颠覆危机，以及竞争如何推动 AI 行业健康发展。",
     "why_it_matters": "值得了解的AI行业动态",
@@ -1440,7 +1440,7 @@
     "category": "industry-product",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "AI 城市管理平台 City Detect 获 1300 万美元 A 轮融资",
     "summaryZh": "City Detect 利用 AI 帮助地方政府预防城市衰败，已在达拉斯、迈阿密等至少 17 个城市部署。该案例展示了 AI 在公共服务领域的商业化落地。",
     "why_it_matters": "反映AI行业资本走向",
@@ -1462,7 +1462,7 @@
       "Meta"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "继欧洲之后，WhatsApp 将允许竞争对手 AI 在巴西提供聊天机器人",
     "summaryZh": "Meta 在确认对欧洲用户开放后，现在允许竞争对手的 AI 公司在巴西 WhatsApp 上提供付费聊天机器人服务。AI 平台的开放竞争正在全球蔓延。",
     "why_it_matters": "值得了解的AI行业动态",
@@ -1484,7 +1484,7 @@
       "Anthropic"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "Anthropic 将在法庭上挑战美国防部「供应链风险」标签",
     "summaryZh": "Anthropic CEO Dario Amodei 表示计划通过法律途径挑战国防部将其列为供应链风险的决定。",
     "why_it_matters": "值得了解的AI行业动态",
@@ -1510,7 +1510,7 @@
     "relatedJobs": [
       "all"
     ],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
       "发行"
@@ -1534,7 +1534,7 @@
       "numerical-planner",
       "product-planner"
     ],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
       "全员"
@@ -1557,7 +1557,7 @@
     "relatedJobs": [
       "all"
     ],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "值得了解的AI行业动态",
     "fit_for": [
       "品牌"
@@ -1604,7 +1604,7 @@
     "relatedJobs": [
       "graphic-designer"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-fc7163b1",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
@@ -1628,7 +1628,7 @@
     "relatedJobs": [
       "video-designer"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-8cd0bedb",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
@@ -1791,7 +1791,7 @@
       "OpenAI"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "OpenAI 发布 GPT-5.4：知识工作能力再升级",
     "summaryZh": "OpenAI 推出 GPT-5.4，在专业知识工作方面能力大幅提升，特别是在处理电子表格、演示文稿和复杂文档分析等办公场景中表现突出。",
     "why_it_matters": "影响模型选型策略",
@@ -1986,7 +1986,7 @@
     "relatedJobs": [
       "all"
     ],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
       "策划",
@@ -2010,7 +2010,7 @@
     "relatedJobs": [
       "all"
     ],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
       "品牌"
@@ -2057,7 +2057,7 @@
       "video-designer",
       "graphic-designer"
     ],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
       "设计",
@@ -2222,7 +2222,7 @@
       "product-planner",
       "brand-manager"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-48fdbefd",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
@@ -2272,7 +2272,7 @@
       "video-designer",
       "new-media"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-32308814",
     "why_it_matters": "可能改变你的工作流",
     "fit_for": [
@@ -2371,7 +2371,7 @@
       "product-ops",
       "new-media"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-609d6b14",
     "why_it_matters": "可能改变你的工作流",
     "fit_for": [
@@ -2507,7 +2507,7 @@
       "product-planner",
       "numerical-planner"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-9c5b548d",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
@@ -2533,7 +2533,7 @@
       "graphic-designer",
       "brand-manager"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-fee9f0cd",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
@@ -2558,7 +2558,7 @@
       "video-designer",
       "new-media"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-814bd7b6",
     "why_it_matters": "影响视频创作工作流",
     "fit_for": [
@@ -2713,7 +2713,7 @@
       "product-ops",
       "ad-optimizer"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-3c935cf6",
     "why_it_matters": "可提升工作自动化水平",
     "fit_for": [
@@ -2850,7 +2850,7 @@
     "relatedJobs": [
       "numerical-planner"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-ecd776ae",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
@@ -3096,7 +3096,7 @@
     "relatedJobs": [
       "all"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-8a6d15d4",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
@@ -3122,7 +3122,7 @@
       "graphic-designer",
       "video-designer"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-80761c63",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
@@ -3145,7 +3145,7 @@
     "relatedJobs": [
       "video-designer"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-aa4bdf1a",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
@@ -3267,7 +3267,7 @@
     "relatedJobs": [
       "video-designer"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-d636ea9a",
     "why_it_matters": "值得了解的AI行业动态",
     "fit_for": [
@@ -3366,7 +3366,7 @@
       "product-ops",
       "ad-optimizer"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-5f1d07fa",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
@@ -3389,7 +3389,7 @@
     "relatedJobs": [
       "graphic-designer"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-fd11d498",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
@@ -3658,7 +3658,7 @@
       "product-ops",
       "product-planner"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-b7ae8bb5",
     "why_it_matters": "值得了解的AI行业动态",
     "fit_for": [
@@ -3682,7 +3682,7 @@
       "graphic-designer",
       "brand-manager"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-2f77733b",
     "why_it_matters": "可能改变你的工作流",
     "fit_for": [
@@ -3974,7 +3974,7 @@
       "graphic-designer",
       "product-planner"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-bcf5c5c2",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
@@ -4159,7 +4159,7 @@
     "relatedJobs": [
       "video-designer"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-00b35c00",
     "why_it_matters": "值得了解的AI行业动态",
     "fit_for": [
@@ -4249,7 +4249,7 @@
     "category": "industry-product",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "titleZh": "三星 Galaxy S26 发布：更快、更贵、更多 AI 功能",
     "summaryZh": "三星 Galaxy S26 搭载更多 AI 功能，包括增强的 AI 摄影、实时翻译和智能助手。硬件厂商正将 AI 能力作为手机核心卖点。",
     "why_it_matters": "值得了解的AI行业动态",
@@ -4416,7 +4416,7 @@
       "video-designer",
       "product-planner"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-708e7239",
     "why_it_matters": "值得了解的AI行业动态",
     "fit_for": [
@@ -4439,7 +4439,7 @@
     "relatedJobs": [
       "numerical-planner"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-b8863c7f",
     "why_it_matters": "可能改变你的工作流",
     "fit_for": [
@@ -4465,7 +4465,7 @@
       "numerical-planner",
       "product-planner"
     ],
-    "isHot": true,
+    "isHot": false,
     "id": "curated-7530e841",
     "why_it_matters": "影响模型选型策略",
     "fit_for": [
