@@ -1,0 +1,745 @@
+[
+  {
+    "id": "digest-001",
+    "source_author": "ethan-mollick",
+    "source_title": "The Organization Is the Product Now",
+    "source_url": "https://www.oneusefulthing.org/p/the-organization-is-the-product-now",
+    "source_date": "2026-03-06",
+    "date": "2026-03-09",
+    "title": "当 AI 重构团队协作：游戏发行团队如何避免「各自为战」",
+    "core_insight": "AI 不只是个人提效工具，而是团队协作模式的重新设计",
+    "summary": "Mollick 最新研究指出，当团队中个体开始使用 AI 但缺乏协作层面的系统设计时，效率提升会迅速触及天花板。真正的突破来自于将 AI 嵌入团队决策流程而非个人任务。波士顿咨询的实验数据显示，「协作式 AI 使用」的团队产出比「个体式使用」高出 40%。",
+    "gaming_relevance": {
+      "hook": "你的团队是不是每个人都在用 AI，但总体效率没变？",
+      "analysis": "在游戏发行团队中，投放同学用 AI 做素材文案，品牌同学用 AI 做社媒内容，发行经理用 AI 做竞品分析——但彼此的 AI 输出缺乏统一的上下文和品牌口径。Mollick 提出的「组织级 AI 协议」概念启示我们：不要让每个岗位单独探索 AI，而是设计一套团队共享的 AI 工作流。",
+      "scenarios": [
+        { "role": "发行", "insight": "在上线前的多部门协同中，设计统一的 AI 知识库（品牌指南、用户画像、竞品数据），让所有岗位的 AI 工具共享同一套上下文" },
+        { "role": "品牌", "insight": "创建品牌声音的 AI 模板（系统指令），确保投放、新媒体、社区等渠道的 AI 生成内容保持一致的品牌调性" },
+        { "role": "运营", "insight": "将运营数据分析的 AI 输出标准化，使其可直接作为策划和投放同学的输入，减少信息传递损耗" }
+      ]
+    },
+    "action_items": [
+      "本周尝试：选一个跨部门协作场景（如版本上线素材准备），让相关岗位的 AI 工具共享同一份背景文档",
+      "团队讨论：我们的 AI 使用是「各自为战」还是「协同作战」？有哪些 AI 输出可以标准化后供其他岗位使用？"
+    ],
+    "tags": ["AI管理", "团队协作", "组织变革"],
+    "fit_for": ["发行", "品牌", "运营"],
+    "value_type": "方法升级",
+    "read_time": "5min",
+    "recommended_path": "5day-advanced"
+  },
+  {
+    "id": "digest-002",
+    "source_author": "ethan-mollick",
+    "source_title": "What AI Benchmarks Actually Tell Us",
+    "source_url": "https://www.oneusefulthing.org/p/what-ai-benchmarks-actually-tell-us",
+    "source_date": "2026-03-03",
+    "date": "2026-03-08",
+    "title": "AI 评测排行榜的真相：游戏团队选模型别只看跑分",
+    "core_insight": "Benchmark 分数和实际业务表现之间的相关性远低于预期",
+    "summary": "Mollick 深度分析了主流 AI 评测（MMLU、HumanEval、Arena ELO 等）的局限性——这些测试衡量的是通用能力，而非特定领域表现。他建议团队建立自己的「任务基准测试」，用真实工作场景而非通用 benchmark 来选择 AI 工具。",
+    "gaming_relevance": {
+      "hook": "你选 AI 工具是看排行榜，还是看它能不能帮你写出好文案？",
+      "analysis": "游戏团队在选择 AI 工具时经常陷入「跑分陷阱」——Arena 排名第一的模型未必最适合写游戏推广文案。正确做法是：拿自己的真实任务（如写一段活动公告、分析一份竞品数据）去测试不同模型，建立团队自己的评估标准。",
+      "scenarios": [
+        { "role": "品牌", "insight": "建立品牌文案的 AI 评估清单：品牌调性匹配度、创意新颖性、中文表达流畅度，用真实素材测试而非看通用排名" },
+        { "role": "策划", "insight": "用真实的游戏设计文档（如系统设计、数值表）测试不同模型的理解和分析能力，建立策划岗专属的模型选型依据" }
+      ]
+    },
+    "action_items": [
+      "本周尝试：挑 3 个你最常做的 AI 任务，分别在 ChatGPT、Claude、Gemini 上做一遍，记录哪个最好用",
+      "思考题：如果让你给团队推荐一个 AI 工具，你的推荐依据是什么？"
+    ],
+    "tags": ["模型选型", "评测方法", "工具选择"],
+    "fit_for": ["品牌", "策划", "全员"],
+    "value_type": "认知刷新",
+    "read_time": "4min",
+    "recommended_path": "7day-beginner"
+  },
+  {
+    "id": "digest-003",
+    "source_author": "lenny",
+    "source_title": "How the best product teams measure success",
+    "source_url": "https://www.lennysnewsletter.com/p/how-the-best-product-teams-measure",
+    "source_date": "2026-03-05",
+    "date": "2026-03-09",
+    "title": "顶级产品团队怎么定指标：游戏运营也该学的北极星思维",
+    "core_insight": "好的指标不是越多越好，而是找到一个能驱动全团队对齐的北极星",
+    "summary": "Lenny 采访了 Notion、Linear、Figma 等产品的增长负责人，总结出高效团队的指标哲学：一个北极星指标 + 2-3 个护栏指标。他特别强调「虚荣指标」（如 DAU）和「行动指标」（如完成核心动作的用户比例）的区别。",
+    "gaming_relevance": {
+      "hook": "你的游戏运营报表有 50 个指标，但团队知道该优先看哪个吗？",
+      "analysis": "游戏运营团队普遍存在「指标过载」问题——留存、付费、活跃、LTV、ARPU 全都看，但缺乏一个让全团队对齐的核心指标。Lenny 的北极星框架可以直接移植：找到那个最能反映游戏健康度的单一指标，让策划、运营、投放围绕同一个目标发力。",
+      "scenarios": [
+        { "role": "运营", "insight": "重新审视周报中的指标：哪些是「虚荣指标」（让你感觉良好但不驱动行动），哪些是「行动指标」（直接指向下一步该做什么）" },
+        { "role": "发行", "insight": "在立项评审和版本规划中，用北极星指标框架替代「什么都要看」的指标清单，让跨部门沟通更聚焦" },
+        { "role": "投放", "insight": "将投放效果评估从 CPI/CPA 延伸到「北极星贡献度」，衡量付费用户是否真正完成了核心体验" }
+      ]
+    },
+    "action_items": [
+      "本周尝试：列出你团队目前关注的所有指标，标记哪些是「虚荣的」哪些是「行动的」",
+      "团队讨论：如果只能看一个指标来判断游戏是否健康，你选哪个？"
+    ],
+    "tags": ["产品思维", "增长方法", "数据驱动"],
+    "fit_for": ["运营", "发行", "投放"],
+    "value_type": "方法升级",
+    "read_time": "6min",
+    "recommended_path": "5day-efficiency"
+  },
+  {
+    "id": "digest-004",
+    "source_author": "lenny",
+    "source_title": "The art of the pivot: When to stay the course vs. change direction",
+    "source_url": "https://www.lennysnewsletter.com/p/the-art-of-the-pivot",
+    "source_date": "2026-03-01",
+    "date": "2026-03-07",
+    "title": "什么时候该坚持、什么时候该转向：游戏品牌定位的破局思维",
+    "core_insight": "最好的 pivot 不是抛弃旧方向，而是基于已有优势找到新的切入角度",
+    "summary": "Lenny 通过 Slack、YouTube、Instagram 等经典案例，总结了成功转向的三个信号：核心用户在用你没预料到的方式使用产品、增长曲线开始平坦化、市场出现新的结构性变化。关键洞察是：pivot 不是失败后的挣扎，而是一种主动的战略选择。",
+    "gaming_relevance": {
+      "hook": "游戏上线后数据不如预期，是继续投入还是调整方向？",
+      "analysis": "游戏行业的 pivot 无处不在——品牌定位从硬核转休闲、目标市场从国内转海外、核心玩法从 PvP 转 PvE。Lenny 的框架帮助品牌经理和发行经理建立更理性的判断：不是「数据差就转」，而是看三个信号来决定调整时机和方式。",
+      "scenarios": [
+        { "role": "品牌", "insight": "监测用户实际行为与品牌定位的偏差——如果玩家在用一种你没预料到的方式玩你的游戏，这可能是重新定位的信号" },
+        { "role": "发行", "insight": "在立项和上线评审中加入「pivot 预案」：如果核心数据在 X 天内没达到 Y 水平，我们的 Plan B 是什么" }
+      ]
+    },
+    "action_items": [
+      "本周尝试：回顾当前项目，有哪些用户行为「出乎意料」？这些意外是否暗示了新的机会？",
+      "思考题：你的团队有没有「不敢 pivot」的执念？成本沉没效应是否在影响判断？"
+    ],
+    "tags": ["产品策略", "品牌定位", "决策方法"],
+    "fit_for": ["品牌", "发行", "策划"],
+    "value_type": "策略启发",
+    "read_time": "5min",
+    "recommended_path": null
+  },
+  {
+    "id": "digest-005",
+    "source_author": "andrew-ng",
+    "source_title": "The Batch Issue #289: Agentic AI Goes Mainstream",
+    "source_url": "https://www.deeplearning.ai/the-batch/",
+    "source_date": "2026-03-07",
+    "date": "2026-03-09",
+    "title": "AI Agent 进入主流：游戏行业的自动化拐点到了吗？",
+    "core_insight": "2026 年 Agent AI 从实验走向生产，多个行业开始部署端到端自动化流程",
+    "summary": "本期 The Batch 重点报道了 AI Agent 在客服、内容生产、代码开发等领域的规模化应用。Andrew Ng 在编辑信中指出，Agent AI 的成熟度已足够支撑「80% 自动化 + 20% 人工审核」的生产模式，并预测这将是 2026 年最大的落地趋势。",
+    "gaming_relevance": {
+      "hook": "你的竞品可能已经在用 AI Agent 自动生成投放素材了",
+      "analysis": "对游戏行业来说，AI Agent 最直接的应用场景是：社区自动回复、多语言素材批量生成、竞品动态自动监测、数据报告自动化。Ng 提到的「80/20 模式」特别适合游戏运营——让 Agent 完成 80% 的重复工作，人类专注于 20% 的创意判断和策略决策。",
+      "scenarios": [
+        { "role": "运营", "insight": "评估团队中哪些重复性任务（如日报生成、社区FAQ回复、活动数据汇总）可以交给 AI Agent，释放人力用于策略思考" },
+        { "role": "新媒体", "insight": "探索用 AI Agent 实现「一次创意，多平台自动适配」——一篇核心内容自动转化为微博、小红书、抖音等不同形式" },
+        { "role": "发行", "insight": "关注竞品的 AI Agent 采用情况——如果对手已经在用 Agent 做素材批量化，你的效率差距可能正在拉大" }
+      ]
+    },
+    "action_items": [
+      "本周尝试：列出你每天花超过 30 分钟的重复性任务，评估哪些可以用 AI Agent（如 n8n + ChatGPT）自动化",
+      "推荐体验：试用 n8n 或 Make.com 搭建一个简单的自动化工作流，体验 Agent 的实际能力边界"
+    ],
+    "tags": ["AI Agent", "自动化", "行业趋势"],
+    "fit_for": ["运营", "新媒体", "发行"],
+    "value_type": "认知刷新",
+    "read_time": "5min",
+    "recommended_path": "5day-advanced"
+  },
+  {
+    "id": "digest-006",
+    "source_author": "andrew-ng",
+    "source_title": "The Batch Issue #288: Building with Open Source AI",
+    "source_url": "https://www.deeplearning.ai/the-batch/",
+    "source_date": "2026-02-28",
+    "date": "2026-03-05",
+    "title": "开源 AI 崛起：游戏团队该关注的降本增效新选项",
+    "core_insight": "开源模型在特定任务上已接近甚至超越商用模型，且成本大幅降低",
+    "summary": "Andrew Ng 分析了 Llama、Qwen、DeepSeek 等开源模型的最新进展。关键信息是：在文本生成、代码辅助等任务上，经过微调的开源模型表现已非常接近 GPT-5 和 Claude，且推理成本可降低 80% 以上。他建议企业认真评估「开源+微调」的技术路径。",
+    "gaming_relevance": {
+      "hook": "你的 AI 工具订阅费每月多少？开源方案可能帮你省掉 80%",
+      "analysis": "对于有技术团队的游戏公司，开源模型意味着：可以用低成本搭建专属的游戏文案生成器、竞品分析工具、甚至自动化客服系统。不需要每个岗位都订阅 ChatGPT Plus，而是由技术团队部署一套内部 AI 服务。",
+      "scenarios": [
+        { "role": "发行", "insight": "和技术团队沟通：是否可以用开源模型搭建内部专属的文案生成和数据分析工具，降低团队 AI 使用的边际成本" },
+        { "role": "运营", "insight": "了解 Qwen 和 DeepSeek 等中文优势模型的能力——在中文游戏运营场景下，它们可能比 GPT 更适合" }
+      ]
+    },
+    "action_items": [
+      "本周了解：问你们的技术同学，公司是否有计划或能力部署开源 AI 模型",
+      "思考题：如果 AI 工具成本降低 80%，你会把节省的预算用在哪里？"
+    ],
+    "tags": ["开源AI", "降本增效", "技术趋势"],
+    "fit_for": ["发行", "运营", "全员"],
+    "value_type": "策略启发",
+    "read_time": "4min",
+    "recommended_path": null
+  },
+  {
+    "id": "digest-007",
+    "source_author": "ethan-mollick",
+    "source_title": "A Guide to Which AI to Use in the Agentic Era",
+    "source_url": "https://www.oneusefulthing.org/p/a-guide-to-which-ai-to-use",
+    "source_date": "2026-02-18",
+    "date": "2026-03-02",
+    "title": "Agent 时代怎么选 AI：游戏团队的模型配置指南",
+    "core_insight": "不同 AI 系统各有擅长领域，最佳策略不是选一个最好的，而是针对任务配置最合适的",
+    "summary": "Mollick 更新了他的 AI 选择指南，核心转变是：AI 已从「聊天工具」进化为「能使用工具的 Agent」。他将 Claude、ChatGPT、Gemini 三大系统按写作、分析、编程、创意等维度做了详细对比，并强调 Agent 能力（工具调用、长任务执行）正在成为新的核心评估维度。",
+    "gaming_relevance": {
+      "hook": "你还在让所有岗位用同一个 AI 工具吗？",
+      "analysis": "游戏团队的不同岗位对 AI 的需求差异很大：品牌需要出色的中文创意写作，投放需要数据分析能力，策划需要长文档理解力。Mollick 的框架启示我们不要「一刀切」，而是按岗位需求配置最合适的 AI 工具组合——品牌用 Claude 写文案，投放用 ChatGPT 做数据分析，策划用 Gemini 处理长文档。",
+      "scenarios": [
+        { "role": "品牌", "insight": "写品牌文案和创意故事时对比测试 Claude 和 ChatGPT，关注中文语感、品牌调性匹配度和创意发散能力" },
+        { "role": "投放", "insight": "数据分析和报表生成场景下，测试不同模型的表格处理、数学推理和可视化建议能力" },
+        { "role": "策划", "insight": "在处理长策划文档、竞品报告时，测试各模型对 10 万字以上文档的理解和总结能力" }
+      ]
+    },
+    "action_items": [
+      "本周尝试：根据你的核心工作任务，在 3 个主流 AI 上各做一遍，建立个人的「最佳工具地图」",
+      "团队共享：每个岗位分享自己的测试结果，汇总出团队级的 AI 工具推荐清单"
+    ],
+    "tags": ["模型选型", "Agent", "工具配置"],
+    "fit_for": ["品牌", "投放", "策划", "全员"],
+    "value_type": "工具实操",
+    "read_time": "6min",
+    "recommended_path": "7day-beginner"
+  },
+  {
+    "id": "digest-008",
+    "source_author": "ethan-mollick",
+    "source_title": "Management as AI Superpower",
+    "source_url": "https://www.oneusefulthing.org/p/management-as-ai-superpower",
+    "source_date": "2026-01-27",
+    "date": "2026-02-28",
+    "title": "管理力就是 AI 超能力：为什么带过团队的人用 AI 更强",
+    "core_insight": "管理经验——拆解任务、给清晰指令、Review 输出——恰恰是驾驭 AI 的核心技能",
+    "summary": "Mollick 提出一个反直觉观点：在 AI 时代，管理能力比技术能力更重要。因为使用 AI 的本质就是「管理一个能力不均匀的超级实习生」——你需要拆解任务、写清楚 brief、检查交付质量、在不同节点做判断。这些都是管理者每天在做的事。",
+    "gaming_relevance": {
+      "hook": "你觉得用好 AI 需要学编程？其实你需要的是管理思维",
+      "analysis": "游戏行业的中层管理者（制作人、项目经理、运营主管）往往觉得 AI 是年轻人的玩具。但 Mollick 的研究表明，有丰富管理经验的人在 AI 协作中表现更好——因为他们更擅长拆解复杂任务、给出结构化指令、评估产出质量。这对游戏团队的 AI 推广策略有重大启示：应该先从管理层开始培训。",
+      "scenarios": [
+        { "role": "发行", "insight": "把 AI 当成你的虚拟团队成员来管理——给它写 brief、设 deadline、做 review，用管理项目的思维来管理 AI 任务" },
+        { "role": "运营", "insight": "运营主管在推动团队用 AI 时，重点不是教工具操作，而是教「如何给 AI 下一个好需求」的方法论" }
+      ]
+    },
+    "action_items": [
+      "本周尝试：把你下一个要分配给同事的任务 brief，先给 AI 做一遍，看看你的需求描述是否足够清晰",
+      "管理者行动：在团队 AI 培训中加入「需求拆解」和「输出审核」环节，而不仅仅是工具操作教学"
+    ],
+    "tags": ["AI管理", "管理思维", "团队赋能"],
+    "fit_for": ["发行", "运营", "全员"],
+    "value_type": "认知刷新",
+    "read_time": "5min",
+    "recommended_path": "5day-advanced"
+  },
+  {
+    "id": "digest-009",
+    "source_author": "ethan-mollick",
+    "source_title": "Claude Code and What Comes Next",
+    "source_url": "https://www.oneusefulthing.org/p/claude-code-and-what-comes-next",
+    "source_date": "2026-01-07",
+    "date": "2026-02-20",
+    "title": "AI 编程颠覆创业：4 天做出产品原型对游戏行业意味着什么",
+    "core_insight": "AI 编程工具让非技术人员也能快速构建产品原型，创业的门槛正在被彻底重写",
+    "summary": "Mollick 分享了他在沃顿商学院的实验课：MBA 学生使用 Claude Code 等 AI 编程工具，在 4 天内从零构建出可运行的创业原型。多数参与者几乎没有编程经验。这说明 AI 正在将「创意→产品」的周期从数月压缩到数天。",
+    "gaming_relevance": {
+      "hook": "不会写代码的策划，现在可以自己做游戏原型了",
+      "analysis": "对游戏行业来说，这意味着：策划可以用 AI 编程工具快速搭建玩法原型验证想法，运营可以自己做数据看板而不用排技术需求，品牌可以快速生成活动页面。「等开发排期」将不再是瓶颈——至少在原型验证阶段。",
+      "scenarios": [
+        { "role": "策划", "insight": "学习使用 Claude Code 或 Cursor 快速搭建玩法原型——不需要精通编程，只需要能清晰描述你想要的交互逻辑" },
+        { "role": "运营", "insight": "尝试用 AI 编程工具搭建简单的数据看板或自动化脚本，减少对技术团队的依赖" },
+        { "role": "品牌", "insight": "用 AI 生成活动落地页的原型，快速验证创意方向后再交给设计和前端精修" }
+      ]
+    },
+    "action_items": [
+      "本周体验：安装 Cursor 或试用 Replit，用自然语言描述一个你想做的小工具，看 AI 能帮你做到什么程度",
+      "思考题：如果做原型的成本从 2 周变成 2 天，你的工作流程会怎么变？"
+    ],
+    "tags": ["AI编程", "快速原型", "降低门槛"],
+    "fit_for": ["策划", "运营", "品牌"],
+    "value_type": "工具实操",
+    "read_time": "5min",
+    "recommended_path": "5day-advanced"
+  },
+  {
+    "id": "digest-010",
+    "source_author": "ethan-mollick",
+    "source_title": "The Shape of AI: Jaggedness, Bottlenecks and Salients",
+    "source_url": "https://www.oneusefulthing.org/p/the-shape-of-ai",
+    "source_date": "2025-12-20",
+    "date": "2026-02-15",
+    "title": "AI 的「锯齿形能力」：为什么同一个 AI 有时天才有时白痴",
+    "core_insight": "AI 的能力边界不是一条平滑的线，而是参差不齐的锯齿——某些任务远超人类，某些任务令人失望",
+    "summary": "Mollick 用「Jagged Frontier」概念解释 AI 表现不稳定的本质原因：AI 的能力边界是锯齿形的，在某些维度远超预期，在另一些维度出乎意料地弱。关键启示是：不要因为 AI 在一个任务上表现出色就盲目信任它所有输出，也不要因为一次失败就全盘否定。",
+    "gaming_relevance": {
+      "hook": "AI 帮你写了一份很棒的文案，但它做的数据分析可能全是错的",
+      "analysis": "游戏团队使用 AI 时经常遇到这种困惑：ChatGPT 写营销文案很好但算数经常错，Claude 分析逻辑很强但创意有时平庸。理解「锯齿形能力」后，正确策略是：为每类任务标记 AI 的可信度等级，高可信度任务放心用，低可信度任务必须人工审核。",
+      "scenarios": [
+        { "role": "运营", "insight": "建立团队的「AI 可信度地图」：标记哪些任务 AI 的输出可以直接用（如初稿写作），哪些必须人工检查（如数据计算、法务相关内容）" },
+        { "role": "数值", "insight": "AI 在数值分析中的表现是典型的「锯齿形」——趋势判断往往准确，但精确计算经常出错。善用它的定性分析能力，但数字一定要自己验证" }
+      ]
+    },
+    "action_items": [
+      "本周尝试：回顾上周你用 AI 完成的所有任务，标记每个任务 AI 的表现（优秀/合格/需人工修正/完全不可用）",
+      "团队共建：汇总各岗位的 AI 使用反馈，画出团队的「AI 能力锯齿图」"
+    ],
+    "tags": ["AI认知", "能力边界", "使用策略"],
+    "fit_for": ["运营", "数值", "全员"],
+    "value_type": "认知刷新",
+    "read_time": "5min",
+    "recommended_path": "7day-beginner"
+  },
+  {
+    "id": "digest-011",
+    "source_author": "ethan-mollick",
+    "source_title": "Mass Intelligence",
+    "source_url": "https://www.oneusefulthing.org/p/mass-intelligence",
+    "source_date": "2025-08-28",
+    "date": "2026-02-10",
+    "title": "「大众智能」时代：AI 不再稀缺，游戏行业的竞争维度正在改变",
+    "core_insight": "当强大的 AI 能力人人可用，竞争壁垒不再是「谁有 AI」，而是「谁用得更深」",
+    "summary": "Mollick 宣告我们进入了「Mass Intelligence」时代——AI 聊天机器人的能力已经强大到普通人免费就能使用接近专家水平的智能工具。这意味着 AI 本身不再是竞争优势，真正的差距在于：谁能把 AI 更深地嵌入工作流、谁能更快地迭代使用方法。",
+    "gaming_relevance": {
+      "hook": "你的竞品也在用 AI，凭什么你用 AI 能赢？",
+      "analysis": "当所有游戏公司都能用 AI 写文案、做分析、生成素材时，AI 工具本身不再是护城河。真正的竞争力在于：你的团队是否把 AI 融入了标准化的工作流程（而不只是个人零散使用）、是否积累了高质量的 prompt 库和 AI 知识库、是否建立了 AI 输出的质量审核机制。",
+      "scenarios": [
+        { "role": "发行", "insight": "从「推动个人用 AI」转向「建设团队 AI 基础设施」——统一的 prompt 库、品牌知识库、AI 使用 SOP，这些才是可积累的竞争优势" },
+        { "role": "品牌", "insight": "竞品也在用 AI 做内容，差异化不在于是否用 AI，而在于你喂给 AI 的品牌资产（调性指南、用户洞察、历史素材）是否比对手更丰富" }
+      ]
+    },
+    "action_items": [
+      "本周审视：你团队的 AI 使用是否有可积累、可复用的资产（如 prompt 模板、知识库），还是每次都从零开始？",
+      "策略思考：在「人人都有 AI」的时代，你团队的独特竞争力是什么？"
+    ],
+    "tags": ["AI战略", "竞争优势", "行业趋势"],
+    "fit_for": ["发行", "品牌", "全员"],
+    "value_type": "策略启发",
+    "read_time": "5min",
+    "recommended_path": "5day-advanced"
+  },
+  {
+    "id": "digest-012",
+    "source_author": "ethan-mollick",
+    "source_title": "Real AI Agents and Real Work",
+    "source_url": "https://www.oneusefulthing.org/p/real-ai-agents-and-real-work",
+    "source_date": "2025-09-29",
+    "date": "2026-02-05",
+    "title": "AI Agent 实战手册：从理论到落地的三步走策略",
+    "core_insight": "真正有效的 AI Agent 不是万能全自动，而是在明确边界内完成特定任务链的工具",
+    "summary": "Mollick 剖析了 AI Agent 的现实能力：当前最有效的 Agent 不是「通用管家」，而是在限定范围内执行多步骤任务的专用工具。他提出 Agent 落地三步法：先找到重复性高且容错率较高的任务，再设计人机协作的审核节点，最后逐步扩大 Agent 的自主范围。",
+    "gaming_relevance": {
+      "hook": "别幻想 AI Agent 替你做一切——先让它替你做好一件事",
+      "analysis": "游戏团队在尝试 AI Agent 时常犯的错是目标太大：想让 AI 自动完成「从数据分析到策略制定到执行」的全流程。Mollick 建议反其道行之——从一个小而具体的任务开始，比如「每天自动汇总竞品社媒动态」或「自动生成日报初稿」，验证效果后再扩展。",
+      "scenarios": [
+        { "role": "运营", "insight": "选一个每天必做的重复任务（如日报汇总、社区舆情扫描）作为第一个 Agent 试点，设计清晰的输入-输出-审核流程" },
+        { "role": "投放", "insight": "从「自动生成素材变体」这类容错率高的任务入手建设 Agent，而不是直接让 AI 做投放策略决策" }
+      ]
+    },
+    "action_items": [
+      "本周行动：列出你每周花 2 小时以上的重复性任务，选一个作为「AI Agent 试点项目」",
+      "框架应用：为试点任务设计「输入标准→Agent 执行→人工审核→输出确认」的完整流程"
+    ],
+    "tags": ["AI Agent", "落地策略", "工作流"],
+    "fit_for": ["运营", "投放", "全员"],
+    "value_type": "方法升级",
+    "read_time": "5min",
+    "recommended_path": "5day-advanced"
+  },
+  {
+    "id": "digest-013",
+    "source_author": "ethan-mollick",
+    "source_title": "Giving Your AI a Job Interview",
+    "source_url": "https://www.oneusefulthing.org/p/giving-your-ai-a-job-interview",
+    "source_date": "2025-11-12",
+    "date": "2026-01-28",
+    "title": "给 AI 做面试：如何科学评估一个 AI 工具是否适合你的团队",
+    "core_insight": "用真实工作场景系统性地测试 AI，比看评测报告更能找到适合你的工具",
+    "summary": "Mollick 提出了一套实用的 AI 评估方法论：把选 AI 工具当作招聘——设计「面试题」（你的真实工作任务），让候选 AI 逐个做，然后按预设标准评分。他建议至少用 5 个典型任务场景来「面试」每个 AI，并记录其强弱项。",
+    "gaming_relevance": {
+      "hook": "如果 AI 是你的新同事，你会怎么面试它？",
+      "analysis": "游戏团队在选 AI 工具时往往凭感觉或跟风。Mollick 的「面试法」提供了一套可操作的评估框架：为每个岗位设计 5 个真实任务（如品牌岗的面试题可以是「改写一段活动公告」「分析竞品品牌定位」「生成 10 个推广 slogan」），让 ChatGPT、Claude、Gemini 分别做，打分对比。",
+      "scenarios": [
+        { "role": "品牌", "insight": "设计品牌岗的 AI 面试清单：文案改写、品牌故事创作、用户评论分析、多平台内容适配、竞品品牌拆解，用真实素材打分" },
+        { "role": "策划", "insight": "用一份真实的游戏设计文档作为面试材料，测试 AI 的逻辑分析、漏洞发现、方案对比能力" },
+        { "role": "发行", "insight": "制定公司级的 AI 工具采购评估标准，让每个岗位提交「AI 面试题」和评分结果作为选型依据" }
+      ]
+    },
+    "action_items": [
+      "本周实操：为你的岗位设计 5 道「AI 面试题」，用真实工作素材让 3 个主流 AI 做一遍并打分",
+      "团队建设：汇总各岗位的面试结果，形成团队级的 AI 工具选型报告"
+    ],
+    "tags": ["AI评估", "工具选型", "方法论"],
+    "fit_for": ["品牌", "策划", "发行", "全员"],
+    "value_type": "方法升级",
+    "read_time": "4min",
+    "recommended_path": "7day-beginner"
+  },
+  {
+    "id": "digest-014",
+    "source_author": "lenny",
+    "source_title": "The rise of the professional vibe coder",
+    "source_url": "https://www.lennysnewsletter.com/p/getting-paid-to-vibe-code",
+    "source_date": "2026-02-08",
+    "date": "2026-03-01",
+    "title": "「Vibe Coding」成为正式职业：非技术岗的新武器",
+    "core_insight": "用自然语言指挥 AI 写代码已经成为一种可变现的职业技能，不需要传统编程基础",
+    "summary": "Lenny 采访了 Lovable 的全职「Vibe Coder」Lazar Jovanovic——一个没有编程背景但靠纯 AI 编程搭建生产级产品的人。他分享了自己的工作流：用自然语言描述需求、让 AI 生成代码、通过迭代对话修复问题。这不是玩具式的尝试，而是真正在发工资的全职工作。",
+    "gaming_relevance": {
+      "hook": "不会写代码的运营同学，现在可以自己做内部工具了",
+      "analysis": "Vibe Coding 对游戏行业的冲击是：大量「想做但排不上开发资源」的内部工具需求，现在可以由非技术岗自己完成。运营想做的数据看板、品牌想做的素材管理工具、投放想做的自动化报表——不再需要等技术排期。",
+      "scenarios": [
+        { "role": "运营", "insight": "把 Vibe Coding 当作岗位技能来学习——不是学编程语言，而是学如何用自然语言清晰描述你想要的工具功能" },
+        { "role": "策划", "insight": "用 Vibe Coding 快速做游戏系统的 Excel 计算器或模拟器，验证数值设计的合理性" },
+        { "role": "新媒体", "insight": "自己搭建内容管理工具：多平台发布追踪、素材库管理、互动数据汇总，不用求技术团队帮忙" }
+      ]
+    },
+    "action_items": [
+      "本周尝试：想一个你一直想要但没有的小工具，用 Lovable、Bolt 或 Replit 试着用自然语言让 AI 帮你做出来",
+      "推荐学习：花 30 分钟了解 Vibe Coding 的基本流程——描述需求→AI 生成→测试→迭代修改"
+    ],
+    "tags": ["Vibe Coding", "非技术编程", "效率工具"],
+    "fit_for": ["运营", "策划", "新媒体"],
+    "value_type": "工具实操",
+    "read_time": "5min",
+    "recommended_path": "5day-efficiency"
+  },
+  {
+    "id": "digest-015",
+    "source_author": "lenny",
+    "source_title": "How to debug a team that isn't working: the Waterline Model",
+    "source_url": "https://www.lennysnewsletter.com/p/the-waterline-model",
+    "source_date": "2026-03-03",
+    "date": "2026-03-08",
+    "title": "团队不出活？用「水位线模型」诊断你的游戏项目组",
+    "core_insight": "团队效率问题通常不在表面的流程上，而是「水面以下」的信任、沟通和角色认知出了问题",
+    "summary": "Lenny 介绍了「水位线模型」——将团队问题分为水面以上（流程、工具、会议制度等可见问题）和水面以下（信任缺失、角色模糊、沟通恐惧等隐性问题）。他指出大多数团队只在修水面以上的问题（加流程、换工具），却忽视了水面以下才是根因。",
+    "gaming_relevance": {
+      "hook": "加了钉钉流程、开了更多周会，团队效率还是上不去？",
+      "analysis": "游戏项目组效率低下时，常见的做法是加流程、加周报、上新工具。但根据水位线模型，真正的问题可能在于：策划和美术之间的不信任导致反复修改、运营不敢对制作人提反馈、各部门对「这个版本的目标到底是什么」理解不一致。",
+      "scenarios": [
+        { "role": "发行", "insight": "在项目复盘时不只看「做了什么」和「数据怎样」，增加「水面以下」的讨论：团队合作中有什么没说出口的不满？" },
+        { "role": "运营", "insight": "反思运营和其他部门的协作：如果你觉得策划不听运营建议，问题可能不在流程上，而在信任和角色认知上" }
+      ]
+    },
+    "action_items": [
+      "本周尝试：画一张你团队的「水位线图」——水面以上列可见的流程问题，水面以下列你感知到的隐性摩擦",
+      "团队讨论：匿名收集团队成员对协作的真实反馈，看看「水面以下」有哪些你不知道的问题"
+    ],
+    "tags": ["团队管理", "协作效率", "组织诊断"],
+    "fit_for": ["发行", "运营", "全员"],
+    "value_type": "管理参考",
+    "read_time": "5min",
+    "recommended_path": null
+  },
+  {
+    "id": "digest-016",
+    "source_author": "lenny",
+    "source_title": "The most successful AI company you've never heard of",
+    "source_url": "https://www.lennysnewsletter.com/p/the-most-successful-ai-company-youve-never-heard-of",
+    "source_date": "2026-03-08",
+    "date": "2026-03-10",
+    "title": "最成功的 AI 公司你可能没听过：AI 不只是软件的事",
+    "core_insight": "AI 最大的商业机会可能不在软件行业，而在物理世界的自动化——矿业、农业、建筑等传统领域",
+    "summary": "Lenny 采访了 Applied Intuition 的 CEO Qasar Younis——这家估值 150 亿美元的 AI 公司不做聊天机器人，而是为汽车、拖拉机、飞机、潜艇加载 AI 智能。核心观点是：未来 5-10 年 AI 最大的变革将发生在实体产业，而非纯软件。",
+    "gaming_relevance": {
+      "hook": "AI 的未来不只是帮你写文案——关注跨行业的 AI 应用会给你新灵感",
+      "analysis": "虽然这篇主题不直接关于游戏，但对游戏从业者有两层价值：一是拓展对 AI 能力边界的认知（AI 能控制物理设备，何况写篇文案），二是启发游戏+AI 的跨界思考（AR 游戏+自动驾驶、游戏 AI 训练+机器人等新赛道）。",
+      "scenarios": [
+        { "role": "策划", "insight": "关注 AI 在物理世界的应用进展——这些技术进步可能催生全新的游戏品类（如 AI 驱动的 AR 实景游戏）" },
+        { "role": "发行", "insight": "拓宽行业视野：AI 正在重塑所有行业，了解跨行业趋势有助于发现游戏行业的下一个结构性机会" }
+      ]
+    },
+    "action_items": [
+      "本周拓展：花 20 分钟了解一个游戏行业外的 AI 应用案例，思考是否能移植到你的工作中",
+      "思考题：如果 AI 能让物理世界自动化，那游戏行业还有哪些「不可能」会被打破？"
+    ],
+    "tags": ["AI趋势", "跨界创新", "行业视野"],
+    "fit_for": ["策划", "发行", "全员"],
+    "value_type": "认知刷新",
+    "read_time": "4min",
+    "recommended_path": null
+  },
+  {
+    "id": "digest-017",
+    "source_author": "lenny",
+    "source_title": "How to do AI analysis you can actually trust",
+    "source_url": "https://www.lennysnewsletter.com/p/how-to-do-ai-analysis-you-can-trust",
+    "source_date": "2026-02-17",
+    "date": "2026-02-25",
+    "title": "如何让 AI 数据分析「可信赖」：游戏运营的数据审核指南",
+    "core_insight": "AI 做数据分析时会自信地给出错误结论，你需要一套验证框架而非盲目信任",
+    "summary": "Lenny 总结了让 AI 数据分析可信赖的方法论：先让 AI 解释它的分析逻辑（而非只看结论），对关键数字做抽样验证，让 AI 用不同方法交叉验证同一结论，并始终保留人工审核的最终判断权。核心原则是「信任但验证」。",
+    "gaming_relevance": {
+      "hook": "AI 说你的留存率下降是因为 X——你确定它算对了吗？",
+      "analysis": "游戏运营用 AI 分析数据时，最大风险不是 AI 不懂分析，而是它会用看似专业的语言包装错误的结论。比如 AI 可能把相关性当因果性，或者在计算留存率时用了错误的分母。Lenny 的验证框架直接适用：每次 AI 做完数据分析，追问三个问题。",
+      "scenarios": [
+        { "role": "运营", "insight": "每次让 AI 做数据分析后，追问：「你是怎么算出这个数的？」「有没有其他可能的解释？」「请用另一种方法验证同一结论」" },
+        { "role": "数值", "insight": "建立 AI 数据分析的抽样验证制度：从 AI 的分析报告中随机抽 3 个关键数字手动核实，建立可信度基准" },
+        { "role": "投放", "insight": "AI 做投放数据归因分析时，要求它同时给出多种归因模型的结果，而非只采信一个结论" }
+      ]
+    },
+    "action_items": [
+      "本周实操：下次用 AI 分析数据时，在接受结论前追问 3 个验证问题",
+      "建立规范：团队内约定「AI 分析报告必须包含分析过程说明和关键数字的计算公式」"
+    ],
+    "tags": ["数据分析", "AI验证", "质量控制"],
+    "fit_for": ["运营", "数值", "投放"],
+    "value_type": "方法升级",
+    "read_time": "5min",
+    "recommended_path": "5day-efficiency"
+  },
+  {
+    "id": "digest-018",
+    "source_author": "lenny",
+    "source_title": "ChatGPT apps are about to be the next big distribution channel",
+    "source_url": "https://www.lennysnewsletter.com/p/chatgpt-apps-distribution",
+    "source_date": "2026-01-20",
+    "date": "2026-02-12",
+    "title": "ChatGPT 应用商店：游戏行业的新分发渠道来了？",
+    "core_insight": "ChatGPT 正在成为新的流量分发平台，早期入场者将获得类似 App Store 初期的红利",
+    "summary": "Lenny 分析了 ChatGPT 应用生态的爆发趋势：OpenAI 正在将 ChatGPT 打造成一个平台，第三方可以在其中构建和分发应用。他将这比作 2008 年 App Store 刚推出时的状况——先行者往往能获得巨大的流量红利。",
+    "gaming_relevance": {
+      "hook": "下一个用户获取的蓝海，可能是 AI 应用商店",
+      "analysis": "对游戏发行来说，这是一个值得关注的新渠道信号。如果 ChatGPT 的应用商店成为主流入口，游戏公司可以考虑：开发 ChatGPT 上的游戏相关应用（如互动故事生成器、游戏攻略助手），用来导流至主游戏；或者在 AI 搜索中优化游戏品牌的曝光。",
+      "scenarios": [
+        { "role": "发行", "insight": "关注 ChatGPT 应用商店和 GPT Store 的发展——评估是否值得投入资源制作游戏品牌的 GPT 应用作为新的获客渠道" },
+        { "role": "新媒体", "insight": "考虑在 ChatGPT 平台上创建品牌互动体验：如游戏世界观的 AI 角色扮演、剧情互动，为玩家社区提供新的内容形式" },
+        { "role": "品牌", "insight": "提前布局 AI 搜索的品牌曝光——越来越多用户通过 AI 搜索而非 Google 来了解产品" }
+      ]
+    },
+    "action_items": [
+      "本周了解：逛一下 ChatGPT 的 GPT Store，看看有没有和游戏相关的热门应用，了解这个生态的现状",
+      "策略讨论：AI 平台会不会成为下一个重要的游戏获客渠道？团队要不要提前布局？"
+    ],
+    "tags": ["渠道创新", "AI平台", "流量红利"],
+    "fit_for": ["发行", "新媒体", "品牌"],
+    "value_type": "策略启发",
+    "read_time": "4min",
+    "recommended_path": null
+  },
+  {
+    "id": "digest-019",
+    "source_author": "lenny",
+    "source_title": "25 proven tactics to accelerate AI adoption at your company",
+    "source_url": "https://www.lennysnewsletter.com/p/25-tactics-ai-adoption",
+    "source_date": "2025-11-15",
+    "date": "2026-02-01",
+    "title": "25 条经过验证的 AI 推广策略：从 Shopify、Duolingo 等公司偷师",
+    "core_insight": "最成功的 AI 推广不是自上而下的命令，而是制造「一旦用了就回不去」的体验",
+    "summary": "Lenny 从 Shopify、Ramp、Zapier、Duolingo、Intercom 等公司收集了 25 条已验证的 AI 推广策略。核心发现是：成功推广的公司都做了三件事——降低尝试门槛（免费免审批）、制造成功体验（让人尝到甜头后欲罢不能）、建立分享机制（让 AI 高手影响身边的人）。",
+    "gaming_relevance": {
+      "hook": "公司让大家用 AI，但大部分人就是不动——怎么破？",
+      "analysis": "游戏公司推广 AI 常遇到的瓶颈：管理层很积极但一线员工不买账、培训完了用两天就回到老办法、少数人用得好但无法扩散。Lenny 总结的策略直接可用：Shopify 的做法是 CEO 要求「所有需求先问 AI」再找人；Duolingo 让每个团队设一个 AI Champion。",
+      "scenarios": [
+        { "role": "发行", "insight": "借鉴 Shopify 模式：在团队内推行「先问 AI」原则——新需求、新方案先让 AI 给一版初稿，再由人修改完善" },
+        { "role": "运营", "insight": "在每个小组设立「AI 先锋」角色，负责分享 AI 使用技巧和成功案例，用同伴影响力带动整个团队" },
+        { "role": "品牌", "insight": "创建内部的「AI 使用案例库」，把团队中 AI 帮助节省时间或提升质量的真实案例收集起来，用成功故事激励更多人尝试" }
+      ]
+    },
+    "action_items": [
+      "本周启动：在团队内指定 1-2 个「AI 先锋」，负责每周分享一个 AI 使用技巧",
+      "制度试点：选一类日常工作（如周报初稿、竞品监测）试行「先问 AI」原则"
+    ],
+    "tags": ["AI推广", "组织变革", "最佳实践"],
+    "fit_for": ["发行", "运营", "品牌", "全员"],
+    "value_type": "管理参考",
+    "read_time": "6min",
+    "recommended_path": "5day-advanced"
+  },
+  {
+    "id": "digest-020",
+    "source_author": "lenny",
+    "source_title": "The new AI growth playbook for 2026 | Elena Verna",
+    "source_url": "https://www.lennysnewsletter.com/p/the-new-ai-growth-playbook-for-2026-elena-verna",
+    "source_date": "2026-02-25",
+    "date": "2026-03-05",
+    "title": "2026 AI 增长新剧本：为什么「免费给用」反而是最强增长引擎",
+    "core_insight": "AI 时代的增长逻辑变了——免费让用户体验产品的 AI 能力，比传统获客漏斗更有效",
+    "summary": "Lenny 对话 Lovable（AI 应用构建工具）的增长负责人 Elena Verna，她解释了为什么 Lovable 在不到一年内达到 2 亿美元 ARR：核心策略是「让产品自己说话」——免费让用户用 AI 做出东西，体验到价值后自然转化为付费用户。这颠覆了传统的「付费墙+试用期」模式。",
+    "gaming_relevance": {
+      "hook": "你的获客策略还是「买量→注册→付费」的老三板斧吗？",
+      "analysis": "Elena Verna 的增长思路对游戏发行有启发：与其用广告把用户「推」进来，不如用产品体验把用户「拉」进来。在 AI 时代，这意味着：让潜在玩家先免费体验 AI 驱动的游戏核心玩法，用「哇哦时刻」驱动自发传播，比投放硬广更高效。",
+      "scenarios": [
+        { "role": "发行", "insight": "重新思考获客漏斗：能否用 AI 降低「试玩体验」的门槛——比如在网页端提供 AI 驱动的互动 Demo，让用户无需下载就能体验核心玩法" },
+        { "role": "投放", "insight": "测试「体验驱动」的投放策略——广告直接跳转到可互动的 AI 体验页面，而非传统的应用商店页" },
+        { "role": "品牌", "insight": "利用 AI 创建「病毒式传播素材」——用户生成 AI 内容并自发分享，带动品牌的有机增长" }
+      ]
+    },
+    "action_items": [
+      "本周思考：你的游戏有没有可以「免费让用户先爽到」的核心体验？如何降低这个体验的门槛？",
+      "案例研究：了解 Lovable 的增长策略，思考哪些做法可以迁移到游戏获客中"
+    ],
+    "tags": ["增长策略", "AI获客", "产品驱动增长"],
+    "fit_for": ["发行", "投放", "品牌"],
+    "value_type": "策略启发",
+    "read_time": "5min",
+    "recommended_path": "5day-efficiency"
+  },
+  {
+    "id": "digest-021",
+    "source_author": "andrew-ng",
+    "source_title": "The Batch Issue #290: Context Hub and Coding Agents",
+    "source_url": "https://www.deeplearning.ai/the-batch/",
+    "source_date": "2026-03-06",
+    "date": "2026-03-10",
+    "title": "给 AI 装上「知识底座」：游戏团队的 AI 效果为什么时好时坏",
+    "core_insight": "AI 输出质量的关键不在模型本身，而在你给它的上下文质量",
+    "summary": "Andrew Ng 介绍了 Context Hub——一款为 AI 编程 Agent 提供实时文档的工具。他在编辑信中强调，当前 AI 效果不稳定的主因不是模型能力不足，而是输入的上下文信息过时或不完整。给 AI 提供高质量、最新的背景信息，效果可以提升数倍。",
+    "gaming_relevance": {
+      "hook": "同样用 ChatGPT，为什么有人输出很好有人输出很差？秘密在上下文",
+      "analysis": "游戏团队用 AI 时效果参差不齐，往往不是工具的问题，而是输入的问题。如果你只给 AI 一句话「帮我写个活动文案」，和你给它品牌手册、目标用户画像、过往成功案例、竞品参考——输出质量天差地别。建设团队级的「AI 上下文库」是提升全员 AI 效果最有效的方法。",
+      "scenarios": [
+        { "role": "品牌", "insight": "整理品牌资产文档包（品牌调性指南、核心卖点、用户画像、竞品分析），每次使用 AI 时作为系统提示的一部分输入" },
+        { "role": "运营", "insight": "建立运营知识库：把游戏的核心玩法说明、历史活动数据、用户反馈汇总等做成标准化文档，让 AI 在有上下文的基础上工作" },
+        { "role": "投放", "insight": "把投放的历史数据（哪类素材效果好、各渠道的用户特征）整理成结构化文档，让 AI 在做素材或策略建议时有数据支撑" }
+      ]
+    },
+    "action_items": [
+      "本周行动：整理你岗位最核心的 3 份背景文档（如品牌指南、用户画像、产品介绍），下次用 AI 时全部附上",
+      "对比实验：同一个任务，分别用「只给一句话」和「附上完整上下文」两种方式让 AI 做，比较输出差距"
+    ],
+    "tags": ["AI上下文", "知识库", "效果优化"],
+    "fit_for": ["品牌", "运营", "投放", "全员"],
+    "value_type": "方法升级",
+    "read_time": "5min",
+    "recommended_path": "7day-beginner"
+  },
+  {
+    "id": "digest-022",
+    "source_author": "andrew-ng",
+    "source_title": "The Batch: Happy 2026! Will This Be the Year of AGI?",
+    "source_url": "https://www.deeplearning.ai/the-batch/",
+    "source_date": "2026-01-02",
+    "date": "2026-01-20",
+    "title": "2026 会是 AGI 元年吗？游戏从业者需要关注的三个技术风向标",
+    "core_insight": "AGI 可能还很远，但 2026 年的 AI 进步足以再次重塑多个行业的工作方式",
+    "summary": "Andrew Ng 在新年信中讨论了 AGI 的可能性，并提出了「Turing-AGI Test」来重新定义通用人工智能的标准。他的务实判断是：不管 AGI 是否在 2026 年到来，当前 AI 的能力提升速度已经足以让每个行业重新思考工作流程。三个值得关注的方向：Agent 能力大幅提升、多模态融合、个性化定制。",
+    "gaming_relevance": {
+      "hook": "不管 AGI 来不来，2026 的 AI 已经够你用来重做一遍工作流了",
+      "analysis": "对游戏行业来说，AGI 的哲学讨论不如三个具体趋势有价值：Agent 能力增强意味着更多工作可以自动化；多模态融合意味着一个 AI 可以同时处理文本、图像、视频；个性化定制意味着可以训练专属于你游戏的 AI 模型。",
+      "scenarios": [
+        { "role": "策划", "insight": "关注多模态 AI 的进展——未来的策划工作可能是：用一段文字描述，AI 同时生成玩法原型、概念图和音效" },
+        { "role": "发行", "insight": "个性化 AI 定制能力意味着：可以训练一个「只懂你的游戏」的专属 AI 助手，比通用 AI 更懂你的产品" }
+      ]
+    },
+    "action_items": [
+      "年度规划参考：在 2026 年工作计划中加入 AI 能力建设的专项，不要等到年底才追赶",
+      "趋势关注：定期关注 Agent、多模态、模型定制三个方向的进展，评估对游戏工作流的影响"
+    ],
+    "tags": ["AGI", "行业趋势", "年度规划"],
+    "fit_for": ["策划", "发行", "全员"],
+    "value_type": "认知刷新",
+    "read_time": "4min",
+    "recommended_path": null
+  },
+  {
+    "id": "digest-023",
+    "source_author": "andrew-ng",
+    "source_title": "The Batch: Is There an AI Bubble?",
+    "source_url": "https://www.deeplearning.ai/the-batch/",
+    "source_date": "2026-02-05",
+    "date": "2026-02-18",
+    "title": "AI 有泡沫吗？游戏公司 AI 投入的理性判断框架",
+    "core_insight": "AI 基础设施投入确实存在过热风险，但应用层的价值创造才刚开始",
+    "summary": "Andrew Ng 回应了市场对 AI 泡沫的担忧。他区分了两个层面：基础设施层（算力、芯片、大模型训练）确实有过度投资的迹象——OpenAI 的 1.4 万亿计划和 Nvidia 5 万亿市值可能超前了；但应用层（用 AI 解决具体业务问题）的价值创造才刚刚开始，远未到泡沫阶段。",
+    "gaming_relevance": {
+      "hook": "老板问你 AI 值不值得投，你怎么回答？",
+      "analysis": "游戏公司在 AI 上的投入可以分两类：一类是买 AI 基础设施（自建大模型、买算力），风险较高需谨慎；另一类是用现有 AI 工具解决业务问题（提效、内容生成、数据分析），风险低且回报确定。Ng 的建议是：不要追「造 AI」的热潮，而要抓「用 AI」的红利。",
+      "scenarios": [
+        { "role": "发行", "insight": "AI 预算的优先级应该是：先投入能直接提效的 AI 工具和培训（成本低、见效快），再考虑是否需要自建 AI 基础设施" },
+        { "role": "运营", "insight": "用具体的 ROI 来证明 AI 投入的价值——记录使用 AI 前后的工作时间对比、产出质量对比，用数据说话" }
+      ]
+    },
+    "action_items": [
+      "本周思考：你团队目前的 AI 投入属于「用 AI」还是「造 AI」？投入产出比如何？",
+      "数据收集：开始记录 AI 帮你节省的时间和提升的质量，为后续的 AI 投入决策提供依据"
+    ],
+    "tags": ["AI投资", "泡沫分析", "理性决策"],
+    "fit_for": ["发行", "运营", "全员"],
+    "value_type": "策略启发",
+    "read_time": "4min",
+    "recommended_path": null
+  },
+  {
+    "id": "digest-024",
+    "source_author": "andrew-ng",
+    "source_title": "The Batch: A Simple Recipe for Building Agentic Workflows",
+    "source_url": "https://www.deeplearning.ai/the-batch/",
+    "source_date": "2026-02-12",
+    "date": "2026-02-22",
+    "title": "零基础搭建 AI 工作流的「简单食谱」：从手动到半自动的实操指南",
+    "core_insight": "搭建有效的 AI 自动化工作流不需要编程——用现成的无代码工具和清晰的流程设计就够了",
+    "summary": "Andrew Ng 分享了一个简单的 Agentic 工作流搭建方法：选择一个重复性任务→用自然语言定义输入输出→选择无代码工具（如 n8n、Make.com）搭建流程→设置人工审核节点→迭代优化。他鼓励即使没有技术背景的人也去尝试。",
+    "gaming_relevance": {
+      "hook": "不需要写代码，你也能搭一个自动化 AI 工作流",
+      "analysis": "对游戏运营和投放团队来说，很多重复性工作（竞品监测→汇总→发群、数据导出→格式化→生成日报、多平台内容→格式适配→发布）都可以用 Ng 推荐的方法搭建半自动化流程。关键是先想清楚「输入是什么，输出是什么，哪步需要人判断」。",
+      "scenarios": [
+        { "role": "运营", "insight": "选一个高频重复任务（如每日竞品动态汇总），用 n8n 搭建：定时触发→AI 抓取分析→自动生成汇总→发送到群聊" },
+        { "role": "新媒体", "insight": "搭建内容多平台分发流程：核心文案→AI 适配各平台格式→人工审核→自动发布到不同渠道" },
+        { "role": "投放", "insight": "自动化投放数据日报：数据源自动采集→AI 生成分析和建议→审核后发送给团队" }
+      ]
+    },
+    "action_items": [
+      "本周动手：在 n8n（免费开源）上创建第一个工作流——推荐从「AI 自动生成日报初稿」开始",
+      "流程梳理：画出你一天工作中所有「输入→处理→输出」可标准化的环节，标记哪些可以交给 AI"
+    ],
+    "tags": ["AI自动化", "无代码", "工作流"],
+    "fit_for": ["运营", "新媒体", "投放"],
+    "value_type": "工具实操",
+    "read_time": "5min",
+    "recommended_path": "5day-efficiency"
+  },
+  {
+    "id": "digest-025",
+    "source_author": "andrew-ng",
+    "source_title": "The Batch: Public Trust in AI",
+    "source_url": "https://www.deeplearning.ai/the-batch/",
+    "source_date": "2026-02-19",
+    "date": "2026-03-03",
+    "title": "用户不信任 AI 生成的内容：游戏品牌如何应对信任危机",
+    "core_insight": "全球用户对 AI 的信任度持续走低，在内容营销中盲目使用 AI 可能适得其反",
+    "summary": "Andrew Ng 引用 Edelman 和 Pew Research 的最新报告指出：大部分西方用户对 AI 持不信任态度，且这种不信任正在蔓延到 AI 生成的内容上。他呼吁企业在使用 AI 时注重透明度和质量把控，避免让用户感觉被「AI 糊弄」。",
+    "gaming_relevance": {
+      "hook": "如果玩家发现你的游戏公告是 AI 写的，他们会怎么想？",
+      "analysis": "对游戏品牌来说，这个警示很重要：在社区公告、运营活动、品牌传播中使用 AI 内容时，不能让用户感觉到「这是 AI 流水线产出的」。关键不是「是否用 AI」，而是「AI 内容的质量是否达到了品牌标准」。低质量的 AI 内容会伤害品牌信任。",
+      "scenarios": [
+        { "role": "品牌", "insight": "建立 AI 生成内容的品牌质量标准：不是说不能用 AI，而是 AI 内容必须经过人工润色，达到品牌一贯的质量水平后才能发布" },
+        { "role": "新媒体", "insight": "在社媒运营中警惕「AI 味」——千篇一律的表达、过度完美的措辞、缺乏人情味的互动，都会让用户产生距离感" },
+        { "role": "运营", "insight": "社区内容的「温度」很重要——AI 可以写初稿，但最终发出去的内容必须有人工注入的真实感和人味" }
+      ]
+    },
+    "action_items": [
+      "本周检查：翻看团队最近发布的内容，有没有明显的「AI 味」？玩家在评论区是否有过相关吐槽？",
+      "制度建议：建立「AI 内容人工审核」的最低标准——哪些内容可以 AI 直出，哪些必须人工润色"
+    ],
+    "tags": ["用户信任", "品牌安全", "内容质量"],
+    "fit_for": ["品牌", "新媒体", "运营"],
+    "value_type": "策略启发",
+    "read_time": "4min",
+    "recommended_path": null
+  },
+  {
+    "id": "digest-026",
+    "source_author": "andrew-ng",
+    "source_title": "The Batch: AI and the Future of Jobs",
+    "source_url": "https://www.deeplearning.ai/the-batch/",
+    "source_date": "2026-02-10",
+    "date": "2026-02-15",
+    "title": "AI 不会取代你——但会用 AI 的人会取代你：游戏行业的技能升级路线图",
+    "core_insight": "AI 正在增加而非减少对人才的需求，但需求的技能组合已经改变",
+    "summary": "Andrew Ng 基于多项劳动力研究数据指出：AI 并没有导致大规模失业，反而在创造新的岗位需求。但关键变化是：市场更需要「会用 AI 工具的专业人才」而非「纯手工的专业人才」。他建议每个从业者把「AI 协作能力」作为核心技能来建设。",
+    "gaming_relevance": {
+      "hook": "你的简历上还没写「熟练使用 AI 工具」？该补上了",
+      "analysis": "游戏行业正在经历这种技能转型：招聘要求中「熟悉 AI 工具」出现的频率越来越高。不是 AI 替代了岗位，而是「会用 AI 的设计师」替代了「不会用 AI 的设计师」。对每个游戏从业者来说，现在投入 AI 技能建设，就是在投资自己的职业竞争力。",
+      "scenarios": [
+        { "role": "全员", "insight": "把 AI 技能当作和 Office 一样的基础技能来对待——不是可选项，而是必修课。每周至少花 2 小时刻意练习 AI 工具" },
+        { "role": "策划", "insight": "策划的核心竞争力不会被 AI 取代（创意直觉、游戏理解、玩家同理心），但 AI 可以极大放大这些核心能力的产出效率" },
+        { "role": "发行", "insight": "在团队招聘和考核中加入 AI 能力维度——不是要求所有人成为 AI 专家，而是要求每个岗位能用 AI 完成至少 3 个常规任务" }
+      ]
+    },
+    "action_items": [
+      "个人行动：列出你岗位最核心的 5 项技能，思考 AI 能如何增强（而非替代）每一项",
+      "团队建议：在季度 OKR 中加入 AI 技能提升的目标，如「团队 100% 成员掌握 AI 辅助完成核心工作流」"
+    ],
+    "tags": ["职业发展", "技能升级", "AI素养"],
+    "fit_for": ["全员", "策划", "发行"],
+    "value_type": "认知刷新",
+    "read_time": "4min",
+    "recommended_path": "7day-beginner"
+  }
+]

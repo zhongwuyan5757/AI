@@ -27,7 +27,8 @@
     "intermediate": { "label": "中级", "cssClass": "intermediate" },
     "medium": { "label": "中等", "cssClass": "intermediate" },
     "advanced": { "label": "高级", "cssClass": "advanced" },
-    "hard": { "label": "高级", "cssClass": "advanced" }
+    "hard": { "label": "高级", "cssClass": "advanced" },
+    "expert": { "label": "专家", "cssClass": "expert" }
   },
   "resourceCategories": {
     "guide": { "label": "使用指南", "icon": "📘", "color": "#3b82f6" },
@@ -55,6 +56,36 @@
     "vision": "图像理解",
     "translation": "多语言",
     "search": "联网搜索"
+  },
+  "digestAuthors": {
+    "ethan-mollick": {
+      "name": "Ethan Mollick",
+      "platform": "One Useful Thing",
+      "focus": "AI工作方法论与管理变革",
+      "icon": "🧠",
+      "color": "#3b82f6"
+    },
+    "lenny": {
+      "name": "Lenny Rachitsky",
+      "platform": "Lenny's Newsletter",
+      "focus": "产品思维、增长方法与业务判断",
+      "icon": "🚀",
+      "color": "#10b981"
+    },
+    "andrew-ng": {
+      "name": "Andrew Ng / The Batch",
+      "platform": "DeepLearning.AI",
+      "focus": "AI行业趋势、应用方向与学习路径",
+      "icon": "📡",
+      "color": "#f59e0b"
+    }
+  },
+  "digestValueTypes": {
+    "策略启发": { "icon": "💡", "color": "#f59e0b" },
+    "方法升级": { "icon": "🔧", "color": "#3b82f6" },
+    "认知刷新": { "icon": "🧠", "color": "#8b5cf6" },
+    "工具实操": { "icon": "🛠", "color": "#10b981" },
+    "管理参考": { "icon": "📋", "color": "#ef4444" }
   },
   "jobRecommendations": {
     "设计": {

@@ -84,6 +84,8 @@
     "icon": "✨",
     "editorPick": true,
     "steps": 7,
+    "columnId": "col-claude",
+    "columnOrder": 1,
     "content": [
       {
         "title": "为什么选择 Claude 4.6",
@@ -127,10 +129,10 @@
     "outcome": "一套Claude高效使用方法和Projects知识库",
     "fitLevel": "零基础可开始",
     "nextGuides": [
-      "t001",
-      "t004"
+      "t-claude-02",
+      "t-claude-03"
     ],
-    "relatedPath": "7天AI入门之旅",
+    "relatedPath": "Claude 深度使用指南",
     "fitRoles": [
       "全岗位"
     ]

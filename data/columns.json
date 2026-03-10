@@ -1,0 +1,74 @@
+[
+  {
+    "id": "col-claude",
+    "title": "Claude 深度使用指南",
+    "subtitle": "从入门到专家 \u00b7 游戏发行团队实战手册",
+    "desc": "围绕 Claude 4.6 构建的完整学习路径\u2014\u2014从基础对话到团队级 AI 工作流，每篇教程聚焦游戏发行真实场景，提供可直接复用的 Prompt 和工作流模板。",
+    "icon": "\u2728",
+    "color": "#A78BFA",
+    "gradient": "linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%)",
+    "status": "active",
+    "totalTutorials": 19,
+    "learningPath": [
+      {
+        "phase": "\u5165\u95e8\u57fa\u7840",
+        "difficulty": "beginner",
+        "desc": "\u8ba9\u6240\u6709\u4eba\u77e5\u9053\u201c\u6211\u80fd\u7528 AI \u505a\u4ec0\u4e48\u201d",
+        "tutorialIds": ["t002", "t-claude-02"]
+      },
+      {
+        "phase": "\u8fdb\u9636\u5b9e\u6218",
+        "difficulty": "intermediate",
+        "desc": "\u6bcf\u4e2a\u5c97\u4f4d\u638c\u63e1\u201c\u6211\u7684\u9ad8\u4ef7\u503c\u573a\u666f\u600e\u4e48\u7528\u201d",
+        "tutorialIds": ["t-claude-03", "t-claude-04", "t-claude-05", "t-claude-06", "t-claude-07", "t-claude-08", "t-claude-09", "t-claude-10"]
+      },
+      {
+        "phase": "\u4e13\u4e1a\u6d41\u7a0b",
+        "difficulty": "advanced",
+        "desc": "\u5b66\u4f1a\u201c\u5982\u4f55\u4e32\u8054\u7cfb\u7edf\u5316\u5de5\u4f5c\u6d41\u201d",
+        "tutorialIds": ["t-claude-11", "t-claude-12", "t-claude-13", "t-claude-14", "t-claude-15"]
+      },
+      {
+        "phase": "\u4e13\u5bb6\u5de5\u7a0b\u5316",
+        "difficulty": "expert",
+        "desc": "\u5b9e\u73b0\u201c\u7ec4\u7ec7\u7ea7 AI \u80fd\u529b\u5efa\u8bbe\u201d",
+        "tutorialIds": ["t-claude-16", "t-claude-17", "t-claude-18", "t-claude-19"]
+      }
+    ],
+    "targetJobs": ["all"],
+    "featured": true
+  },
+  {
+    "id": "col-nano-banana",
+    "title": "Nano Banana 2 \u5b9e\u6218\u6307\u5357",
+    "subtitle": "\u8f7b\u91cf\u7ea7 AI \u7684\u6548\u7387\u573a\u666f",
+    "desc": "\u805a\u7126 Nano Banana 2 \u7684\u5dee\u5f02\u5316\u80fd\u529b\u2014\u2014\u6279\u91cf\u4efb\u52a1\u52a0\u901f\u3001\u5b9e\u65f6\u8f85\u52a9\u3001\u6a21\u578b\u6df7\u7528\u7b56\u7565\uff0c\u5e2e\u52a9\u53d1\u884c\u56e2\u961f\u7528\u66f4\u4f4e\u6210\u672c\u5b8c\u6210\u66f4\u591a\u4efb\u52a1\u3002",
+    "icon": "\ud83c\udf4c",
+    "color": "#F59E0B",
+    "gradient": "linear-gradient(135deg, #F59E0B 0%, #D97706 100%)",
+    "status": "coming-soon",
+    "totalTutorials": 6,
+    "learningPath": [
+      {
+        "phase": "\u5165\u95e8\u4e0e\u5b9a\u4f4d",
+        "difficulty": "beginner",
+        "desc": "\u4e86\u89e3 Nano Banana 2 \u7684\u80fd\u529b\u8fb9\u754c\u548c\u6700\u4f73\u573a\u666f",
+        "tutorialIds": ["t-nb-01"]
+      },
+      {
+        "phase": "\u573a\u666f\u5b9e\u6218",
+        "difficulty": "intermediate",
+        "desc": "\u6279\u91cf\u4efb\u52a1\u3001\u5b9e\u65f6\u8f85\u52a9\u3001\u8f7b\u91cf\u81ea\u52a8\u5316",
+        "tutorialIds": ["t-nb-02", "t-nb-03", "t-nb-04"]
+      },
+      {
+        "phase": "\u8fdb\u9636\u7b56\u7565",
+        "difficulty": "advanced",
+        "desc": "\u6a21\u578b\u6df7\u7528\u4e0e\u6210\u672c\u4f18\u5316",
+        "tutorialIds": ["t-nb-05", "t-nb-06"]
+      }
+    ],
+    "targetJobs": ["all"],
+    "featured": true
+  }
+]

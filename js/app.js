@@ -186,6 +186,7 @@ function handleRoute() {
     case 'models':    renderModels(); break;
     case 'tutorials':
       if (param && param.startsWith('tier:')) renderTutorials(param.replace('tier:', ''));
+      else if (param && param.startsWith('column:')) renderColumnDetail(param.replace('column:', ''));
       else if (param) renderTutorialDetail(param);
       else renderTutorials();
       break;
@@ -820,9 +821,30 @@ function renderNews() {
   let currentFilter = 'must-read';
   let searchQuery = '';
   let currentPage = 1;
+  let authorFilter = 'all';  // 博主筛选状态
   const PAGE_SIZE = 9;
 
   function getFilteredItems() {
+    // 深度解读模式：使用 digests 数据
+    if (currentFilter === 'digest') {
+      let items = DATA.digests || [];
+      // 按博主筛选
+      if (authorFilter !== 'all') {
+        items = items.filter(d => d.source_author === authorFilter);
+      }
+      if (searchQuery) {
+        const q = searchQuery.toLowerCase();
+        items = items.filter(d =>
+          d.title.toLowerCase().includes(q) ||
+          d.core_insight.toLowerCase().includes(q) ||
+          d.summary.toLowerCase().includes(q) ||
+          d.tags.some(t => t.toLowerCase().includes(q))
+        );
+      }
+      items.sort((a, b) => new Date(b.date) - new Date(a.date));
+      return items;
+    }
+
     let items = DATA.news;
 
     // "今日必看" = items with isHot flag, sorted by date
@@ -856,13 +878,49 @@ function renderNews() {
     const startIdx = (currentPage - 1) * PAGE_SIZE;
     const pageItems = items.slice(startIdx, startIdx + PAGE_SIZE);
 
-    // Featured card = first item on page 1
-    const featured = (currentPage === 1 && pageItems.length > 0) ? pageItems[0] : null;
-    const gridItems = currentPage === 1 ? pageItems.slice(1) : pageItems;
+    // 根据当前 tab 选择不同渲染逻辑
+    let contentAreaHtml = '';
+    if (currentFilter === 'digest') {
+      // 博主筛选 chips
+      const allDigests = DATA.digests || [];
+      const authorCounts = {};
+      allDigests.forEach(d => { authorCounts[d.source_author] = (authorCounts[d.source_author] || 0) + 1; });
 
-    const featuredHtml = featured ? renderNewsFeaturedCard(featured) : '';
-    const cardsHtml = gridItems.length ? gridItems.map(n => renderNewsCard(n)).join('') : '';
-    const emptyHtml = (!featured && !gridItems.length) ? '<div class="empty-state"><i class="fa-solid fa-newspaper"></i>没有找到完全匹配的结果，试试换个筛选条件？</div>' : '';
+      let authorChipsHtml = `<div class="digest-author-filters">`;
+      authorChipsHtml += `<button class="digest-author-chip ${authorFilter === 'all' ? 'active' : ''}" data-author="all">
+        <span class="digest-author-chip-icon">📖</span>
+        <div class="digest-author-chip-info">
+          <span class="digest-author-chip-name">全部博主</span>
+        </div>
+        <span class="digest-author-chip-count">${allDigests.length}</span>
+      </button>`;
+      Object.entries(DATA.digestAuthors || {}).forEach(([id, a]) => {
+        const count = authorCounts[id] || 0;
+        if (count === 0) return;
+        const isActive = authorFilter === id;
+        authorChipsHtml += `<button class="digest-author-chip ${isActive ? 'active' : ''}" data-author="${id}" style="--chip-color:${a.color}">
+          <span class="digest-author-chip-icon">${a.icon}</span>
+          <div class="digest-author-chip-info">
+            <span class="digest-author-chip-name">${a.name}</span>
+            <span class="digest-author-chip-focus">${a.focus}</span>
+          </div>
+          <span class="digest-author-chip-count">${count}</span>
+        </button>`;
+      });
+      authorChipsHtml += `</div>`;
+
+      const listHtml = pageItems.length
+        ? `<div class="digest-list">${pageItems.map(d => renderDigestCard(d)).join('')}</div>`
+        : '<div class="empty-state"><i class="fa-solid fa-book-open"></i>暂无深度解读内容</div>';
+      contentAreaHtml = authorChipsHtml + listHtml;
+    } else {
+      const featured = (currentPage === 1 && pageItems.length > 0) ? pageItems[0] : null;
+      const gridItems = currentPage === 1 ? pageItems.slice(1) : pageItems;
+      const featuredHtml = featured ? renderNewsFeaturedCard(featured) : '';
+      const cardsHtml = gridItems.length ? gridItems.map(n => renderNewsCard(n)).join('') : '';
+      const emptyHtml = (!featured && !gridItems.length) ? '<div class="empty-state"><i class="fa-solid fa-newspaper"></i>没有找到完全匹配的结果，试试换个筛选条件？</div>' : '';
+      contentAreaHtml = `${featuredHtml}<div class="news-grid">${cardsHtml}</div>${emptyHtml}`;
+    }
 
     // Tab counts
     const tabCounts = {
@@ -871,6 +929,7 @@ function renderNews() {
       'tools-workflow': DATA.news.filter(n => n.category === 'tools-workflow').length,
       'industry-product': DATA.news.filter(n => n.category === 'industry-product').length,
       'deep-insight': DATA.news.filter(n => n.category === 'deep-insight').length,
+      'digest': (DATA.digests || []).length,
     };
 
     const filterBtns = Object.entries(DATA.newsCategories).map(([k, v]) =>
@@ -878,19 +937,25 @@ function renderNews() {
         <span class="news-tab-label">${v}</span>
         <span class="news-tab-count">${tabCounts[k] || 0}</span>
       </button>`
-    ).join('');
+    ).join('') + `<span class="news-tab-divider"></span><button class="news-tab digest-tab ${currentFilter === 'digest' ? 'active' : ''}" data-filter="digest"><span class="news-tab-label">📖 深度解读</span><span class="news-tab-count">${tabCounts['digest'] || 0}</span></button>`;
 
     // Pagination
-    const activeTabLabel = DATA.newsCategories[currentFilter] || currentFilter;
+    const activeTabLabel = currentFilter === 'digest' ? '深度解读' : (DATA.newsCategories[currentFilter] || currentFilter);
     const paginationHtml = totalPages > 1 ? renderNewsPagination(currentPage, totalPages, items.length, activeTabLabel) : '';
 
+    const isDigest = currentFilter === 'digest';
     $('#newsContent').innerHTML = `
       ${renderPageHeader({
-        icon: 'fa-solid fa-bolt',
-        iconColor: 'var(--accent-orange)',
-        title: 'AI Pulse',
-        desc: 'AI 每天都有新东西，但不是每个都值得你看——这里只推值得关注的',
-        stats: [
+        icon: isDigest ? 'fa-solid fa-book-open' : 'fa-solid fa-bolt',
+        iconColor: isDigest ? 'var(--primary)' : 'var(--accent-orange)',
+        title: isDigest ? '深度解读' : 'AI Pulse',
+        desc: isDigest
+          ? '全球顶级思想家的最新洞察，为游戏行业量身解读——不只是翻译，而是「这和我有什么关系」'
+          : 'AI 每天都有新东西，但不是每个都值得你看——这里只推值得关注的',
+        stats: isDigest ? [
+          { value: (DATA.digests || []).length, label: '篇解读', icon: 'fa-solid fa-book-open' },
+          { value: Object.keys(DATA.digestAuthors || {}).length, label: '位博主', icon: 'fa-solid fa-pen-nib' },
+        ] : [
           { value: DATA.news.length, label: '条动态', icon: 'fa-solid fa-newspaper' },
           { value: tabCounts['must-read'], label: '条必看', icon: 'fa-solid fa-fire' },
         ]
@@ -899,12 +964,10 @@ function renderNews() {
         <div class="news-tabs" id="newsFilters">${filterBtns}</div>
         <div class="search-wrap sm">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="newsSearch" placeholder="搜索动态…" value="${escapeAttr(searchQuery)}" autocomplete="off" />
+          <input type="text" id="newsSearch" placeholder="${isDigest ? '搜索深度解读…' : '搜索动态…'}" value="${escapeAttr(searchQuery)}" autocomplete="off" />
         </div>
       </div>
-      ${featuredHtml}
-      <div class="news-grid">${cardsHtml}</div>
-      ${emptyHtml}
+      ${contentAreaHtml}
       ${paginationHtml}
     `;
 
@@ -913,6 +976,7 @@ function renderNews() {
       btn.addEventListener('click', () => {
         currentFilter = btn.dataset.filter;
         currentPage = 1;
+        authorFilter = 'all';  // 切 tab 时重置博主筛选
         render();
         // Scroll to top of news content
         const el = $('#newsContent');
@@ -942,8 +1006,98 @@ function renderNews() {
         }
       });
     });
+
+    // Bind digest author filter chips
+    $$('.digest-author-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        authorFilter = chip.dataset.author;
+        currentPage = 1;
+        render();
+        const el = $('#newsContent');
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Bind digest card author name clicks
+    $$('.digest-author-link').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        authorFilter = el.dataset.author;
+        currentPage = 1;
+        render();
+        const target = $('#newsContent');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
   }
   render();
+}
+
+function renderDigestCard(d) {
+  const author = DATA.digestAuthors?.[d.source_author] || {};
+  const valueType = DATA.digestValueTypes?.[d.value_type] || {};
+
+  // 作者头部（可点击触发博主筛选）
+  const focusHtml = author.focus ? `<span class="digest-author-focus">${author.focus}</span>` : '';
+  const authorHtml = `
+    <div class="digest-author-bar">
+      <a class="digest-author-link" data-author="${d.source_author}" title="查看 ${author.name || d.source_author} 的所有解读">
+        <span class="digest-author-icon" style="--author-color:${author.color || '#69EACB'}">${author.icon || '📝'}</span>
+        <div class="digest-author-info">
+          <span class="digest-author-name">${author.name || d.source_author}</span>
+          <span class="digest-author-sep">·</span>
+          <span class="digest-author-platform">${author.platform || ''}</span>
+        </div>
+        ${focusHtml}
+      </a>
+      <span class="digest-value-badge" style="--badge-color:${valueType.color || '#69EACB'}">${valueType.icon || '💡'} ${d.value_type}</span>
+    </div>`;
+
+  // 角色场景
+  const scenariosHtml = (d.gaming_relevance?.scenarios || []).map(s =>
+    `<div class="digest-scenario">
+      <span class="digest-scenario-role">${s.role}</span>
+      <span class="digest-scenario-text">${s.insight}</span>
+    </div>`
+  ).join('');
+
+  // 行动建议
+  const actionsHtml = (d.action_items || []).map(a =>
+    `<div class="digest-action-item"><i class="fa-solid fa-circle-check"></i> ${a}</div>`
+  ).join('');
+
+  // 适用岗位标签
+  const fitChips = (d.fit_for || []).map(r => `<span class="digest-fit-chip">${r}</span>`).join('');
+
+  // 话题标签
+  const tagsHtml = (d.tags || []).map(t => `<span class="digest-tag">${t}</span>`).join('');
+
+  // 学习路径链接
+  let pathLink = '';
+  if (d.recommended_path && typeof LEARNING_PATHS !== 'undefined' && LEARNING_PATHS[d.recommended_path]) {
+    const lp = LEARNING_PATHS[d.recommended_path];
+    pathLink = `<button class="digest-path-link" onclick="navigate('path',{pathId:'${lp.id}'})"><i class="fa-solid fa-route"></i> ${lp.title}</button>`;
+  }
+
+  return `
+    <div class="digest-card" data-id="${d.id}">
+      ${authorHtml}
+      <div class="digest-title">${d.title}</div>
+      <div class="digest-core-insight"><i class="fa-solid fa-bolt"></i> ${d.core_insight}</div>
+      <div class="digest-hook">${d.gaming_relevance?.hook || ''}</div>
+      <div class="digest-analysis">${d.gaming_relevance?.analysis || ''}</div>
+      ${scenariosHtml ? `<div class="digest-scenarios"><div class="digest-section-label"><i class="fa-solid fa-gamepad"></i> 游戏行业场景</div>${scenariosHtml}</div>` : ''}
+      ${actionsHtml ? `<div class="digest-actions"><div class="digest-section-label"><i class="fa-solid fa-list-check"></i> 本周行动</div>${actionsHtml}</div>` : ''}
+      <div class="digest-footer">
+        <div class="digest-meta">${fitChips}${tagsHtml}</div>
+        <div class="digest-footer-right">
+          <span class="digest-read-time"><i class="fa-regular fa-clock"></i> ${d.read_time}</span>
+          ${pathLink}
+          <a href="${d.source_url}" target="_blank" rel="noopener noreferrer" class="digest-source-link">原文 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 function renderNewsFeaturedCard(n) {
@@ -1259,6 +1413,9 @@ function renderTutorials(initialTier) {
     const jobBtns = `<button class="filter-btn ${jobFilter === 'all' ? 'active' : ''}" data-filter="all">全部岗位</button>` +
       DATA.jobs.map(j => `<button class="filter-btn ${jobFilter === j.id ? 'active' : ''}" data-filter="${j.id}">${j.name}</button>`).join('');
 
+    // 专栏推荐区
+    const columnsHtml = (DATA.columns && DATA.columns.length && tierFilter === 'all' && !intentFilter && jobFilter === 'all') ? renderColumnsShowcase() : '';
+
     $('#tutorialsContent').innerHTML = `
       ${renderPageHeader({
         icon: 'fa-solid fa-graduation-cap',
@@ -1270,6 +1427,7 @@ function renderTutorials(initialTier) {
           { value: DATA.jobs.length, label: '个岗位覆盖', icon: 'fa-solid fa-briefcase' },
         ]
       })}
+      ${columnsHtml}
       <div class="tut-intent-nav" id="tutIntentNav">${intentNavHtml}</div>
       ${recommendHtml}
       <div class="filter-group"><div class="filter-label">教程级别：</div><div class="filter-bar" id="tutTierFilter">${tierBtns}</div></div>
@@ -1294,6 +1452,151 @@ function renderTutorials(initialTier) {
   }
   render();
 }
+
+
+// ===== 专栏系统 =====
+
+function getColumnById(id) {
+  return (DATA.columns || []).find(c => c.id === id);
+}
+
+function getColumnForTutorial(tutId) {
+  const tut = getTutorialById(tutId);
+  if (tut && tut.columnId) return getColumnById(tut.columnId);
+  return null;
+}
+
+function getColumnTutorials(column) {
+  if (!column) return [];
+  const allIds = column.learningPath.flatMap(p => p.tutorialIds);
+  return allIds.map(id => {
+    const t = getTutorialById(id);
+    return t || { id, title: id, desc: '', icon: '📄', difficulty: 'beginner', duration: '—', _placeholder: true };
+  });
+}
+
+function renderColumnsShowcase() {
+  const cols = (DATA.columns || []).filter(c => c.featured);
+  if (!cols.length) return '';
+  return `
+    <div class="columns-showcase">
+      <div class="columns-showcase-title"><i class="fa-solid fa-layer-group"></i> 深度学习专栏</div>
+      <div class="columns-showcase-grid">
+        ${cols.map(c => {
+          const publishedCount = c.learningPath.flatMap(p => p.tutorialIds).filter(id => getTutorialById(id) && !getTutorialById(id)._placeholder).length;
+          const statusBadge = c.status === 'active'
+            ? '<span class="column-card-badge active">连载中</span>'
+            : '<span class="column-card-badge coming-soon">即将上线</span>';
+          return `
+            <div class="column-showcase-card" style="background:${c.gradient ? c.gradient.replace('100%)', '100%) 0.04') : 'var(--surface)'}; --col-color:${c.color}" onclick="navigate('tutorials','column:${c.id}')">
+              <div class="column-card-header">
+                <span class="column-card-icon">${c.icon}</span>
+                <div>
+                  <div class="column-card-title">${c.title}</div>
+                  <div class="column-card-subtitle">${c.subtitle}</div>
+                </div>
+              </div>
+              <div class="column-card-desc">${c.desc}</div>
+              <div class="column-card-stats">
+                ${statusBadge}
+                <span><i class="fa-solid fa-book-open"></i> ${publishedCount}/${c.totalTutorials} 篇</span>
+                <span><i class="fa-solid fa-layer-group"></i> ${c.learningPath.length} 个阶段</span>
+              </div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderColumnDetail(columnId) {
+  const col = getColumnById(columnId);
+  if (!col) { renderTutorials(); return; }
+
+  const phaseColors = {
+    'beginner': { bg: 'rgba(16,185,129,0.1)', color: '#34d399', border: 'rgba(16,185,129,0.15)' },
+    'intermediate': { bg: 'rgba(245,158,11,0.1)', color: '#fbbf24', border: 'rgba(245,158,11,0.15)' },
+    'advanced': { bg: 'rgba(239,68,68,0.1)', color: '#f87171', border: 'rgba(239,68,68,0.15)' },
+    'expert': { bg: 'rgba(167,139,250,0.12)', color: '#A78BFA', border: 'rgba(167,139,250,0.2)' }
+  };
+
+  const allTutIds = col.learningPath.flatMap(p => p.tutorialIds);
+  const publishedCount = allTutIds.filter(id => { const t = getTutorialById(id); return t && !t._placeholder; }).length;
+
+  const phasesHtml = col.learningPath.map(phase => {
+    const pc = phaseColors[phase.difficulty] || phaseColors.beginner;
+    const diffLabel = (DATA.difficultyMap[phase.difficulty] || { label: phase.difficulty }).label;
+    const tutsHtml = phase.tutorialIds.map(id => {
+      const t = getTutorialById(id);
+      if (t) {
+        return `
+          <div class="column-tut-item" onclick="navigate('tutorials','${t.id}')">
+            <span class="column-tut-item-icon">${t.icon}</span>
+            <div class="column-tut-item-info">
+              <div class="column-tut-item-title">${t.title}</div>
+              <div class="column-tut-item-desc">${t.solves || t.desc}</div>
+            </div>
+            <div class="column-tut-item-meta">
+              ${diffBadge(t.difficulty)}
+              <span class="column-tut-item-duration"><i class="fa-regular fa-clock"></i> ${t.duration}</span>
+              <i class="fa-solid fa-chevron-right column-tut-item-arrow"></i>
+            </div>
+          </div>
+        `;
+      } else {
+        return `
+          <div class="column-tut-item coming-soon">
+            <span class="column-tut-item-icon">📄</span>
+            <div class="column-tut-item-info">
+              <div class="column-tut-item-title">${id}</div>
+              <div class="column-tut-item-desc">内容制作中，敬请期待</div>
+            </div>
+            <div class="column-tut-item-meta">
+              <span class="column-card-badge coming-soon">即将上线</span>
+            </div>
+          </div>
+        `;
+      }
+    }).join('');
+    return `
+      <div class="column-phase">
+        <div class="column-phase-header">
+          <div class="column-phase-dot" style="background:${pc.color}"></div>
+          <span class="column-phase-title">${phase.phase}</span>
+          <span class="column-phase-badge" style="background:${pc.bg};color:${pc.color};border:1px solid ${pc.border}">${diffLabel}</span>
+        </div>
+        <div class="column-phase-desc">${phase.desc}</div>
+        <div class="column-phase-tutorials">${tutsHtml}</div>
+      </div>
+    `;
+  }).join('');
+
+  $('#tutorialsContent').innerHTML = `
+    <button class="back-btn" onclick="navigate('tutorials')"><i class="fa-solid fa-arrow-left"></i> 返回全部指南</button>
+    <div class="column-detail">
+      <div class="column-detail-hero" style="background:${col.gradient ? col.gradient.replace('100%)', '100%) 0.03') : 'var(--surface)'}">
+        <div class="column-hero-top">
+          <span class="column-hero-icon">${col.icon}</span>
+          <div class="column-hero-info">
+            <div class="column-hero-title">${col.title}</div>
+            <div class="column-hero-subtitle">${col.subtitle}</div>
+          </div>
+        </div>
+        <div class="column-hero-desc">${col.desc}</div>
+        <div class="column-hero-stats">
+          <span class="column-hero-stat"><i class="fa-solid fa-book-open"></i> <strong>${publishedCount}</strong>/${col.totalTutorials} 篇已发布</span>
+          <span class="column-hero-stat"><i class="fa-solid fa-layer-group"></i> <strong>${col.learningPath.length}</strong> 个学习阶段</span>
+          <span class="column-hero-stat"><i class="fa-solid fa-users"></i> ${col.targetJobs.includes('all') ? '全岗位适用' : col.targetJobs.join('、')}</span>
+        </div>
+      </div>
+      <div class="column-phases">
+        ${phasesHtml}
+      </div>
+    </div>
+  `;
+}
+
 
 function renderTutorialDetail(tutId) {
   const t = DATA.tutorials.find(x => x.id === tutId);
@@ -1359,8 +1662,44 @@ function renderTutorialDetail(tutId) {
     `;
   }
 
+  // 专栏面包屑和上下篇导航
+  const column = getColumnForTutorial(tutId);
+  let columnBreadcrumbHtml = '';
+  let columnNavHtml = '';
+  if (column) {
+    const allColTutIds = column.learningPath.flatMap(p => p.tutorialIds);
+    const currentIdx = allColTutIds.indexOf(tutId);
+    columnBreadcrumbHtml = `
+      <div class="column-breadcrumb">
+        <a href="#tutorials" onclick="event.preventDefault();navigate('tutorials')">实战指南</a>
+        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+        <a href="#tutorials/column:${column.id}" onclick="event.preventDefault();navigate('tutorials','column:${column.id}')">${column.icon} ${column.title}</a>
+        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+        <span>${t.title}</span>
+      </div>
+    `;
+    const prevId = currentIdx > 0 ? allColTutIds[currentIdx - 1] : null;
+    const nextId = currentIdx < allColTutIds.length - 1 ? allColTutIds[currentIdx + 1] : null;
+    const prevTut = prevId ? getTutorialById(prevId) : null;
+    const nextTut = nextId ? getTutorialById(nextId) : null;
+    columnNavHtml = `
+      <div class="column-nav-bar">
+        ${prevTut ? `<div class="column-nav-item prev" onclick="navigate('tutorials','${prevTut.id}')"><div class="column-nav-label"><i class="fa-solid fa-arrow-left"></i> 上一篇</div><div class="column-nav-title">${prevTut.icon} ${prevTut.title}</div></div>` : '<div class="column-nav-item placeholder"></div>'}
+        ${nextTut ? `<div class="column-nav-item next" onclick="navigate('tutorials','${nextTut.id}')"><div class="column-nav-label">下一篇 <i class="fa-solid fa-arrow-right"></i></div><div class="column-nav-title">${nextTut.icon} ${nextTut.title}</div></div>` : '<div class="column-nav-item placeholder"></div>'}
+      </div>
+    `;
+  }
+
+  const backTarget = column
+    ? `navigate('tutorials','column:${column.id}')`
+    : (pathInfo ? `navigate('path','${pathInfo.pathId}')` : `navigate('tutorials')`);
+  const backLabel = column
+    ? `返回「${column.title}」`
+    : (pathInfo ? `返回「${pathInfo.path.title}」` : '返回全部指南');
+
   $('#tutorialsContent').innerHTML = `
-    <button class="back-btn" onclick="${pathInfo ? `navigate('path','${pathInfo.pathId}')` : `navigate('tutorials')`}"><i class="fa-solid fa-arrow-left"></i> ${pathInfo ? `返回「${pathInfo.path.title}」` : '返回全部指南'}</button>
+    ${columnBreadcrumbHtml}
+    <button class="back-btn" onclick="${backTarget}"><i class="fa-solid fa-arrow-left"></i> ${backLabel}</button>
     <div class="tut-detail-header">
       <div class="tut-detail-icon">${t.icon}</div>
       <div class="tut-detail-meta">
@@ -1380,6 +1719,7 @@ function renderTutorialDetail(tutId) {
       ${stepsHTML}
     </div>
     ${pathActionsHTML}
+    ${columnNavHtml}
     ${nextHtml}
   `;
 }
@@ -1675,6 +2015,7 @@ function setupGlobalSearch() {
     prompt:   { label: 'Prompt',   icon: '📝', weight: 1.0, filterLabel: '找Prompt' },
     resource: { label: '资源',     icon: '📦', weight: 1.0, filterLabel: '找资源' },
     news:     { label: 'AI Pulse', icon: '📰', weight: 0.9, filterLabel: '找快报' },
+    digest:   { label: '深度解读', icon: '📖', weight: 1.3, filterLabel: '找解读' },
   };
 
   // 热门搜索词
@@ -1815,6 +2156,29 @@ function setupGlobalSearch() {
       }
     });
 
+    // 搜索深度解读
+    (DATA.digests || []).forEach(d => {
+      let score = 0;
+      if (d.title.toLowerCase().includes(ql)) score = 80;
+      else if (d.core_insight.toLowerCase().includes(ql)) score = 70;
+      else if (d.summary.toLowerCase().includes(ql)) score = 50;
+      else if ((d.gaming_relevance?.hook || '').toLowerCase().includes(ql)) score = 50;
+      else if (d.tags.some(t => t.toLowerCase().includes(ql))) score = 60;
+      else if ((d.fit_for || []).some(r => r.toLowerCase().includes(ql))) score = 40;
+      if (score > 0) {
+        const author = DATA.digestAuthors?.[d.source_author] || {};
+        const tags = [];
+        const vt = DATA.digestValueTypes?.[d.value_type];
+        if (vt) tags.push({ text: d.value_type, cls: 'tag-purple' });
+        results.push({
+          type: 'digest', icon: '📖', title: d.title,
+          desc: d.core_insight.slice(0, 60),
+          score, tags,
+          action: () => { navigate('news'); setTimeout(() => { const tabEl = document.querySelector('.digest-tab'); if (tabEl) tabEl.click(); setTimeout(() => scrollToCard('digest', d.id), 200); }, 100); }
+        });
+      }
+    });
+
     // 搜索岗位
     DATA.jobs.forEach(j => {
       let score = 0;
@@ -1888,7 +2252,7 @@ function setupGlobalSearch() {
 
     // 按类型分组，保持组内排序
     const groups = {};
-    const typeOrder = ['path', 'tutorial', 'tool', 'model', 'job', 'prompt', 'resource', 'news'];
+    const typeOrder = ['path', 'tutorial', 'tool', 'model', 'digest', 'job', 'prompt', 'resource', 'news'];
     filtered.forEach(r => {
       if (!groups[r.type]) groups[r.type] = [];
       groups[r.type].push(r);
@@ -2003,7 +2367,7 @@ function setupGlobalSearch() {
 
     // 构建扁平结果列表（用于键盘导航）
     const filtered = activeFilter === 'all' ? results : results.filter(r => r.type === activeFilter);
-    const typeOrder = ['path', 'tutorial', 'tool', 'model', 'job', 'prompt', 'resource', 'news'];
+    const typeOrder = ['path', 'tutorial', 'tool', 'model', 'digest', 'job', 'prompt', 'resource', 'news'];
     const maxPerGroup = activeFilter === 'all' ? 5 : 10;
     let total = 0;
     typeOrder.forEach(type => {
