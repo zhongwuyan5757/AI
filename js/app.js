@@ -13,14 +13,22 @@ function getToolById(id) { return DATA.tools.find(t => t.id === id); }
 function getTutorialById(id) { return DATA.tutorials.find(t => t.id === id); }
 function getPromptById(id) { return DATA.prompts.find(p => p.id === id); }
 
+const _escapeDiv = document.createElement('div');
 function escapeHtml(text) {
-  const d = document.createElement('div');
-  d.textContent = text;
-  return d.innerHTML;
+  _escapeDiv.textContent = text;
+  return _escapeDiv.innerHTML;
 }
 
 function escapeAttr(text) {
   return text.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function sanitizeUrl(url) {
+  if (!url || typeof url !== 'string') return '#';
+  const trimmed = url.trim();
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  if (/^\/[^/]/.test(trimmed) || trimmed === '/') return trimmed;
+  return '#';
 }
 
 function matchesJob(itemJobs, jobId) {
@@ -602,15 +610,32 @@ function setupHomeEvents() {
 
 // ===== 岗位专区 =====
 
+// 岗位数据缓存 — DATA 是静态的，按岗位预计算一次
+let _jobDataCache = null;
+function getJobDataCache() {
+  if (_jobDataCache) return _jobDataCache;
+  _jobDataCache = {};
+  DATA.jobs.forEach(j => {
+    _jobDataCache[j.id] = {
+      tools: DATA.tools.filter(t => matchesJob(t.suitableJobs, j.id)),
+      tutorials: DATA.tutorials.filter(t => matchesJob(t.targetJobs, j.id)),
+      prompts: DATA.prompts.filter(p => matchesJob(p.targetJobs, j.id)),
+      resources: DATA.resources.filter(r => matchesJob(r.relatedJobs, j.id)),
+    };
+  });
+  return _jobDataCache;
+}
+
 function renderJobZone(jobId) {
   if (!jobId) { renderJobSelector(); return; }
   const job = getJobById(jobId);
   if (!job) { navigate('home'); return; }
 
-  const jobTools = DATA.tools.filter(t => matchesJob(t.suitableJobs, job.id));
-  const jobTutorials = DATA.tutorials.filter(t => matchesJob(t.targetJobs, job.id));
-  const jobPrompts = DATA.prompts.filter(p => matchesJob(p.targetJobs, job.id));
-  const jobResources = DATA.resources.filter(r => matchesJob(r.relatedJobs, job.id));
+  const cache = getJobDataCache()[job.id] || {};
+  const jobTools = cache.tools || [];
+  const jobTutorials = cache.tutorials || [];
+  const jobPrompts = cache.prompts || [];
+  const jobResources = cache.resources || [];
 
   $('#jobsContent').innerHTML = `
     ${renderJobZoneHeader(job)}
@@ -626,10 +651,12 @@ function renderJobZone(jobId) {
 }
 
 function renderJobSelector() {
+  const cache = getJobDataCache();
   const cards = DATA.jobs.map(j => {
-    const toolCount = DATA.tools.filter(t => matchesJob(t.suitableJobs, j.id)).length;
-    const tutCount = DATA.tutorials.filter(t => matchesJob(t.targetJobs, j.id)).length;
-    const promptCount = DATA.prompts.filter(p => matchesJob(p.targetJobs, j.id)).length;
+    const jc = cache[j.id] || {};
+    const toolCount = (jc.tools || []).length;
+    const tutCount = (jc.tutorials || []).length;
+    const promptCount = (jc.prompts || []).length;
     return `
       <div class="job-selector-card" data-job="${j.id}" style="--jc:${j.color}">
         <div class="job-selector-icon">${j.icon}</div>
@@ -669,9 +696,10 @@ function renderJobSelector() {
 function renderJobZoneHeader(job) {
   const otherJobs = DATA.jobs.filter(j => j.id !== job.id);
   const quickNav = otherJobs.map(j => `<a href="#jobs/${j.id}" class="job-quick-link">${j.icon} ${j.name}</a>`).join('');
-  const toolCount = DATA.tools.filter(t => matchesJob(t.suitableJobs, job.id)).length;
-  const tutCount = DATA.tutorials.filter(t => matchesJob(t.targetJobs, job.id)).length;
-  const promptCount = DATA.prompts.filter(p => matchesJob(p.targetJobs, job.id)).length;
+  const jc = getJobDataCache()[job.id] || {};
+  const toolCount = (jc.tools || []).length;
+  const tutCount = (jc.tutorials || []).length;
+  const promptCount = (jc.prompts || []).length;
   const scenarioCount = job.scenarios.length;
 
   return `
@@ -819,7 +847,7 @@ function renderJobResources(resources) {
             <span class="dl-size">${r.format} · ${r.size}</span>
           </div>
         </div>
-        <div class="dl-actions">${r.url && r.url !== '#' ? `<a href="${r.url}" target="_blank" rel="noopener noreferrer" class="dl-btn primary"><i class="fa-solid fa-download"></i> 下载</a>` : `<span class="dl-btn disabled" title="资源整理中，即将上线"><i class="fa-solid fa-clock"></i> 即将上线</span>`}</div>
+        <div class="dl-actions">${r.url && r.url !== '#' ? `<a href="${sanitizeUrl(r.url)}" target="_blank" rel="noopener noreferrer" class="dl-btn primary"><i class="fa-solid fa-download"></i> 下载</a>` : `<span class="dl-btn disabled" title="资源整理中，即将上线"><i class="fa-solid fa-clock"></i> 即将上线</span>`}</div>
       </div>
     `;
   }).join('');
@@ -841,6 +869,16 @@ function renderNews() {
   let currentPage = 1;
   let authorFilter = 'all';  // 博主筛选状态
   const PAGE_SIZE = 9;
+
+  // 静态数据缓存 — 计算一次，render 内部直接引用
+  const tabCounts = {
+    'must-read': DATA.news.filter(n => n.isHot).length,
+    'model-update': DATA.news.filter(n => n.category === 'model-update').length,
+    'tools-workflow': DATA.news.filter(n => n.category === 'tools-workflow').length,
+    'industry-product': DATA.news.filter(n => n.category === 'industry-product').length,
+    'deep-insight': DATA.news.filter(n => n.category === 'deep-insight').length,
+    'digest': (DATA.digests || []).length,
+  };
 
   function getFilteredItems() {
     // 深度解读模式：使用 digests 数据
@@ -940,15 +978,7 @@ function renderNews() {
       contentAreaHtml = `${featuredHtml}<div class="news-grid">${cardsHtml}</div>${emptyHtml}`;
     }
 
-    // Tab counts
-    const tabCounts = {
-      'must-read': DATA.news.filter(n => n.isHot).length,
-      'model-update': DATA.news.filter(n => n.category === 'model-update').length,
-      'tools-workflow': DATA.news.filter(n => n.category === 'tools-workflow').length,
-      'industry-product': DATA.news.filter(n => n.category === 'industry-product').length,
-      'deep-insight': DATA.news.filter(n => n.category === 'deep-insight').length,
-      'digest': (DATA.digests || []).length,
-    };
+    // tabCounts 已缓存在 renderNews 作用域内
 
     const filterBtns = Object.entries(DATA.newsCategories).map(([k, v]) =>
       `<button class="news-tab ${currentFilter === k ? 'active' : ''}" data-filter="${k}">
@@ -1034,6 +1064,16 @@ function renderNews() {
       container.scrollIntoView({ behavior: 'smooth', block: 'start' });
       return;
     }
+    // 新闻卡片整体点击 → 跳转原文
+    const card = e.target.closest('.news-card');
+    if (card && !e.target.closest('a')) {
+      const id = card.dataset.id;
+      const item = DATA.news.find(n => n.id === id);
+      if (item && item.url) {
+        window.open(sanitizeUrl(item.url), '_blank', 'noopener,noreferrer');
+      }
+      return;
+    }
   };
   container.addEventListener('click', container._clickHandler);
 
@@ -1095,7 +1135,7 @@ function renderDigestCard(d) {
   let pathLink = '';
   if (d.recommended_path && typeof LEARNING_PATHS !== 'undefined' && LEARNING_PATHS[d.recommended_path]) {
     const lp = LEARNING_PATHS[d.recommended_path];
-    pathLink = `<button class="digest-path-link" onclick="navigate('path',{pathId:'${lp.id}'})"><i class="fa-solid fa-route"></i> ${lp.title}</button>`;
+    pathLink = `<button class="digest-path-link" onclick="navigate('path','${lp.id}')"><i class="fa-solid fa-route"></i> ${lp.title}</button>`;
   }
 
   return `
@@ -1112,7 +1152,7 @@ function renderDigestCard(d) {
         <div class="digest-footer-right">
           <span class="digest-read-time"><i class="fa-regular fa-clock"></i> ${d.read_time}</span>
           ${pathLink}
-          <a href="${d.source_url}" target="_blank" rel="noopener noreferrer" class="digest-source-link">原文 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="${sanitizeUrl(d.source_url)}" target="_blank" rel="noopener noreferrer" class="digest-source-link">原文 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
     </div>
@@ -1143,7 +1183,7 @@ function renderNewsFeaturedCard(n) {
   let pathLink = '';
   if (n.recommended_path && typeof LEARNING_PATHS !== 'undefined' && LEARNING_PATHS[n.recommended_path]) {
     const lp = LEARNING_PATHS[n.recommended_path];
-    pathLink = `<button class="news-path-link" onclick="navigate('path',{pathId:'${lp.id}'})"><i class="fa-solid fa-route"></i> 适合路径：${lp.title}</button>`;
+    pathLink = `<button class="news-path-link" onclick="navigate('path','${lp.id}')"><i class="fa-solid fa-route"></i> 适合路径：${lp.title}</button>`;
   }
 
   return `
@@ -1170,7 +1210,7 @@ function renderNewsFeaturedCard(n) {
           <div class="news-tags">${(n.tags || []).map(t => `<span class="news-tag">${t}</span>`).join('')}</div>
           <div class="news-featured-actions">
             ${pathLink}
-            <a href="${n.url}" target="_blank" rel="noopener noreferrer" class="news-link">阅读全文 <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="${sanitizeUrl(n.url)}" target="_blank" rel="noopener noreferrer" class="news-link">阅读全文 <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -1834,7 +1874,7 @@ function renderResourcesPage() {
             </div>
           </div>
           <div class="dl-actions">
-            ${r.url && r.url !== '#' ? `<a href="${r.url}" target="_blank" rel="noopener noreferrer" class="dl-btn primary"><i class="fa-solid fa-download"></i> 下载</a>` : `<span class="dl-btn disabled" title="资源整理中，即将上线"><i class="fa-solid fa-clock"></i> 即将上线</span>`}
+            ${r.url && r.url !== '#' ? `<a href="${sanitizeUrl(r.url)}" target="_blank" rel="noopener noreferrer" class="dl-btn primary"><i class="fa-solid fa-download"></i> 下载</a>` : `<span class="dl-btn disabled" title="资源整理中，即将上线"><i class="fa-solid fa-clock"></i> 即将上线</span>`}
           </div>
         </div>
       `;
@@ -1933,7 +1973,7 @@ function renderNewsCard(n) {
         <div class="news-card-chips">${fitHtml}${(n.tags || []).slice(0, fitRoles.length ? 1 : 2).map(t => `<span class="news-tag">${t}</span>`).join('')}</div>
         <div class="news-card-meta">
           <span class="news-source">${n.source}</span>
-          <a href="${n.url}" target="_blank" rel="noopener noreferrer" class="news-link" onclick="event.stopPropagation()"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="${sanitizeUrl(n.url)}" target="_blank" rel="noopener noreferrer" class="news-link" onclick="event.stopPropagation()"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
     </div>
@@ -2510,7 +2550,6 @@ function setupGlobalSearch() {
     activeFilter = 'all';
     if (!q) {
       resultsContainer.innerHTML = renderZeroInputPanel();
-      bindZeroInputEvents();
       overlay.classList.remove('hidden');
       return;
     }
@@ -2682,14 +2721,22 @@ function setupMobileMenu() {
 
 // ===== Analytics =====
 
+// 批量写入 analytics，避免每次操作都同步读写 localStorage
+const _eventBuffer = [];
+let _eventFlushTimer = null;
 function trackEvent(event, data) {
-  // 未来替换为真实 analytics SDK
-  try {
-    const log = JSON.parse(localStorage.getItem('fs-events') || '[]');
-    log.push({ event, data, ts: Date.now() });
-    if (log.length > 200) log.splice(0, log.length - 200);
-    localStorage.setItem('fs-events', JSON.stringify(log));
-  } catch {}
+  _eventBuffer.push({ event, data, ts: Date.now() });
+  if (!_eventFlushTimer) {
+    _eventFlushTimer = setTimeout(() => {
+      _eventFlushTimer = null;
+      try {
+        const log = JSON.parse(localStorage.getItem('fs-events') || '[]');
+        log.push(..._eventBuffer.splice(0));
+        if (log.length > 200) log.splice(0, log.length - 200);
+        localStorage.setItem('fs-events', JSON.stringify(log));
+      } catch {}
+    }, 2000); // 每 2 秒批量写入一次
+  }
 }
 
 // ===== 学习诊断 =====
@@ -2920,8 +2967,8 @@ function handleSubscribe() {
     showToast('请输入有效的邮箱地址', 'info');
     return;
   }
-  localStorage.setItem('fs-subscribed', email);
-  trackEvent('subscribe', { email });
+  localStorage.setItem('fs-subscribed', 'true');
+  trackEvent('subscribe', { subscribed: true });
   showToast('订阅成功！每周帮你整理最值得关注的内容', 'success');
   // 更新 UI
   const sub = document.querySelector('.diag-subscribe');
@@ -3073,7 +3120,7 @@ function showToast(message, type) {
   if (existing) existing.remove();
   const toast = document.createElement('div');
   toast.className = `lp-toast lp-toast-${type}`;
-  toast.innerHTML = message;
+  toast.textContent = message;
   document.body.appendChild(toast);
   requestAnimationFrame(() => toast.classList.add('lp-toast-show'));
   setTimeout(() => {

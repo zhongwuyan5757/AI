@@ -1,0 +1,48 @@
+name: Update AI Pulse Content
+
+on:
+  schedule:
+    - cron: '0 0,12 * * *'  # UTC 00:00 & 12:00 = Beijing 08:00 & 20:00
+  workflow_dispatch:          # Manual trigger button
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch all content
+        run: npm run fetch:all
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Bump data version
+        run: |
+          NEW_VERSION=$(date -u +%Y.%m.%d.%H%M)
+          sed -i "s/const VERSION = .*/const VERSION = '${NEW_VERSION}';/" js/data-loader.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ js/data-loader.js
+          if git diff --cached --quiet; then
+            echo "No content changes detected, skipping commit."
+          else
+            git commit -m "chore: auto-update content $(date -u +%Y-%m-%d)"
+            git push
+            echo "Content updated and pushed!"
+          fi
