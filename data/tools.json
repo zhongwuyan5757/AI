@@ -239,7 +239,46 @@
     "pricing": "免费版可用 / SuperGrok $30/月",
     "officialUrl": "https://grok.x.ai",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "xAI 推出的实时信息 AI，深度整合 X（原 Twitter）平台。如果你需要实时追踪游戏行业热点、社媒舆情和玩家讨论趋势，Grok 是独家优势。",
+    "bestFor": "需要实时追踪社交媒体热点和舆情、关注行业动态和竞品社交表现、重度 X/Twitter 用户",
+    "notFor": "不使用 X 平台、需要长文写作或深度分析、需要中文社交媒体监控（Grok 主要覆盖 X 平台英文内容）",
+    "strengths": [
+      "实时信息获取——直接接入 X 平台数据，追踪行业热点和玩家讨论的速度远超其他 AI",
+      "社媒分析独家优势——可以分析 X 平台上的话题趋势、情绪走向、KOL 影响力",
+      "推理能力强——Grok 4 在多项基准测试中表现优异，复杂逻辑分析不逊色于 GPT-5",
+      "幽默和创意表达风格独特——生成的文案有辨识度，适合社交媒体内容"
+    ],
+    "limitations": [
+      "中文能力相对较弱，中文社交媒体（微博/小红书）的数据无法覆盖",
+      "生态封闭——主要在 X 平台内使用，独立网页版功能受限",
+      "图片生成能力一般，不如 Midjourney/ChatGPT 的图片生成",
+      "SuperGrok 订阅价格偏高（$30/月），免费版功能受限"
+    ],
+    "pricingAdvice": "免费版体验基础对话功能。如果你是 X Premium 订阅用户已包含 Grok 基础版。SuperGrok（$30/月）适合需要深度社媒分析和高级推理的市场团队。",
+    "vsAlternatives": [
+      {
+        "rival": "chatgpt",
+        "verdict": "实时社媒分析选 Grok，通用全能选 ChatGPT",
+        "pickThis": "需要 X 平台实时数据、社媒舆情监控、行业热点追踪",
+        "pickThat": "通用写作、图片生成、GPTs 生态、中文场景"
+      },
+      {
+        "rival": "perplexity",
+        "verdict": "社媒热点选 Grok（X 平台独家数据），通用搜索选 Perplexity（全网来源引用）",
+        "pickThis": "X/Twitter 平台数据分析、社交媒体趋势监控",
+        "pickThat": "全网信息搜索、需要来源引用、中文搜索"
+      }
+    ],
+    "quickStart": "1. 访问 x.com/i/grok 或下载 X 应用\n2. 使用 X 账号登录即可使用基础版\n3. 试试\"分析最近一周关于XX游戏的讨论趋势\"",
+    "timeToValue": "3 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p003",
+      "p007"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "deepseek",
@@ -587,7 +626,47 @@
     "pricing": "免费版可用 / Pro $13/月",
     "officialUrl": "https://www.canva.com",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "非设计师的最佳出图工具。AI 加持的 Canva 让不会 PS 的运营也能 5 分钟做出专业海报——模板+AI生图+智能排版的组合拳。",
+    "bestFor": "没有设计背景但需要快速出图的运营/市场人员、需要批量产出社媒配图/海报/Banner 的团队、小团队没有专职设计师",
+    "notFor": "需要精细化设计（如 UI 设计、品牌 VI）的专业设计师、需要 PSD 分层文件输出的场景",
+    "strengths": [
+      "模板量业界最大——数十万专业模板一键套用，改文字和图片即可出稿",
+      "Magic Design AI 设计——描述需求自动生成多个设计方案，选一个微调即可",
+      "AI 一键抠图/扩图/去水印——以前需要 PS 的操作现在一键搞定",
+      "品牌套件——上传品牌色+Logo+字体，所有模板自动适配品牌风格"
+    ],
+    "limitations": [
+      "设计自由度有限——高度依赖模板，很难做出完全自定义的复杂设计",
+      "AI 图片生成质量不如 Midjourney——适合配图和素材，不适合做主视觉",
+      "导出格式受限——免费版不能导出 SVG 和透明背景 PNG",
+      "中文字体选择有限——部分中文字体需要 Pro 订阅"
+    ],
+    "pricingAdvice": "免费版功能已经很强，足够个人轻度使用。Pro（$13/月）解锁全部模板+品牌套件+高级导出，团队使用强烈推荐。",
+    "vsAlternatives": [
+      {
+        "rival": "midjourney",
+        "verdict": "快速出设计稿选 Canva AI（模板+排版），AI 艺术创作选 Midjourney",
+        "pickThis": "需要完成品的设计稿（海报/Banner/社媒图）、不会设计软件、需要品牌一致性",
+        "pickThat": "需要高质量 AI 艺术图片、概念设计、创意视觉探索"
+      },
+      {
+        "rival": "figma-ai",
+        "verdict": "营销物料选 Canva AI（效率高），产品设计选 Figma AI（专业深）",
+        "pickThis": "海报/Banner/社媒配图等营销物料、快速出稿",
+        "pickThat": "UI/UX 设计、组件化设计系统、开发交付"
+      }
+    ],
+    "quickStart": "1. 访问 canva.com 注册账号\n2. 搜索\"游戏海报\"模板，选一个喜欢的\n3. 替换文字和图片，体验 Magic Design 的 AI 建议功能",
+    "timeToValue": "5 分钟",
+    "relatedTutorials": [
+      "t006"
+    ],
+    "relatedPrompts": [
+      "p025"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "figma-ai",
@@ -775,7 +854,48 @@
     "pricing": "免费试用 / 会员制",
     "officialUrl": "https://kling.kuaishou.com",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "国产 AI 视频生成标杆。中文提示词效果最好、单次可生成更长视频、性价比高，中文用户做视频素材的首选。",
+    "bestFor": "以中文提示词为主的视频制作团队、预算有限但需要大量视频素材的运营团队、需要更长单次生成时长的用户",
+    "notFor": "对画面质量要求极高（如电影级宣传片）、以英文提示词为主的团队",
+    "strengths": [
+      "中文提示词效果业界最佳——用中文描述就能准确生成想要的画面",
+      "单次生成时长更长（最长 10 秒 1080p），减少拼接次数",
+      "人物生成稳定性好——面部一致性和动作连贯性优于多数竞品",
+      "价格友好——基础功能免费，付费套餐远低于 Runway 等海外工具"
+    ],
+    "limitations": [
+      "画面精细度和光影质感略逊于 Runway Gen-3 Alpha",
+      "风格化能力有限——写实风格好但艺术风格（如赛博朋克、水墨画）不如 Runway 灵活",
+      "导出分辨率有限，4K 输出还不支持",
+      "国际化程度低，英文提示词效果不如中文"
+    ],
+    "pricingAdvice": "免费版每天有生成额度，足够体验和轻度使用。标准版（¥66/月）适合日常使用，专业版（¥199/月）适合团队批量产出。",
+    "vsAlternatives": [
+      {
+        "rival": "runway",
+        "verdict": "中文场景+性价比选可灵，画面质量+英文场景选 Runway",
+        "pickThis": "中文提示词为主、预算有限、国内团队日常使用",
+        "pickThat": "追求最高画面质量、英文场景、需要 Motion Brush 精准控制"
+      },
+      {
+        "rival": "sora",
+        "verdict": "现在能用选可灵（成熟稳定），期待顶级画质选 Sora",
+        "pickThis": "现在就需要大量产出视频素材、中文场景为主",
+        "pickThat": "不急于使用、关注 OpenAI 生态"
+      }
+    ],
+    "quickStart": "1. 访问 klingai.com 注册账号（支持手机号）\n2. 选择\"文生视频\"，用中文描述想要的画面\n3. 等待约 2 分钟，预览生成结果",
+    "timeToValue": "3 分钟",
+    "relatedTutorials": [
+      "t010"
+    ],
+    "relatedPrompts": [
+      "p021",
+      "p005"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "pika",
@@ -1092,7 +1212,39 @@
     "pricing": "免费版可用 / Starter $5/月",
     "officialUrl": "https://elevenlabs.io",
     "tutorialId": null,
-    "editorPick": true
+    "editorPick": true,
+    "verdict": "最强 AI 语音合成工具。声音克隆逼真度业界第一，支持 30+ 种语言，游戏角色配音、多语言旁白、有声内容制作的最佳方案。",
+    "bestFor": "需要游戏角色配音、多语言语音本地化、有声内容（播客/有声书/教程）制作的团队",
+    "notFor": "只需要基础文字转语音（系统自带 TTS 就够）、需要音乐/歌曲生成（选 Suno）",
+    "strengths": [
+      "声音克隆逼真度最高——上传 1 分钟音频即可克隆声音，情感和语调高度还原",
+      "30+ 种语言支持——同一个声音可以无缝切换不同语言，适合游戏多语言配音",
+      "情感控制精准——可以调节语速、语调、情绪强度，比机械式 TTS 自然得多",
+      "批量处理能力——支持脚本式批量生成，适合大规模配音项目"
+    ],
+    "limitations": [
+      "高质量语音消耗配额较快——Professional Voice Clone 每月字符数有限",
+      "中文语音质量不如英文——中文语调和断句偶尔不够自然",
+      "实时语音对话功能还在早期阶段，延迟较高",
+      "价格较高——Creator 套餐 $22/月 仅 10 万字符，大项目需要更高套餐"
+    ],
+    "pricingAdvice": "免费版 1 万字符/月体验基础功能。如果团队需要角色配音，Starter（$5/月）3 万字符够做 demo。正式项目推荐 Creator（$22/月）或 Pro（$99/月）。",
+    "vsAlternatives": [
+      {
+        "rival": "suno",
+        "verdict": "语音/配音选 ElevenLabs，音乐/歌曲选 Suno",
+        "pickThis": "游戏角色配音、多语言旁白、有声内容、语音克隆",
+        "pickThat": "游戏 BGM、营销视频配乐、歌曲创作"
+      }
+    ],
+    "quickStart": "1. 访问 elevenlabs.io 注册账号\n2. 选择 Text to Speech，选一个预设声音\n3. 输入一段游戏角色台词，体验语音合成效果",
+    "timeToValue": "2 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p023"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "perplexity",
@@ -1209,7 +1361,45 @@
     "pricing": "Notion 付费版含 AI / AI 附加 $10/月",
     "officialUrl": "https://www.notion.so",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "最好的 AI 协作文档工具。直接在你的知识库中调用 AI，上下文理解能力远超独立 AI 工具——因为它能读懂你团队的所有文档。",
+    "bestFor": "团队已在用 Notion 管理知识库/项目/文档、需要在文档上下文中直接调用 AI、需要自动化工作流（如周报汇总）的团队",
+    "notFor": "不使用 Notion 的团队、需要长文深度写作（Claude 更强）、只需要对话式 AI 的个人用户",
+    "strengths": [
+      "知识库级上下文——AI 能读懂你 Notion 中的所有文档和数据库，输出贴合团队实际",
+      "行内 AI 编辑——选中文字即可让 AI 改写、翻译、总结、扩写，不离开文档",
+      "AI 自动填充数据库——批量对数据库条目做分类、生成摘要、打标签",
+      "与 Notion 工作流深度集成——自动化会议纪要、项目状态更新、团队周报汇总"
+    ],
+    "limitations": [
+      "只在 Notion 生态内有效——离开 Notion 就失去了上下文优势",
+      "长文生成质量不如 Claude/ChatGPT——适合短段落编辑而非写 1 万字方案",
+      "AI 功能需要额外付费——$10/人/月 在已有 Notion 订阅基础上叠加",
+      "对中文的理解偶尔不如 ChatGPT 精准"
+    ],
+    "pricingAdvice": "如果团队已在用 Notion，AI 附加功能（$10/人/月）非常值得——省去在 AI 工具和文档间来回复制的时间。如果还没用 Notion，不建议单独为 AI 功能迁移。",
+    "vsAlternatives": [
+      {
+        "rival": "chatgpt",
+        "verdict": "文档内编辑选 Notion AI（上下文好），通用对话选 ChatGPT（能力强）",
+        "pickThis": "在 Notion 文档中直接编辑、需要知识库上下文、团队协作场景",
+        "pickThat": "独立对话、需要图片生成、需要 GPTs 生态"
+      },
+      {
+        "rival": "claude",
+        "verdict": "文档内快速编辑选 Notion AI，深度写作选 Claude",
+        "pickThis": "短段落改写/翻译/总结、数据库批量处理、团队工作流",
+        "pickThat": "写 1 万字完整方案、分析超长文档、需要 Projects 知识库"
+      }
+    ],
+    "quickStart": "1. 在 Notion 中打开任意页面\n2. 按空格键或输入 /ai 调出 AI 功能\n3. 试试\"帮我总结这个页面的要点\"或选中一段文字让 AI 改写",
+    "timeToValue": "1 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p016"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "gamma",
