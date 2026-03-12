@@ -6,8 +6,17 @@
     "color": "#10a37f",
     "desc": "OpenAI 旗舰对话 AI，搭载 GPT-5 系列模型，支持深度推理、长期记忆和自主任务执行，适合文案撰写、数据分析、方案生成等各类办公场景",
     "category": "text",
-    "suitableJobs": ["all"],
-    "problemsSolved": ["文案撰写", "数据分析", "方案生成", "信息整理", "翻译润色", "深度推理"],
+    "suitableJobs": [
+      "all"
+    ],
+    "problemsSolved": [
+      "文案撰写",
+      "数据分析",
+      "方案生成",
+      "信息整理",
+      "翻译润色",
+      "深度推理"
+    ],
     "difficulty": "easy",
     "pricing": "免费版可用 / Plus $20/月 / Pro $200/月",
     "officialUrl": "https://chat.openai.com",
@@ -16,19 +25,53 @@
     "verdict": "大多数人的第一个 AI 工具。如果你只能选一个，选它不会错——但处理超长文档或深度分析时，Claude 更强。",
     "bestFor": "需要一个万能型 AI 助手处理日常工作的人",
     "notFor": "需要处理大量长文档（超过 5 万字）或需要极致写作质量的用户",
-    "strengths": ["生态最完整：GPTs 商店、插件、API、移动端全覆盖", "多模态最全面：文字、图片、文件、语音、视频一站式处理", "GPT Image 1.5 的文字渲染能力业界第一，做活动海报、社媒配图直接出成品", "免费版 GPT-5 已经能覆盖 80% 的日常需求"],
-    "limitations": ["长文档分析不如 Claude——上下文窗口虽大，但真实利用率低于标称值", "深度结构化写作略逊于 Claude，策划方案类输出偶尔会头重脚轻", "Pro 版 $200/月，重度使用者成本偏高"],
+    "strengths": [
+      "生态最完整：GPTs 商店、插件、API、移动端全覆盖",
+      "多模态最全面：文字、图片、文件、语音、视频一站式处理",
+      "GPT Image 1.5 的文字渲染能力业界第一，做活动海报、社媒配图直接出成品",
+      "免费版 GPT-5 已经能覆盖 80% 的日常需求"
+    ],
+    "limitations": [
+      "长文档分析不如 Claude——上下文窗口虽大，但真实利用率低于标称值",
+      "深度结构化写作略逊于 Claude，策划方案类输出偶尔会头重脚轻",
+      "Pro 版 $200/月，重度使用者成本偏高"
+    ],
     "pricingAdvice": "大多数用户 Plus（$20/月）就够了。免费版限制了 GPT-5 的使用次数但日常够用。只有需要大量使用 GPT-5.4 推理和 o3 模型的重度用户才需要 Pro。建议先用免费版 1 周，觉得次数不够再升 Plus。",
     "vsAlternatives": [
-      {"toolId": "claude", "summary": "长文档和深度写作选 Claude，通用万能选 ChatGPT", "pickThis": "需要多模态（图片生成/语音/视频）、GPTs 生态、或团队已在用 OpenAI API", "pickThat": "需要处理超长文档（10 万字+）、写高质量策划方案、或需要 Projects 知识库管理"},
-      {"toolId": "gemini", "summary": "Google 生态用户选 Gemini，其他选 ChatGPT", "pickThis": "不依赖 Google 生态、需要更成熟的插件和 GPTs 商店", "pickThat": "重度 Google Workspace 用户、需要 Deep Research 深度分析功能"},
-      {"toolId": "deepseek", "summary": "预算有限选 DeepSeek（免费），功能全面选 ChatGPT", "pickThis": "需要图片生成、多模态、成熟生态", "pickThat": "预算为零、主要用中文、对隐私要求高（支持私有部署）"}
+      {
+        "toolId": "claude",
+        "summary": "长文档和深度写作选 Claude，通用万能选 ChatGPT",
+        "pickThis": "需要多模态（图片生成/语音/视频）、GPTs 生态、或团队已在用 OpenAI API",
+        "pickThat": "需要处理超长文档（10 万字+）、写高质量策划方案、或需要 Projects 知识库管理"
+      },
+      {
+        "toolId": "gemini",
+        "summary": "Google 生态用户选 Gemini，其他选 ChatGPT",
+        "pickThis": "不依赖 Google 生态、需要更成熟的插件和 GPTs 商店",
+        "pickThat": "重度 Google Workspace 用户、需要 Deep Research 深度分析功能"
+      },
+      {
+        "toolId": "deepseek",
+        "summary": "预算有限选 DeepSeek（免费），功能全面选 ChatGPT",
+        "pickThis": "需要图片生成、多模态、成熟生态",
+        "pickThat": "预算为零、主要用中文、对隐私要求高（支持私有部署）"
+      }
     ],
     "quickStart": "注册 → 选 GPT-5 模型 → 输入你的第一个工作任务 → 30 秒出结果",
     "timeToValue": "5 分钟内产出第一份可用内容",
-    "relatedTutorials": ["t001", "t004"],
-    "relatedPrompts": ["p001", "p002", "p005", "p009"],
-    "relatedPaths": ["ops-ai-path"],
+    "relatedTutorials": [
+      "t001",
+      "t004"
+    ],
+    "relatedPrompts": [
+      "p001",
+      "p002",
+      "p005",
+      "p009"
+    ],
+    "relatedPaths": [
+      "ops-ai-path"
+    ],
     "lastUpdated": "2026-03-12"
   },
   {
@@ -38,8 +81,17 @@
     "color": "#d97706",
     "desc": "Anthropic 出品，Sonnet 4.6 在专业工作中表现接近 Opus 水平，拥有 100 万 token 上下文窗口，擅长长文档处理、深度分析和结构化写作",
     "category": "text",
-    "suitableJobs": ["all"],
-    "problemsSolved": ["长文写作", "深度分析", "文档整理", "方案撰写", "代码辅助", "复杂推理"],
+    "suitableJobs": [
+      "all"
+    ],
+    "problemsSolved": [
+      "长文写作",
+      "深度分析",
+      "文档整理",
+      "方案撰写",
+      "代码辅助",
+      "复杂推理"
+    ],
     "difficulty": "easy",
     "pricing": "免费版可用 / Pro $20/月",
     "officialUrl": "https://claude.ai",
@@ -48,18 +100,45 @@
     "verdict": "写长方案、分析大文档、处理复杂推理任务的首选。如果你的工作以写策划方案和分析长文档为主，Claude 比 ChatGPT 更适合你。",
     "bestFor": "需要写高质量策划方案、分析超长文档、或处理复杂逻辑推理的用户",
     "notFor": "主要需要图片生成、语音交互、或依赖插件生态的用户",
-    "strengths": ["长文档处理真正可用：200K 上下文窗口不丢信息，10 万字文档一次性分析", "结构化写作最强：128K 最大输出，一次生成完整策划方案不截断", "推理能力顶尖：Opus 4.6 SWE-bench 79.2%，复杂逻辑任务首选", "Projects 知识库：上传公司文档建立团队专属知识库，输出贴合公司风格"],
-    "limitations": ["无内置图片生成——需要做图搭配 Midjourney 或 ChatGPT GPT Image", "插件生态弱于 ChatGPT，没有 GPTs 商店", "联网搜索能力弱于 Perplexity，实时信息获取不是强项"],
+    "strengths": [
+      "长文档处理真正可用：200K 上下文窗口不丢信息，10 万字文档一次性分析",
+      "结构化写作最强：128K 最大输出，一次生成完整策划方案不截断",
+      "推理能力顶尖：Opus 4.6 SWE-bench 79.2%，复杂逻辑任务首选",
+      "Projects 知识库：上传公司文档建立团队专属知识库，输出贴合公司风格"
+    ],
+    "limitations": [
+      "无内置图片生成——需要做图搭配 Midjourney 或 ChatGPT GPT Image",
+      "插件生态弱于 ChatGPT，没有 GPTs 商店",
+      "联网搜索能力弱于 Perplexity，实时信息获取不是强项"
+    ],
     "pricingAdvice": "免费版 Sonnet 4.6 已经很强，日常对话和短文档够用。如果你每天写策划方案或分析长文档，Pro（$20/月）的 Opus 4.6 物超所值——同价位下写作质量高于 ChatGPT Plus。",
     "vsAlternatives": [
-      {"toolId": "chatgpt", "summary": "长文档和深度写作选 Claude，通用万能选 ChatGPT", "pickThis": "主要写策划方案、分析长文档、需要 Projects 知识库", "pickThat": "需要图片生成、语音交互、GPTs 生态、或团队已在用 OpenAI API"},
-      {"toolId": "deepseek", "summary": "免费选 DeepSeek，写作质量选 Claude", "pickThis": "对方案质量要求高、需要处理长文档、愿意付费", "pickThat": "预算为零、主要做中文短文本任务、对数据隐私要求高"}
+      {
+        "toolId": "chatgpt",
+        "summary": "长文档和深度写作选 Claude，通用万能选 ChatGPT",
+        "pickThis": "主要写策划方案、分析长文档、需要 Projects 知识库",
+        "pickThat": "需要图片生成、语音交互、GPTs 生态、或团队已在用 OpenAI API"
+      },
+      {
+        "toolId": "deepseek",
+        "summary": "免费选 DeepSeek，写作质量选 Claude",
+        "pickThis": "对方案质量要求高、需要处理长文档、愿意付费",
+        "pickThat": "预算为零、主要做中文短文本任务、对数据隐私要求高"
+      }
     ],
     "quickStart": "注册 → 在对话框输入任务 → 选 Sonnet 4.6 → 30 秒出结果",
     "timeToValue": "5 分钟内产出第一份结构化方案",
-    "relatedTutorials": ["t002"],
-    "relatedPrompts": ["p001", "p004", "p007"],
-    "relatedPaths": ["ops-ai-path"],
+    "relatedTutorials": [
+      "t002"
+    ],
+    "relatedPrompts": [
+      "p001",
+      "p004",
+      "p007"
+    ],
+    "relatedPaths": [
+      "ops-ai-path"
+    ],
     "lastUpdated": "2026-03-12"
   },
   {
@@ -69,13 +148,72 @@
     "color": "#4285f4",
     "desc": "Google 旗舰 AI 助手，搭载 Gemini 2.5 Pro 模型，多模态能力业界领先，深度整合 Google Workspace 生态，支持 Deep Research 深度分析",
     "category": "text",
-    "suitableJobs": ["all"],
-    "problemsSolved": ["长文档分析", "多模态理解", "数据处理", "跨语言翻译", "深度研究", "Google 生态联动"],
+    "suitableJobs": [
+      "all"
+    ],
+    "problemsSolved": [
+      "长文档分析",
+      "多模态理解",
+      "数据处理",
+      "跨语言翻译",
+      "深度研究",
+      "Google 生态联动"
+    ],
     "difficulty": "easy",
     "pricing": "免费版可用 / Pro $19.99/月 / Ultra $249.99/月",
     "officialUrl": "https://gemini.google.com",
     "tutorialId": null,
-    "editorPick": true
+    "editorPick": true,
+    "verdict": "深度整合 Google 生态的全能 AI 助手。如果你重度使用 Gmail/Docs/Sheets，Gemini 是最自然的选择；否则 ChatGPT 功能更全面。",
+    "bestFor": "已在 Google Workspace 生态内工作、需要 Deep Research 深度调研、需要超长上下文（100 万 token）处理长文档的用户",
+    "notFor": "不使用 Google 生态、需要成熟插件市场和 GPTs 生态、或团队已标准化使用 ChatGPT/Claude 的用户",
+    "strengths": [
+      "Deep Research 功能强大——自动多轮搜索、整合信息、生成带引用的完整报告",
+      "100 万 token 上下文窗口，处理超长文档（如完整设计文档、合同）无需拆分",
+      "与 Google Workspace 深度集成——直接在 Gmail 中总结邮件、在 Docs 中辅助写作",
+      "多模态理解能力出色，图片、视频、音频均可处理"
+    ],
+    "limitations": [
+      "插件生态远不如 ChatGPT 的 GPTs 商店丰富",
+      "中文创意写作能力略逊于 ChatGPT 和 Claude",
+      "免费版使用次数限制较严，高峰期经常提示用量超限",
+      "Ultra 套餐 $249.99/月 定价偏高，性价比不如 ChatGPT Pro"
+    ],
+    "pricingAdvice": "免费版体验 Deep Research 和基本对话。如果频繁使用且在 Google 生态内，Pro（$19.99/月）值得订阅。Ultra 仅推荐给重度 AI 用户。",
+    "vsAlternatives": [
+      {
+        "rival": "chatgpt",
+        "verdict": "Google 生态用户选 Gemini，功能全面性选 ChatGPT",
+        "pickThis": "重度 Google Workspace 用户、需要 Deep Research 深度调研功能",
+        "pickThat": "需要 GPTs 生态、图片生成、语音对话、或更成熟的插件市场"
+      },
+      {
+        "rival": "claude",
+        "verdict": "长文档选 Gemini（上下文更长），深度写作选 Claude（质量更高）",
+        "pickThis": "需要处理超过 20 万字的文档、需要多模态分析（视频/音频）",
+        "pickThat": "需要高质量长文写作、代码辅助、或 Projects 知识库管理"
+      },
+      {
+        "rival": "perplexity",
+        "verdict": "深度调研选 Gemini Deep Research，快速搜索选 Perplexity",
+        "pickThis": "需要自动化多轮调研生成完整报告、需要综合分析能力",
+        "pickThat": "需要快速精准搜索、需要实时信息且重视来源引用的场景"
+      }
+    ],
+    "quickStart": "1. 访问 gemini.google.com 用 Google 账号登录\n2. 试试 Deep Research：输入一个调研话题，让 Gemini 自动生成完整报告\n3. 在 Gmail 中点击 Gemini 图标，体验邮件总结功能",
+    "timeToValue": "5 分钟",
+    "relatedTutorials": [
+      "t001",
+      "t004"
+    ],
+    "relatedPrompts": [
+      "p003",
+      "p008"
+    ],
+    "relatedPaths": [
+      "ops-ai-path"
+    ],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "grok",
@@ -84,8 +222,19 @@
     "color": "#1d9bf0",
     "desc": "xAI 推出的 AI 助手，Grok 4 采用多智能体架构，擅长实时信息获取和推理分析，与 X 平台深度整合",
     "category": "text",
-    "suitableJobs": ["product-planner", "publishing-manager", "brand-manager", "new-media"],
-    "problemsSolved": ["实时信息", "热点追踪", "推理分析", "社媒洞察", "内容生成"],
+    "suitableJobs": [
+      "product-planner",
+      "publishing-manager",
+      "brand-manager",
+      "new-media"
+    ],
+    "problemsSolved": [
+      "实时信息",
+      "热点追踪",
+      "推理分析",
+      "社媒洞察",
+      "内容生成"
+    ],
     "difficulty": "easy",
     "pricing": "免费版可用 / SuperGrok $30/月",
     "officialUrl": "https://grok.x.ai",
@@ -99,13 +248,71 @@
     "color": "#6366f1",
     "desc": "国产开源大模型，中文理解能力出色，推理能力强，性价比极高，支持私有化部署",
     "category": "text",
-    "suitableJobs": ["product-planner", "numerical-planner", "product-ops"],
-    "problemsSolved": ["中文写作", "逻辑推理", "代码生成", "数据分析"],
+    "suitableJobs": [
+      "product-planner",
+      "numerical-planner",
+      "product-ops"
+    ],
+    "problemsSolved": [
+      "中文写作",
+      "逻辑推理",
+      "代码生成",
+      "数据分析"
+    ],
     "difficulty": "easy",
     "pricing": "免费使用",
     "officialUrl": "https://chat.deepseek.com",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "中文能力顶尖的免费 AI 工具。推理和代码能力强，完全免费无限制。预算有限或主要用中文工作场景的首选。",
+    "bestFor": "预算有限想免费使用顶级 AI、中文内容创作和分析为主、需要强推理能力（数学/逻辑/代码）的用户",
+    "notFor": "需要多模态能力（图片/语音/视频）、需要插件生态和工作流集成、或对响应速度要求极高的用户",
+    "strengths": [
+      "完全免费无限制——没有每日用量上限，可以放心大量使用",
+      "中文理解和生成质量在免费工具中最佳，游戏文案、运营方案等中文场景表现突出",
+      "深度思考（DeepThink）模式推理能力强，复杂逻辑分析和数学问题表现优异",
+      "开源模型，支持私有化部署，数据安全可控"
+    ],
+    "limitations": [
+      "不支持图片生成、语音对话等多模态功能",
+      "高峰期服务器压力大，偶尔响应较慢或排队",
+      "没有插件/应用市场，无法扩展功能",
+      "联网搜索能力有限，实时信息获取不如 Perplexity"
+    ],
+    "pricingAdvice": "完全免费，直接使用即可。如果需要更稳定的服务和 API 调用，可以考虑充值 API 额度（按量计费，价格极低）。",
+    "vsAlternatives": [
+      {
+        "rival": "chatgpt",
+        "verdict": "预算有限选 DeepSeek（免费），功能全面选 ChatGPT（付费）",
+        "pickThis": "不想花钱、中文场景为主、需要强推理能力",
+        "pickThat": "需要多模态（图片/语音/视频）、GPTs 生态、或英文场景为主"
+      },
+      {
+        "rival": "claude",
+        "verdict": "免费方案选 DeepSeek，付费深度写作选 Claude",
+        "pickThis": "零预算、短中文内容生成、数学和逻辑推理任务",
+        "pickThat": "需要写 1 万字以上长方案、需要 Projects 知识库、或代码辅助"
+      },
+      {
+        "rival": "kimi",
+        "verdict": "通用中文对话选 DeepSeek（推理更强），长文档处理选 Kimi",
+        "pickThis": "需要深度思考和逻辑推理、免费无限制使用",
+        "pickThat": "需要处理超长 PDF/文档、需要更好的文件上传和解析体验"
+      }
+    ],
+    "quickStart": "1. 访问 chat.deepseek.com，注册账号（支持手机号）\n2. 开启\"深度思考\"模式，体验复杂推理能力\n3. 试着让它写一份活动策划方案，感受中文输出质量",
+    "timeToValue": "3 分钟",
+    "relatedTutorials": [
+      "t001"
+    ],
+    "relatedPrompts": [
+      "p001",
+      "p009"
+    ],
+    "relatedPaths": [
+      "ops-ai-path"
+    ],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "kimi",
@@ -114,8 +321,17 @@
     "color": "#0ea5e9",
     "desc": "月之暗面推出的长文本 AI 助手，擅长处理超长文档和复杂信息整理",
     "category": "text",
-    "suitableJobs": ["product-planner", "product-ops", "publishing-manager"],
-    "problemsSolved": ["长文档处理", "信息提取", "文档总结", "研究辅助"],
+    "suitableJobs": [
+      "product-planner",
+      "product-ops",
+      "publishing-manager"
+    ],
+    "problemsSolved": [
+      "长文档处理",
+      "信息提取",
+      "文档总结",
+      "研究辅助"
+    ],
     "difficulty": "easy",
     "pricing": "免费使用",
     "officialUrl": "https://kimi.moonshot.cn",
@@ -129,8 +345,16 @@
     "color": "#3b82f6",
     "desc": "字节跳动推出的 AI 助手，基于云雀大模型，中文对话体验优秀，支持图片理解、文档分析和多种创作场景",
     "category": "text",
-    "suitableJobs": ["all"],
-    "problemsSolved": ["中文对话", "文案创作", "图片理解", "文档分析", "翻译润色"],
+    "suitableJobs": [
+      "all"
+    ],
+    "problemsSolved": [
+      "中文对话",
+      "文案创作",
+      "图片理解",
+      "文档分析",
+      "翻译润色"
+    ],
     "difficulty": "easy",
     "pricing": "免费使用",
     "officialUrl": "https://www.doubao.com",
@@ -144,8 +368,18 @@
     "color": "#7c3aed",
     "desc": "AI 图像生成标杆，V6.1 版本大幅提升文字渲染和真实感，是设计师创意探索的首选工具",
     "category": "image",
-    "suitableJobs": ["graphic-designer", "video-designer", "brand-manager", "new-media"],
-    "problemsSolved": ["创意概念图", "风格探索", "素材初稿", "KV设计参考"],
+    "suitableJobs": [
+      "graphic-designer",
+      "video-designer",
+      "brand-manager",
+      "new-media"
+    ],
+    "problemsSolved": [
+      "创意概念图",
+      "风格探索",
+      "素材初稿",
+      "KV设计参考"
+    ],
     "difficulty": "medium",
     "pricing": "付费 $10/月起",
     "officialUrl": "https://www.midjourney.com",
@@ -154,18 +388,42 @@
     "verdict": "目前出图美学质量最高的 AI 图像工具。需要高质量概念图和风格探索选 Midjourney，需要精确中文文字渲染选 GPT Image。",
     "bestFor": "需要高美学质量概念图、活动视觉参考、创意风格探索的设计师和品牌经理",
     "notFor": "需要精确中文文字渲染、批量快速出图、或不愿学习 Prompt 语法的用户",
-    "strengths": ["美学质量业界最高：风格化、氛围感、构图能力无人能及", "V7 版本真实感大幅提升，角色一致性和手部细节显著改善", "适合做活动 KV 参考图、角色概念设计、场景氛围图", "社区生态丰富：大量风格参考和 Prompt 模板可直接复用"],
-    "limitations": ["中文文字渲染差——活动海报上的中文容易出错，不如 GPT Image 1.5", "学习曲线较陡：Prompt 写法有独特语法（--ar、--v、--s 等参数）", "无免费版，最低 $10/月起步", "不支持精确控制构图和元素位置"],
+    "strengths": [
+      "美学质量业界最高：风格化、氛围感、构图能力无人能及",
+      "V7 版本真实感大幅提升，角色一致性和手部细节显著改善",
+      "适合做活动 KV 参考图、角色概念设计、场景氛围图",
+      "社区生态丰富：大量风格参考和 Prompt 模板可直接复用"
+    ],
+    "limitations": [
+      "中文文字渲染差——活动海报上的中文容易出错，不如 GPT Image 1.5",
+      "学习曲线较陡：Prompt 写法有独特语法（--ar、--v、--s 等参数）",
+      "无免费版，最低 $10/月起步",
+      "不支持精确控制构图和元素位置"
+    ],
     "pricingAdvice": "Basic（$10/月）有 200 次快速生成，偶尔用够了。Standard（$30/月）有 15 小时快速生成 + 无限慢速，是设计师日常使用的最佳档位。Pro（$60/月）只在需要隐私模式或大量并发时才需要。",
     "vsAlternatives": [
-      {"toolId": "chatgpt", "summary": "文字渲染选 GPT Image，美学质量选 Midjourney", "pickThis": "需要高美学质量的概念图、KV 参考、风格探索", "pickThat": "需要精确的文字渲染（活动海报带文字）、或想用一个工具搞定文字+图片"},
-      {"toolId": "stable-diffusion", "summary": "定制化和批量选 SD，即拿即用选 Midjourney", "pickThis": "不想折腾部署、追求出图美学质量、接受月费", "pickThat": "需要本地部署保护隐私、批量流水线出图、深度定制模型风格"}
+      {
+        "toolId": "chatgpt",
+        "summary": "文字渲染选 GPT Image，美学质量选 Midjourney",
+        "pickThis": "需要高美学质量的概念图、KV 参考、风格探索",
+        "pickThat": "需要精确的文字渲染（活动海报带文字）、或想用一个工具搞定文字+图片"
+      },
+      {
+        "toolId": "stable-diffusion",
+        "summary": "定制化和批量选 SD，即拿即用选 Midjourney",
+        "pickThis": "不想折腾部署、追求出图美学质量、接受月费",
+        "pickThat": "需要本地部署保护隐私、批量流水线出图、深度定制模型风格"
+      }
     ],
     "quickStart": "注册 → 进入创建页面 → 输入英文描述 → 选择风格 → 60 秒出图",
     "timeToValue": "3 分钟内获得第一张可用的概念图",
-    "relatedTutorials": ["t005"],
+    "relatedTutorials": [
+      "t005"
+    ],
     "relatedPrompts": [],
-    "relatedPaths": ["content-path"],
+    "relatedPaths": [
+      "content-path"
+    ],
     "lastUpdated": "2026-03-12"
   },
   {
@@ -175,8 +433,16 @@
     "color": "#ec4899",
     "desc": "开源图像生成模型，可本地部署，自定义程度高，适合批量生成和风格定制场景",
     "category": "image",
-    "suitableJobs": ["graphic-designer", "video-designer"],
-    "problemsSolved": ["批量图片生成", "风格定制", "本地化部署", "素材流水线"],
+    "suitableJobs": [
+      "graphic-designer",
+      "video-designer"
+    ],
+    "problemsSolved": [
+      "批量图片生成",
+      "风格定制",
+      "本地化部署",
+      "素材流水线"
+    ],
     "difficulty": "hard",
     "pricing": "开源免费 / 云服务按量付费",
     "officialUrl": "https://stability.ai",
@@ -190,8 +456,19 @@
     "color": "#ea4335",
     "desc": "Google 最新推出的 Imagen 4 图像生成模型，速度比 Imagen 3 快 10 倍，支持 2K 分辨率，文字渲染和精细控制能力大幅提升",
     "category": "image",
-    "suitableJobs": ["graphic-designer", "video-designer", "brand-manager", "new-media"],
-    "problemsSolved": ["高质量图片生成", "文字渲染", "精细控制", "背景扩展", "分辨率提升"],
+    "suitableJobs": [
+      "graphic-designer",
+      "video-designer",
+      "brand-manager",
+      "new-media"
+    ],
+    "problemsSolved": [
+      "高质量图片生成",
+      "文字渲染",
+      "精细控制",
+      "背景扩展",
+      "分辨率提升"
+    ],
     "difficulty": "easy",
     "pricing": "通过 Gemini / AI Studio 使用，含免费额度",
     "officialUrl": "https://deepmind.google/technologies/imagen-4/",
@@ -205,8 +482,17 @@
     "color": "#8b5cf6",
     "desc": "专注文字渲染的 AI 图像生成工具，生成图片中的文字准确率极高，非常适合海报、Logo 和品牌物料设计",
     "category": "image",
-    "suitableJobs": ["graphic-designer", "brand-manager", "new-media"],
-    "problemsSolved": ["文字图片生成", "Logo 设计", "海报制作", "品牌物料"],
+    "suitableJobs": [
+      "graphic-designer",
+      "brand-manager",
+      "new-media"
+    ],
+    "problemsSolved": [
+      "文字图片生成",
+      "Logo 设计",
+      "海报制作",
+      "品牌物料"
+    ],
     "difficulty": "easy",
     "pricing": "免费版可用 / Plus $8/月",
     "officialUrl": "https://ideogram.ai",
@@ -220,8 +506,18 @@
     "color": "#ff6b35",
     "desc": "字节跳动旗下 AI 创作平台，支持文生图、图生图和 AI 视频生成，中文理解好，风格多样",
     "category": "image",
-    "suitableJobs": ["graphic-designer", "video-designer", "new-media", "brand-manager"],
-    "problemsSolved": ["中文场景图片生成", "风格化创作", "社媒配图", "创意素材"],
+    "suitableJobs": [
+      "graphic-designer",
+      "video-designer",
+      "new-media",
+      "brand-manager"
+    ],
+    "problemsSolved": [
+      "中文场景图片生成",
+      "风格化创作",
+      "社媒配图",
+      "创意素材"
+    ],
     "difficulty": "easy",
     "pricing": "免费使用 / 会员制",
     "officialUrl": "https://jimeng.jianying.com",
@@ -235,8 +531,19 @@
     "color": "#00c4cc",
     "desc": "在线设计平台 Canva 内置的 AI 功能，支持 AI 出图、模板生成和品牌适配，降低设计门槛",
     "category": "image",
-    "suitableJobs": ["graphic-designer", "new-media", "brand-manager", "product-ops"],
-    "problemsSolved": ["快速设计", "社媒配图", "品牌物料", "模板生成", "批量适配"],
+    "suitableJobs": [
+      "graphic-designer",
+      "new-media",
+      "brand-manager",
+      "product-ops"
+    ],
+    "problemsSolved": [
+      "快速设计",
+      "社媒配图",
+      "品牌物料",
+      "模板生成",
+      "批量适配"
+    ],
     "difficulty": "easy",
     "pricing": "免费版可用 / Pro $13/月",
     "officialUrl": "https://www.canva.com",
@@ -250,8 +557,15 @@
     "color": "#a259ff",
     "desc": "Figma 内置的 AI 设计助手，支持 AI 生成设计稿、自动布局建议和设计系统维护",
     "category": "image",
-    "suitableJobs": ["graphic-designer"],
-    "problemsSolved": ["设计稿生成", "布局建议", "组件管理", "设计系统"],
+    "suitableJobs": [
+      "graphic-designer"
+    ],
+    "problemsSolved": [
+      "设计稿生成",
+      "布局建议",
+      "组件管理",
+      "设计系统"
+    ],
     "difficulty": "medium",
     "pricing": "Figma 付费版含 AI 功能",
     "officialUrl": "https://www.figma.com",
@@ -265,8 +579,17 @@
     "color": "#31a8ff",
     "desc": "Adobe Photoshop 内置的生成式 AI 功能，包括生成式填充、扩展和背景替换，专业修图首选",
     "category": "image",
-    "suitableJobs": ["graphic-designer", "video-designer"],
-    "problemsSolved": ["图像修复", "背景替换", "尺寸延展", "对象移除", "创意合成"],
+    "suitableJobs": [
+      "graphic-designer",
+      "video-designer"
+    ],
+    "problemsSolved": [
+      "图像修复",
+      "背景替换",
+      "尺寸延展",
+      "对象移除",
+      "创意合成"
+    ],
     "difficulty": "medium",
     "pricing": "Adobe 订阅 $23/月起",
     "officialUrl": "https://www.adobe.com/products/photoshop.html",
@@ -280,8 +603,19 @@
     "color": "#34a853",
     "desc": "Google DeepMind 推出的 Veo 3 视频生成模型，首次支持带同步音频的视频生成（对话、音效），可生成 1080p 60 秒视频，质量业界领先",
     "category": "video",
-    "suitableJobs": ["video-designer", "new-media", "ad-manager", "brand-manager"],
-    "problemsSolved": ["高质量视频生成", "带音频视频", "创意短片", "广告素材", "场景演示"],
+    "suitableJobs": [
+      "video-designer",
+      "new-media",
+      "ad-manager",
+      "brand-manager"
+    ],
+    "problemsSolved": [
+      "高质量视频生成",
+      "带音频视频",
+      "创意短片",
+      "广告素材",
+      "场景演示"
+    ],
     "difficulty": "medium",
     "pricing": "通过 Gemini Ultra 订阅使用 / AI Studio API 按量付费",
     "officialUrl": "https://deepmind.google/technologies/veo/",
@@ -295,8 +629,19 @@
     "color": "#10a37f",
     "desc": "OpenAI 推出的文生视频模型，擅长生成具有物理真实感的视频片段，支持多种宽高比和风格化输出",
     "category": "video",
-    "suitableJobs": ["video-designer", "new-media", "ad-manager", "brand-manager"],
-    "problemsSolved": ["真实感视频", "创意短片", "概念演示", "广告素材", "场景预览"],
+    "suitableJobs": [
+      "video-designer",
+      "new-media",
+      "ad-manager",
+      "brand-manager"
+    ],
+    "problemsSolved": [
+      "真实感视频",
+      "创意短片",
+      "概念演示",
+      "广告素材",
+      "场景预览"
+    ],
     "difficulty": "medium",
     "pricing": "ChatGPT Plus/Pro 订阅可用",
     "officialUrl": "https://sora.com",
@@ -310,8 +655,19 @@
     "color": "#10b981",
     "desc": "AI 视频生成领军工具，Gen-4 模型支持视觉参考结合指令生成一致风格的图片和视频，适合创意视频和广告制作",
     "category": "video",
-    "suitableJobs": ["video-designer", "new-media", "ad-manager", "brand-manager"],
-    "problemsSolved": ["视频片段生成", "创意视频制作", "广告素材", "视觉特效", "风格一致性"],
+    "suitableJobs": [
+      "video-designer",
+      "new-media",
+      "ad-manager",
+      "brand-manager"
+    ],
+    "problemsSolved": [
+      "视频片段生成",
+      "创意视频制作",
+      "广告素材",
+      "视觉特效",
+      "风格一致性"
+    ],
     "difficulty": "medium",
     "pricing": "免费试用 / Standard $12/月",
     "officialUrl": "https://runway.ml",
@@ -325,8 +681,17 @@
     "color": "#6366f1",
     "desc": "快手推出的 AI 视频生成工具，在人物动作和场景一致性上表现优秀，支持中文场景",
     "category": "video",
-    "suitableJobs": ["video-designer", "new-media", "ad-manager"],
-    "problemsSolved": ["短视频生成", "广告视频素材", "创意内容", "社媒视频"],
+    "suitableJobs": [
+      "video-designer",
+      "new-media",
+      "ad-manager"
+    ],
+    "problemsSolved": [
+      "短视频生成",
+      "广告视频素材",
+      "创意内容",
+      "社媒视频"
+    ],
     "difficulty": "easy",
     "pricing": "免费试用 / 会员制",
     "officialUrl": "https://kling.kuaishou.com",
@@ -340,8 +705,17 @@
     "color": "#f472b6",
     "desc": "新锐 AI 视频生成工具，界面简洁易上手，支持文生视频、图生视频和视频编辑，适合快速制作短视频素材",
     "category": "video",
-    "suitableJobs": ["video-designer", "new-media", "ad-manager"],
-    "problemsSolved": ["快速视频生成", "创意短视频", "素材制作", "视频编辑"],
+    "suitableJobs": [
+      "video-designer",
+      "new-media",
+      "ad-manager"
+    ],
+    "problemsSolved": [
+      "快速视频生成",
+      "创意短视频",
+      "素材制作",
+      "视频编辑"
+    ],
     "difficulty": "easy",
     "pricing": "免费试用 / Standard $8/月",
     "officialUrl": "https://pika.art",
@@ -355,8 +729,19 @@
     "color": "#7c3aed",
     "desc": "AI 数字人视频平台，支持 4K 分辨率数字人出镜，可自动翻译口型同步 175+ 语言，适合企业宣传和培训视频",
     "category": "video",
-    "suitableJobs": ["video-designer", "brand-manager", "new-media", "publishing-manager"],
-    "problemsSolved": ["数字人视频", "多语言翻译", "企业宣传", "培训视频", "口播内容"],
+    "suitableJobs": [
+      "video-designer",
+      "brand-manager",
+      "new-media",
+      "publishing-manager"
+    ],
+    "problemsSolved": [
+      "数字人视频",
+      "多语言翻译",
+      "企业宣传",
+      "培训视频",
+      "口播内容"
+    ],
     "difficulty": "easy",
     "pricing": "免费试用 / Creator $24/月",
     "officialUrl": "https://www.heygen.com",
@@ -370,8 +755,17 @@
     "color": "#f59e0b",
     "desc": "MiniMax 推出的 AI 视频生成工具，生成质量高、运动幅度大，中文场景支持好，免费额度充足",
     "category": "video",
-    "suitableJobs": ["video-designer", "new-media", "ad-manager"],
-    "problemsSolved": ["视频生成", "动态素材", "创意内容", "社媒视频"],
+    "suitableJobs": [
+      "video-designer",
+      "new-media",
+      "ad-manager"
+    ],
+    "problemsSolved": [
+      "视频生成",
+      "动态素材",
+      "创意内容",
+      "社媒视频"
+    ],
     "difficulty": "easy",
     "pricing": "免费使用 / 付费套餐可选",
     "officialUrl": "https://hailuoai.video",
@@ -385,8 +779,18 @@
     "color": "#fe2c55",
     "desc": "字节跳动旗下视频剪辑工具，AI 功能包括自动字幕、智能剪辑、模板生成和口播辅助",
     "category": "video",
-    "suitableJobs": ["video-designer", "new-media", "ad-manager"],
-    "problemsSolved": ["自动字幕", "智能剪辑", "口播制作", "模板套用", "批量视频"],
+    "suitableJobs": [
+      "video-designer",
+      "new-media",
+      "ad-manager"
+    ],
+    "problemsSolved": [
+      "自动字幕",
+      "智能剪辑",
+      "口播制作",
+      "模板套用",
+      "批量视频"
+    ],
     "difficulty": "easy",
     "pricing": "基础免费 / Pro 版付费",
     "officialUrl": "https://www.capcut.com",
@@ -400,8 +804,17 @@
     "color": "#4f46e5",
     "desc": "通过编辑文字来编辑视频的创新工具，支持 AI 语音克隆、自动去除口头禅和智能剪辑",
     "category": "video",
-    "suitableJobs": ["video-designer", "new-media"],
-    "problemsSolved": ["文字编辑视频", "自动去噪", "字幕生成", "播客制作", "语音克隆"],
+    "suitableJobs": [
+      "video-designer",
+      "new-media"
+    ],
+    "problemsSolved": [
+      "文字编辑视频",
+      "自动去噪",
+      "字幕生成",
+      "播客制作",
+      "语音克隆"
+    ],
     "difficulty": "medium",
     "pricing": "免费试用 / Pro $24/月",
     "officialUrl": "https://www.descript.com",
@@ -415,8 +828,17 @@
     "color": "#fbbc04",
     "desc": "Google 推出的 AI 电影制作工具，整合 Veo、Imagen 和 Gemini 模型，用自然语言描述镜头即可创作电影级片段和场景",
     "category": "video",
-    "suitableJobs": ["video-designer", "brand-manager", "new-media"],
-    "problemsSolved": ["电影级视频", "镜头叙事", "场景编排", "创意短片"],
+    "suitableJobs": [
+      "video-designer",
+      "brand-manager",
+      "new-media"
+    ],
+    "problemsSolved": [
+      "电影级视频",
+      "镜头叙事",
+      "场景编排",
+      "创意短片"
+    ],
     "difficulty": "medium",
     "pricing": "通过 Gemini Ultra 订阅使用",
     "officialUrl": "https://flow.google",
@@ -430,8 +852,15 @@
     "color": "#06b6d4",
     "desc": "AI 原生代码编辑器，支持智能补全、代码生成和多文件 Agent 模式，开发效率倍增",
     "category": "code",
-    "suitableJobs": ["numerical-planner"],
-    "problemsSolved": ["代码编写", "脚本辅助", "自动化工具", "Bug 修复"],
+    "suitableJobs": [
+      "numerical-planner"
+    ],
+    "problemsSolved": [
+      "代码编写",
+      "脚本辅助",
+      "自动化工具",
+      "Bug 修复"
+    ],
     "difficulty": "hard",
     "pricing": "免费版可用 / Pro $20/月",
     "officialUrl": "https://cursor.com",
@@ -445,8 +874,17 @@
     "color": "#e11d48",
     "desc": "AI 全栈应用构建工具，用自然语言描述需求即可生成完整 Web 应用，零代码基础也能快速搭建原型和工具",
     "category": "code",
-    "suitableJobs": ["product-planner", "product-ops", "numerical-planner"],
-    "problemsSolved": ["快速原型", "内部工具搭建", "网页生成", "MVP 开发"],
+    "suitableJobs": [
+      "product-planner",
+      "product-ops",
+      "numerical-planner"
+    ],
+    "problemsSolved": [
+      "快速原型",
+      "内部工具搭建",
+      "网页生成",
+      "MVP 开发"
+    ],
     "difficulty": "easy",
     "pricing": "免费版可用 / Pro $20/月",
     "officialUrl": "https://lovable.dev",
@@ -460,8 +898,17 @@
     "color": "#f97316",
     "desc": "AI 音乐生成工具，输入文字描述即可生成完整歌曲，适合游戏 BGM 创作和营销音乐制作",
     "category": "audio",
-    "suitableJobs": ["video-designer", "brand-manager", "new-media"],
-    "problemsSolved": ["背景音乐", "游戏 BGM 创意", "营销视频配乐", "音效素材"],
+    "suitableJobs": [
+      "video-designer",
+      "brand-manager",
+      "new-media"
+    ],
+    "problemsSolved": [
+      "背景音乐",
+      "游戏 BGM 创意",
+      "营销视频配乐",
+      "音效素材"
+    ],
     "difficulty": "easy",
     "pricing": "免费试用 / Pro $10/月",
     "officialUrl": "https://suno.com",
@@ -475,8 +922,19 @@
     "color": "#1e293b",
     "desc": "业界领先的 AI 语音合成平台，可精准捕捉情感、语调和节奏，支持声音克隆和多语言配音，适合游戏角色配音和广告旁白",
     "category": "audio",
-    "suitableJobs": ["video-designer", "brand-manager", "new-media", "ad-manager"],
-    "problemsSolved": ["AI 配音", "声音克隆", "多语言配音", "角色语音", "广告旁白"],
+    "suitableJobs": [
+      "video-designer",
+      "brand-manager",
+      "new-media",
+      "ad-manager"
+    ],
+    "problemsSolved": [
+      "AI 配音",
+      "声音克隆",
+      "多语言配音",
+      "角色语音",
+      "广告旁白"
+    ],
     "difficulty": "easy",
     "pricing": "免费版可用 / Starter $5/月",
     "officialUrl": "https://elevenlabs.io",
@@ -490,13 +948,66 @@
     "color": "#3b82f6",
     "desc": "AI 驱动的智能搜索引擎，实时联网检索并给出结构化答案附带来源引用，是快速调研和信息检索的利器",
     "category": "productivity",
-    "suitableJobs": ["publishing-manager", "brand-manager", "product-planner", "ad-manager", "product-ops"],
-    "problemsSolved": ["快速调研", "市场分析", "竞品研究", "信息检索", "数据查找"],
+    "suitableJobs": [
+      "publishing-manager",
+      "brand-manager",
+      "product-planner",
+      "ad-manager",
+      "product-ops"
+    ],
+    "problemsSolved": [
+      "快速调研",
+      "市场分析",
+      "竞品研究",
+      "信息检索",
+      "数据查找"
+    ],
     "difficulty": "easy",
     "pricing": "免费版可用 / Pro $20/月",
     "officialUrl": "https://www.perplexity.ai",
     "tutorialId": "t003",
-    "editorPick": true
+    "editorPick": true,
+    "verdict": "AI 搜索的标杆产品。当你需要「快速搞清楚一件事」时，Perplexity 比传统搜索引擎和通用 AI 都更高效——每个回答自带来源引用。",
+    "bestFor": "需要快速调研并引用来源、做竞品分析和市场调研、写报告需要真实数据支撑的用户",
+    "notFor": "需要长文创意写作、需要图片/视频生成、或需要复杂多轮对话构建方案的用户",
+    "strengths": [
+      "每个回答都附带来源链接——你可以验证信息准确性，用在报告里也有出处",
+      "实时联网搜索，信息时效性远超 ChatGPT/Claude 的训练数据",
+      "Pro Search 自动追问、多角度搜索，一个问题就能得到全面调研结果",
+      "界面简洁高效，没有多余功能干扰，打开就搜、搜完就用"
+    ],
+    "limitations": [
+      "创意写作和长文生成能力明显弱于 ChatGPT/Claude",
+      "不支持图片生成、语音对话等多模态功能",
+      "免费版每天 Pro Search 次数有限（约 5 次），重度使用需付费",
+      "中文搜索结果质量不如英文，中文来源的覆盖面有待提升"
+    ],
+    "pricingAdvice": "免费版足够日常轻度搜索使用。如果每天需要做超过 5 次深度调研，Pro（$20/月）值得订阅——无限 Pro Search + 上传文件搜索。",
+    "vsAlternatives": [
+      {
+        "rival": "chatgpt",
+        "verdict": "快速调研选 Perplexity（带来源），创意生成选 ChatGPT（更全面）",
+        "pickThis": "需要带引用的调研结果、需要实时信息、写报告需要数据支撑",
+        "pickThat": "需要创意写作、图片生成、多轮对话构建复杂方案"
+      },
+      {
+        "rival": "gemini",
+        "verdict": "快速精准搜索选 Perplexity，深度自动化调研选 Gemini Deep Research",
+        "pickThis": "需要即时搜索、每个回答要有来源引用、简洁高效",
+        "pickThat": "需要自动多轮深度调研并生成长报告、或需要 Google 生态集成"
+      }
+    ],
+    "quickStart": "1. 访问 perplexity.ai（无需注册即可使用）\n2. 输入一个调研问题，如\"2026年中国手游市场规模\"\n3. 查看回答底部的来源链接，验证信息准确性",
+    "timeToValue": "1 分钟",
+    "relatedTutorials": [
+      "t004"
+    ],
+    "relatedPrompts": [
+      "p003",
+      "p008"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "google-notebooklm",
@@ -505,8 +1016,16 @@
     "color": "#4285f4",
     "desc": "Google 推出的 AI 研究助手，上传文档/视频/PDF 即可获得定制化摘要和问答，还能自动生成音频和视频概述",
     "category": "productivity",
-    "suitableJobs": ["all"],
-    "problemsSolved": ["文档分析", "研究总结", "音频概述生成", "知识整理", "资料问答"],
+    "suitableJobs": [
+      "all"
+    ],
+    "problemsSolved": [
+      "文档分析",
+      "研究总结",
+      "音频概述生成",
+      "知识整理",
+      "资料问答"
+    ],
     "difficulty": "easy",
     "pricing": "核心功能免费 / Plus 版随 AI Pro/Ultra 订阅",
     "officialUrl": "https://notebooklm.google",
@@ -520,8 +1039,19 @@
     "color": "#64748b",
     "desc": "内嵌在 Notion 中的 AI 助手，擅长文档整理、会议纪要、知识库管理和内容生成",
     "category": "productivity",
-    "suitableJobs": ["product-ops", "product-planner", "brand-manager", "new-media"],
-    "problemsSolved": ["文档整理", "会议纪要", "知识管理", "内容生成", "任务管理"],
+    "suitableJobs": [
+      "product-ops",
+      "product-planner",
+      "brand-manager",
+      "new-media"
+    ],
+    "problemsSolved": [
+      "文档整理",
+      "会议纪要",
+      "知识管理",
+      "内容生成",
+      "任务管理"
+    ],
     "difficulty": "easy",
     "pricing": "Notion 付费版含 AI / AI 附加 $10/月",
     "officialUrl": "https://www.notion.so",
@@ -535,8 +1065,18 @@
     "color": "#f59e0b",
     "desc": "AI 一键生成演示文稿，输入主题即可自动生成精美 PPT，适合快速制作汇报材料",
     "category": "productivity",
-    "suitableJobs": ["brand-manager", "publishing-manager", "product-planner", "product-ops"],
-    "problemsSolved": ["PPT 制作", "汇报材料", "方案展示", "快速原型"],
+    "suitableJobs": [
+      "brand-manager",
+      "publishing-manager",
+      "product-planner",
+      "product-ops"
+    ],
+    "problemsSolved": [
+      "PPT 制作",
+      "汇报材料",
+      "方案展示",
+      "快速原型"
+    ],
     "difficulty": "easy",
     "pricing": "免费版可用 / Plus $10/月",
     "officialUrl": "https://gamma.app",
@@ -550,8 +1090,18 @@
     "color": "#22c55e",
     "desc": "AI 可视化工具，输入文字自动生成专业图表、流程图和信息图，适合方案展示和数据可视化",
     "category": "productivity",
-    "suitableJobs": ["product-planner", "product-ops", "brand-manager", "publishing-manager"],
-    "problemsSolved": ["图表生成", "流程图制作", "信息图设计", "方案可视化"],
+    "suitableJobs": [
+      "product-planner",
+      "product-ops",
+      "brand-manager",
+      "publishing-manager"
+    ],
+    "problemsSolved": [
+      "图表生成",
+      "流程图制作",
+      "信息图设计",
+      "方案可视化"
+    ],
     "difficulty": "easy",
     "pricing": "免费版可用 / Pro $15/月",
     "officialUrl": "https://www.napkin.ai",
@@ -565,8 +1115,17 @@
     "color": "#ea4335",
     "desc": "低代码 AI 自动化编排平台，可串联 LLM 与 Slack、飞书等工具实现自动化工作流，支持自托管",
     "category": "productivity",
-    "suitableJobs": ["product-ops", "ad-manager", "numerical-planner"],
-    "problemsSolved": ["工作流自动化", "跨工具联动", "数据同步", "AI Agent 编排"],
+    "suitableJobs": [
+      "product-ops",
+      "ad-manager",
+      "numerical-planner"
+    ],
+    "problemsSolved": [
+      "工作流自动化",
+      "跨工具联动",
+      "数据同步",
+      "AI Agent 编排"
+    ],
     "difficulty": "medium",
     "pricing": "社区版免费 / Cloud $24/月起",
     "officialUrl": "https://n8n.io",
