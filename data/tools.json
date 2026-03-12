@@ -336,7 +336,46 @@
     "pricing": "免费使用",
     "officialUrl": "https://kimi.moonshot.cn",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "国产长文档处理首选工具。200 万字超长上下文 + 联网搜索 + 文件解析，处理中文长文档（合同、报告、研报）的体验比 ChatGPT/Claude 更流畅。",
+    "bestFor": "需要处理超长中文文档（合同、研报、政策文件）、需要联网搜索中文信息、偏好中文界面和交互的用户",
+    "notFor": "以英文场景为主、需要图片/视频生成、需要代码辅助的开发者",
+    "strengths": [
+      "200 万字超长上下文——真正可用于完整合同、研报、长篇小说的一次性分析",
+      "中文文件解析体验最佳——PDF、Word、PPT 上传即解析，排版识别准确",
+      "联网搜索能力强——实时搜索中文互联网信息，比 ChatGPT 中文搜索结果更全面",
+      "完全免费无限制——不限对话次数，无需付费即可使用完整功能"
+    ],
+    "limitations": [
+      "英文能力明显弱于 ChatGPT/Claude，英文场景不推荐",
+      "创意写作和方案策划能力不如 Claude，输出结构化程度偏低",
+      "不支持图片生成、语音对话等多模态功能",
+      "高峰期偶尔响应较慢，长文档处理时等待时间较长"
+    ],
+    "pricingAdvice": "完全免费，直接使用。目前不需要付费即可使用全部功能包括超长上下文。",
+    "vsAlternatives": [
+      {
+        "rival": "chatgpt",
+        "verdict": "中文长文档选 Kimi（更长上下文+更好中文解析），通用场景选 ChatGPT",
+        "pickThis": "处理中文长文档、需要免费无限使用、中文联网搜索",
+        "pickThat": "英文场景、需要图片生成、需要 GPTs 生态和插件"
+      },
+      {
+        "rival": "deepseek",
+        "verdict": "中文长文档选 Kimi（上下文更长），推理和代码选 DeepSeek（推理更强）",
+        "pickThis": "需要处理超长文档（20 万字+）、需要中文文件解析",
+        "pickThat": "需要深度思考和逻辑推理、需要代码辅助"
+      }
+    ],
+    "quickStart": "1. 访问 kimi.moonshot.cn，用手机号注册\n2. 上传一份 PDF 或 Word 文档（如一份行业研报）\n3. 输入\"帮我总结这份文档的核心观点和数据\"，体验长文档分析能力",
+    "timeToValue": "3 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p008",
+      "p016"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "doubao",
@@ -672,7 +711,47 @@
     "pricing": "免费试用 / Standard $12/月",
     "officialUrl": "https://runway.ml",
     "tutorialId": "t007",
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "AI 视频生成的行业标杆。Gen-3 Alpha 的画面质量和运动连贯性目前最好，适合制作游戏宣传片片段、社媒短视频素材、概念预览动画。",
+    "bestFor": "需要快速产出视频素材的市场/运营团队、游戏宣传片概念预览、社媒短视频批量产出",
+    "notFor": "需要长视频完整叙事（目前单次生成 10 秒）、需要精确控制角色表情和口型的场景",
+    "strengths": [
+      "Gen-3 Alpha 画面质量业界最佳——光影、材质、运动连贯性都领先竞品",
+      "支持图片转视频（Image-to-Video）——上传游戏截图即可生成动态宣传素材",
+      "Motion Brush 精准控制运动区域——指定画面中哪些部分动、怎么动",
+      "一站式工作流——从文字/图片生成到剪辑、字幕、绿幕抠像都在一个平台内完成"
+    ],
+    "limitations": [
+      "单次生成最长 10 秒，长视频需要分段生成后拼接",
+      "人物面部细节和手部还原偶尔不自然",
+      "价格偏高——Standard 套餐 $12/月 仅 625 积分（约 25 个 10 秒视频）",
+      "中文提示词效果不如英文，建议用英文描述画面"
+    ],
+    "pricingAdvice": "免费版有 125 积分体验基本功能。Standard（$12/月）适合偶尔使用。如果市场团队每周产视频素材，Pro（$28/月）的 2250 积分更划算。",
+    "vsAlternatives": [
+      {
+        "rival": "kling",
+        "verdict": "画面质量选 Runway，性价比和中文支持选可灵",
+        "pickThis": "对画面质量要求高、需要 Motion Brush 精准控制、英文场景为主",
+        "pickThat": "预算有限、中文提示词为主、需要更长的单次生成时长"
+      },
+      {
+        "rival": "sora",
+        "verdict": "目前可用性选 Runway（已商用），期待值选 Sora（仍在迭代）",
+        "pickThis": "现在就需要用、需要稳定的商用视频生成工具",
+        "pickThat": "不急于使用、关注 OpenAI 生态、等待 Sora 正式开放"
+      }
+    ],
+    "quickStart": "1. 访问 runwayml.com 注册账号\n2. 选择 Generate → Text/Image to Video\n3. 输入英文画面描述（如\"A spaceship flying through a colorful nebula, cinematic lighting\"）\n4. 等待约 90 秒，预览生成结果",
+    "timeToValue": "5 分钟",
+    "relatedTutorials": [
+      "t010"
+    ],
+    "relatedPrompts": [
+      "p021"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "kling",
@@ -865,7 +944,49 @@
     "pricing": "免费版可用 / Pro $20/月",
     "officialUrl": "https://cursor.com",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "目前最好的 AI 编程 IDE。如果你写代码（哪怕只是数据处理脚本），Cursor 能让你的效率翻倍——它不只是补全，而是理解你的整个项目。",
+    "bestFor": "日常写代码的开发者、需要写数据处理脚本的运营/策划、想用 AI 快速搭建工具和自动化流程的人",
+    "notFor": "完全不涉及代码的纯文案/设计岗位、只需要简单对话式 AI 而不写代码的用户",
+    "strengths": [
+      "Codebase 级理解能力——不只是补全当前行，而是理解你的整个项目结构和上下文",
+      "Tab 智能补全极其流畅，比 GitHub Copilot 更准确、更少废代码",
+      "Composer 模式可以一次性修改多个文件，适合重构和新功能开发",
+      "内置终端 + AI 调试，报错直接让 AI 分析和修复，调试效率极高"
+    ],
+    "limitations": [
+      "免费版额度有限（每月约 2000 次补全），重度使用需要 Pro 订阅",
+      "对非代码文件（如 Markdown、文档）的辅助不如 Claude/ChatGPT 对话模式",
+      "底层模型切换（GPT-4o/Claude）时偶尔出现不一致的代码风格",
+      "大项目（10 万行+）索引较慢，初次打开需要等待"
+    ],
+    "pricingAdvice": "免费版体验 Tab 补全和基础 Chat 功能。如果你每天写 2 小时以上代码，Pro（$20/月）绝对值——单 Composer 功能就能省大量重构时间。",
+    "vsAlternatives": [
+      {
+        "rival": "chatgpt",
+        "verdict": "写代码选 Cursor（项目级理解），问问题选 ChatGPT（通用对话）",
+        "pickThis": "在 IDE 中边写边改、需要项目级代码理解、多文件同时修改",
+        "pickThat": "不写代码只是想问编程问题、需要生成独立代码片段、学习编程概念"
+      },
+      {
+        "rival": "claude",
+        "verdict": "IDE 内编码选 Cursor，长文档分析选 Claude",
+        "pickThis": "写代码、调试、重构——在 IDE 中实时辅助",
+        "pickThat": "分析长文档、写策划方案、非代码类深度写作任务"
+      }
+    ],
+    "quickStart": "1. 访问 cursor.com 下载安装（支持 Mac/Windows/Linux）\n2. 打开你的项目文件夹，等待索引完成\n3. 按 Tab 体验智能补全，按 Cmd+K 试试内联编辑",
+    "timeToValue": "10 分钟",
+    "relatedTutorials": [
+      "t003"
+    ],
+    "relatedPrompts": [
+      "p013"
+    ],
+    "relatedPaths": [
+      "5day-advanced"
+    ],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "lovable",
@@ -913,7 +1034,39 @@
     "pricing": "免费试用 / Pro $10/月",
     "officialUrl": "https://suno.com",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "最好用的 AI 音乐生成工具。输入一段文字描述就能生成完整歌曲（含人声+编曲），游戏 BGM、营销视频配乐、活动主题曲的快速出demo利器。",
+    "bestFor": "需要快速产出游戏 BGM demo、营销视频配乐、活动主题曲的游戏/市场团队，不需要专业音乐制作能力",
+    "notFor": "需要精细混音和母带处理的专业音乐人、需要精确控制每个音轨的场景",
+    "strengths": [
+      "文字描述直接出歌——输入风格+情绪+歌词就能生成完整歌曲，含人声和编曲",
+      "音乐质量显著领先——v4 版本的人声自然度和编曲丰富度远超同类工具",
+      "风格覆盖广——流行、摇滚、电子、古风、二次元等几十种风格都能生成",
+      "生成速度快——一首 3 分钟歌曲约 30 秒出结果，非常适合快速出 demo"
+    ],
+    "limitations": [
+      "中文歌词生成的咬字和韵律有时不够自然，英文明显更好",
+      "免费版每天只有 5 首的额度，做比选需要付费",
+      "不能精确控制编曲细节（如指定某个乐器的演奏方式）",
+      "商用授权需要 Pro 或以上套餐，免费版不能商用"
+    ],
+    "pricingAdvice": "免费版每天 5 首，足够体验和偶尔使用。如果团队需要频繁出 BGM demo，Pro（$10/月）500 首额度很划算。Premier（$30/月）适合每周都要产音乐的团队。",
+    "vsAlternatives": [
+      {
+        "rival": "elevenlabs",
+        "verdict": "做歌曲/BGM 选 Suno，做配音/语音选 ElevenLabs",
+        "pickThis": "需要完整歌曲（人声+编曲）、游戏 BGM、活动配乐",
+        "pickThat": "需要角色配音、多语言语音克隆、游戏角色台词配音"
+      }
+    ],
+    "quickStart": "1. 访问 suno.com 注册账号\n2. 点击 Create，输入歌曲描述（如\"轻快的电子游戏背景音乐，8bit 风格\"）\n3. 30 秒后试听生成结果，不满意可以重新生成",
+    "timeToValue": "2 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p023"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "elevenlabs",
