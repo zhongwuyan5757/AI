@@ -1,0 +1,147 @@
+/**
+ * Batch-13 内容扩展 — 20 Prompt (p166-p185)
+ */
+const fs = require('fs');
+const path = require('path');
+const PROMPTS_PATH = path.join(__dirname, '..', 'data', 'prompts.json');
+
+const promptExtensions = {
+  'p166': { taskCategory: '提效率', taskDesc: '为游戏客服团队生成标准化 FAQ 知识库', whenToUse: '客服体系搭建、新版本FAQ更新、自助客服系统建设', whenNotToUse: '已有完善且维护良好的客服知识库',
+    inputGuide: { required: '常见问题类型、游戏功能列表、客服渠道', optional: '历史工单数据、玩家反馈高频词、竞品FAQ参考', tips: '按问题频率排序，TOP20 问题覆盖 80% 的咨询量' },
+    exampleFull: { input: '类型=账号/充值/游戏Bug/活动规则，功能=全功能，渠道=在线客服+邮件', outputPreview: 'FAQ 分类：\n账号类(15条)：\nQ1: 如何找回密码？\nA: 请在登录界面点击「忘记密码」→ 输入注册邮箱...' },
+    commonFailures: ['FAQ 太笼统不够具体', '更新不及时与游戏版本脱节', '未考虑不同平台的差异'], optimizationTips: ['按工单频率排序优先编写', '配截图和步骤图提升清晰度', '每次版本更新同步更新FAQ'],
+    versions: { lite: '50 条核心 FAQ', advanced: '完整知识库 + 分类体系 + 更新流程 + 自助系统接入方案' },
+    relatedTools: ['claude', 'notion-ai'], relatedTutorials: [], relatedPrompts: ['p101', 'p088'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p167': { taskCategory: '提效率', taskDesc: '自动规划游戏内日常任务和活动的排期', whenToUse: '运营团队日常排期、活动密度优化、自动化运营', whenNotToUse: '活动类型极少不需要复杂排期',
+    inputGuide: { required: '可用活动类型列表、排期周期、运营目标', optional: '历史活动数据、玩家活跃曲线、节日日历', tips: '工作日和周末的活动类型应有差异化' },
+    exampleFull: { input: '活动=[限时副本/签到/PVP赛季/收集活动]，周期=月度，目标=DAU稳定', outputPreview: '月度排期：\nW1: 签到（常驻）+ 限时副本A（3天）\nW2: 签到 + PVP赛季开启 + 收集活动（5天）...' },
+    commonFailures: ['活动间隔太密导致疲劳', '忽略不同活动对资源的影响', '排期与版本更新节奏冲突'], optimizationTips: ['用「高投入/低投入」交替排列', '周末安排重点活动', '每月留 2-3 天「休息期」'],
+    versions: { lite: '月度活动排期表', advanced: '完整排期系统 + 自动化规则 + 数据驱动优化' },
+    relatedTools: ['claude', 'notion-ai'], relatedTutorials: [], relatedPrompts: ['p105', 'p091'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p168': { taskCategory: '提效率', taskDesc: '将会议内容转化为结构化纪要并提取行动项', whenToUse: '日常会议、评审会议、跨部门协调会', whenNotToUse: '非正式讨论不需要记录',
+    inputGuide: { required: '会议主题、参会人员、讨论内容/录音转写', optional: '会议议程、待决事项、上次会议遗留项', tips: '行动项必须有「责任人+截止日期+验收标准」' },
+    exampleFull: { input: '主题=2.0版本评审会，人员=策划/开发/QA负责人，内容=版本进度+风险+决策', outputPreview: '会议纪要：\n决策事项：\n1. 2.0版本延期1周至8/22上线（全体同意）\n行动项：\n□ 张三：完成新手引导优化 @8/15...' },
+    commonFailures: ['纪要冗长重点不突出', '行动项缺少责任人', '会后无人跟踪执行'], optimizationTips: ['用 AI 做会议转写+关键信息提取', '纪要控制在1页以内', '行动项用任务工具跟踪'],
+    versions: { lite: '会议纪要 + 行动项列表', advanced: '完整纪要模板 + 自动化转写 + 行动项追踪 + 决策日志' },
+    relatedTools: ['claude', 'descript'], relatedTutorials: [], relatedPrompts: ['p092', 'p120'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p169': { taskCategory: '做分析', taskDesc: '分析广告素材的投放效果，指导素材迭代', whenToUse: '素材效果复盘、创意方向调整、投放策略优化', whenNotToUse: '投放数据不足（展示<1万）无法分析',
+    inputGuide: { required: '素材数据（展示/点击/安装/CPI）、素材类型、分析目标', optional: '素材标签、行业benchmark、历史趋势', tips: '用「素材标签」（画面元素×文案类型×CTA）做交叉分析' },
+    exampleFull: { input: '数据=20组素材近7天数据，类型=视频+图片，目标=找出最佳素材方向', outputPreview: '分析发现：\n最佳组合：实机战斗画面 + 挑战式文案 + 「免费下载」CTA\nCTR=2.8%（均值1.5%），CPI=$1.8...' },
+    commonFailures: ['样本太小结论不可靠', '只看 CTR 不看后端转化', '未考虑受众差异'], optimizationTips: ['按素材元素打标签做交叉分析', '关注 CTR→CVR→CPI 完整链路', '建立素材数据库积累历史数据'],
+    versions: { lite: '素材效果排名 + TOP3 洞察', advanced: '完整分析报告 + 标签矩阵 + 迭代建议 + 预测模型' },
+    relatedTools: ['claude', 'chatgpt'], relatedTutorials: [], relatedPrompts: ['p094', 'p096'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p170': { taskCategory: '写方案', taskDesc: '设计广告投放的人群定向和分层策略', whenToUse: '新市场投放起步、人群扩展测试、定向效率优化', whenNotToUse: '已有成熟的定向模型且效果稳定',
+    inputGuide: { required: '投放平台、目标市场、游戏类型、预算', optional: '一方数据、竞品定向参考、历史投放数据', tips: '先窄后宽——先用精准定向验证效果，再用 Lookalike 扩展' },
+    exampleFull: { input: '平台=Facebook，市场=东南亚，类型=SLG，预算=$3万/月', outputPreview: '人群策略：\n层1-核心（30%预算）：SLG玩家+策略游戏兴趣\n层2-扩展（40%预算）：Lookalike 1-3%...' },
+    commonFailures: ['定向太宽浪费预算', '受众组重叠竞价', '未排除已安装用户'], optimizationTips: ['设置受众排除避免重叠', '每层受众独立评估 ROI', '定期刷新 Lookalike 种子用户'],
+    versions: { lite: '人群分层 + 定向设置', advanced: '完整定向策略 + 受众矩阵 + 测试计划 + 优化节奏' },
+    relatedTools: ['claude', 'perplexity'], relatedTutorials: [], relatedPrompts: ['p093', 'p095'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p171': { taskCategory: '提效率', taskDesc: '生成游戏本地化翻译质量检查清单', whenToUse: '本地化QA阶段、翻译供应商交付验收、质量标准建设', whenNotToUse: '不涉及多语言的项目',
+    inputGuide: { required: '目标语言、检查范围、质量标准', optional: '已知问题列表、术语表、风格指南', tips: '分「语言质量」和「功能质量」两个维度检查' },
+    exampleFull: { input: '语言=日文，范围=全UI+对话，标准=日本市场发行级别', outputPreview: '检查清单：\n语言质量：\n□ 翻译准确性（与原文含义一致）\n□ 自然度（符合日文表达习惯）...' },
+    commonFailures: ['只检查翻译不检查显示', '检查标准主观不统一', '遗漏上下文一致性'], optimizationTips: ['用母语者做最终审校', '建立常见错误案例库', '自动化检查工具+人工抽查结合'],
+    versions: { lite: '核心检查清单', advanced: '完整QA方案 + 检查表 + 评分标准 + 案例库' },
+    relatedTools: ['claude'], relatedTutorials: [], relatedPrompts: ['p100', 'p099'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p172': { taskCategory: '写方案', taskDesc: '制定海外市场进入策略和发行方案', whenToUse: '游戏出海决策、新市场拓展、海外发行合作评估', whenNotToUse: '只在国内发行不考虑海外',
+    inputGuide: { required: '目标市场、游戏类型、发行模式（自发行/代理）', optional: '预算、本地化准备度、合作方资源', tips: '市场进入策略的核心是「选对市场→做好本地化→找到流量」' },
+    exampleFull: { input: '市场=日本，类型=二次元RPG，模式=自发行，预算=$100万', outputPreview: '市场进入策略：\n阶段1（M1-M2）：市场调研+本地化\n阶段2（M3）：预注册+KOL预热...' },
+    commonFailures: ['低估本地化的深度和成本', '忽略当地法规和支付习惯', '投放策略照搬国内'], optimizationTips: ['找当地合作方降低试错成本', '先软启动（soft launch）验证数据', '投放策略需本地化定制'],
+    versions: { lite: '市场进入框架 + 关键决策点', advanced: '完整发行方案 + 预算明细 + 时间线 + 风险评估 + 合作方案' },
+    relatedTools: ['claude', 'perplexity'], relatedTutorials: [], relatedPrompts: ['p063', 'p102'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p173': { taskCategory: '产内容', taskDesc: '为游戏宣传 PV 编写创意脚本', whenToUse: '新游公布PV、大版本宣传、展会用PV', whenNotToUse: '已有专业PV制作团队且脚本流程成熟',
+    inputGuide: { required: '视频目的、时长、核心信息、风格', optional: '可用素材（CG/实机/混合）、配乐、参考PV', tips: 'PV 的前 5 秒必须抓住注意力' },
+    exampleFull: { input: '目的=新游首曝，时长=90秒，信息=世界观+核心玩法，风格=史诗热血', outputPreview: '0-5s: 黑屏+低沉旁白「在这个被遗忘的世界...」\n5-15s: 壮观世界全景+标题渐显...' },
+    commonFailures: ['信息太多节奏混乱', '风格与游戏调性不符', '结尾没有记忆点'], optimizationTips: ['遵循「悬念→展示→高潮→CTA」结构', '用音乐节奏驱动画面转场', '结尾标题停留至少3秒'],
+    versions: { lite: 'PV 分段大纲', advanced: '完整PV脚本 + 分镜标注 + 音乐节奏图 + 制作指南' },
+    relatedTools: ['sora', 'runway'], relatedTutorials: [], relatedPrompts: ['p045', 'p108'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p174': { taskCategory: '写方案', taskDesc: '策划游戏直播活动的完整方案', whenToUse: '版本发布直播、周年庆直播、电竞赛事直播', whenNotToUse: '不做直播活动的项目',
+    inputGuide: { required: '直播主题、平台、时长、核心目标', optional: '主播/嘉宾、互动预算、历史直播数据', tips: '每15分钟设置一个互动点保持观众留存' },
+    exampleFull: { input: '主题=周年庆，平台=B站，时长=3小时，目标=展示新内容+社区互动', outputPreview: '流程：\n0:00-0:20 开场+年度回顾视频\n0:20-0:50 新版本内容首曝...' },
+    commonFailures: ['节奏拖沓观众流失', '技术问题导致翻车', '互动环节设计不足'], optimizationTips: ['提前彩排技术流程', '准备 30% 额外内容作为备用', '直播同步社交媒体话题运营'],
+    versions: { lite: '直播流程大纲', advanced: '完整策划书 + 分镜脚本 + 技术清单 + 应急预案' },
+    relatedTools: ['claude', 'chatgpt'], relatedTutorials: [], relatedPrompts: ['p046', 'p130'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p175': { taskCategory: '写方案', taskDesc: '设计游戏用户调研问卷', whenToUse: '需求验证、满意度调查、市场摸底', whenNotToUse: '已有成熟调研体系且不需要新问卷',
+    inputGuide: { required: '调研目的、目标用户、预计回收量', optional: '历史调研数据、激励方案、发放渠道', tips: '问卷不超过 15 题，完成时间控制在 5 分钟内' },
+    exampleFull: { input: '目的=新功能优先级排序，用户=活跃玩家，回收=1000份', outputPreview: 'Q1 [单选] 你玩本游戏多久了？\nQ2 [多选] 你最期望新增哪些功能？（最多选3项）...' },
+    commonFailures: ['题目太多完成率低', '选项设计不完整', '引导性提问'], optimizationTips: ['先放简单题再放复杂题', '必须有开放式问题', '清洗无效问卷再分析'],
+    versions: { lite: '10 题快速问卷', advanced: '完整调研方案 + 问卷 + 分析框架 + 报告模板' },
+    relatedTools: ['claude'], relatedTutorials: [], relatedPrompts: ['p058', 'p111'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p176': { taskCategory: '产内容', taskDesc: '生成游戏配音和音效的需求文档', whenToUse: '配音外包需求、内部音效制作需求下达', whenNotToUse: '已有音频总监直接对接的成熟流程',
+    inputGuide: { required: '配音/音效类型、角色/场景列表、风格要求', optional: '参考音频、技术规格、预算限制', tips: '配音需求要标注角色情绪和语气，不只是台词' },
+    exampleFull: { input: '类型=角色配音，角色=5个主角，风格=热血少年漫', outputPreview: '配音需求：\n角色1「炎心」：男/16岁/热血/声线偏高\n  台词1（兴奋）：「就是现在！」\n  台词2（悲伤）...' },
+    commonFailures: ['情绪标注不清配音方向偏差', '技术规格遗漏', '台词量估算不准'], optimizationTips: ['提供角色性格说明和剧情上下文', '标注每句台词的情绪和语速', '预留补录时间'],
+    versions: { lite: '配音需求表', advanced: '完整需求文档 + 角色说明 + 技术规格 + 录制指南' },
+    relatedTools: ['elevenlabs', 'claude'], relatedTutorials: [], relatedPrompts: ['p114', 'p115'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p177': { taskCategory: '产内容', taskDesc: '描述游戏各场景的BGM配乐需求', whenToUse: '音乐制作需求下达、外包沟通、音乐资源规划', whenNotToUse: '使用授权音乐库不需要定制配乐',
+    inputGuide: { required: '场景列表、情绪氛围、音乐风格', optional: '参考曲目、BPM范围、乐器偏好', tips: '用3个情绪关键词描述每个场景的音乐需求' },
+    exampleFull: { input: '场景=主城/战斗/Boss战/剧情过场，风格=东方幻想+管弦', outputPreview: '主城BGM：温暖/安宁/有生活气息\n  参考：可参考《原神》蒙德城BGM的氛围\n  BPM: 80-100...' },
+    commonFailures: ['描述过于抽象', '未考虑音乐循环点', '各场景音乐风格不统一'], optimizationTips: ['用 Suno 生成 demo 辅助沟通', '建立音乐风格板确保一致性', '标注音乐交互需求（过渡/渐变）'],
+    versions: { lite: '各场景配乐需求表', advanced: '完整音乐设计文档 + 风格指南 + 交互需求 + 制作排期' },
+    relatedTools: ['suno', 'claude'], relatedTutorials: [], relatedPrompts: ['p114', 'p115'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p178': { taskCategory: '产内容', taskDesc: '生成项目汇报 PPT 的内容和结构', whenToUse: '定期项目汇报、里程碑展示、跨部门协作汇报', whenNotToUse: '日常邮件/消息沟通能解决的轻量汇报',
+    inputGuide: { required: '汇报主题、受众、核心数据/成果、时长', optional: '汇报模板、历史数据对比、待决策事项', tips: '管理层汇报不超过 15 页，每页 1 个核心信息' },
+    exampleFull: { input: '主题=Q1运营复盘，受众=VP，数据=DAU/收入/留存/投放，时长=10分钟', outputPreview: 'P1: 封面\nP2: 核心结论（一句话+红绿灯指标）\nP3-P5: 关键指标趋势图...' },
+    commonFailures: ['数据堆砌缺少洞察', '篇幅过长', '缺少明确的行动建议'], optimizationTips: ['结论先行，数据支撑', '用 Gamma 快速生成PPT初版', '准备 2 分钟的 elevator pitch'],
+    versions: { lite: 'PPT 大纲 + 核心内容', advanced: '完整PPT内容 + 演讲稿 + 数据可视化建议' },
+    relatedTools: ['gamma', 'claude'], relatedTutorials: [], relatedPrompts: ['p119', 'p120'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p179': { taskCategory: '产内容', taskDesc: '为数据报告设计合适的可视化图表方案', whenToUse: '数据报告制作、仪表盘设计、汇报材料准备', whenNotToUse: '数据量极小不需要可视化',
+    inputGuide: { required: '数据类型、展示目的、受众', optional: '数据样本、工具偏好、品牌色彩', tips: '「一个图表只传达一个信息」是可视化的金科玉律' },
+    exampleFull: { input: '数据=月度运营指标（DAU趋势/留存漏斗/收入构成/渠道分布），目的=月度汇报，受众=管理层', outputPreview: '图表建议：\nDAU趋势 → 折线图（标注版本更新节点）\n留存漏斗 → 漏斗图...' },
+    commonFailures: ['图表类型选择不当', '信息过载', '缺少数据标注和说明'], optimizationTips: ['趋势用折线，占比用饼/环形，对比用柱状', '每个图表加简短标题说明结论', '用 Napkin AI 快速生成图表'],
+    versions: { lite: '图表类型推荐', advanced: '完整可视化方案 + 图表模板 + 色彩规范 + 工具推荐' },
+    relatedTools: ['napkin-ai', 'gamma'], relatedTutorials: [], relatedPrompts: ['p024', 'p120'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p180': { taskCategory: '产内容', taskDesc: '为角色立绘生成 AI 绘图的创意描述', whenToUse: '角色概念探索、美术方向验证、快速迭代', whenNotToUse: '最终商用立绘需要美术精修',
+    inputGuide: { required: '角色设定信息、画风、用途', optional: '参考图、表情/姿势需求', tips: '提示词分层：角色特征→服装→姿势→背景→氛围' },
+    exampleFull: { input: '角色=暗影刺客/男/黑色系/酷帅，画风=韩系半写实，用途=概念探索', outputPreview: '提示词：「1boy, assassin, black hooded cloak, dual daggers, cold sharp eyes, dark purple energy aura, standing on rooftop at night...」' },
+    commonFailures: ['描述不够具体', '多次生成风格不一致', '忽略背景和氛围描述'], optimizationTips: ['固定种子值保持一致性', '建立角色提示词模板', '生成后让美术选择方向再深入'],
+    versions: { lite: '单角色提示词', advanced: '角色提示词集 + 多姿势/表情变体 + 风格指南' },
+    relatedTools: ['midjourney', 'stable-diffusion'], relatedTutorials: [], relatedPrompts: ['p122', 'p121'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p181': { taskCategory: '产内容', taskDesc: '生成游戏场景和地图的概念图 AI 提示词', whenToUse: '场景概念设计、世界观视觉化、地图设计参考', whenNotToUse: '需要精确建筑尺寸的正式场景设计',
+    inputGuide: { required: '场景描述、光影氛围、游戏风格', optional: '参考图、建筑风格、特殊元素', tips: '光影方向是场景氛围的决定因素' },
+    exampleFull: { input: '场景=水下遗迹神殿，氛围=神秘幽蓝，风格=幻想写实', outputPreview: '提示词：「underwater ancient temple ruins, ethereal blue bioluminescent light, coral overgrowth on marble pillars...」' },
+    commonFailures: ['缺少纵深感', '光源描述不明确', '比例失调'], optimizationTips: ['用前中后景分层描述', '明确光源方向和类型', '加入叙事元素增强故事感'],
+    versions: { lite: '3 个场景变体提示词', advanced: '场景提示词库 + 多天气/时间变体 + 世界观场景集' },
+    relatedTools: ['midjourney', 'stable-diffusion'], relatedTutorials: [], relatedPrompts: ['p123', 'p070'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p182': { taskCategory: '写方案', taskDesc: '制定游戏在抖音/TikTok 的运营策略', whenToUse: '开设抖音官方号、短视频营销布局、内容策略制定', whenNotToUse: '不做短视频渠道运营',
+    inputGuide: { required: '游戏类型、账号定位、内容方向、更新频率', optional: '团队资源、预算、竞品账号参考', tips: '抖音的核心是「内容为王」——好内容比投放更重要' },
+    exampleFull: { input: '类型=二次元RPG，定位=官方趣味号，方向=搞笑+攻略+幕后，频率=日更', outputPreview: '内容矩阵：\n搞笑类(40%)：游戏梗图/角色日常/玩家吐槽\n攻略类(30%)：快速技巧/角色对比...' },
+    commonFailures: ['内容太官方缺少趣味性', '更新频率不稳定', '未研究平台算法'], optimizationTips: ['研究平台热门话题和挑战', '前 3 秒是生死线', '每周分析数据调整内容方向'],
+    versions: { lite: '内容方向 + 发布计划', advanced: '完整运营策略 + 内容矩阵 + 模板 + 数据追踪体系' },
+    relatedTools: ['chatgpt', 'capcut-ai'], relatedTutorials: [], relatedPrompts: ['p131', 'p049'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p183': { taskCategory: '写方案', taskDesc: '制定小红书游戏种草内容矩阵', whenToUse: '小红书渠道布局、女性用户获取、品牌口碑建设', whenNotToUse: '目标用户完全不在小红书的游戏',
+    inputGuide: { required: '游戏类型、目标用户画像、内容风格', optional: 'KOL/KOC资源、预算、竞品小红书运营参考', tips: '小红书核心是「种草」——用生活化方式展示游戏魅力' },
+    exampleFull: { input: '类型=二次元RPG，用户=18-28女性，风格=清新分享风', outputPreview: '内容矩阵：\n颜值类：角色截图+调色教程\n攻略类：「3分钟看懂XX系统」图文\n安利类：「入坑一个月的真实感受」...' },
+    commonFailures: ['内容风格与平台调性不符', '太像广告被限流', '忽略SEO标签优化'], optimizationTips: ['用平台热搜关键词做标题', '首图决定点击率', '评论区互动比内容更重要'],
+    versions: { lite: '内容方向 + 10 篇选题', advanced: '完整运营方案 + 内容矩阵 + KOL合作 + 效果追踪' },
+    relatedTools: ['chatgpt', 'canva-ai'], relatedTutorials: [], relatedPrompts: ['p131', 'p133'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p184': { taskCategory: '写方案', taskDesc: '规划游戏版本更新的内容节奏和发布计划', whenToUse: '季度/半年版本规划、版本计划对齐、开发节奏控制', whenNotToUse: '游戏处于开发期还未上线',
+    inputGuide: { required: '当前版本状态、规划周期、可用开发资源', optional: '玩家需求排序、竞品版本节奏、技术限制', tips: '大版本间隔建议 4-6 周，中间用小更新和活动填充' },
+    exampleFull: { input: '当前=1.5版本，周期=6个月，资源=20人研发团队', outputPreview: 'M1: v1.6（新角色+新副本）\nM2: v1.6.1（平衡调整+活动）\nM3: v1.7（新地图+新系统）...' },
+    commonFailures: ['版本太密团队压力大', '版本内容单薄不值得更新', '忽略Bug修复和优化的时间'], optimizationTips: ['大/中/小版本交替发布', '每个版本预留20%时间做优化和修复', '版本计划与营销活动同步规划'],
+    versions: { lite: '版本时间线', advanced: '完整版本规划 + 功能优先级 + 资源分配 + 风险标注' },
+    relatedTools: ['claude', 'notion-ai'], relatedTutorials: [], relatedPrompts: ['p044', 'p105'], relatedPaths: [], lastUpdated: '2025-06-10' },
+  'p185': { taskCategory: '做分析', taskDesc: '评估游戏跨平台移植的可行性和方案', whenToUse: '手游转PC/主机、PC转移动端、多平台同步规划', whenNotToUse: '不考虑多平台的项目',
+    inputGuide: { required: '当前平台、目标平台、游戏类型、技术栈', optional: '移植预算、时间限制、竞品跨平台案例', tips: '移植不是简单的「搬过去」——需要重新设计交互和适配' },
+    exampleFull: { input: '当前=移动端，目标=PC(Steam)，类型=RPG，技术栈=Unity', outputPreview: '评估报告：\n可行性：高（Unity原生支持多平台）\n核心工作：1.PC操控适配（键鼠+手柄）2.UI重排（4:3→16:9）...' },
+    commonFailures: ['低估适配工作量', '忽略不同平台的用户预期差异', '多平台同步更新维护成本高'], optimizationTips: ['优先做「增量市场」大的平台', '找有跨平台经验的外包辅助', '建立统一的多平台CI/CD流水线'],
+    versions: { lite: '可行性评估 + 核心工作量', advanced: '完整评估报告 + 技术方案 + 预算估算 + 时间线 + 风险清单' },
+    relatedTools: ['claude', 'cursor'], relatedTutorials: [], relatedPrompts: ['p043', 'p138'], relatedPaths: [], lastUpdated: '2025-06-10' }
+};
+
+// ========== 执行升级 ==========
+console.log('===== Batch-13 内容升级 =====\n');
+const prompts = JSON.parse(fs.readFileSync(PROMPTS_PATH, 'utf8'));
+let count = 0;
+for (const [id, ext] of Object.entries(promptExtensions)) {
+  const prompt = prompts.find(p => p.id === id);
+  if (!prompt) { console.log(`  ✗ ${id} — 未找到`); continue; }
+  Object.assign(prompt, ext);
+  console.log(`  ✓ ${id} (${prompt.name}) — 添加 13 个扩展字段`);
+  count++;
+}
+fs.writeFileSync(PROMPTS_PATH, JSON.stringify(prompts, null, 2), 'utf8');
+console.log(`\nPrompt 更新完成：${count} 个 Prompt 已升级`);
+const verified = JSON.parse(fs.readFileSync(PROMPTS_PATH, 'utf8'));
+const upgraded = verified.filter(p => !!p.taskCategory).length;
+console.log(`Prompt：${upgraded}/${verified.length} 已升级 (${(upgraded/verified.length*100).toFixed(1)}%)`);
+console.log(`\n✅ Batch-13 数据更新完成`);
