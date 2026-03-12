@@ -623,7 +623,36 @@
     "pricing": "通过 Gemini / AI Studio 使用，含免费额度",
     "officialUrl": "https://deepmind.google/technologies/imagen-4/",
     "tutorialId": null,
-    "editorPick": true
+    "editorPick": true,
+    "verdict": "Google 生态里最强的图像生成器，Gemini 直接调用零门槛",
+    "bestFor": "需要在 Google 生态内快速生成高质量图片的团队",
+    "notFor": "需要精确控制构图细节或风格迁移的专业美术",
+    "strengths": [
+      "与 Gemini 深度集成，对话式生图",
+      "人物面部生成质量高",
+      "支持文字渲染（英文）",
+      "免费额度充裕"
+    ],
+    "limitations": [
+      "中文文字渲染效果一般",
+      "风格控制不如 Midjourney 精细",
+      "独立编辑功能有限",
+      "商用授权需确认"
+    ],
+    "pricingAdvice": "通过 Gemini Advanced 订阅使用性价比最高，AI Studio API 适合批量调用",
+    "vsAlternatives": [
+      "vs Midjourney：Imagen 集成方便但风格控制弱",
+      "vs Stable Diffusion：Imagen 更易用但可定制性低",
+      "vs 即梦 AI：Imagen 全球化更强但中文支持弱"
+    ],
+    "quickStart": "打开 Gemini → 输入\"生成一张…的图片\" → 选择喜欢的结果 → 下载使用",
+    "timeToValue": "1 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p025"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   },
   {
     "id": "ideogram",
@@ -647,7 +676,36 @@
     "pricing": "免费版可用 / Plus $8/月",
     "officialUrl": "https://ideogram.ai",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "文字渲染王者，Logo 和标题类图片的首选工具",
+    "bestFor": "需要在图片中渲染清晰文字的营销和设计场景",
+    "notFor": "不需要文字元素的纯插画或概念原画需求",
+    "strengths": [
+      "文字渲染准确率业界领先",
+      "支持中英文文字嵌入",
+      "Logo 和海报设计效果出色",
+      "免费版额度慷慨"
+    ],
+    "limitations": [
+      "非文字场景不如 Midjourney",
+      "人物生成一致性偶有波动",
+      "社区生态不如主流平台",
+      "高级功能需付费"
+    ],
+    "pricingAdvice": "免费版每天 25 张已够日常使用，高频设计需求上 Plus",
+    "vsAlternatives": [
+      "vs Midjourney：Ideogram 文字渲染强但整体美感弱",
+      "vs Stable Diffusion：Ideogram 文字能力碾压但开放性低",
+      "vs Canva AI：Ideogram 生图更专业但缺乏模板"
+    ],
+    "quickStart": "打开 ideogram.ai → 输入 prompt（含要渲染的文字）→ 选择风格 → 生成并下载",
+    "timeToValue": "2 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p025"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   },
   {
     "id": "jimeng",
@@ -672,7 +730,36 @@
     "pricing": "免费使用 / 会员制",
     "officialUrl": "https://jimeng.jianying.com",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "字节系国产 AI 绘图工具，中文提示词体验最佳",
+    "bestFor": "中文母语用户快速生成二次元、国潮风格图片",
+    "notFor": "需要高度精确控制或写实风格的商业项目",
+    "strengths": [
+      "中文提示词理解最佳",
+      "二次元和国潮风格出色",
+      "免费使用门槛低",
+      "移动端体验友好"
+    ],
+    "limitations": [
+      "写实风格不如 Midjourney",
+      "高分辨率输出受限",
+      "商用授权条款需注意",
+      "海外可用性低"
+    ],
+    "pricingAdvice": "免费版完全够用于日常测试，会员主要解锁更多风格和分辨率",
+    "vsAlternatives": [
+      "vs Midjourney：即梦中文支持强但国际化和风格丰富度弱",
+      "vs Stable Diffusion：即梦更易用但可控性差",
+      "vs Google Imagen：即梦中文更好但技术底层弱"
+    ],
+    "quickStart": "打开即梦 App/网页 → 输入中文描述 → 选择风格 → 生成图片",
+    "timeToValue": "1 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p025"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   },
   {
     "id": "canva-ai",
@@ -760,7 +847,34 @@
     "pricing": "Figma 付费版含 AI 功能",
     "officialUrl": "https://www.figma.com",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "UI/UX 设计师的 AI 助手，在设计工作流内直接使用",
+    "bestFor": "已使用 Figma 的团队，需要 AI 辅助设计的场景",
+    "notFor": "不使用 Figma 或需要独立 AI 绘图能力的场景",
+    "strengths": [
+      "无缝集成 Figma 工作流",
+      "自动布局和组件建议",
+      "支持文本生成和填充",
+      "团队协作设计中 AI 辅助"
+    ],
+    "limitations": [
+      "必须有 Figma 付费订阅",
+      "生图能力不如专业 AI 绘图工具",
+      "功能仍在快速迭代",
+      "AI 功能覆盖面有限"
+    ],
+    "pricingAdvice": "已有 Figma Professional 以上订阅即可使用，无需额外付费",
+    "vsAlternatives": [
+      "vs Midjourney：Figma AI 集成强但生图质量弱",
+      "vs Canva AI：Figma AI 更专业但学习门槛高",
+      "vs Photoshop AI：Figma AI 轻量但编辑能力弱"
+    ],
+    "quickStart": "在 Figma 中选择元素 → 右键使用 AI 功能 → 选择生成/修改操作 → 应用结果",
+    "timeToValue": "3 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   },
   {
     "id": "photoshop-ai",
@@ -784,7 +898,34 @@
     "pricing": "Adobe 订阅 $23/月起",
     "officialUrl": "https://www.adobe.com/products/photoshop.html",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "专业图像编辑的 AI 进化，生成式填充和扩展改变游戏规则",
+    "bestFor": "需要精确编辑和修图的美术、设计团队",
+    "notFor": "只需要简单 AI 生图、不需要精细编辑的场景",
+    "strengths": [
+      "生成式填充效果业界顶级",
+      "与 PS 传统工具无缝结合",
+      "支持图像扩展（outpainting）",
+      "专业级输出质量"
+    ],
+    "limitations": [
+      "需要 Adobe 订阅（价格不低）",
+      "学习曲线较陡",
+      "对硬件有一定要求",
+      "AI 功能需联网使用"
+    ],
+    "pricingAdvice": "已有 Adobe 订阅的团队零成本使用；单独为 AI 功能订阅不划算",
+    "vsAlternatives": [
+      "vs Midjourney：PS AI 编辑能力强但生图创意性弱",
+      "vs Stable Diffusion：PS AI 更易用但灵活性低",
+      "vs Canva AI：PS AI 更专业但门槛高"
+    ],
+    "quickStart": "在 PS 中选区 → 使用生成式填充 → 输入描述 → 选择最佳结果 → 继续编辑",
+    "timeToValue": "5 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   },
   {
     "id": "google-veo",
@@ -810,7 +951,36 @@
     "pricing": "通过 Gemini Ultra 订阅使用 / AI Studio API 按量付费",
     "officialUrl": "https://deepmind.google/technologies/veo/",
     "tutorialId": null,
-    "editorPick": true
+    "editorPick": true,
+    "verdict": "Google 视频生成旗舰，长时长 + 高分辨率 + 物理真实感",
+    "bestFor": "需要高质量、长时长 AI 视频的创意和营销团队",
+    "notFor": "预算有限或只需要简单短视频的场景",
+    "strengths": [
+      "视频质量和一致性极高",
+      "支持较长视频生成",
+      "物理运动真实感强",
+      "与 Google 生态整合"
+    ],
+    "limitations": [
+      "仅通过 Gemini Ultra 或 API 访问",
+      "生成速度较慢",
+      "细粒度控制有限",
+      "价格偏高"
+    ],
+    "pricingAdvice": "Gemini Ultra 用户可直接使用；API 按量付费适合批量但成本需监控",
+    "vsAlternatives": [
+      "vs Sora：Veo 可用性更高但创意控制弱",
+      "vs Runway：Veo 质量高但编辑灵活性低",
+      "vs Pika：Veo 质量强但价格高"
+    ],
+    "quickStart": "打开 Gemini → 输入\"生成一段视频…\" → 等待生成 → 预览并下载",
+    "timeToValue": "3 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p045"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   },
   {
     "id": "sora",
@@ -1031,7 +1201,36 @@
     "pricing": "免费试用 / Standard $8/月",
     "officialUrl": "https://pika.art",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "轻量好用的 AI 视频工具，特效和风格化视频首选",
+    "bestFor": "快速制作风格化短视频、添加 AI 特效",
+    "notFor": "需要长时长、高复杂度叙事视频的制作",
+    "strengths": [
+      "界面简洁上手快",
+      "特效和风格化能力突出",
+      "图生视频效果好",
+      "免费版可体验核心功能"
+    ],
+    "limitations": [
+      "视频时长受限",
+      "复杂场景一致性不稳定",
+      "细节控制不如 Runway",
+      "商用需付费版"
+    ],
+    "pricingAdvice": "免费版适合测试效果，Standard $8/月性价比高",
+    "vsAlternatives": [
+      "vs Runway：Pika 更轻量但专业度弱",
+      "vs Sora：Pika 更易用但质量差距大",
+      "vs 海螺 AI：Pika 特效强但中文支持弱"
+    ],
+    "quickStart": "打开 Pika → 上传图片或输入文字描述 → 选择特效/风格 → 生成视频",
+    "timeToValue": "2 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p045"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   },
   {
     "id": "heygen",
@@ -1113,7 +1312,36 @@
     "pricing": "免费使用 / 付费套餐可选",
     "officialUrl": "https://hailuoai.video",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "MiniMax 出品的国产视频生成利器，中文场景表现优秀",
+    "bestFor": "中文场景短视频快速生成，特别是人物和动作表现",
+    "notFor": "需要精细后期编辑或超长视频的专业制作",
+    "strengths": [
+      "人物动作和表情生成自然",
+      "中文提示词理解准确",
+      "生成速度快",
+      "免费额度充足"
+    ],
+    "limitations": [
+      "视频时长上限较短",
+      "海外访问速度慢",
+      "风格多样性不如国际工具",
+      "高分辨率需等待"
+    ],
+    "pricingAdvice": "免费额度够日常测试，付费套餐适合批量生产",
+    "vsAlternatives": [
+      "vs Sora：海螺免费更友好但质量差距明显",
+      "vs Runway：海螺中文强但编辑功能弱",
+      "vs Pika：海螺人物生成强但特效弱"
+    ],
+    "quickStart": "打开海螺 AI → 输入视频描述（中文）→ 选择参数 → 等待生成 → 下载",
+    "timeToValue": "2 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p045"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   },
   {
     "id": "capcut-ai",
@@ -1138,7 +1366,36 @@
     "pricing": "基础免费 / Pro 版付费",
     "officialUrl": "https://www.capcut.com",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "字节系全能剪辑工具，AI 功能让视频编辑效率翻倍",
+    "bestFor": "快速剪辑、字幕生成、模板化视频制作",
+    "notFor": "需要从零 AI 生成视频内容的场景（它是编辑工具，不是生成工具）",
+    "strengths": [
+      "AI 字幕和翻译极其准确",
+      "海量模板一键套用",
+      "移动端+桌面端+网页三端同步",
+      "基础功能完全免费"
+    ],
+    "limitations": [
+      "AI 生成视频能力不如专业工具",
+      "高级特效需要 Pro",
+      "素材库偏模板化",
+      "导出水印需付费去除"
+    ],
+    "pricingAdvice": "基础版免费且功能丰富，Pro 版适合日常大量视频产出",
+    "vsAlternatives": [
+      "vs Descript：CapCut 模板多但文字编辑弱",
+      "vs Runway：CapCut 剪辑强但 AI 生成弱",
+      "vs 海螺 AI：CapCut 编辑强但生成能力不同赛道"
+    ],
+    "quickStart": "导入素材 → AI 自动字幕 → 选择模板 → 调整剪辑 → 导出",
+    "timeToValue": "5 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p045"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   },
   {
     "id": "descript",
@@ -1162,7 +1419,34 @@
     "pricing": "免费试用 / Pro $24/月",
     "officialUrl": "https://www.descript.com",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "用编辑文档的方式编辑视频，AI 让视频剪辑像改 Word 一样简单",
+    "bestFor": "播客、教程、访谈类视频的快速剪辑和润色",
+    "notFor": "需要复杂特效或高度视觉化的创意视频制作",
+    "strengths": [
+      "文字即视频：编辑转写文本就能剪辑视频",
+      "AI 去除口头禅和停顿",
+      "声音克隆补录音频",
+      "多人协作剪辑"
+    ],
+    "limitations": [
+      "不适合特效密集的视频",
+      "中文转写准确度待提升",
+      "高级功能价格不低",
+      "渲染速度受网络影响"
+    ],
+    "pricingAdvice": "免费版适合体验，制作播客或教程视频建议 Pro $24/月",
+    "vsAlternatives": [
+      "vs CapCut：Descript 文字编辑强但模板少",
+      "vs Runway：Descript 剪辑效率高但生成能力弱",
+      "vs 剪映：Descript 英文体验好但中文弱"
+    ],
+    "quickStart": "上传视频 → AI 自动转写 → 编辑文本（=编辑视频）→ 去除填充词 → 导出",
+    "timeToValue": "5 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   },
   {
     "id": "google-flow",
@@ -1186,7 +1470,36 @@
     "pricing": "通过 Gemini Ultra 订阅使用",
     "officialUrl": "https://flow.google",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "Google 电影级 AI 视频工具，主打叙事连贯性和镜头语言",
+    "bestFor": "需要多镜头叙事连贯性的创意视频和广告",
+    "notFor": "简单短视频或不需要复杂镜头语言的场景",
+    "strengths": [
+      "镜头语言和叙事连贯性强",
+      "支持多镜头脚本生成",
+      "画面质量精美",
+      "与 Google 视频生态整合"
+    ],
+    "limitations": [
+      "需要 Gemini Ultra 订阅",
+      "生成速度较慢",
+      "功能仍在早期迭代",
+      "可用性受地区限制"
+    ],
+    "pricingAdvice": "通过 Gemini Ultra 订阅使用，目前无独立定价",
+    "vsAlternatives": [
+      "vs Sora：Flow 叙事性强但可用性受限",
+      "vs Runway：Flow 连贯性好但编辑灵活性弱",
+      "vs Google Veo：Flow 侧重叙事、Veo 侧重单镜头质量"
+    ],
+    "quickStart": "在 Google AI Studio 中 → 编写多镜头脚本 → 设置参数 → 生成并预览",
+    "timeToValue": "10 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p045"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   },
   {
     "id": "cursor",
@@ -1274,7 +1587,34 @@
     "pricing": "免费版可用 / Pro $20/月",
     "officialUrl": "https://lovable.dev",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "对话式全栈开发平台，不写代码也能做出完整 Web 应用",
+    "bestFor": "快速搭建 MVP、内部工具和原型验证",
+    "notFor": "需要高性能或高度定制化的大型项目",
+    "strengths": [
+      "自然语言描述即可生成完整应用",
+      "前后端+数据库一站式",
+      "支持 Supabase 集成",
+      "可导出源代码继续开发"
+    ],
+    "limitations": [
+      "复杂业务逻辑仍需人工干预",
+      "生成代码质量参差不齐",
+      "对中文支持一般",
+      "免费版功能受限"
+    ],
+    "pricingAdvice": "免费版适合原型验证，Pro $20/月适合持续开发小型项目",
+    "vsAlternatives": [
+      "vs Cursor：Lovable 更无代码但灵活性低",
+      "vs v0：Lovable 全栈但 UI 精细度弱",
+      "vs Bolt.new：Lovable 集成更完整但价格更高"
+    ],
+    "quickStart": "描述你想做的应用 → Lovable 生成代码 → 预览和调整 → 部署上线",
+    "timeToValue": "10 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   },
   {
     "id": "suno",
@@ -1664,7 +2004,36 @@
     "pricing": "免费版可用 / Pro $15/月",
     "officialUrl": "https://www.napkin.ai",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "文字秒变图表，让复杂信息一目了然的可视化神器",
+    "bestFor": "快速将文字内容转化为信息图、流程图、示意图",
+    "notFor": "需要精确数据图表或专业统计可视化的场景",
+    "strengths": [
+      "粘贴文字一键生成图表",
+      "图表风格美观专业",
+      "支持多种图表类型",
+      "导出格式丰富（PNG/SVG/PDF）"
+    ],
+    "limitations": [
+      "数据图表精确度有限",
+      "定制化程度不如专业工具",
+      "中文排版偶有问题",
+      "复杂图表仍需手动调整"
+    ],
+    "pricingAdvice": "免费版满足偶尔使用，频繁制作图表建议 Pro $15/月",
+    "vsAlternatives": [
+      "vs Gamma：Napkin 图表强但演示功能弱",
+      "vs Canva：Napkin 自动化强但模板少",
+      "vs Miro：Napkin AI 生成强但协作弱"
+    ],
+    "quickStart": "粘贴文字内容 → AI 自动分析并建议图表 → 选择样式 → 调整细节 → 导出",
+    "timeToValue": "2 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p024"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   },
   {
     "id": "n8n",
@@ -1688,6 +2057,33 @@
     "pricing": "社区版免费 / Cloud $24/月起",
     "officialUrl": "https://n8n.io",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "开源自动化编排平台，AI 工作流的瑞士军刀",
+    "bestFor": "需要连接多个 AI 工具和服务、构建自动化流程的技术团队",
+    "notFor": "不具备基本技术能力或只需要单一 AI 工具的个人用户",
+    "strengths": [
+      "开源可自部署，数据可控",
+      "500+ 集成节点",
+      "可视化工作流编辑",
+      "AI Agent 节点支持"
+    ],
+    "limitations": [
+      "需要一定技术基础",
+      "自部署需要运维",
+      "社区版功能相对有限",
+      "复杂流程调试不直观"
+    ],
+    "pricingAdvice": "社区版免费且功能完整，Cloud 版 $24/月适合不想运维的团队",
+    "vsAlternatives": [
+      "vs Zapier：n8n 开源可控但易用性弱",
+      "vs Make：n8n 灵活性高但学习曲线陡",
+      "vs Dify：n8n 通用性强但 AI 专注度弱"
+    ],
+    "quickStart": "安装 n8n → 创建工作流 → 拖拽节点连接服务 → 设置触发器 → 激活",
+    "timeToValue": "30 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [],
+    "relatedPaths": [],
+    "lastUpdated": "2025-06-10"
   }
 ]
