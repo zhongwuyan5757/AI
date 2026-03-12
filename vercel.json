@@ -1,4 +1,16 @@
 {
+  "rewrites": [
+    { "source": "/tutorials/:param*", "destination": "/api/og?section=tutorials&param=:param*" },
+    { "source": "/jobs/:param*",      "destination": "/api/og?section=jobs&param=:param*" },
+    { "source": "/path/:param*",      "destination": "/api/og?section=path&param=:param*" },
+    { "source": "/news",              "destination": "/api/og?section=news" },
+    { "source": "/tools",             "destination": "/api/og?section=tools" },
+    { "source": "/models",            "destination": "/api/og?section=models" },
+    { "source": "/prompts",           "destination": "/api/og?section=prompts" },
+    { "source": "/resources",         "destination": "/api/og?section=resources" },
+    { "source": "/diagnosis",         "destination": "/api/og?section=diagnosis" },
+    { "source": "/video-tool",        "destination": "/api/og?section=video-tool" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

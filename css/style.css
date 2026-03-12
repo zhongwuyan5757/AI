@@ -138,11 +138,22 @@ a { text-decoration: none; color: inherit; }
   flex-shrink: 0;
 }
 .logo-icon {
-  width: 36px; height: 36px;
-  background: rgba(105,234,203,0.1);
-  border: 1px solid var(--primary-border);
+  width: 38px; height: 38px;
+  background: rgba(105,234,203,0.06);
+  border: 1px solid rgba(105,234,203,0.18);
   border-radius: var(--radius-sm);
   display: flex; align-items: center; justify-content: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.logo:hover .logo-icon {
+  border-color: rgba(105,234,203,0.35);
+  box-shadow: 0 0 16px rgba(105,234,203,0.12);
+}
+.logo-icon svg {
+  transition: transform 0.3s ease;
+}
+.logo:hover .logo-icon svg {
+  transform: scale(1.08);
 }
 .logo-title {
   font-size: 15px;
@@ -3522,14 +3533,19 @@ footer {
   cursor: pointer;
 }
 .footer-logo-icon {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 10px;
-  background: linear-gradient(145deg, rgba(105,234,203,0.1), rgba(167,139,250,0.08));
-  border: 1px solid rgba(105,234,203,0.15);
+  background: rgba(105,234,203,0.06);
+  border: 1px solid rgba(105,234,203,0.18);
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.footer-logo:hover .footer-logo-icon {
+  border-color: rgba(105,234,203,0.35);
+  box-shadow: 0 0 14px rgba(105,234,203,0.1);
 }
 .footer-logo-text {
   font-size: 17px;
@@ -3795,8 +3811,8 @@ footer {
 
 @media (max-width: 480px) {
   .header-inner { padding: 0 12px; gap: 6px; }
-  .logo-icon { width: 32px; height: 32px; }
-  .logo-icon svg { width: 18px; height: 18px; }
+  .logo-icon { width: 34px; height: 34px; }
+  .logo-icon svg { width: 19px; height: 20px; }
   .logo-title { font-size: 14px; }
   .search-wrap input { padding: 6px 10px 6px 28px; font-size: 12px; }
 
