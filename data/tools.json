@@ -437,7 +437,45 @@
     "pricing": "免费使用",
     "officialUrl": "https://www.doubao.com",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "字节跳动推出的国产全能 AI 助手。中文能力强、响应快、免费无限用，且背靠字节生态可连接豆包 MarsCode（代码）和即梦（图片）。",
+    "bestFor": "需要免费中文对话 AI、偏好快速响应、在字节系产品生态中工作的用户",
+    "notFor": "以英文场景为主、需要超长文档分析（Kimi 更强）、需要深度推理（DeepSeek 更强）",
+    "strengths": [
+      "中文对话流畅自然——日常对话、翻译、写短文案的中文体验舒适",
+      "响应速度极快——同类国产 AI 中响应延迟最低",
+      "完全免费无限制——不限对话次数、不限功能",
+      "字节生态联动——可调用即梦生图、MarsCode 写代码，一站式多能力"
+    ],
+    "limitations": [
+      "深度推理和复杂逻辑分析不如 DeepSeek 和 Claude",
+      "长文档处理能力不如 Kimi（上下文窗口较短）",
+      "方案类长文生成质量不如 Claude/ChatGPT，结构化程度偏低",
+      "英文能力明显弱于 ChatGPT/Claude"
+    ],
+    "pricingAdvice": "完全免费，直接使用。移动端体验尤其好，下载豆包 App 即可。",
+    "vsAlternatives": [
+      {
+        "rival": "deepseek",
+        "verdict": "日常中文对话选豆包（响应快），推理和代码选 DeepSeek（能力强）",
+        "pickThis": "轻量日常对话、需要字节生态联动、偏好移动端体验",
+        "pickThat": "需要深度思考和推理、需要代码辅助、对输出质量要求高"
+      },
+      {
+        "rival": "kimi",
+        "verdict": "快速日常对话选豆包，长文档处理选 Kimi",
+        "pickThis": "短对话、翻译、快速问答、移动端使用",
+        "pickThat": "需要分析超长文档（20万字+）、PDF/Word 文件解析"
+      }
+    ],
+    "quickStart": "1. 下载豆包 App 或访问 doubao.com\n2. 用手机号注册即可使用\n3. 试试日常对话和翻译功能，体验响应速度",
+    "timeToValue": "1 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p001"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "midjourney",
@@ -525,7 +563,41 @@
     "pricing": "开源免费 / 云服务按量付费",
     "officialUrl": "https://stability.ai",
     "tutorialId": "t006",
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "开源 AI 图片生成的基石。完全免费、可本地运行、无内容限制、模型可自由微调——适合有技术能力且需要高度定制化的团队。",
+    "bestFor": "有技术能力的团队（能配置本地环境）、需要训练自定义风格模型（如统一游戏美术风格）、对数据隐私要求极高的项目",
+    "notFor": "不想折腾技术环境的非技术用户、只需要偶尔出几张图（用 Midjourney 更省事）",
+    "strengths": [
+      "完全开源免费——模型权重公开，本地部署零成本（除硬件外）",
+      "定制化能力最强——LoRA/DreamBooth 微调可以训练出专属风格模型",
+      "本地运行数据安全——所有数据不离开你的电脑，适合保密项目",
+      "社区生态丰富——CivitAI 上数万个社区模型和 LoRA 可直接使用"
+    ],
+    "limitations": [
+      "上手门槛高——需要安装 Python 环境、配置 GPU、理解采样器等概念",
+      "需要独立显卡——至少 8GB VRAM（如 RTX 3060），Mac 用户需要额外配置",
+      "默认出图质量不如 Midjourney——需要大量调参和模型选择才能出好图",
+      "没有官方客服和技术支持，遇到问题靠社区和自行排查"
+    ],
+    "pricingAdvice": "模型完全免费。成本只有硬件（需要好显卡）和学习时间。如果没有 GPU，可以使用云端服务（如 RunPod $0.4/小时）。",
+    "vsAlternatives": [
+      {
+        "rival": "midjourney",
+        "verdict": "定制化和免费选 SD，简单好用出图快选 Midjourney",
+        "pickThis": "需要训练自定义模型、本地运行保密、大批量生成不限次数",
+        "pickThat": "不想折腾技术、只需要高质量出图、偶尔使用"
+      }
+    ],
+    "quickStart": "1. 安装方式推荐 ComfyUI 或 Stable Diffusion WebUI（A1111）\n2. 从 CivitAI 下载一个热门 Checkpoint 模型\n3. 输入提示词生成第一张图",
+    "timeToValue": "30-60 分钟（含环境配置）",
+    "relatedTutorials": [
+      "t005"
+    ],
+    "relatedPrompts": [
+      "p025"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "google-imagen",
@@ -764,7 +836,47 @@
     "pricing": "ChatGPT Plus/Pro 订阅可用",
     "officialUrl": "https://sora.com",
     "tutorialId": null,
-    "editorPick": true
+    "editorPick": true,
+    "verdict": "OpenAI 推出的 AI 视频生成工具。画面质量和物理真实性令人惊艳，但目前仅限 ChatGPT Plus/Pro 用户使用，额度有限。",
+    "bestFor": "已订阅 ChatGPT Plus/Pro、追求最高画面质量的概念预览和创意探索、OpenAI 生态用户",
+    "notFor": "需要大量批量生成视频素材（额度太少）、预算有限不想为 ChatGPT Plus 付费的用户",
+    "strengths": [
+      "物理真实性最好——光影、材质、运动物理的拟真度目前最高",
+      "理解复杂场景——对长文本描述的理解能力强，能生成叙事性画面",
+      "与 ChatGPT 深度集成——直接在 ChatGPT 对话中生成视频，工作流顺畅",
+      "持续快速迭代——OpenAI 的更新速度意味着功能会不断增强"
+    ],
+    "limitations": [
+      "额度非常有限——Plus 用户每月仅约 50 个视频额度（720p 5秒）",
+      "生成速度较慢——一段视频可能需要等待数分钟",
+      "需要 ChatGPT Plus（$20/月）才能使用，没有独立免费版",
+      "不支持中文提示词——必须用英文描述"
+    ],
+    "pricingAdvice": "包含在 ChatGPT Plus（$20/月）中，但额度有限。如果你已订阅 Plus 可以直接体验。专门为视频付费不划算——同价位 Runway 额度更多。",
+    "vsAlternatives": [
+      {
+        "rival": "runway",
+        "verdict": "画面拟真选 Sora，量产和工具链选 Runway",
+        "pickThis": "追求最高画面质量、已有 ChatGPT Plus、创意概念探索",
+        "pickThat": "需要大量生成、需要 Motion Brush 等专业工具、独立视频工作流"
+      },
+      {
+        "rival": "kling",
+        "verdict": "英文顶级画质选 Sora，中文日常量产选可灵",
+        "pickThis": "追求物理拟真度、英文提示词、偶尔使用",
+        "pickThat": "中文提示词为主、需要大量生成、预算有限"
+      }
+    ],
+    "quickStart": "1. 订阅 ChatGPT Plus（$20/月）\n2. 在 ChatGPT 中描述你想要的视频画面\n3. 等待生成（约 1-5 分钟），预览和下载",
+    "timeToValue": "5 分钟（已有 Plus 订阅的情况下）",
+    "relatedTutorials": [
+      "t010"
+    ],
+    "relatedPrompts": [
+      "p021"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "runway",
@@ -945,7 +1057,39 @@
     "pricing": "免费试用 / Creator $24/月",
     "officialUrl": "https://www.heygen.com",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "最成熟的 AI 数字人视频工具。上传照片即可生成逼真的\"真人出镜\"视频，适合做产品解说、多语言宣传和虚拟代言人内容。",
+    "bestFor": "需要\"真人出镜\"但没有演员/拍摄条件的团队、多语言视频本地化、数字人直播和虚拟代言人",
+    "notFor": "需要纯 CG/动画风格视频（选 Runway/可灵）、对口型自然度要求极高的正式品牌片",
+    "strengths": [
+      "数字人逼真度业界最高——支持自定义形象，口型和表情同步自然",
+      "多语言一键翻译——一段视频自动翻译成 40+ 种语言并匹配口型",
+      "模板丰富——数百个预设场景和数字人形象，快速出片",
+      "支持自定义数字人——上传 2 分钟视频即可克隆你自己的数字形象"
+    ],
+    "limitations": [
+      "数字人仍有\"恐怖谷\"效应——近距离特写时偶尔不够自然",
+      "动作幅度有限——数字人主要做上半身讲述，全身动作和走动支持有限",
+      "价格偏高——Creator 套餐 $24/月 仅 15 分钟视频额度",
+      "定制数字人需要 Business 套餐（$180/月+），个人用户成本高"
+    ],
+    "pricingAdvice": "免费版 1 分钟视频体验。如果每周需要出 1-2 条产品解说视频，Creator（$24/月）够用。团队需要定制数字人和大量产出需要 Business 套餐。",
+    "vsAlternatives": [
+      {
+        "rival": "runway",
+        "verdict": "数字人视频选 HeyGen，创意画面生成选 Runway",
+        "pickThis": "需要\"真人出镜\"效果、产品解说、多语言翻译视频",
+        "pickThat": "需要纯 AI 生成的创意画面、游戏概念预览"
+      }
+    ],
+    "quickStart": "1. 访问 heygen.com 注册账号\n2. 选择一个预设数字人和模板\n3. 输入解说文案，选择语言，一键生成视频",
+    "timeToValue": "5 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p021"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "hailuo",
@@ -1335,7 +1479,46 @@
     "pricing": "核心功能免费 / Plus 版随 AI Pro/Ultra 订阅",
     "officialUrl": "https://notebooklm.google",
     "tutorialId": null,
-    "editorPick": true
+    "editorPick": true,
+    "verdict": "Google 推出的 AI 研究助手。上传多份资料后自动建立知识库，支持带引用的问答和独家的播客式音频摘要——做深度研究的最佳伴侣。",
+    "bestFor": "需要综合分析多份资料（研报/文章/文档）的研究工作、喜欢用听的方式消化信息、需要带来源引用的分析结论",
+    "notFor": "只需要分析单份文档（用 Claude 就够）、需要实时联网信息（NotebookLM 只分析上传资料）、需要生成创意内容",
+    "strengths": [
+      "多源交叉分析——上传多份资料后自动找出关联、矛盾和关键洞察",
+      "所有回答带引用——点击引用编号直接跳转原文，可验证 AI 是否准确",
+      "独家音频摘要——自动生成播客式双人对话摘要，通勤时可以听研究结论",
+      "完全免费——Google 账号登录即可使用全部功能"
+    ],
+    "limitations": [
+      "只能分析上传的资料——不能联网搜索，信息局限于你提供的文档",
+      "每个笔记本最多 50 个来源——大规模文献综述受限",
+      "不擅长生成创意内容——更适合分析和提炼，不适合写方案",
+      "中文资料处理偶尔不如英文资料精准"
+    ],
+    "pricingAdvice": "完全免费，用 Google 账号登录即可使用全部功能包括音频摘要。",
+    "vsAlternatives": [
+      {
+        "rival": "claude",
+        "verdict": "多源研究选 NotebookLM（带引用+音频），深度写作选 Claude",
+        "pickThis": "需要分析 5+ 份资料并交叉引用、需要音频摘要、需要引用溯源",
+        "pickThat": "需要基于分析结论写完整方案、单份文档深度分析、创意写作"
+      },
+      {
+        "rival": "perplexity",
+        "verdict": "分析已有资料选 NotebookLM，搜索新信息选 Perplexity",
+        "pickThis": "已有一批资料需要综合分析、需要引用溯源、需要音频摘要",
+        "pickThat": "需要实时联网搜索新信息、快速调研、数据验证"
+      }
+    ],
+    "quickStart": "1. 访问 notebooklm.google.com 用 Google 账号登录\n2. 创建新笔记本，上传 3-5 份相关资料（PDF/网页/文本）\n3. 在对话框提问\"这些资料的核心结论是什么？有没有矛盾的地方？\"",
+    "timeToValue": "5 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p022",
+      "p008"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "notion-ai",
@@ -1424,7 +1607,39 @@
     "pricing": "免费版可用 / Plus $10/月",
     "officialUrl": "https://gamma.app",
     "tutorialId": null,
-    "editorPick": false
+    "editorPick": false,
+    "verdict": "最快的 AI 演示文稿工具。输入主题自动生成完整 PPT，含排版、配图和动画——把\"做 PPT\"从 2 小时压缩到 5 分钟。",
+    "bestFor": "经常需要做汇报/提案 PPT 但不擅长排版设计的人、需要快速出方案演示的场景、内部分享和会议展示",
+    "notFor": "需要精细化品牌设计的正式对外演示（如投资人路演 PPT）、需要复杂动画和交互效果的展示",
+    "strengths": [
+      "一句话生成完整 PPT——输入主题自动生成 10-20 页含内容和配图的演示文稿",
+      "排版质量远超 AI 竞品——默认模板就好看，不需要手动调整版式",
+      "支持导入文档——上传 Word/PDF 自动转换为演示文稿",
+      "在线协作——支持团队实时协同编辑和评论"
+    ],
+    "limitations": [
+      "设计风格偏西式——中文排版偶尔不够紧凑",
+      "内容深度有限——AI 生成的内容适合做框架，核心论据需要手动补充",
+      "免费版有 Gamma 水印——正式场合需要付费去除",
+      "导出 PPT 格式后排版可能轻微变形"
+    ],
+    "pricingAdvice": "免费版每月 400 AI 积分（约 10 份 PPT），足够轻度使用。Plus（$10/月）无限 AI 生成 + 去水印，经常做 PPT 的人强烈推荐。",
+    "vsAlternatives": [
+      {
+        "rival": "canva-ai",
+        "verdict": "PPT 选 Gamma（更智能），海报/社媒图选 Canva AI（模板多）",
+        "pickThis": "需要 AI 自动生成完整演示文稿、输入文字出 PPT",
+        "pickThat": "需要海报/Banner/社媒配图、需要更多设计模板"
+      }
+    ],
+    "quickStart": "1. 访问 gamma.app 注册账号\n2. 点击 Create → Presentation\n3. 输入主题（如\"2026年Q2游戏运营复盘\"），等待 30 秒出完整 PPT",
+    "timeToValue": "2 分钟",
+    "relatedTutorials": [],
+    "relatedPrompts": [
+      "p024"
+    ],
+    "relatedPaths": [],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "napkin-ai",
