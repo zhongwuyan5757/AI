@@ -2005,6 +2005,153 @@ function renderNewsCard(n) {
   `;
 }
 
+// ===== 扩展内容渲染辅助函数（工具 + Prompt 共用） =====
+
+function renderExtStrengthsHtml(tool) {
+  const pros = (tool.strengths || []).map(s =>
+    `<li class="ext-pro-item"><i class="fa-solid fa-check"></i><span>${escapeHtml(s)}</span></li>`
+  ).join('');
+  const cons = (tool.limitations || []).map(l =>
+    `<li class="ext-con-item"><i class="fa-solid fa-xmark"></i><span>${escapeHtml(l)}</span></li>`
+  ).join('');
+  return `
+    <div class="ext-pros-cons">
+      <div class="ext-pros"><div class="ext-section-title ext-title-pro"><i class="fa-solid fa-thumbs-up"></i> 强项</div><ul class="ext-list">${pros}</ul></div>
+      <div class="ext-cons"><div class="ext-section-title ext-title-con"><i class="fa-solid fa-triangle-exclamation"></i> 局限</div><ul class="ext-list">${cons}</ul></div>
+    </div>`;
+}
+
+function renderExtComparisonsHtml(tool) {
+  const cards = tool.vsAlternatives.map(function(alt) {
+    var altTool = getToolById(alt.toolId);
+    var altName = altTool ? altTool.name : alt.toolId;
+    return `
+      <div class="ext-vs-card">
+        <div class="ext-vs-header">${escapeHtml(tool.name)} vs ${escapeHtml(altName)}</div>
+        <div class="ext-vs-summary">${escapeHtml(alt.summary)}</div>
+        <div class="ext-vs-picks">
+          <div class="ext-vs-pick ext-vs-this"><span class="ext-vs-label">选 ${escapeHtml(tool.name)}</span><span>${escapeHtml(alt.pickThis)}</span></div>
+          <div class="ext-vs-pick ext-vs-that"><span class="ext-vs-label">选 ${escapeHtml(altName)}</span><span>${escapeHtml(alt.pickThat)}</span></div>
+        </div>
+      </div>`;
+  }).join('');
+  return `
+    <div class="ext-comparisons">
+      <div class="ext-section-title"><i class="fa-solid fa-scale-balanced"></i> 和同类工具对比</div>
+      ${cards}
+    </div>`;
+}
+
+function renderExtRelatedHtml(item) {
+  var links = [];
+  if (item.relatedTutorials && item.relatedTutorials.length) {
+    item.relatedTutorials.forEach(function(id) {
+      var t = getTutorialById(id);
+      var name = t ? t.title : id;
+      links.push(`<a class="ext-related-link" onclick="navigate('tutorials')"><i class="fa-solid fa-graduation-cap"></i> ${escapeHtml(name)}</a>`);
+    });
+  }
+  if (item.relatedPrompts && item.relatedPrompts.length) {
+    item.relatedPrompts.forEach(function(id) {
+      var p = getPromptById(id);
+      var name = p ? p.name : id;
+      links.push(`<a class="ext-related-link" onclick="navigate('prompts')"><i class="fa-solid fa-terminal"></i> ${escapeHtml(name)}</a>`);
+    });
+  }
+  if (item.relatedTools && item.relatedTools.length) {
+    item.relatedTools.forEach(function(id) {
+      var t = getToolById(id);
+      var name = t ? t.name : id;
+      links.push(`<a class="ext-related-link" onclick="navigate('tools')"><i class="fa-solid fa-wrench"></i> ${escapeHtml(name)}</a>`);
+    });
+  }
+  if (!links.length) return '';
+  return `
+    <div class="ext-related">
+      <div class="ext-section-title"><i class="fa-solid fa-link"></i> 相关内容</div>
+      <div class="ext-related-grid">${links.join('')}</div>
+    </div>`;
+}
+
+function renderPromptInputGuideHtml(p) {
+  var rows = Object.entries(p.inputGuide).map(function(entry) {
+    var varName = entry[0], info = entry[1];
+    return `
+      <tr>
+        <td class="ext-guide-var">{${escapeHtml(varName)}}</td>
+        <td>${escapeHtml(info.desc)}</td>
+        <td class="ext-guide-good">${escapeHtml(info.good)}</td>
+        <td class="ext-guide-bad">${escapeHtml(info.bad)}</td>
+      </tr>`;
+  }).join('');
+  return `
+    <div class="ext-input-guide">
+      <div class="ext-section-title"><i class="fa-solid fa-pen-to-square"></i> 变量填写指南</div>
+      <div class="ext-table-wrap">
+        <table class="ext-table">
+          <thead><tr><th>变量</th><th>填什么</th><th>好的填法</th><th>差的填法</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
+function renderPromptExampleFullHtml(p) {
+  var ex = p.exampleFull;
+  return `
+    <div class="ext-example-full">
+      <div class="ext-section-title"><i class="fa-solid fa-flask"></i> 完整使用示例</div>
+      <div class="ext-example-input">
+        <div class="ext-example-label">输入</div>
+        <pre><code>${escapeHtml(ex.input)}</code></pre>
+      </div>
+      <div class="ext-example-output">
+        <div class="ext-example-label">输出摘要 <span class="ext-example-model">${escapeHtml(ex.model)}</span></div>
+        <p>${escapeHtml(ex.outputSummary)}</p>
+      </div>
+    </div>`;
+}
+
+function renderPromptFailuresHtml(p) {
+  var rows = p.commonFailures.map(function(f) {
+    return `
+      <tr>
+        <td class="ext-fail-symptom">${escapeHtml(f.symptom)}</td>
+        <td>${escapeHtml(f.cause)}</td>
+        <td class="ext-fail-fix">${escapeHtml(f.fix)}</td>
+      </tr>`;
+  }).join('');
+  return `
+    <div class="ext-failures">
+      <div class="ext-section-title"><i class="fa-solid fa-bug"></i> 跑出来不对？常见问题排查</div>
+      <div class="ext-table-wrap">
+        <table class="ext-table">
+          <thead><tr><th>症状</th><th>原因</th><th>解决方法</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
+function renderPromptVersionsHtml(p) {
+  var items = Object.entries(p.versions).map(function(entry) {
+    var key = entry[0], v = entry[1];
+    return `
+      <div class="ext-version-card">
+        <div class="ext-version-label">${escapeHtml(v.label)}</div>
+        <div class="ext-version-desc">${escapeHtml(v.desc)}</div>
+        ${v.prompt ? `<button class="copy-btn ext-version-copy" data-copy="${escapeAttr(v.prompt)}"><i class="fa-solid fa-copy"></i> 复制${escapeHtml(v.label)}版</button>` : ''}
+      </div>`;
+  }).join('');
+  return `
+    <div class="ext-versions">
+      <div class="ext-section-title"><i class="fa-solid fa-code-branch"></i> 版本切换</div>
+      <div class="ext-versions-grid">${items}</div>
+    </div>`;
+}
+
+// ===== 工具详情卡片（支持扩展字段 + 向后兼容） =====
+
 function renderToolDetailCard(tool) {
   const tags = jobTagsHtml(tool.suitableJobs);
   const diff = DATA.difficultyMap[tool.difficulty] || { label: tool.difficulty, cssClass: 'beginner' };
@@ -2012,9 +2159,10 @@ function renderToolDetailCard(tool) {
   const isFav = favs.includes(tool.id);
   const icon = getToolIcon(tool.id);
   const catLabel = DATA.toolCategories[tool.category] || tool.category;
+  const hasExt = !!tool.verdict;
 
   return `
-    <div class="tool-detail-card" data-id="${tool.id}" style="--tool-glow:${tool.color}25;--tool-color:${tool.color}">
+    <div class="tool-detail-card${hasExt ? ' tool-extended' : ''}" data-id="${tool.id}" style="--tool-glow:${tool.color}25;--tool-color:${tool.color}">
       <button class="fav-btn ${isFav ? 'favorited' : ''}" onclick="event.stopPropagation();toggleFavorite('${tool.id}',this)" title="${isFav ? '取消收藏' : '收藏'}"><i class="fa-${isFav ? 'solid' : 'regular'} fa-heart"></i></button>
       <div class="tool-detail-header">
         <div class="tool-icon-container">${icon}</div>
@@ -2027,36 +2175,72 @@ function renderToolDetailCard(tool) {
         </div>
         <span class="difficulty ${diff.cssClass}">${diff.label}</span>
       </div>
+      ${hasExt ? `<div class="tool-verdict">${escapeHtml(tool.verdict)}</div>` : ''}
       <div class="tool-detail-desc">${tool.desc}</div>
+      ${tool.bestFor ? `
+      <div class="ext-fit-section">
+        <div class="ext-fit-item ext-fit-yes"><span class="ext-fit-icon">✅</span><span>${escapeHtml(tool.bestFor)}</span></div>
+        <div class="ext-fit-item ext-fit-no"><span class="ext-fit-icon">❌</span><span>${escapeHtml(tool.notFor || '')}</span></div>
+      </div>` : ''}
       <div class="tool-detail-meta">
         <div class="tool-meta-item"><span class="tool-meta-label">定价</span><span class="tool-meta-value">${tool.pricing}</span></div>
         <div class="tool-meta-item"><span class="tool-meta-label">擅长解决</span><span class="tool-meta-value">${tool.problemsSolved.join('、')}</span></div>
       </div>
+      ${tool.strengths ? renderExtStrengthsHtml(tool) : ''}
+      ${tool.pricingAdvice ? `<div class="ext-pricing-advice"><i class="fa-solid fa-coins"></i><span>${escapeHtml(tool.pricingAdvice)}</span></div>` : ''}
+      ${tool.vsAlternatives && tool.vsAlternatives.length ? renderExtComparisonsHtml(tool) : ''}
+      ${tool.quickStart ? `
+      <div class="ext-quickstart">
+        <div class="ext-section-title"><i class="fa-solid fa-rocket"></i> 快速上手</div>
+        <div class="ext-quickstart-text">${escapeHtml(tool.quickStart)}</div>
+        ${tool.timeToValue ? `<div class="ext-time-value"><i class="fa-solid fa-clock"></i> ${escapeHtml(tool.timeToValue)}</div>` : ''}
+      </div>` : ''}
+      ${renderExtRelatedHtml(tool)}
       <div class="tool-actions">
         <a href="${tool.officialUrl}" target="_blank" rel="noopener noreferrer" class="dl-btn primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> 访问官网</a>
         ${tool.tutorialId ? `<a href="#tutorials" class="dl-btn secondary" onclick="setTimeout(()=>navigate('tutorials'),10)"><i class="fa-solid fa-graduation-cap"></i> 查看教程</a>` : ''}
       </div>
+      ${tool.lastUpdated ? `<div class="ext-updated"><i class="fa-solid fa-calendar-check"></i> 更新于 ${tool.lastUpdated}</div>` : ''}
     </div>
   `;
 }
 
+// ===== Prompt 卡片（支持扩展字段 + 向后兼容） =====
+
 function renderPromptCard(p) {
   const tags = jobTagsHtml(p.targetJobs);
   const highlightedPrompt = escapeHtml(p.prompt).replace(/\{([^}]+)\}/g, '<span class="prompt-variable">{$1}</span>');
+  const hasExt = !!p.taskCategory;
+
   return `
-    <div class="prompt-card" data-id="${p.id}">
+    <div class="prompt-card${hasExt ? ' prompt-extended' : ''}" data-id="${p.id}">
       <div class="prompt-header">
         <h3 class="prompt-name">${p.name}</h3>
         <div class="prompt-scenario-tag">${p.scenario}</div>
       </div>
+      ${hasExt && p.taskDesc ? `<div class="prompt-task-desc">${escapeHtml(p.taskDesc)}</div>` : ''}
       <div class="prompt-tags">${tags}</div>
       ${p.recommendedModel ? `<div class="prompt-model-badge"><i class="fa-solid fa-robot"></i> 推荐模型：${p.recommendedModel}</div>` : ''}
+      ${p.whenToUse ? `
+      <div class="ext-when-section">
+        <div class="ext-when-item ext-when-yes"><span class="ext-when-icon">✅</span><span><strong>什么时候用</strong>：${escapeHtml(p.whenToUse)}</span></div>
+        <div class="ext-when-item ext-when-no"><span class="ext-when-icon">❌</span><span><strong>什么时候别用</strong>：${escapeHtml(p.whenNotToUse || '')}</span></div>
+      </div>` : ''}
       <div class="prompt-content">
         <pre><code>${highlightedPrompt}</code></pre>
         <button class="copy-btn" data-copy="${escapeAttr(p.prompt)}"><i class="fa-solid fa-copy"></i> 复制</button>
       </div>
-      ${p.example ? `<div class="prompt-example"><strong>💡 使用示例：</strong>${escapeHtml(p.example)}</div>` : ''}
+      ${p.inputGuide ? renderPromptInputGuideHtml(p) : ''}
+      ${p.exampleFull ? renderPromptExampleFullHtml(p) : (p.example ? `<div class="prompt-example"><strong>💡 使用示例：</strong>${escapeHtml(p.example)}</div>` : '')}
+      ${p.commonFailures && p.commonFailures.length ? renderPromptFailuresHtml(p) : ''}
+      ${p.optimizationTips && p.optimizationTips.length ? `
+      <div class="ext-tips">
+        <div class="ext-section-title"><i class="fa-solid fa-lightbulb"></i> 效果优化技巧</div>
+        <ol class="ext-tips-list">${p.optimizationTips.map(function(t) { return '<li>' + escapeHtml(t) + '</li>'; }).join('')}</ol>
+      </div>` : ''}
+      ${p.versions ? renderPromptVersionsHtml(p) : ''}
       ${p.notes ? `<div class="prompt-notes"><i class="fa-solid fa-circle-info"></i> ${p.notes}</div>` : ''}
+      ${renderExtRelatedHtml(p)}
     </div>
   `;
 }

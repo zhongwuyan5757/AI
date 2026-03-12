@@ -5847,3 +5847,413 @@ footer {
   .column-tut-item-title { white-space: normal; }
   .column-nav-bar { flex-direction: column; }
 }
+
+/* ===========================
+   扩展内容系统（决策型工具页 + 任务型 Prompt 页）
+   用于 batch-1 升级页面，非升级页面不受影响
+=========================== */
+
+/* --- 通用区块标题 --- */
+.ext-section-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.ext-section-title i { font-size: 11px; opacity: 0.7; }
+.ext-title-pro { color: var(--accent-green); }
+.ext-title-con { color: var(--accent-orange); }
+
+/* --- 一句话判断（Verdict） --- */
+.tool-verdict {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.65;
+  padding: 14px 16px;
+  background: var(--gradient-subtle);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-sm, 8px);
+  position: relative;
+  z-index: 2;
+}
+
+/* --- 适合 / 不适合 --- */
+.ext-fit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+.ext-fit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm, 8px);
+}
+.ext-fit-icon { flex-shrink: 0; font-size: 13px; }
+.ext-fit-yes { background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.12); }
+.ext-fit-no  { background: rgba(239, 68, 68, 0.05);  border: 1px solid rgba(239, 68, 68, 0.10); }
+
+/* --- 强项 / 局限 双栏 --- */
+.ext-pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+.ext-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ext-pro-item, .ext-con-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+.ext-pro-item i { color: var(--accent-green); font-size: 10px; margin-top: 3px; flex-shrink: 0; }
+.ext-con-item i { color: var(--accent-orange); font-size: 10px; margin-top: 3px; flex-shrink: 0; }
+
+/* --- 价格建议 --- */
+.ext-pricing-advice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  padding: 12px 14px;
+  background: rgba(245, 158, 11, 0.05);
+  border: 1px solid rgba(245, 158, 11, 0.12);
+  border-radius: var(--radius-sm, 8px);
+  position: relative;
+  z-index: 2;
+}
+.ext-pricing-advice i { color: var(--accent-orange); margin-top: 2px; flex-shrink: 0; }
+
+/* --- 工具对比卡片 --- */
+.ext-comparisons {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ext-vs-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm, 8px);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ext-vs-header {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.ext-vs-summary {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+.ext-vs-picks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.ext-vs-pick {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.ext-vs-this { background: rgba(105, 234, 203, 0.05); border: 1px solid rgba(105, 234, 203, 0.10); }
+.ext-vs-that { background: rgba(167, 139, 250, 0.05); border: 1px solid rgba(167, 139, 250, 0.10); }
+.ext-vs-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+/* --- 快速上手 --- */
+.ext-quickstart {
+  position: relative;
+  z-index: 2;
+}
+.ext-quickstart-text {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.ext-time-value {
+  font-size: 11px;
+  color: var(--accent-green);
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* --- 相关内容链接 --- */
+.ext-related {
+  position: relative;
+  z-index: 2;
+}
+.ext-related-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ext-related-link {
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill, 99px);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+.ext-related-link:hover {
+  background: var(--primary-dim);
+  border-color: var(--primary-border);
+  color: var(--primary);
+}
+.ext-related-link i { font-size: 10px; }
+
+/* --- 更新时间 --- */
+.ext-updated {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-top: 4px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Prompt 扩展：任务描述 --- */
+.prompt-task-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* --- 什么时候用 / 别用 --- */
+.ext-when-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ext-when-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm, 8px);
+}
+.ext-when-icon { flex-shrink: 0; font-size: 13px; }
+.ext-when-yes { background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.12); }
+.ext-when-no  { background: rgba(239, 68, 68, 0.05);  border: 1px solid rgba(239, 68, 68, 0.10); }
+.ext-when-item strong { color: var(--text-primary); font-weight: 600; }
+
+/* --- 变量填写指南 & 通用表格 --- */
+.ext-input-guide, .ext-failures {
+  position: relative;
+  z-index: 2;
+}
+.ext-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.ext-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+.ext-table thead th {
+  text-align: left;
+  padding: 8px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--border-bright);
+  white-space: nowrap;
+}
+.ext-table tbody td {
+  padding: 8px 10px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.ext-guide-var {
+  font-family: var(--mono, monospace);
+  font-size: 11px;
+  color: var(--primary);
+  white-space: nowrap;
+  font-weight: 600;
+}
+.ext-guide-good { color: var(--accent-green); }
+.ext-guide-bad  { color: var(--accent-red); opacity: 0.7; }
+.ext-fail-symptom { color: var(--accent-orange); font-weight: 500; }
+.ext-fail-fix { color: var(--accent-green); }
+
+/* --- 完整示例 --- */
+.ext-example-full {
+  position: relative;
+  z-index: 2;
+}
+.ext-example-input, .ext-example-output {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: var(--radius-sm, 8px);
+}
+.ext-example-input {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+}
+.ext-example-input pre {
+  font-family: var(--mono, monospace);
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+}
+.ext-example-output {
+  background: rgba(105, 234, 203, 0.04);
+  border: 1px solid rgba(105, 234, 203, 0.10);
+}
+.ext-example-output p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+.ext-example-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ext-example-model {
+  font-size: 9px;
+  padding: 1px 7px;
+  border-radius: var(--radius-pill, 99px);
+  background: var(--primary-dim);
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* --- 优化技巧 --- */
+.ext-tips {
+  position: relative;
+  z-index: 2;
+}
+.ext-tips-list {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ext-tips-list li {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.ext-tips-list li::marker { color: var(--primary); }
+
+/* --- 版本切换 --- */
+.ext-versions {
+  position: relative;
+  z-index: 2;
+}
+.ext-versions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+.ext-version-card {
+  padding: 12px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm, 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ext-version-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.ext-version-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.ext-version-copy {
+  position: static !important;
+  margin-top: 4px;
+  align-self: flex-start;
+  font-size: 10.5px !important;
+  padding: 3px 10px !important;
+}
+
+/* --- 响应式：扩展内容移动端适配 --- */
+@media (max-width: 768px) {
+  .ext-pros-cons { grid-template-columns: 1fr; }
+  .ext-vs-picks { grid-template-columns: 1fr; }
+  .ext-versions-grid { grid-template-columns: 1fr; }
+  .tool-verdict { font-size: 13px; }
+  .ext-table { font-size: 11px; }
+  .ext-table thead th { font-size: 9px; }
+}

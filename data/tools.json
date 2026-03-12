@@ -12,7 +12,24 @@
     "pricing": "免费版可用 / Plus $20/月 / Pro $200/月",
     "officialUrl": "https://chat.openai.com",
     "tutorialId": "t001",
-    "editorPick": true
+    "editorPick": true,
+    "verdict": "大多数人的第一个 AI 工具。如果你只能选一个，选它不会错——但处理超长文档或深度分析时，Claude 更强。",
+    "bestFor": "需要一个万能型 AI 助手处理日常工作的人",
+    "notFor": "需要处理大量长文档（超过 5 万字）或需要极致写作质量的用户",
+    "strengths": ["生态最完整：GPTs 商店、插件、API、移动端全覆盖", "多模态最全面：文字、图片、文件、语音、视频一站式处理", "GPT Image 1.5 的文字渲染能力业界第一，做活动海报、社媒配图直接出成品", "免费版 GPT-5 已经能覆盖 80% 的日常需求"],
+    "limitations": ["长文档分析不如 Claude——上下文窗口虽大，但真实利用率低于标称值", "深度结构化写作略逊于 Claude，策划方案类输出偶尔会头重脚轻", "Pro 版 $200/月，重度使用者成本偏高"],
+    "pricingAdvice": "大多数用户 Plus（$20/月）就够了。免费版限制了 GPT-5 的使用次数但日常够用。只有需要大量使用 GPT-5.4 推理和 o3 模型的重度用户才需要 Pro。建议先用免费版 1 周，觉得次数不够再升 Plus。",
+    "vsAlternatives": [
+      {"toolId": "claude", "summary": "长文档和深度写作选 Claude，通用万能选 ChatGPT", "pickThis": "需要多模态（图片生成/语音/视频）、GPTs 生态、或团队已在用 OpenAI API", "pickThat": "需要处理超长文档（10 万字+）、写高质量策划方案、或需要 Projects 知识库管理"},
+      {"toolId": "gemini", "summary": "Google 生态用户选 Gemini，其他选 ChatGPT", "pickThis": "不依赖 Google 生态、需要更成熟的插件和 GPTs 商店", "pickThat": "重度 Google Workspace 用户、需要 Deep Research 深度分析功能"},
+      {"toolId": "deepseek", "summary": "预算有限选 DeepSeek（免费），功能全面选 ChatGPT", "pickThis": "需要图片生成、多模态、成熟生态", "pickThat": "预算为零、主要用中文、对隐私要求高（支持私有部署）"}
+    ],
+    "quickStart": "注册 → 选 GPT-5 模型 → 输入你的第一个工作任务 → 30 秒出结果",
+    "timeToValue": "5 分钟内产出第一份可用内容",
+    "relatedTutorials": ["t001", "t004"],
+    "relatedPrompts": ["p001", "p002", "p005", "p009"],
+    "relatedPaths": ["ops-ai-path"],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "claude",
@@ -27,7 +44,23 @@
     "pricing": "免费版可用 / Pro $20/月",
     "officialUrl": "https://claude.ai",
     "tutorialId": "t002",
-    "editorPick": true
+    "editorPick": true,
+    "verdict": "写长方案、分析大文档、处理复杂推理任务的首选。如果你的工作以写策划方案和分析长文档为主，Claude 比 ChatGPT 更适合你。",
+    "bestFor": "需要写高质量策划方案、分析超长文档、或处理复杂逻辑推理的用户",
+    "notFor": "主要需要图片生成、语音交互、或依赖插件生态的用户",
+    "strengths": ["长文档处理真正可用：200K 上下文窗口不丢信息，10 万字文档一次性分析", "结构化写作最强：128K 最大输出，一次生成完整策划方案不截断", "推理能力顶尖：Opus 4.6 SWE-bench 79.2%，复杂逻辑任务首选", "Projects 知识库：上传公司文档建立团队专属知识库，输出贴合公司风格"],
+    "limitations": ["无内置图片生成——需要做图搭配 Midjourney 或 ChatGPT GPT Image", "插件生态弱于 ChatGPT，没有 GPTs 商店", "联网搜索能力弱于 Perplexity，实时信息获取不是强项"],
+    "pricingAdvice": "免费版 Sonnet 4.6 已经很强，日常对话和短文档够用。如果你每天写策划方案或分析长文档，Pro（$20/月）的 Opus 4.6 物超所值——同价位下写作质量高于 ChatGPT Plus。",
+    "vsAlternatives": [
+      {"toolId": "chatgpt", "summary": "长文档和深度写作选 Claude，通用万能选 ChatGPT", "pickThis": "主要写策划方案、分析长文档、需要 Projects 知识库", "pickThat": "需要图片生成、语音交互、GPTs 生态、或团队已在用 OpenAI API"},
+      {"toolId": "deepseek", "summary": "免费选 DeepSeek，写作质量选 Claude", "pickThis": "对方案质量要求高、需要处理长文档、愿意付费", "pickThat": "预算为零、主要做中文短文本任务、对数据隐私要求高"}
+    ],
+    "quickStart": "注册 → 在对话框输入任务 → 选 Sonnet 4.6 → 30 秒出结果",
+    "timeToValue": "5 分钟内产出第一份结构化方案",
+    "relatedTutorials": ["t002"],
+    "relatedPrompts": ["p001", "p004", "p007"],
+    "relatedPaths": ["ops-ai-path"],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "gemini",
@@ -117,7 +150,23 @@
     "pricing": "付费 $10/月起",
     "officialUrl": "https://www.midjourney.com",
     "tutorialId": "t005",
-    "editorPick": true
+    "editorPick": true,
+    "verdict": "目前出图美学质量最高的 AI 图像工具。需要高质量概念图和风格探索选 Midjourney，需要精确中文文字渲染选 GPT Image。",
+    "bestFor": "需要高美学质量概念图、活动视觉参考、创意风格探索的设计师和品牌经理",
+    "notFor": "需要精确中文文字渲染、批量快速出图、或不愿学习 Prompt 语法的用户",
+    "strengths": ["美学质量业界最高：风格化、氛围感、构图能力无人能及", "V7 版本真实感大幅提升，角色一致性和手部细节显著改善", "适合做活动 KV 参考图、角色概念设计、场景氛围图", "社区生态丰富：大量风格参考和 Prompt 模板可直接复用"],
+    "limitations": ["中文文字渲染差——活动海报上的中文容易出错，不如 GPT Image 1.5", "学习曲线较陡：Prompt 写法有独特语法（--ar、--v、--s 等参数）", "无免费版，最低 $10/月起步", "不支持精确控制构图和元素位置"],
+    "pricingAdvice": "Basic（$10/月）有 200 次快速生成，偶尔用够了。Standard（$30/月）有 15 小时快速生成 + 无限慢速，是设计师日常使用的最佳档位。Pro（$60/月）只在需要隐私模式或大量并发时才需要。",
+    "vsAlternatives": [
+      {"toolId": "chatgpt", "summary": "文字渲染选 GPT Image，美学质量选 Midjourney", "pickThis": "需要高美学质量的概念图、KV 参考、风格探索", "pickThat": "需要精确的文字渲染（活动海报带文字）、或想用一个工具搞定文字+图片"},
+      {"toolId": "stable-diffusion", "summary": "定制化和批量选 SD，即拿即用选 Midjourney", "pickThis": "不想折腾部署、追求出图美学质量、接受月费", "pickThat": "需要本地部署保护隐私、批量流水线出图、深度定制模型风格"}
+    ],
+    "quickStart": "注册 → 进入创建页面 → 输入英文描述 → 选择风格 → 60 秒出图",
+    "timeToValue": "3 分钟内获得第一张可用的概念图",
+    "relatedTutorials": ["t005"],
+    "relatedPrompts": [],
+    "relatedPaths": ["content-path"],
+    "lastUpdated": "2026-03-12"
   },
   {
     "id": "stable-diffusion",
