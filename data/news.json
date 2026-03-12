@@ -1,5 +1,714 @@
 [
   {
+    "id": "auto-mmmvcris",
+    "title": "清华学霸团队打造“AI工程师”，帮2000万工程师打造AI助手｜水下项目",
+    "url": "https://36kr.com/p/3719341175649922?f=rss",
+    "source": "36氪",
+    "date": "2026-03-12",
+    "summary": "2026年，全球AI产业迎来关键转折点，大模型狂热逐渐退潮，核心叙事从技术军备竞赛转向商业化兑现。\n在这样的周期里，AI+CAD平台公司「品览科技」选择了一条相对另类的发展路径：没有追逐大模型风口，没有做C端爆款，也不想讲AI替代人力的故事，而是选择钻进图纸堆，切入工业设计这个不太“性感”的细分领域。\n品览科技创立于2018年，专注于AI+CAD核⼼平台的研发与产业化应用，为AEC⼯程设计和MFG⼯业设计⾏业提供AI设计整体解决⽅案。创始人李一帆毕业于清华⼤学电⼦⼯程系，后在卡耐基梅隆大学攻读硕士学位。在硅谷创业期间，曾参与多个创业项目，担任MailTime创始团队成员与Caicloud⾏业A",
+    "category": "model-update",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": true,
+    "why_it_matters": "创意生产工具直接影响内容效率",
+    "fit_for": [
+      "设计",
+      "策划",
+      "投放"
+    ],
+    "recommended_path": "",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmmvcrit",
+    "title": "自研全球最小行星滚柱丝杠，量产价格降至百元级，「诺仕机器人」完成超亿元A轮融资｜水下项目",
+    "url": "https://36kr.com/p/3719335512585609?f=rss",
+    "source": "36氪",
+    "date": "2026-03-12",
+    "summary": "36氪获悉，具身智能核心部件供应商「诺仕机器人」（下简称“诺仕”）近日宣布完成超亿元A轮融资。本轮融资由上海半导体装备材料产业基金/浦东科创领投，联想创投、琥珀资本跟投，汽车零部件上市公司鹏翎股份、克来机电战略入股，老股东上汽创投继续加注。诚一资本持续担任公司长期财务顾问。资金将主要用于产能提升、产品研发与流动资金补充。\n诺仕机器人成立于2023年7月，专注于微型行星滚柱丝杠及基于此的微型线性执行器（电缸）的设计、研发与制造，致力于成为汽车、人形机器人及工业领域高精度传动与运动控制核心供应商。\n目前，诺仕自研的直径仅1.5mm、螺母直径5.5mm的全球最小行星滚柱丝杠，已突破C5级精度丝杠（定",
+    "category": "tools-workflow",
+    "tags": [],
+    "relatedJobs": [
+      "graphic-designer",
+      "video-designer",
+      "product-ops"
+    ],
+    "isHot": true,
+    "why_it_matters": "影响行业资本走向与竞争格局",
+    "fit_for": [
+      "设计"
+    ],
+    "recommended_path": "",
+    "editor_note": "大额资本事件，反映行业信心方向"
+  },
+  {
+    "id": "auto-mmmvcriu",
+    "title": "与拓竹错位竞争，耗材比友商便宜10倍，深圳新兴3D打印公司拿下超470万美元众筹 | 产品观察",
+    "url": "https://36kr.com/p/3718647645533569?f=rss",
+    "source": "36氪",
+    "date": "2026-03-12",
+    "summary": "作者 | 张子怡\n编辑 | 袁斯来\n在拓竹、智能派、创想三维等公司将消费级3D打印机降至主流千元入门门槛，销量占据全球超九成消费级3D打印机市场的当下，新入局者似乎已经没有太多想象空间。\n然而，今年年初Kickstarter众筹平台一位新玩家仍然突围：碳索者三号（FibreSeeker 3）的全球首款消费级连续纤维3D打印机，以不到3000美元的价格，获得超470万美元的众筹金额。\n碳索者3号打印的不是塑料手办，而是强度媲美铝合金的碳纤维结构件。它是一家新兴公司阿奈索三维推出的新品牌——碳索科技。\n碳纤维是多数消费级3D打印企业并未涉足的领域，阿奈索三维则是全球少有的能研发生产连续纤维3D打印",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [
+      "product-ops",
+      "ad-optimizer",
+      "publishing-manager"
+    ],
+    "isHot": true,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "品牌"
+    ],
+    "recommended_path": "7day-beginner",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmmvcrix",
+    "title": "菜鸟将在海外部署大规模机器人仓储网络",
+    "url": "https://36kr.com/newsflashes/3719354236843401?f=rss",
+    "source": "36氪",
+    "date": "2026-03-12",
+    "summary": "36氪获悉，2026年菜鸟将在中国香港、美国及欧洲等关键市场建成大规模的机器人仓库网络，用来支持全球多家跨境电商平台以及跨境商家的本地发货与配送。仓内主要使用菜鸟自研的新一代仓储机器人及AI调度系统。与传统自动化仓不同的是，新机器人仓的存储密度更高，同时作业时效也将得到提升。",
+    "category": "tools-workflow",
+    "tags": [],
+    "relatedJobs": [
+      "graphic-designer",
+      "video-designer",
+      "product-ops"
+    ],
+    "isHot": true,
+    "why_it_matters": "自动化趋势将重塑岗位协作模式",
+    "fit_for": [
+      "策划",
+      "品牌",
+      "发行"
+    ],
+    "recommended_path": "5day-efficiency",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmmvcriy",
+    "title": "Anthropic正与黑石及其他私募股权公司洽谈组建人工智能咨询合资企业",
+    "url": "https://36kr.com/newsflashes/3719326758385029?f=rss",
+    "source": "36氪",
+    "date": "2026-03-12",
+    "summary": "Anthropic正与黑石及其他私募股权公司洽谈组建人工智能咨询合资企业。（新浪财经）",
+    "category": "industry-product",
+    "tags": [
+      "Anthropic"
+    ],
+    "relatedJobs": [
+      "product-ops",
+      "ad-optimizer",
+      "publishing-manager"
+    ],
+    "isHot": true,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmmvcriz",
+    "title": "具身机器人开始走进仓库，去年我国物流技术有效助力降成本",
+    "url": "https://36kr.com/newsflashes/3719315576386948?f=rss",
+    "source": "36氪",
+    "date": "2026-03-12",
+    "summary": "中国物流与采购联合会今天（12日）在浙江湖州举办的2026物流技术大会上正式发布《中国物流技术发展报告（2025）》。根据报告，2025年我国物流技术发展热点频现，新型物流装备实现规模化应用，特别是“人工智能+”深度融入物流，在提升物流运行效率的同时，有效助力降低全社会物流成本。（央视新闻）",
+    "category": "model-update",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": true,
+    "why_it_matters": "新工具/模型可能改变现有工作流",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "5day-efficiency",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmmvcrj0",
+    "title": "曝千问郁博文加入字节跳动",
+    "url": "https://36kr.com/newsflashes/3719293584749959?f=rss",
+    "source": "36氪",
+    "date": "2026-03-12",
+    "summary": "据媒体报道，原阿里巴巴通义实验室Qwen（千问）大模型后训练负责人郁博文已正式加入字节跳动，担任Seed团队视觉模型与多模态交互团队后训练负责人。这是继今年3月初郁博文从阿里离职后，其职业动向的首次明确。就上述信息向官方求证，截至发稿，字节暂无回应。（新浪科技）",
+    "category": "model-update",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "里程碑事件，值得重点关注"
+  },
+  {
+    "id": "auto-mmmvcrj1",
+    "title": "百度智能云发布全球首款手机龙虾应用",
+    "url": "https://36kr.com/newsflashes/3719285232318083?f=rss",
+    "source": "36氪",
+    "date": "2026-03-12",
+    "summary": "36氪获悉，百度智能云发布全球首款手机龙虾应用，通过“红手指Operator”即可实现手机“养虾”。百度表示，这款应用能带来OpenClaw原生移动端体验，还结合自研AI Agent能力，实现打车、外卖等跨App智能操作。",
+    "category": "model-update",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "新工具/模型可能改变现有工作流",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmmvcrj2",
+    "title": "Wayve、Uber和日产将开展自动驾驶出租车合作，目标年底在日本东京试点",
+    "url": "https://36kr.com/newsflashes/3719267051648389?f=rss",
+    "source": "36氪",
+    "date": "2026-03-12",
+    "summary": "当地时间3月11日，Wayve、Uber和日产宣布签署合作备忘录，共同开发自动驾驶出租车。各方将着手准备于2026年底在日本东京开展试点部署，届时将推出搭载Wayve人工智能驾驶系统的日产聆风，乘客可通过Uber平台叫车。声明称，这将是Uber在日本推出的首个自动驾驶汽车项目，也是Wayve和Uber在全球十多座城市推出自动驾驶出租车服务目标的一部分。（界面）",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [
+      "product-ops",
+      "ad-optimizer",
+      "publishing-manager"
+    ],
+    "isHot": true,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "策划"
+    ],
+    "recommended_path": "",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmmvcrj3",
+    "title": "派早报：Google 发布 Gemini Embedding 2 模型等",
+    "url": "https://sspai.com/post/107110",
+    "source": "少数派",
+    "date": "2026-03-12",
+    "summary": "联发科发布多个 IoT SoC 平台、ComfyUI 支持 App 化工作流等。查看全文",
+    "category": "model-update",
+    "tags": [
+      "Gemini",
+      "Google"
+    ],
+    "relatedJobs": [],
+    "isHot": true,
+    "why_it_matters": "新工具/模型可能改变现有工作流",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmmvcriv",
+    "title": "「格式塔科技」获1.5亿元天使轮融资，加速超声波脑机接口临床开发 | 36氪首发",
+    "url": "https://36kr.com/p/3718214514128514?f=rss",
+    "source": "36氪",
+    "date": "2026-03-11",
+    "summary": "36氪获悉，超声波脑机接口企业「格式塔科技（Gestala）」近日获1.5亿元天使轮融资，由国生资本、道彤投资联合领投，清松资本、戈壁创投、傅利叶智能、猎聘、云时资本等机构与企业跟投；融资主要用于首款产品研发与前期临床试验。\n在脑机接口创业与投资的热潮中，近期“超声脑机”技术备受关注。特别是Sam Altman亲自下场，与加州理工大学科学家一起创立Merge Labs，利用超声波及基因治疗等新技术探索“脑机交互”的新路径。这家公司今年1月也获得了OpenAI等投资在内的2.5亿美元天使轮融资。\n格式塔科技成立于今年1月，由彭雷和盛大集团、天桥脑科学研究院创始人陈天桥联合创立。创始人兼CEO彭雷",
+    "category": "industry-product",
+    "tags": [
+      "OpenAI"
+    ],
+    "relatedJobs": [
+      "product-ops",
+      "ad-optimizer",
+      "publishing-manager"
+    ],
+    "isHot": false,
+    "why_it_matters": "影响行业资本走向与竞争格局",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "大额资本事件，反映行业信心方向"
+  },
+  {
+    "id": "auto-mmmvcriw",
+    "title": "追觅芯际穿越“天穹”系列芯片正式量产，首个太空算力盒将发射升空｜最前线",
+    "url": "https://36kr.com/p/3718486572037507?f=rss",
+    "source": "36氪",
+    "date": "2026-03-11",
+    "summary": "作者｜黄楠\n编辑｜袁斯来\n3月11日，追觅生态企业芯际穿越正式发布“天穹”系列芯片，并宣布已实现规模化量产，即将搭载于追觅泛机器人系列产品中。\n当前，AI算力需求正以超越摩尔定律的速度指数级增长。OpenAI的研究显示，自2012年以来，前沿AI训练任务所需的算力每3.4个月翻一番，累计增长超过30万倍。大模型从千亿参数向万亿参数迈进，端侧智能从简单感知向复杂决策演进，算力成为新一代AI竞赛的核心壁垒。\n然而，全球算力供给正面临结构性瓶颈。传统摩尔定律逼近物理极限，晶体管密度提升放缓；先进制程产能受限，芯片供给存在不确定性；更重要的是，地面数据中心受限于能耗指标、散热效率与土地资源，已难以支撑",
+    "category": "model-update",
+    "tags": [
+      "OpenAI"
+    ],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "新工具/模型可能改变现有工作流",
+    "fit_for": [
+      "运营",
+      "数值"
+    ],
+    "recommended_path": "5day-efficiency",
+    "editor_note": "大额资本事件，反映行业信心方向"
+  },
+  {
+    "id": "auto-mmmvcrj4",
+    "title": "再谈 eSIM 手机：海内外不同手机比较与技术讨论",
+    "url": "https://sspai.com/post/106719",
+    "source": "少数派",
+    "date": "2026-03-11",
+    "summary": "本文将简单回顾 eSIM 智能手机的起点，介绍当下各品牌智能手机支持 eSIM 的情况，探讨一些关于 eSIM 的技术话题。查看全文",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "品牌"
+    ],
+    "recommended_path": "",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmmvcrj5",
+    "title": "One of Grammarly’s ‘experts’ is suing the company over its identity-stealing AI feature",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/893451/grammarly-ai-lawsuit-julia-angwin",
+    "source": "AI | The Verge",
+    "date": "2026-03-11",
+    "summary": "Journalist Julia Angwin is one of the writers whose likeness was used in Grammarly’s “expert review” feature. | Photo: Eóin Noonan / Sportsfile via Getty Images\t\n\nFor months, Grammarly has been using the identities of real people (including us) for its \"Expert Review\" AI suggestions without getting",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "创意生产工具直接影响内容效率",
+    "fit_for": [
+      "设计"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "[EN] One of Grammarly’s ‘experts’ is suing the company over its identity-stealing AI feature",
+    "summaryZh": "Journalist Julia Angwin is one of the writers whose likeness was used in Grammarly’s “expert review” feature. | Photo: Eóin Noonan / Sportsfile via Getty Images\t\n\nFor months, Grammarly has been using the identities of real people (including us) for its \"Expert Review\" AI suggestions without getting"
+  },
+  {
+    "id": "auto-mmmvcrj6",
+    "title": "Grammarly says it will stop using AI to clone experts without permission",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/893270/grammarly-ai-expert-review-disabled",
+    "source": "AI | The Verge",
+    "date": "2026-03-11",
+    "summary": "Superhuman says it has disabled Grammarly's \"expert review\" AI feature that said its edit suggestions were \"inspired by\" real writers, including our editor-in-chief and other Verge staff members.\n\"After careful consideration, we have decided to disable Expert Review as we reimagine the feature to ma",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "[EN] Grammarly says it will stop using AI to clone experts without permission",
+    "summaryZh": "Superhuman says it has disabled Grammarly's \"expert review\" AI feature that said its edit suggestions were \"inspired by\" real writers, including our editor-in-chief and other Verge staff members.\n\"After careful consideration, we have decided to disable Expert Review as we reimagine the feature to ma"
+  },
+  {
+    "id": "auto-mmmvcrj7",
+    "title": "OpenAI’s Sora video generator is reportedly coming to ChatGPT",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/893189/openai-chatgpt-sora-integration",
+    "source": "AI | The Verge",
+    "date": "2026-03-11",
+    "summary": "OpenAI's Sora video generator could soon become a built-in feature in ChatGPT, as reported by The Information. Sora is currently only available on its website or as a standalone app, which has fallen shy of the popularity of ChatGPT. This update would allow users to access Sora's video generation ca",
+    "category": "model-update",
+    "tags": [
+      "ChatGPT",
+      "Sora",
+      "OpenAI"
+    ],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "创意生产工具直接影响内容效率",
+    "fit_for": [
+      "视频"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "[EN] OpenAI’s Sora video generator is reportedly coming to ChatGPT",
+    "summaryZh": "OpenAI's Sora video generator could soon become a built-in feature in ChatGPT, as reported by The Information. Sora is currently only available on its website or as a standalone app, which has fallen shy of the popularity of ChatGPT. This update would allow users to access Sora's video generation ca"
+  },
+  {
+    "id": "auto-mmmvcrj8",
+    "title": "Canva’s new editing tool adds layers to AI-generated designs",
+    "url": "https://www.theverge.com/tech/893124/canva-ai-magic-layers-feature-beta",
+    "source": "AI | The Verge",
+    "date": "2026-03-11",
+    "summary": "Canva introduced a new feature that separates flat image files and AI-generated visuals into layered, fully editable designs. The Magic Layers tool is launching in public beta today in the US, UK, Canada, and Australia, allowing design components like objects, text boxes, and other graphics to be se",
+    "category": "model-update",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "新工具/模型可能改变现有工作流",
+    "fit_for": [
+      "设计",
+      "投放"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "[EN] Canva’s new editing tool adds layers to AI-generated designs",
+    "summaryZh": "Canva introduced a new feature that separates flat image files and AI-generated visuals into layered, fully editable designs. The Magic Layers tool is launching in public beta today in the US, UK, Canada, and Australia, allowing design components like objects, text boxes, and other graphics to be se"
+  },
+  {
+    "id": "auto-mmmvcrj9",
+    "title": "I was interviewed by an AI bot for a job",
+    "url": "https://www.theverge.com/featured-video/892850/i-was-interviewed-by-an-ai-bot-for-a-job",
+    "source": "AI | The Verge",
+    "date": "2026-03-11",
+    "summary": "Millions of people are on the job hunt right now - and for many people, landing a job in the AI era feels more intimidating than ever. That's why the onset of AI avatars running your job interview via one-on-one video call, asking you questions, and analyzing how well you respond has generated a lot",
+    "category": "tools-workflow",
+    "tags": [],
+    "relatedJobs": [
+      "graphic-designer",
+      "video-designer",
+      "product-ops"
+    ],
+    "isHot": false,
+    "why_it_matters": "创意生产工具直接影响内容效率",
+    "fit_for": [
+      "视频"
+    ],
+    "recommended_path": "",
+    "editor_note": "大额资本事件，反映行业信心方向",
+    "titleZh": "[EN] I was interviewed by an AI bot for a job",
+    "summaryZh": "Millions of people are on the job hunt right now - and for many people, landing a job in the AI era feels more intimidating than ever. That's why the onset of AI avatars running your job interview via one-on-one video call, asking you questions, and analyzing how well you respond has generated a lot"
+  },
+  {
+    "id": "auto-mmmvcrja",
+    "title": "The mysterious case of the DHS white supremacist memelord",
+    "url": "https://www.theverge.com/column/892985/dhs-white-supremacist-memelord",
+    "source": "AI | The Verge",
+    "date": "2026-03-11",
+    "summary": "Department of Homeland Security. | Image: The Verge\t\n\nHello and welcome to Regulator, a newsletter that takes Verge subscribers into the smoke-filled back rooms of Washington as they become the Zyn-filled back rooms of Washington. (Although Tucker Carlson's ALP is more popular among a certain set.)",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "创意生产工具直接影响内容效率",
+    "fit_for": [
+      "设计"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "[EN] The mysterious case of the DHS white supremacist memelord",
+    "summaryZh": "Department of Homeland Security. | Image: The Verge\t\n\nHello and welcome to Regulator, a newsletter that takes Verge subscribers into the smoke-filled back rooms of Washington as they become the Zyn-filled back rooms of Washington. (Although Tucker Carlson's ALP is more popular among a certain set.)"
+  },
+  {
+    "id": "auto-mmmvcrjb",
+    "title": "Chatbots encouraged &#8216;teens&#8217; to plan shootings in study",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/892978/ai-chatbots-investigation-help-teens-plan-violence",
+    "source": "AI | The Verge",
+    "date": "2026-03-11",
+    "summary": "AI companies have repeatedly promised safeguards to protect younger users, but a new investigation suggests those guardrails remain woefully deficient. Popular chatbots missed warning signs in scenarios involving teenagers discussing violent acts, in some cases even offering encouragement instead of",
+    "category": "tools-workflow",
+    "tags": [],
+    "relatedJobs": [
+      "graphic-designer",
+      "video-designer",
+      "product-ops"
+    ],
+    "isHot": false,
+    "why_it_matters": "影响行业资本走向与竞争格局",
+    "fit_for": [
+      "投放"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "[EN] Chatbots encouraged &#8216;teens&#8217; to plan shootings in study",
+    "summaryZh": "AI companies have repeatedly promised safeguards to protect younger users, but a new investigation suggests those guardrails remain woefully deficient. Popular chatbots missed warning signs in scenarios involving teenagers discussing violent acts, in some cases even offering encouragement instead of"
+  },
+  {
+    "id": "auto-mmmvcrjc",
+    "title": "Anthropic is launching a new think tank amid Pentagon blacklist fight",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/892478/anthropic-institute-think-tank-claude-pentagon-jack-clark",
+    "source": "AI | The Verge",
+    "date": "2026-03-11",
+    "summary": "Amid a weekslong conflict with the Pentagon, resulting in a blacklist and a lawsuit, Anthropic is shaking up its C-suite and research initiatives. The company announced Wednesday that it's launching a new internal think tank, called the Anthropic Institute, that combines three of Anthropic's current",
+    "category": "model-update",
+    "tags": [
+      "Anthropic"
+    ],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "新工具/模型可能改变现有工作流",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "[EN] Anthropic is launching a new think tank amid 五角大楼 blacklist fight",
+    "summaryZh": "Amid a weekslong conflict with the Pentagon, resulting in a blacklist and a lawsuit, Anthropic is shaking up its C-suite and research initiatives. The company announced Wednesday that it's launching a new internal think tank, called the Anthropic Institute, that combines three of Anthropic's current"
+  },
+  {
+    "id": "auto-mmmvcrjf",
+    "title": "AI ‘actor’ Tilly Norwood put out the worst song I’ve ever heard",
+    "url": "https://techcrunch.com/2026/03/11/ai-actor-tilly-norwood-put-out-the-worst-song-ive-ever-heard/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-11",
+    "summary": "This song is an AI actor's rallying cry to other AI actors, urging them to keep going despite the naysayers who doubt their humanity. Literally no one can relate to this.",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "[EN] AI ‘actor’ Tilly Norwood put out the worst song I’ve ever heard",
+    "summaryZh": "This song is an AI actor's rallying cry to other AI actors, urging them to keep going despite the naysayers who doubt their humanity. Literally no one can relate to this."
+  },
+  {
+    "id": "auto-mmmvcrjg",
+    "title": "Ford’s new AI assistant will help fleet owners know if seatbelts are being used",
+    "url": "https://techcrunch.com/2026/03/11/fords-new-ai-assistant-will-help-fleet-owners-know-if-seatbelts-are-being-used/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-11",
+    "summary": "Ford Pro AI debuted at Work Truck Week in Indianapolis and is now available to all of its U.S.-based Pro telematics subscribers.",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "[EN] Ford’s new AI assistant will help fleet owners know if seatbelts are being used",
+    "summaryZh": "Ford Pro AI debuted at Work Truck Week in Indianapolis and is now available to all of its U.S.-based Pro telematics subscribers."
+  },
+  {
+    "id": "auto-mmmvcrjh",
+    "title": "Zendesk acquires agentic customer service startup Forethought",
+    "url": "https://techcrunch.com/2026/03/11/zendesk-acquires-agentic-customer-service-startup-forethought/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-11",
+    "summary": "Forethought was years ahead of its time and the 2018 winner of TechCrunch Battlefield.",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [
+      "product-ops",
+      "ad-optimizer",
+      "publishing-manager"
+    ],
+    "isHot": false,
+    "why_it_matters": "影响行业资本走向与竞争格局",
+    "fit_for": [
+      "投放"
+    ],
+    "recommended_path": "",
+    "editor_note": "大额资本事件，反映行业信心方向",
+    "titleZh": "[EN] Zendesk acquires agentic customer service 初创公司 Forethought",
+    "summaryZh": "Forethought was years ahead of its time and the 2018 winner of TechCrunch Battlefield."
+  },
+  {
+    "id": "auto-mmmvcrji",
+    "title": "Netflix may have paid $600 million for Ben Affleck’s AI startup",
+    "url": "https://techcrunch.com/2026/03/11/netflix-may-have-paid-600-million-for-ben-afflecks-ai-startup/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-11",
+    "summary": "This deal could rank as among the streaming giant's largest acquisitions ever.",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [
+      "product-ops",
+      "ad-optimizer",
+      "publishing-manager"
+    ],
+    "isHot": false,
+    "why_it_matters": "影响行业资本走向与竞争格局",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "大额资本事件，反映行业信心方向",
+    "titleZh": "[EN] Netflix may have paid $600 million for Ben Affleck’s AI 初创公司",
+    "summaryZh": "This deal could rank as among the streaming giant's largest acquisitions ever."
+  },
+  {
+    "id": "auto-mmmvcrjj",
+    "title": "Replit snags $9B valuation 6 months after hitting $3B",
+    "url": "https://techcrunch.com/2026/03/11/replit-snags-9b-valuation-6-months-after-hitting-3b/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-11",
+    "summary": "Replit raised a new $400 million round and said it hopes to have $1B in ARR by year's end.",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "大额资本事件，反映行业信心方向",
+    "titleZh": "[EN] Replit snags $9B valuation 6 months after hitting $3B",
+    "summaryZh": "Replit raised a new $400 million round and said it hopes to have $1B in ARR by year's end."
+  },
+  {
+    "id": "auto-mmmvcrjk",
+    "title": "WordPress debuts a private workspace that runs in your browser via a new service, my.WordPress.net",
+    "url": "https://techcrunch.com/2026/03/11/wordpress-debuts-a-private-workspace-that-runs-in-your-browser-via-a-new-service-my-wordpress-net/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-11",
+    "summary": "WordPress’s new browser-based service lets users create private sites without hosting or signing up, turning the platform into a personal workspace for writing, research, and AI tools.",
+    "category": "tools-workflow",
+    "tags": [],
+    "relatedJobs": [
+      "graphic-designer",
+      "video-designer",
+      "product-ops"
+    ],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "[EN] WordPress debuts a private workspace that runs in your browser via a new service, my.WordPress.net",
+    "summaryZh": "WordPress’s new browser-based service lets users create private sites without hosting or signing up, turning the platform into a personal workspace for writing, research, and AI tools."
+  },
+  {
+    "id": "auto-mmmvcrjl",
+    "title": "Rivian spin-out Mind Robotics raises $500M for industrial AI-powered robots",
+    "url": "https://techcrunch.com/2026/03/11/rivian-mind-robotics-series-a-500m-fund-raise-industrial-ai-powered-robots/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-11",
+    "summary": "The startup, which was created by Rivian founder RJ Scaringe, is looking to train on data from, and deploy in, Rivian's factory.",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [
+      "product-ops",
+      "ad-optimizer",
+      "publishing-manager"
+    ],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "大额资本事件，反映行业信心方向",
+    "titleZh": "[EN] Rivian spin-out Mind Robotics 获得$500M for industrial AI-powered robots",
+    "summaryZh": "The startup, which was created by Rivian founder RJ Scaringe, is looking to train on data from, and deploy in, Rivian's factory."
+  },
+  {
+    "id": "auto-mmmvcrjm",
+    "title": "Meta’s Moltbook deal points to a future built around AI agents",
+    "url": "https://techcrunch.com/2026/03/11/metas-moltbook-deal-points-to-a-future-built-around-ai-agents/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-11",
+    "summary": "Meta’s Moltbook acquisition may look odd at first, but the deal could signal how Meta sees AI agents shaping future advertising and commerce on an agentic web.",
+    "category": "deep-insight",
+    "tags": [
+      "Meta"
+    ],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "影响行业资本走向与竞争格局",
+    "fit_for": [
+      "投放"
+    ],
+    "recommended_path": "5day-advanced",
+    "editor_note": "大额资本事件，反映行业信心方向",
+    "titleZh": "[EN] Meta’s Moltbook deal points to a future built around AI 智能体",
+    "summaryZh": "Meta’s Moltbook acquisition may look odd at first, but the deal could signal how Meta sees AI agents shaping future advertising and commerce on an agentic web."
+  },
+  {
+    "id": "auto-mmmvcrjn",
+    "title": "Amazon expands a program that lets customers shop from other retailers’ sites",
+    "url": "https://techcrunch.com/2026/03/11/amazon-expands-a-program-that-lets-customers-shop-from-other-retailers-sites/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-11",
+    "summary": "The changes allow more merchants to participate in Amazon's Shop Direct program, which sends Amazon customers to other retailers' websites.",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "[EN] Amazon expands a program that lets customers shop from other retailers’ sites",
+    "summaryZh": "The changes allow more merchants to participate in Amazon's Shop Direct program, which sends Amazon customers to other retailers' websites."
+  },
+  {
+    "id": "auto-mmmvcrjw",
+    "title": "\"Use a gun\" or \"beat the crap out of him\": AI chatbot urged violence, study finds",
+    "url": "https://arstechnica.com/tech-policy/2026/03/use-a-gun-or-beat-the-crap-out-of-him-ai-chatbot-urged-violence-study-finds/",
+    "source": "AI - Ars Technica",
+    "date": "2026-03-11",
+    "summary": "Character.AI deemed \"uniquely unsafe\" among 10 chatbots tested by CCDH.",
+    "category": "tools-workflow",
+    "tags": [],
+    "relatedJobs": [
+      "graphic-designer",
+      "video-designer",
+      "product-ops"
+    ],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "[EN] \"Use a gun\" or \"beat the crap out of him\": AI chatbot urged violence, study finds",
+    "summaryZh": "Character.AI deemed \"uniquely unsafe\" among 10 chatbots tested by CCDH."
+  },
+  {
+    "id": "auto-mmmvcrki",
+    "title": "Hustlers are cashing in on China’s OpenClaw AI craze",
+    "url": "https://www.technologyreview.com/2026/03/11/1134179/china-openclaw-gold-rush/",
+    "source": "MIT Technology Review",
+    "date": "2026-03-11",
+    "summary": "Feng Qingyang had always hoped to launch his own company, but he never thought this would be how—or that the day would come this fast.  Feng, a 27-year-old software engineer based in Beijing, started tinkering with OpenClaw, a popular new open-source AI tool that can take over a device and autonomou",
+    "category": "model-update",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "新工具/模型可能改变现有工作流",
+    "fit_for": [
+      "投放"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "[EN] Hustlers are cashing in on China’s OpenClaw AI craze",
+    "summaryZh": "Feng Qingyang had always hoped to launch his own company, but he never thought this would be how—or that the day would come this fast.  Feng, a 27-year-old software engineer based in Beijing, started tinkering with OpenClaw, a popular new open-source AI tool that can take over a device and autonomou"
+  },
+  {
+    "id": "auto-mmmvcrkj",
+    "title": "The Download: Pokémon Go to train world models, and the US-China race to find aliens",
+    "url": "https://www.technologyreview.com/2026/03/11/1134174/the-download-pokemon-go-train-world-models-us-china-race-find-aliens/",
+    "source": "MIT Technology Review",
+    "date": "2026-03-11",
+    "summary": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. How Pokémon Go is giving delivery robots an inch-perfect view of the world  Pokémon Go was the world’s first augmented-reality megahit. Released in 2016 by Nianti",
+    "category": "model-update",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "新工具/模型可能改变现有工作流",
+    "fit_for": [
+      "投放"
+    ],
+    "recommended_path": "",
+    "editor_note": "里程碑事件，值得重点关注",
+    "titleZh": "[EN] The Download: Pokémon Go to train world 模型, and the US-China race to find aliens",
+    "summaryZh": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. How Pokémon Go is giving delivery robots an inch-perfect view of the world  Pokémon Go was the world’s first augmented-reality megahit. Released in 2016 by Nianti"
+  },
+  {
     "id": "auto-mmlfpmfz",
     "title": "不再沉默的房子：Matter协议与主动智能的觉醒",
     "url": "https://36kr.com/p/3717920631830152?f=rss",
@@ -13,7 +722,7 @@
       "video-designer",
       "product-ops"
     ],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "值得了解的行业动态",
     "fit_for": [
       "品牌"
@@ -35,7 +744,7 @@
       "ad-optimizer",
       "publishing-manager"
     ],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "合规政策影响产品上线与市场策略",
     "fit_for": [
       "全员"
@@ -53,7 +762,7 @@
     "category": "model-update",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "自动化趋势将重塑岗位协作模式",
     "fit_for": [
       "运营",
@@ -72,7 +781,7 @@
     "category": "model-update",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "影响行业资本走向与竞争格局",
     "fit_for": [
       "运营",
@@ -167,7 +876,7 @@
     "category": "deep-insight",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "值得了解的行业动态",
     "fit_for": [
       "数值"
@@ -189,7 +898,7 @@
       "video-designer",
       "product-ops"
     ],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "创意生产工具直接影响内容效率",
     "fit_for": [
       "设计",
@@ -211,7 +920,7 @@
       "Google"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "值得了解的行业动态",
     "fit_for": [
       "投放"
@@ -1743,48 +2452,5 @@
     "editor_note": "",
     "titleZh": "[EN] How much wildfire prevention is too much?",
     "summaryZh": "The race to prevent the worst wildfires has been an increasingly high-tech one. Companies are proposing AI fire detection systems and drones that can stamp out early blazes. And now, one Canadian startup says it’s going after lightning. Lightning-sparked fires can be a big deal: The Canadian wildfir"
-  },
-  {
-    "id": "auto-mmlfpmhe",
-    "title": "Large genome model: Open source AI trained on trillions of bases",
-    "url": "https://arstechnica.com/science/2026/03/large-genome-model-open-source-ai-trained-on-trillions-of-bases/",
-    "source": "AI - Ars Technica",
-    "date": "2026-03-04",
-    "summary": "System can identify genes, regulatory sequences, splice sites, and more.",
-    "category": "industry-product",
-    "tags": [],
-    "relatedJobs": [],
-    "isHot": false,
-    "why_it_matters": "开源资源可直接提升团队能力",
-    "fit_for": [
-      "全员"
-    ],
-    "recommended_path": "",
-    "editor_note": "",
-    "titleZh": "[EN] Large genome 模型: 开源 AI trained on trillions of bases",
-    "summaryZh": "System can identify genes, regulatory sequences, splice sites, and more."
-  },
-  {
-    "id": "auto-mmlfpmhf",
-    "title": "Lawsuit: Google Gemini sent man on violent missions, set suicide \"countdown\"",
-    "url": "https://arstechnica.com/tech-policy/2026/03/lawsuit-google-gemini-sent-man-on-violent-missions-set-suicide-countdown/",
-    "source": "AI - Ars Technica",
-    "date": "2026-03-04",
-    "summary": "Gemini allegedly called man its \"husband,\" said they could be together in death.",
-    "category": "model-update",
-    "tags": [
-      "Gemini",
-      "Google"
-    ],
-    "relatedJobs": [],
-    "isHot": false,
-    "why_it_matters": "合规政策影响产品上线与市场策略",
-    "fit_for": [
-      "全员"
-    ],
-    "recommended_path": "",
-    "editor_note": "争议性话题，关注行业治理走向",
-    "titleZh": "[EN] Lawsuit: Google Gemini sent man on violent missions, set suicide \"countdown\"",
-    "summaryZh": "Gemini allegedly called man its \"husband,\" said they could be together in death."
   }
 ]
