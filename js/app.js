@@ -213,6 +213,7 @@ function handleRoute() {
     case 'path':      renderLearningPath(param); break;
     case 'diagnosis': renderDiagnosis(); break;
     case 'video-tool': renderVideoTool(); break;
+    case 'topic':     renderTopicPage(param); break;
     default:          renderHome();
   }
 
@@ -234,7 +235,8 @@ const SECTION_TITLES = {
   resources: '资源库',
   path: '学习路径',
   diagnosis: 'AI 能力诊断',
-  'video-tool': '视频学习助手'
+  'video-tool': '视频学习助手',
+  topic: '专题',
 };
 
 function updatePageTitle(section, param) {
@@ -256,6 +258,9 @@ function updatePageTitle(section, param) {
     } else if (section === 'path' && typeof LEARNING_PATHS !== 'undefined') {
       const p = LEARNING_PATHS[param];
       if (p) title = p.title;
+    } else if (section === 'topic' && typeof TOPICS !== 'undefined') {
+      const tp = TOPICS[param];
+      if (tp) title = tp.name;
     }
   }
 
@@ -3285,6 +3290,35 @@ const LEARNING_PATHS = {
     nextPaths: [],
     nextFallback: { label: '探索岗位专属路径', action: "navigate('jobs')" },
   },
+  'ops-ai-path': {
+    id: 'ops-ai-path',
+    title: '游戏运营 AI 上手路径',
+    desc: '5 步从 AI 零基础到能独立用 AI 完成日常运营工作——活动策划、数据分析、PRD 撰写',
+    icon: '🎮',
+    accent: 'var(--accent-orange, #f97316)',
+    tier: 'job-specific',
+    difficulty: '零基础 → 中级',
+    audience: '游戏运营、策划岗位的你',
+    estimatedDaily: '1 小时',
+    prerequisites: ['无需 AI 基础', '有一台能上网的电脑即可'],
+    outcomes: [
+      '选定适合自己的主力 AI 工具',
+      '独立用 AI 完成一个真实工作任务',
+      '用 AI 在 60 分钟内产出完整活动策划方案',
+      '把 2 小时的数据周报缩短到 10 分钟',
+      '用 AI 快速产出可评审的 PRD 初稿',
+    ],
+    relatedJobs: ['product-ops', 'product-planner'],
+    days: [
+      { day: 1, theme: '选工具——找到适合你的 AI 助手', title: 'ChatGPT vs Claude 工具对比', icon: '📊', duration: '30 分钟', difficulty: '入门', navigateTo: 'tools', goal: '了解主流 AI 工具的差异，选定你的主力工具', task: '阅读 ChatGPT 和 Claude 工具页，决定你的主力工具', deliverable: '做出选择：「我日常用 XX，写长方案用 YY」' },
+      { day: 2, theme: '上手——完成第一个 AI 任务', tutorialId: 't001', goal: '从零开始用 AI 完成一个真实工作任务', task: '跟着教程完成 ChatGPT 入门，用 AI 产出一份真实交付物', deliverable: '用 AI 产出的周报 / 文案 / 大纲' },
+      { day: 3, theme: '写方案——用 AI 策划一场活动', tutorialId: 't009', goal: '学会用 AI 完成运营岗最核心的任务——活动策划', task: '跟着教程 + p001 Prompt 完成一份完整活动策划方案', deliverable: '一份包含主题、玩法、排期和预算的活动方案' },
+      { day: 4, theme: '做分析——让 AI 帮你处理数据', title: '数据周报生成器 Prompt', icon: '📝', duration: '30 分钟', difficulty: '入门', promptId: 'p009', navigateTo: 'prompts', goal: '用 AI 做数据整理和分析，把 2 小时的周报缩短到 10 分钟', task: '用 p009 数据周报 Prompt 处理一组真实数据', deliverable: '一份带分析和建议的数据周报' },
+      { day: 5, theme: '写文档——用 AI 输出专业 PRD', title: 'PRD 需求文档 Prompt', icon: '📝', duration: '30 分钟', difficulty: '入门', promptId: 'p004', navigateTo: 'prompts', goal: '用 AI 快速产出 PRD 等结构化文档', task: '用 p004 PRD Prompt + Claude 产出一份 PRD 初稿', deliverable: '一份可用于评审会的 PRD 初稿' },
+    ],
+    nextPaths: [],
+    nextFallback: { label: '深入专题：游戏运营 AI 方案全书', action: "navigate('topic', 'ops-ai-playbook')" },
+  },
 };
 
 function findPathByTutorial(tutorialId) {
@@ -3376,9 +3410,14 @@ function renderLearningPath(pathId) {
   `;
 
   const daysHTML = path.days.map(d => {
-    const t = getTutorialById(d.tutorialId);
+    const t = d.tutorialId ? getTutorialById(d.tutorialId) : null;
     const done = progress.includes(d.day);
-    if (!t) return '';
+    // 支持无教程的步骤（工具页、Prompt 页等）
+    const dayTitle = t ? `${t.icon} ${t.title}` : `${d.icon || '📌'} ${d.title || d.theme}`;
+    const dayDuration = t ? t.duration : (d.duration || '30 分钟');
+    const dayDifficulty = t ? t.difficulty : (d.difficulty || '入门');
+    const dayStepsHtml = t ? `<span class="lp-day-steps"><i class="fa-solid fa-list-ol"></i> ${t.steps} 个步骤</span>` : '';
+    const dayOnClick = t ? `navigate('tutorials', '${t.id}')` : (d.navigateTo ? `navigate('${d.navigateTo}')` : '');
     const taskHTML = d.task ? `
       <div class="lp-day-task">
         <div class="lp-day-task-label"><i class="fa-solid fa-pen-to-square"></i> 今日任务</div>
@@ -3394,18 +3433,18 @@ function renderLearningPath(pathId) {
           </button>
           <div class="lp-day-line"></div>
         </div>
-        <div class="lp-day-card" onclick="navigate('tutorials', '${t.id}')">
+        <div class="lp-day-card" onclick="${dayOnClick}">
           <div class="lp-day-header">
             <span class="lp-day-label">Day ${d.day}</span>
             <span class="lp-day-theme">${d.theme}</span>
-            <span class="lp-day-duration"><i class="fa-regular fa-clock"></i> ${t.duration}</span>
+            <span class="lp-day-duration"><i class="fa-regular fa-clock"></i> ${dayDuration}</span>
           </div>
-          <div class="lp-day-title">${t.icon} ${t.title}</div>
+          <div class="lp-day-title">${dayTitle}</div>
           <div class="lp-day-goal"><i class="fa-solid fa-bullseye"></i> ${d.goal}</div>
           ${taskHTML}
           <div class="lp-day-footer">
-            ${diffBadge(t.difficulty)}
-            <span class="lp-day-steps"><i class="fa-solid fa-list-ol"></i> ${t.steps} 个步骤</span>
+            ${diffBadge(dayDifficulty)}
+            ${dayStepsHtml}
             <span class="lp-day-action">${done ? '已完成 ✓' : '开始这一天 →'}</span>
           </div>
         </div>
@@ -3565,6 +3604,207 @@ function renderPathIndex() {
     })}
     <div class="pi-grid">${cards}</div>
   `;
+}
+
+
+// ===== 专题入口页 =====
+
+const TOPICS = {
+  'ops-ai-playbook': {
+    id: 'ops-ai-playbook',
+    name: '游戏运营 AI 方案全书',
+    desc: '游戏运营岗位的一站式 AI 工具箱：从活动策划到数据分析，从文案生成到用户研究',
+    icon: '🎮',
+    accent: 'var(--accent-orange, #f97316)',
+    targetJobs: ['product-ops', 'product-planner'],
+    pathId: 'ops-ai-path',
+    readingOrder: [
+      { phase: '1. 选工具', problem: '「AI 工具那么多，我该用哪个？」', action: "navigate('tools')", label: '→ 工具推荐模块' },
+      { phase: '2. 入门', problem: '「ChatGPT 下载了，但不会用到工作里」', action: "navigate('tutorials','t001')", label: '→ ChatGPT 入门实战' },
+      { phase: '3. 写方案', problem: '「活动策划方案怎么让 AI 帮我写？」', action: "navigate('tutorials','t009')", label: '→ 活动策划教程' },
+      { phase: '4. 做分析', problem: '「每周数据周报太花时间了」', action: "navigate('prompts')", label: '→ 数据分析模块' },
+      { phase: '5. 写文档', problem: '「PRD 怎么让 AI 帮我出初稿？」', action: "navigate('prompts')", label: '→ PRD 模块' },
+    ],
+    coreContent: [
+      { type: '📖 教程', id: 't001', solves: '从零到完成第一个 AI 任务', time: '45 分钟' },
+      { type: '📖 教程', id: 't009', solves: '用 AI 完成完整活动策划', time: '60 分钟' },
+      { type: '📝 Prompt', id: 'p001', solves: '一键生成活动方案', time: '10 分钟' },
+      { type: '📝 Prompt', id: 'p009', solves: '原始数据→结构化周报', time: '10 分钟' },
+      { type: '📝 Prompt', id: 'p004', solves: '需求想法→PRD 初稿', time: '15 分钟' },
+    ],
+    taskGroups: [
+      {
+        groupName: '写方案类',
+        items: [
+          { id: 'p001', solves: '从零生成完整活动方案', tool: 'Claude' },
+          { id: 'p004', solves: '需求想法→PRD 框架', tool: 'Claude' },
+        ]
+      },
+      {
+        groupName: '做分析类',
+        items: [
+          { id: 'p009', solves: '原始数据→结构化周报', tool: 'ChatGPT' },
+        ]
+      },
+    ],
+    recommendedTools: ['chatgpt', 'claude', 'midjourney'],
+    toolUseCases: {
+      chatgpt: '日常万能助手：文案、头脑风暴、快速问答',
+      claude: '写长方案、分析长文档、复杂推理',
+      midjourney: '活动 KV 参考图、视觉风格探索',
+    },
+  },
+};
+
+function renderTopicPage(topicId) {
+  if (!topicId) { navigate('home'); return; }
+  const topic = TOPICS[topicId];
+  if (!topic) { navigate('home'); return; }
+
+  // 阅读顺序表
+  const orderRows = topic.readingOrder.map(r => `
+    <tr class="topic-order-row" onclick="${r.action}">
+      <td class="topic-order-phase">${escapeHtml(r.phase)}</td>
+      <td class="topic-order-problem">${escapeHtml(r.problem)}</td>
+      <td class="topic-order-link">${escapeHtml(r.label)}</td>
+    </tr>
+  `).join('');
+
+  // 核心内容卡片
+  const coreCards = topic.coreContent.map((c, i) => {
+    const isTutorial = c.id.startsWith('t');
+    const item = isTutorial ? getTutorialById(c.id) : getPromptById(c.id);
+    const name = item ? (item.title || item.name) : c.id;
+    const onclick = isTutorial
+      ? `navigate('tutorials','${c.id}')`
+      : `navigate('prompts')`;
+    return `
+      <div class="topic-core-card" onclick="${onclick}">
+        <div class="topic-core-num">${i + 1}</div>
+        <div class="topic-core-body">
+          <div class="topic-core-type">${c.type}</div>
+          <div class="topic-core-title">${escapeHtml(name)}</div>
+          <div class="topic-core-solves">${escapeHtml(c.solves)}</div>
+        </div>
+        <div class="topic-core-time"><i class="fa-regular fa-clock"></i> ${c.time}</div>
+      </div>
+    `;
+  }).join('');
+
+  // 按任务分组
+  const taskGroupsHtml = topic.taskGroups.map(g => {
+    const rows = g.items.map(item => {
+      const p = getPromptById(item.id);
+      const name = p ? (p.name || p.title) : item.id;
+      return `
+        <tr class="topic-task-row" onclick="navigate('prompts')">
+          <td class="topic-task-name">${escapeHtml(name)}</td>
+          <td>${escapeHtml(item.solves)}</td>
+          <td class="topic-task-tool">${escapeHtml(item.tool)}</td>
+        </tr>
+      `;
+    }).join('');
+    return `
+      <div class="topic-task-group">
+        <h4>${escapeHtml(g.groupName)}</h4>
+        <table class="topic-task-table">
+          <thead><tr><th>Prompt</th><th>解决什么</th><th>推荐工具</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    `;
+  }).join('');
+
+  // 推荐工具卡片
+  const toolCards = topic.recommendedTools.map(tid => {
+    const tool = getToolById(tid);
+    if (!tool) return '';
+    const useCase = topic.toolUseCases[tid] || '';
+    return `
+      <div class="topic-tool-card" onclick="navigate('tools')">
+        <div class="topic-tool-icon">${getToolIcon(tool)}</div>
+        <div class="topic-tool-info">
+          <div class="topic-tool-name">${escapeHtml(tool.name)}</div>
+          <div class="topic-tool-usecase">${escapeHtml(useCase)}</div>
+        </div>
+        <div class="topic-tool-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      </div>
+    `;
+  }).join('');
+
+  // 关联路径
+  const pathData = topic.pathId ? LEARNING_PATHS[topic.pathId] : null;
+  const pathHtml = pathData ? `
+    <div class="topic-path-entry" onclick="navigate('path','${pathData.id}')" style="--lp-accent:${pathData.accent}">
+      <div class="topic-path-icon">${pathData.icon}</div>
+      <div class="topic-path-info">
+        <div class="topic-path-title">${pathData.title}</div>
+        <div class="topic-path-desc">${pathData.desc}</div>
+        <div class="topic-path-meta">
+          <span><i class="fa-solid fa-calendar-days"></i> ${pathData.days.length} 天</span>
+          <span><i class="fa-solid fa-clock"></i> 每天 ${pathData.estimatedDaily}</span>
+        </div>
+      </div>
+      <div class="topic-path-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+    </div>
+  ` : '';
+
+  // 关联岗位
+  const jobTags = (topic.targetJobs || []).map(jid => {
+    const job = getJobById(jid);
+    return job ? `<span class="topic-job-tag" onclick="event.stopPropagation(); navigate('jobs','${jid}')">${job.icon} ${job.name}</span>` : '';
+  }).filter(Boolean).join('');
+
+  $('#topicContent').innerHTML = `
+    <button class="back-btn" onclick="navigate('home')"><i class="fa-solid fa-arrow-left"></i> 返回首页</button>
+
+    <div class="topic-header" style="--topic-accent:${topic.accent}">
+      <div class="topic-header-icon">${topic.icon}</div>
+      <div class="topic-header-info">
+        <h1 class="topic-header-title">${escapeHtml(topic.name)}</h1>
+        <p class="topic-header-desc">${escapeHtml(topic.desc)}</p>
+        ${jobTags ? `<div class="topic-header-jobs">${jobTags}</div>` : ''}
+      </div>
+    </div>
+
+    <div class="topic-intro">
+      <p>这个专题汇集了 FiveSeven AI 上与游戏运营最相关的教程、Prompt 模板和工具推荐。不需要从头到尾全看——按你当前最需要解决的问题，直接跳到对应模块。</p>
+    </div>
+
+    <div class="topic-section">
+      <h3 class="topic-section-title"><i class="fa-solid fa-list-ol"></i> 推荐阅读顺序</h3>
+      <p class="topic-section-hint">新手从上到下走一遍；老手直接跳到需要的模块。</p>
+      <div class="topic-order-wrapper">
+        <table class="topic-order-table">
+          <thead><tr><th>阶段</th><th>你在这里要解决的问题</th><th>入口</th></tr></thead>
+          <tbody>${orderRows}</tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="topic-section">
+      <h3 class="topic-section-title"><i class="fa-solid fa-star"></i> 必读内容（${topic.coreContent.length} 篇核心）</h3>
+      <div class="topic-core-grid">${coreCards}</div>
+    </div>
+
+    <div class="topic-section">
+      <h3 class="topic-section-title"><i class="fa-solid fa-crosshairs"></i> 按任务找内容</h3>
+      ${taskGroupsHtml}
+    </div>
+
+    <div class="topic-section">
+      <h3 class="topic-section-title"><i class="fa-solid fa-wrench"></i> 推荐工具</h3>
+      <div class="topic-tools-grid">${toolCards}</div>
+    </div>
+
+    <div class="topic-section">
+      <h3 class="topic-section-title"><i class="fa-solid fa-route"></i> 学习路径入口</h3>
+      <p class="topic-section-hint">想系统化学习？跟着路径一步步来。</p>
+      ${pathHtml}
+    </div>
+  `;
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 
