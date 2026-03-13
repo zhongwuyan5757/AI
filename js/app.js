@@ -249,7 +249,11 @@ function updatePageTitle(section, param) {
 
   // 详情页：尝试获取具体名称
   if (param) {
-    if (section === 'tutorials' && !param.startsWith('tier:')) {
+    if (section === 'tutorials' && param.startsWith('column:')) {
+      const colId = param.replace('column:', '');
+      const col = DATA.columns ? DATA.columns.find(function(c) { return c.id === colId; }) : null;
+      if (col) title = col.title;
+    } else if (section === 'tutorials' && !param.startsWith('tier:')) {
       const t = getTutorialById(param);
       if (t) title = t.title;
     } else if (section === 'jobs') {
@@ -269,6 +273,10 @@ function updatePageTitle(section, param) {
   } else {
     document.title = `${SECTION_TITLES[section]} — ${SITE_NAME}`;
   }
+
+  // 更新地址栏为 path URL，让分享链接被爬虫正确解析 OG 标签
+  var pathUrl = param ? '/' + section + '/' + param : (section === 'home' ? '/' : '/' + section);
+  try { history.replaceState(null, '', pathUrl); } catch(e) { /* ignore */ }
 }
 
 
