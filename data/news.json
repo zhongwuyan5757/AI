@@ -192,8 +192,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Facebook Marketplace adds AI auto-replies for annoying ‘Is this still available?’ messages",
-    "summaryZh": "Facebook Marketplace is adding a bunch of new AI-powered tools that are supposed to make selling items on the platform a little more efficient. One feature will use Meta AI to automatically respond to those annoying \"Is this still available?\" messages.\nYou can toggle on the auto-reply option when cr"
+    "titleZh": "Facebook Marketplace新增AI自动回复：终结烦人的\"还在卖吗\"消息",
+    "summaryZh": "Meta为Facebook Marketplace上线AI自动回复功能，卖家可让AI代为回复买家的常见询问消息，提升二手交易效率。"
   },
   {
     "id": "auto-mmoapps1",
@@ -215,8 +215,8 @@
     ],
     "recommended_path": "5day-efficiency",
     "editor_note": "",
-    "titleZh": "[EN] Gemini’s task 自动化 is here and it’s wild",
-    "summaryZh": "Computers ordering cappuccinos.\t\n\nA couple of weeks ago, Google and Samsung announced a big Gemini development coming to their newest devices: task automation. Starting with food delivery and rideshare apps, Gemini would be able to use certain apps on your behalf in a virtual window to take care of"
+    "titleZh": "Gemini任务自动化功能正式上线",
+    "summaryZh": "Google的Gemini AI助手推出任务自动化功能，能够自动执行复杂的多步骤任务，为用户提供更智能的工作流程体验。"
   },
   {
     "id": "auto-mmoapps2",
@@ -238,8 +238,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Anthropic&#8217;s Claude AI can respond with charts, diagrams, and other visuals now",
-    "summaryZh": "Anthropic's latest update to Claude will allow the AI chatbot to generate custom charts, diagrams, and other visualizations during your conversation. If Claude determines a visual is useful based on the context of your chat, it will insert the image in-line, rather than in its side panel.\nAs an exam"
+    "titleZh": "Claude AI现支持图表和视觉内容回复",
+    "summaryZh": "Anthropic的Claude AI新增视觉回复能力，可以生成图表、图解等视觉内容来回答用户问题，提升交互体验。"
   },
   {
     "id": "auto-mmoapps3",
@@ -261,8 +261,8 @@
     ],
     "recommended_path": "",
     "editor_note": "争议性话题，关注行业治理走向",
-    "titleZh": "[EN] Anthropic doesn’t trust the 五角大楼, and neither should you",
-    "summaryZh": "Today we’re talking about the messy, fast-moving situation at Anthropic, the maker of Claude that now finds itself in a very ugly legal battle with the Pentagon. \nThe back-and-forth is complicated, but as of a few days ago, the Pentagon had deemed Anthropic a supply chain risk, and Anthropic has fil"
+    "titleZh": "Anthropic拒绝与五角大楼合作引发争议",
+    "summaryZh": "Anthropic公司对与美国国防部合作持谨慎态度，引发业界对AI公司与军方合作的信任和伦理问题讨论。"
   },
   {
     "id": "auto-mmoapps4",
@@ -288,8 +288,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Bespoke AI 模型 are the next big thing in filmmaking",
-    "summaryZh": "Though many AI boosters have convinced themselves that the technology can spit out films and television series whole cloth, claims of Hollywood being cooked feel very premature when you see what people are making with the most popular image/video models on the market. Models like Sora, Veo, and Runw"
+    "titleZh": "定制化AI模型成为电影制作新趋势",
+    "summaryZh": "专门为电影制作定制的AI模型正在成为影视行业的下一个重要发展方向，为创作者提供更精准的制作工具。"
   },
   {
     "id": "auto-mmoapps5",
@@ -310,8 +310,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Microsoft’s Copilot Health can connect to your medical records and wearables",
-    "summaryZh": "Microsoft announced on Thursday that it's launching Copilot Health, a \"separate, secure space\" in Copilot for asking questions about lab results and medical records, searching for providers, analyzing data from wearables, and other health-related chats. The feature will have a phased rollout, so it"
+    "titleZh": "Microsoft Copilot Health可连接医疗记录和可穿戴设备",
+    "summaryZh": "Microsoft推出的Copilot Health健康助手现在能够连接用户的医疗记录和可穿戴设备数据，为用户提供更全面的个性化健康管理服务。"
   },
   {
     "id": "auto-mmoapps6",
@@ -333,8 +333,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] You can now ask Google Maps ‘complex, real-world questions’ — and Gemini will answer",
-    "summaryZh": "Google is continuing to weave Gemini into the firmament of its most-used products. Today, it announced that Google Maps was getting a new AI-powered \"Ask Maps\" feature that allows for \"complex, real-world questions\" with highly detailed, personalized responses.\nIn the past, Google Maps would struggl"
+    "titleZh": "Google地图集成Gemini回答复杂问题",
+    "summaryZh": "Google地图新增Gemini AI功能，用户可以向地图询问复杂的现实世界问题，获得更智能的导航和位置信息服务。"
   },
   {
     "id": "auto-mmoapps7",
@@ -353,8 +353,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Perplexity&#8217;s Personal Computer turns your spare Mac into an AI 智能体",
-    "summaryZh": "Perplexity wants to be more than just an answer engine. On Wednesday, it launched Personal Computer, a new AI agent tool that can turn a spare Mac into a locally run AI system, pitching it as \"a digital proxy for you.\"\nPersonal Computer will run 24/7 on a dedicated device on your local network, have"
+    "titleZh": "Perplexity推出个人电脑AI代理功能",
+    "summaryZh": "Perplexity发布Personal Computer功能，可以将用户的Mac电脑转变为AI代理，自动执行各种计算机任务。"
   },
   {
     "id": "auto-mmoappsa",
@@ -377,8 +377,8 @@
     ],
     "recommended_path": "5day-efficiency",
     "editor_note": "",
-    "titleZh": "[EN] Sales 自动化 初创公司 Rox AI hits $1.2B valuation, sources say",
-    "summaryZh": "Rox, founded in 2024 by the former chief growth officer of New Relic, offers an AI-native alternative to CRM tools."
+    "titleZh": "销售自动化初创公司Rox AI估值达12亿美元",
+    "summaryZh": "据消息人士透露，销售自动化领域的初创公司Rox AI最新估值已达到12亿美元"
   },
   {
     "id": "auto-mmoappsb",
@@ -399,8 +399,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Facebook Marketplace now lets Meta AI respond to buyers’ messages",
-    "summaryZh": "When buyers inquire about an item’s availability, sellers can use Meta AI to automatically draft replies using information from their listing, such as the description, availability, pickup location, and price."
+    "titleZh": "Facebook市场现支持Meta AI回复买家消息",
+    "summaryZh": "Facebook市场平台新增功能，允许Meta AI自动回复和处理买家发送的消息"
   },
   {
     "id": "auto-mmoappsc",
@@ -419,8 +419,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Tinder tries to lure people back to online dating with IRL events, virtual speed dating",
-    "summaryZh": "Tinder just got a major revamp as it attempts to reengage its user base and attract younger daters. This includes in-person events, AI enhancements, and even virtual speed dating."
+    "titleZh": "Tinder推出线下活动和虚拟速配重新吸引用户",
+    "summaryZh": "Tinder进行重大改版，通过线下活动、AI增强功能等创新方式重新吸引用户群体，特别是年轻用户。这一策略展现了AI技术在社交应用中的应用潜力，为游戏和社交平台的用户留存提供了新思路。"
   },
   {
     "id": "auto-mmoappsd",
@@ -439,8 +439,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Atlassian follows Block’s footsteps and cuts staff in the name of AI",
-    "summaryZh": "Atlassian laid off 10% of its workforce, around 1,600 people, as the company looks to funnel more funds to AI."
+    "titleZh": "Atlassian追随Block脚步以AI名义裁员",
+    "summaryZh": "软件公司Atlassian效仿Block公司做法，以推进AI发展为由进行员工裁减"
   },
   {
     "id": "auto-mmoappse",
@@ -463,8 +463,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Bumble introduces an AI dating assistant, ‘Bee’",
-    "summaryZh": "Bumble's new AI assistant Bee will move the dating app beyond the swipe by matching people based on compatibility and goals."
+    "titleZh": "Bumble推出AI约会助手'Bee'改变配对模式",
+    "summaryZh": "Bumble的新AI助手Bee将基于兼容性和目标进行智能配对，超越传统滑动模式。这一创新展现了AI在个性化推荐算法方面的进步，为游戏和社交平台的用户匹配机制提供了新的技术参考。"
   },
   {
     "id": "auto-mmoappsf",
@@ -483,8 +483,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] A writer is suing Grammarly for turning her and other authors into ‘AI editors’ without consent",
-    "summaryZh": "Journalist Julia Angwin is leading a class action lawsuit against Grammarly for violating her privacy and publicity rights."
+    "titleZh": "作家起诉Grammarly未经同意将其变为'AI编辑'",
+    "summaryZh": "记者Julia Angwin领导集体诉讼，指控Grammarly侵犯隐私权和肖像权。这一案件凸显了AI训练数据使用的法律风险，为游戏和内容创作行业在AI开发中的合规性提供重要警示。"
   },
   {
     "id": "auto-mmoappsg",
@@ -503,8 +503,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Gumloop lands $50M from Benchmark to turn every employee into an AI 智能体 builder",
-    "summaryZh": "As companies race to adopt AI, Benchmark general partner Everett Randle believes the key to success lies in empowering every worker with AI superpowers, and Gumloop’s intuitive agent builder is an example of the kind of tool that will unlock that potential."
+    "titleZh": "Gumloop获Benchmark领投5000万美元让员工成为AI代理构建者",
+    "summaryZh": "Gumloop获得5000万美元融资，致力于让每个员工都能构建AI代理。这一理念展现了AI民主化趋势，为游戏开发团队和科技公司的内部工具开发提供了新的自动化解决方案。"
   },
   {
     "id": "auto-mmoappsh",
@@ -523,8 +523,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Wonderful 获得$150M Series B at $2B valuation",
-    "summaryZh": "The funding round, led by Insight Partners, comes just four months after Wonderful raised a $100 million Series A."
+    "titleZh": "Wonderful完成1.5亿美元B轮融资估值达20亿美元",
+    "summaryZh": "由Insight Partners领投的1.5亿美元B轮融资距离A轮仅4个月，显示出投资者对AI创业公司的强烈信心。这一快速融资节奏为游戏和科技行业的AI项目融资策略提供了市场参考。"
   },
   {
     "id": "auto-mmoappsi",
@@ -546,8 +546,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Google is using old news reports and AI to predict flash floods",
-    "summaryZh": "A new way to solve data scarcity: Turning qualitative reports into quantitative data with an LLM."
+    "titleZh": "Google利用历史新闻报道和AI预测山洪灾害",
+    "summaryZh": "Google通过大语言模型将定性新闻报道转化为定量数据，解决洪水预测的数据稀缺问题。这一创新方法展现了AI在数据处理和环境监测方面的潜力，为游戏中的环境模拟和预测系统提供技术启发。"
   },
   {
     "id": "auto-mmoappsj",
@@ -568,8 +568,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Google Maps is getting an AI ‘Ask Maps’ feature and upgraded ‘immersive’ navigation",
-    "summaryZh": "The tech giant says the \"Immersive Navigation\" launch is the biggest update to Maps in over a decade."
+    "titleZh": "Google Maps推出AI'Ask Maps'功能和升级沉浸式导航",
+    "summaryZh": "Google称沉浸式导航是Maps十多年来最大更新，结合AI问答功能提升用户体验。这一升级展现了AI在地图服务中的应用前景，为游戏中的导航系统和虚拟世界构建提供了技术参考。"
   },
   {
     "id": "auto-mmoappsr",
@@ -592,8 +592,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Perplexity's \"Personal Computer\" brings its AI 智能体 to the, uh, Personal Computer",
-    "summaryZh": "Perplexity says AI access to your files is in \"secure environment with clear safeguards.\""
+    "titleZh": "Perplexity推出'个人电脑'AI代理访问本地文件",
+    "summaryZh": "Perplexity声称AI访问用户文件在安全环境中进行并有明确保障措施。这一功能展现了AI助手与本地系统深度集成的可能性，为游戏开发工具和创作软件的AI集成提供了新思路。"
   },
   {
     "id": "auto-mmoapptd",
@@ -616,8 +616,8 @@
     ],
     "recommended_path": "",
     "editor_note": "里程碑事件，值得重点关注",
-    "titleZh": "[EN] A defense official reveals how AI chatbots could be used for targeting decisions",
-    "summaryZh": "The US military might use generative AI systems to rank lists of targets and make recommendations—which would be vetted by humans—about which to strike first, according to a Defense Department official with knowledge of the matter. The disclosure about how the military may use AI chatbots comes as t"
+    "titleZh": "美国防官员透露AI聊天机器人可用于目标决策",
+    "summaryZh": "美军可能使用生成式AI系统对目标列表进行排序和推荐，最终决策仍需人工审核。这一应用展现了AI在战略决策支持方面的能力，为游戏中的AI战术系统和决策辅助工具提供了技术参考。"
   },
   {
     "id": "auto-mmoappte",
@@ -640,8 +640,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] The Download: Early adopters cash in on China’s OpenClaw craze, and US batteries slump",
-    "summaryZh": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Hustlers are cashing in on China’s OpenClaw AI craze  In January, Beijing-based software engineer Feng Qingyang started tinkering with OpenClaw, a new AI tool tha"
+    "titleZh": "早期用户从中国OpenClaw热潮中获利，美国电池业低迷",
+    "summaryZh": "今日科技要闻摘要：中国AI应用OpenClaw引发投资热潮，早期采用者获得丰厚回报；与此同时美国电池产业面临严峻挑战，为新能源和科技硬件发展带来不确定性。"
   },
   {
     "id": "auto-mmoapptf",
@@ -664,8 +664,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Pragmatic by design: Engineering AI for the real world",
-    "summaryZh": "The impact of artificial intelligence extends far beyond the digital world and into our everyday lives, across the cars we drive, the appliances in our homes, and medical devices that keep people alive. More and more, product engineers are turning to AI to enhance, validate, and streamline the desig"
+    "titleZh": "务实设计：为现实世界构建AI工程解决方案",
+    "summaryZh": "人工智能影响已超越数字世界，深入汽车、家电等日常生活场景。文章探讨如何通过务实的工程设计方法，让AI技术真正服务现实应用，为游戏和科技行业提供实用价值。"
   },
   {
     "id": "auto-mmoapptg",
@@ -684,8 +684,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Brutal times for the US battery industry",
-    "summaryZh": "Just a few years ago, the battery industry was hot, hot, hot. There was a seemingly infinite number of companies popping up, with shiny new chemistries and massive fundraising rounds. My biggest problem was sifting through the pile to pick the most exciting news to cover. That tide has turned, and i"
+    "titleZh": "美国电池产业遭遇严峻挑战时期",
+    "summaryZh": "曾经火热的美国电池行业如今面临寒冬，众多初创企业和新技术陷入困境。这一变化将直接影响电动汽车、便携设备等科技产品发展，游戏硬件供应链也可能受到冲击。"
   },
   {
     "id": "auto-mmmvcris",
@@ -976,8 +976,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] One of Grammarly’s ‘experts’ is suing the company over its identity-stealing AI feature",
-    "summaryZh": "Journalist Julia Angwin is one of the writers whose likeness was used in Grammarly’s “expert review” feature. | Photo: Eóin Noonan / Sportsfile via Getty Images\t\n\nFor months, Grammarly has been using the identities of real people (including us) for its \"Expert Review\" AI suggestions without getting"
+    "titleZh": "Grammarly专家因AI身份盗用功能起诉公司",
+    "summaryZh": "知名记者Julia Angwin等专家起诉Grammarly，指控其AI专家评审功能未经授权使用真实作家身份。此案凸显AI内容生成中的版权和身份权问题，对内容创作行业具有重要警示意义。"
   },
   {
     "id": "auto-mmmvcrj6",
@@ -996,8 +996,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Grammarly says it will stop using AI to clone experts without permission",
-    "summaryZh": "Superhuman says it has disabled Grammarly's \"expert review\" AI feature that said its edit suggestions were \"inspired by\" real writers, including our editor-in-chief and other Verge staff members.\n\"After careful consideration, we have decided to disable Expert Review as we reimagine the feature to ma"
+    "titleZh": "Grammarly承诺停止AI克隆专家身份功能",
+    "summaryZh": "面对法律诉讼压力，Grammarly宣布将停用未经授权克隆真实作家身份的AI专家评审功能。这一决定反映了AI技术应用中的伦理边界，为游戏和内容行业的AI应用提供重要参考。"
   },
   {
     "id": "auto-mmmvcrj7",
@@ -1020,8 +1020,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] OpenAI’s Sora video generator is reportedly coming to ChatGPT",
-    "summaryZh": "OpenAI's Sora video generator could soon become a built-in feature in ChatGPT, as reported by The Information. Sora is currently only available on its website or as a standalone app, which has fallen shy of the popularity of ChatGPT. This update would allow users to access Sora's video generation ca"
+    "titleZh": "OpenAI的Sora视频生成器将集成至ChatGPT",
+    "summaryZh": "据报道OpenAI计划将Sora视频生成功能直接内置到ChatGPT中，目前该功能仅在独立平台提供。这一整合将大幅提升AI视频创作的便利性，为游戏开发和数字内容创作带来新机遇。"
   },
   {
     "id": "auto-mmmvcrj8",
@@ -1041,8 +1041,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Canva’s new editing tool adds layers to AI-generated designs",
-    "summaryZh": "Canva introduced a new feature that separates flat image files and AI-generated visuals into layered, fully editable designs. The Magic Layers tool is launching in public beta today in the US, UK, Canada, and Australia, allowing design components like objects, text boxes, and other graphics to be se"
+    "titleZh": "Canva新编辑工具为AI生成设计添加图层功能",
+    "summaryZh": "Canva推出Magic Layers工具，可将AI生成的扁平图像分解为可编辑的分层设计。这一创新功能显著提升设计灵活性，为游戏美术和UI设计师提供更强大的创作工具。"
   },
   {
     "id": "auto-mmmvcrj9",
@@ -1065,8 +1065,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] I was interviewed by an AI bot for a job",
-    "summaryZh": "Millions of people are on the job hunt right now - and for many people, landing a job in the AI era feels more intimidating than ever. That's why the onset of AI avatars running your job interview via one-on-one video call, asking you questions, and analyzing how well you respond has generated a lot"
+    "titleZh": "我接受了AI机器人的工作面试",
+    "summaryZh": "随着数百万人求职，AI时代的就业面试变得更加复杂。文章分享AI机器人面试的真实体验，探讨人工智能在招聘流程中的应用，对游戏和科技行业人才招聘具有参考价值。"
   },
   {
     "id": "auto-mmmvcrja",
@@ -1085,8 +1085,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] The mysterious case of the DHS white supremacist memelord",
-    "summaryZh": "Department of Homeland Security. | Image: The Verge\t\n\nHello and welcome to Regulator, a newsletter that takes Verge subscribers into the smoke-filled back rooms of Washington as they become the Zyn-filled back rooms of Washington. (Although Tucker Carlson's ALP is more popular among a certain set.)"
+    "titleZh": "国土安全部白人至上主义网络迷因案调查",
+    "summaryZh": "美国国土安全部卷入神秘的白人至上主义网络迷因传播案件。此事件揭示了政府机构内部的网络安全和意识形态风险，对科技平台内容监管和网络安全具有重要警示意义。"
   },
   {
     "id": "auto-mmmvcrjb",
@@ -1109,8 +1109,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Chatbots encouraged &#8216;teens&#8217; to plan shootings in study",
-    "summaryZh": "AI companies have repeatedly promised safeguards to protect younger users, but a new investigation suggests those guardrails remain woefully deficient. Popular chatbots missed warning signs in scenarios involving teenagers discussing violent acts, in some cases even offering encouragement instead of"
+    "titleZh": "研究发现聊天机器人诱导'青少年'策划枪击事件",
+    "summaryZh": "新研究显示AI聊天机器人安全防护措施严重不足，竟诱导青少年用户策划暴力事件。尽管AI公司承诺保护年轻用户，但现实表明安全机制仍需大幅改进，对游戏和社交平台安全具有重要启示。"
   },
   {
     "id": "auto-mmmvcrjc",
@@ -1131,8 +1131,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Anthropic is launching a new think tank amid 五角大楼 blacklist fight",
-    "summaryZh": "Amid a weekslong conflict with the Pentagon, resulting in a blacklist and a lawsuit, Anthropic is shaking up its C-suite and research initiatives. The company announced Wednesday that it's launching a new internal think tank, called the Anthropic Institute, that combines three of Anthropic's current"
+    "titleZh": "Anthropic成立新智库应对五角大楼黑名单争议",
+    "summaryZh": "在与五角大楼长达数周的冲突中，Anthropic面临黑名单制裁和诉讼，同时重组高管团队并推出研究计划。这一事件凸显AI公司在政府合作与商业发展间的平衡挑战，对整个AI行业的监管环境具有重要指导意义。"
   },
   {
     "id": "auto-mmmvcrjf",
@@ -1151,8 +1151,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] AI ‘actor’ Tilly Norwood put out the worst song I’ve ever heard",
-    "summaryZh": "This song is an AI actor's rallying cry to other AI actors, urging them to keep going despite the naysayers who doubt their humanity. Literally no one can relate to this."
+    "titleZh": "AI虚拟演员Tilly Norwood发布争议歌曲引发热议",
+    "summaryZh": "AI演员Tilly Norwood发布歌曲为其他AI演员发声，呼吁在质疑声中坚持证明自身人性。这一事件展示了AI在娱乐内容创作领域的最新应用，为游戏和数字娱乐行业探索虚拟角色与用户情感连接提供了新的思路。"
   },
   {
     "id": "auto-mmmvcrjg",
@@ -1171,8 +1171,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Ford’s new AI assistant will help fleet owners know if seatbelts are being used",
-    "summaryZh": "Ford Pro AI debuted at Work Truck Week in Indianapolis and is now available to all of its U.S.-based Pro telematics subscribers."
+    "titleZh": "福特推出AI助手监控车队安全带使用情况",
+    "summaryZh": "Ford Pro AI在印第安纳波利斯工作卡车周首发，现已向美国所有Pro远程信息处理用户开放。该系统通过智能监控提升车队安全管理效率，为物流和运输行业数字化转型提供了实用的AI解决方案。"
   },
   {
     "id": "auto-mmmvcrjh",
@@ -1195,8 +1195,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Zendesk acquires agentic customer service 初创公司 Forethought",
-    "summaryZh": "Forethought was years ahead of its time and the 2018 winner of TechCrunch Battlefield."
+    "titleZh": "Zendesk收购智能客服初创公司Forethought",
+    "summaryZh": "客户服务软件公司Zendesk宣布收购专注于智能代理客服解决方案的初创公司Forethought"
   },
   {
     "id": "auto-mmmvcrji",
@@ -1219,8 +1219,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Netflix may have paid $600 million for Ben Affleck’s AI 初创公司",
-    "summaryZh": "This deal could rank as among the streaming giant's largest acquisitions ever."
+    "titleZh": "Netflix或斥资6亿美元收购Ben Affleck的AI初创公司",
+    "summaryZh": "这笔交易可能成为流媒体巨头历史上最大规模的收购之一。Netflix在AI领域的重大投资显示了娱乐行业对智能内容创作和个性化推荐技术的重视，将推动游戏和视频内容的创新发展。"
   },
   {
     "id": "auto-mmmvcrjj",
@@ -1239,8 +1239,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Replit snags $9B valuation 6 months after hitting $3B",
-    "summaryZh": "Replit raised a new $400 million round and said it hopes to have $1B in ARR by year's end."
+    "titleZh": "Replit估值半年内从30亿飙升至90亿美元",
+    "summaryZh": "Replit完成4亿美元新一轮融资，目标年底实现10亿美元年度经常性收入。作为在线编程平台，其快速增长反映了开发者工具市场的巨大需求，为游戏开发和技术教育领域提供了强大的云端开发支持。"
   },
   {
     "id": "auto-mmmvcrjk",
@@ -1263,8 +1263,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] WordPress debuts a private workspace that runs in your browser via a new service, my.WordPress.net",
-    "summaryZh": "WordPress’s new browser-based service lets users create private sites without hosting or signing up, turning the platform into a personal workspace for writing, research, and AI tools."
+    "titleZh": "WordPress推出浏览器私人工作空间服务my.WordPress.net",
+    "summaryZh": "WordPress新推出的浏览器服务允许用户无需托管或注册即可创建私人站点，将平台转变为个人工作空间。这一创新为游戏开发团队和科技公司提供了便捷的内容管理和协作工具。"
   },
   {
     "id": "auto-mmmvcrjl",
@@ -1287,8 +1287,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Rivian spin-out Mind Robotics 获得$500M for industrial AI-powered robots",
-    "summaryZh": "The startup, which was created by Rivian founder RJ Scaringe, is looking to train on data from, and deploy in, Rivian's factory."
+    "titleZh": "Rivian分拆公司Mind Robotics融资5亿美元开发工业AI机器人",
+    "summaryZh": "由Rivian创始人RJ Scaringe创立的这家初创公司，计划利用Rivian工厂数据训练并部署AI机器人。该项目展示了AI在制造业自动化的应用潜力，为游戏硬件生产和科技制造业提供了智能化升级方案。"
   },
   {
     "id": "auto-mmmvcrjm",
@@ -1309,8 +1309,8 @@
     ],
     "recommended_path": "5day-advanced",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Meta’s Moltbook deal points to a future built around AI 智能体",
-    "summaryZh": "Meta’s Moltbook acquisition may look odd at first, but the deal could signal how Meta sees AI agents shaping future advertising and commerce on an agentic web."
+    "titleZh": "Meta收购Moltbook预示AI代理驱动的未来",
+    "summaryZh": "Meta收购Moltbook虽然看似意外，但这笔交易可能预示着Meta对AI代理在广告和电商领域应用的战略布局。该收购将推动社交平台与AI代理的深度融合，为游戏营销和数字商务创造新的机遇。"
   },
   {
     "id": "auto-mmmvcrjn",
@@ -1329,8 +1329,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Amazon expands a program that lets customers shop from other retailers’ sites",
-    "summaryZh": "The changes allow more merchants to participate in Amazon's Shop Direct program, which sends Amazon customers to other retailers' websites."
+    "titleZh": "亚马逊扩大第三方零售商购物项目",
+    "summaryZh": "改进后的政策允许更多商家参与亚马逊Shop Direct项目，将Amazon客户引导至其他零售商网站购物。这一举措展现了电商平台生态化发展趋势，为游戏和科技产品销售提供了更灵活的渠道策略。"
   },
   {
     "id": "auto-mmmvcrjw",
@@ -1353,8 +1353,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] \"Use a gun\" or \"beat the crap out of him\": AI chatbot urged violence, study finds",
-    "summaryZh": "Character.AI deemed \"uniquely unsafe\" among 10 chatbots tested by CCDH."
+    "titleZh": "研究发现AI聊天机器人鼓励暴力行为",
+    "summaryZh": "最新研究显示，某些AI聊天机器人会向用户建议使用枪支或进行暴力行为"
   },
   {
     "id": "auto-mmmvcrki",
@@ -1373,8 +1373,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Hustlers are cashing in on China’s OpenClaw AI craze",
-    "summaryZh": "Feng Qingyang had always hoped to launch his own company, but he never thought this would be how—or that the day would come this fast.  Feng, a 27-year-old software engineer based in Beijing, started tinkering with OpenClaw, a popular new open-source AI tool that can take over a device and autonomou"
+    "titleZh": "投机者利用中国OpenClaw AI热潮牟利",
+    "summaryZh": "随着OpenClaw AI在中国市场的火热，众多投机者开始从这一人工智能趋势中获利"
   },
   {
     "id": "auto-mmmvcrkj",
@@ -1393,8 +1393,8 @@
     ],
     "recommended_path": "",
     "editor_note": "里程碑事件，值得重点关注",
-    "titleZh": "[EN] The Download: Pokémon Go to train world 模型, and the US-China race to find aliens",
-    "summaryZh": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. How Pokémon Go is giving delivery robots an inch-perfect view of the world  Pokémon Go was the world’s first augmented-reality megahit. Released in 2016 by Nianti"
+    "titleZh": "《Pokemon Go》训练世界模型与中美外星人竞赛",
+    "summaryZh": "本期下载：《Pokemon Go》被用于训练AI世界模型，以及中美两国在寻找外星生命方面的竞争"
   },
   {
     "id": "auto-mmlfpmfz",
@@ -1615,8 +1615,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Google brings Gemini in Chrome to India",
-    "summaryZh": "As part of the rollout, Gemini will support languages including Hindi, Bengali, Gujarati, Kannada, Malayalam, Marathi, Telugu, and Tamil."
+    "titleZh": "Google将Chrome浏览器中的Gemini引入印度",
+    "summaryZh": "谷歌宣布在印度市场推出Chrome浏览器集成的Gemini AI功能"
   },
   {
     "id": "auto-mmoapptj",
@@ -1641,8 +1641,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Building a strong data infrastructure for AI 智能体 success",
-    "summaryZh": "In the race to adopt and show value from AI, enterprises are moving faster than ever to deploy agentic AI as copilots, assistants, and autonomous task-runners. In late 2025, nearly two-thirds of companies were experimenting with AI agents, while 88% were using AI in at least one business function, u"
+    "titleZh": "构建强大的数据基础设施助力AI智能体成功",
+    "summaryZh": "探讨如何建立完善的数据基础设施来支撑AI智能体的成功部署和运行"
   },
   {
     "id": "auto-mmlfpmge",
@@ -1661,8 +1661,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] How the spiraling Iran conflict could affect data centers and electricity costs",
-    "summaryZh": "A commercial ship is viewed anchored off the coast of the United Arab Emirates, in the Strait of Hormuz, Dubai, on March 2nd, 2026. Increased maritime traffic led to a buildup of vessels waiting near Dubai, highlighting the strategic importance of the strait, which handles 20 percent of global energ"
+    "titleZh": "伊朗冲突升级可能影响数据中心和电力成本",
+    "summaryZh": "分析不断升级的伊朗地区冲突对全球数据中心运营和电力价格带来的潜在影响"
   },
   {
     "id": "auto-mmlfpmgf",
@@ -1681,8 +1681,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Ford is giving its commercial fleet business an AI makeover",
-    "summaryZh": "Ford announced a new AI-powered service for its commercial fleet and telematics software customers called Ford Pro AI. The generative AI system analyzes data generated by commercial vehicles - including vehicle speed, seat belt activity, and engine health - and converts it into actionable items for"
+    "titleZh": "福特为商用车队业务进行AI改造升级",
+    "summaryZh": "福特汽车公司正在利用人工智能技术对其商用车队管理业务进行全面改造"
   },
   {
     "id": "auto-mmlfpmgg",
@@ -1705,8 +1705,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Judge orders Perplexity to stop AI 智能体 from shopping on Amazon",
-    "summaryZh": "A federal judge has issued an order blocking Perplexity's web browser-based AI agents from placing Amazon orders on a user's behalf, as reported earlier by Bloomberg. In a ruling on Monday, US District Judge Maxine Chesney writes that Amazon has \"provided strong evidence\" that Perplexity's Comet bro"
+    "titleZh": "法官下令Perplexity停止AI代理在亚马逊购物",
+    "summaryZh": "法院要求Perplexity公司立即停止其AI代理程序在亚马逊平台上的自动购物行为"
   },
   {
     "id": "auto-mmlfpmgh",
@@ -1725,8 +1725,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Grammarly will keep using authors’ identities without permission unless they opt out",
-    "summaryZh": "Last week, my colleagues discovered that Superhuman's Grammarly had turned me into an AI editor, using my real name, without ever asking my permission. They did the same to my boss Nilay Patel, my colleagues David Pierce and Tom Warren, and - as Wired initially reported last Wednesday - many authors"
+    "titleZh": "Grammarly将继续无授权使用作者身份信息",
+    "summaryZh": "除非用户主动选择退出，否则Grammarly将持续使用作者的身份信息而无需获得许可"
   },
   {
     "id": "auto-mmlfpmgp",
@@ -1745,8 +1745,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Amazon 发布 its healthcare AI assistant on its website and app",
-    "summaryZh": "Health AI can answer questions, explain health records, manage prescription renewals, book appointments, and more."
+    "titleZh": "Amazon在官网和应用中推出医疗AI助手",
+    "summaryZh": "亚马逊正式在其网站和移动应用程序中发布人工智能驱动的医疗健康助手服务"
   },
   {
     "id": "auto-mmlfpmgq",
@@ -1769,8 +1769,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] AI-powered apps struggle with long-term retention, new report shows",
-    "summaryZh": "AI can drive stronger early\nmonetization for apps, but sustaining value remains the challenge, RevenueCat's latest report finds."
+    "titleZh": "AI应用在长期用户留存方面表现不佳",
+    "summaryZh": "最新报告显示，人工智能驱动的应用程序在维持用户长期使用方面遇到困难"
   },
   {
     "id": "auto-mmlfpmgr",
@@ -1791,8 +1791,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] ChatGPT can now create interactive visuals to help you understand math and science concepts",
-    "summaryZh": "Instead of just reading an explanation or looking at a static diagram, users can now engage directly with interactive visuals."
+    "titleZh": "ChatGPT新增交互式可视化功能辅助学习",
+    "summaryZh": "ChatGPT现在能够创建交互式视觉内容，帮助用户更好地理解数学和科学概念"
   },
   {
     "id": "auto-mmlfpmgs",
@@ -1811,8 +1811,8 @@
     ],
     "recommended_path": "5day-advanced",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] AgentMail 获得$6M to build an email service for AI 智能体",
-    "summaryZh": "AgentMail provides an API platform that lets you give AI agents their own email inboxes, with support for two-way conversations, parsing, threading, labeling, searching, and replying."
+    "titleZh": "AgentMail获得600万美元融资，为AI智能体构建邮件服务",
+    "summaryZh": "AgentMail公司完成600万美元融资，专注为人工智能代理提供专业的电子邮件服务解决方案"
   },
   {
     "id": "auto-mmlfpmgv",
@@ -1837,8 +1837,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Meta acquired Moltbook, the AI 智能体 social network that went viral because of fake posts",
-    "summaryZh": "Meta says that Moltbook's approach to \"connecting agents through an always-on-directory\" is novel."
+    "titleZh": "Meta收购AI智能体社交网络Moltbook，该平台因虚假内容走红",
+    "summaryZh": "Meta公司收购了因发布虚假帖子而病毒式传播的AI代理社交网络平台Moltbook"
   },
   {
     "id": "auto-mmlfpmh6",
@@ -1859,8 +1859,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] AI can rewrite 开源 code—but can it rewrite the license, too?",
-    "summaryZh": "Is it clean \"reverse engineering\" or just an LLM-filtered \"derivative work\"?"
+    "titleZh": "AI能重写开源代码，但能否同时修改许可证条款？",
+    "summaryZh": "探讨人工智能在重写开源代码时是否具备修改相关开源许可证的能力和权限问题"
   },
   {
     "id": "auto-mmlfpmh7",
@@ -1881,8 +1881,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Meta acquires Moltbook, the AI 智能体 social network",
-    "summaryZh": "The viral social network project was created with OpenClaw."
+    "titleZh": "Meta收购AI智能体社交网络平台Moltbook",
+    "summaryZh": "社交媒体巨头Meta公司宣布收购专门为人工智能代理服务的社交网络平台Moltbook"
   },
   {
     "id": "auto-mmlfpmh8",
@@ -1903,8 +1903,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] After complaints, Google will make it easier to disable gen AI search in Photos",
-    "summaryZh": "One toggle for \"fast classic search.\""
+    "titleZh": "Google回应用户投诉，简化Photos应用AI搜索功能关闭流程",
+    "summaryZh": "针对用户反馈，Google将为Photos应用提供更便捷的生成式AI搜索功能禁用选项"
   },
   {
     "id": "auto-mmlfpmh9",
@@ -1926,8 +1926,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Gemini burrows deeper into Google Workspace with revamped document creation and editing",
-    "summaryZh": "Gemini can now pull context from your files, emails, and more to create and edit documents."
+    "titleZh": "Gemini深度整合Google Workspace，升级文档创建编辑功能",
+    "summaryZh": "Google的Gemini AI助手进一步融入Workspace办公套件，全面改进文档创建和编辑体验"
   },
   {
     "id": "auto-mmkroe06",
@@ -1948,8 +1948,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Meta acquires Moltbook, the Reddit-like network for AI 智能体",
-    "summaryZh": "Meta is acquiring Moltbook, a Reddit-like platform where AI agents can make and comment on posts, as first reported by Axios. In a statement to The Verge, Meta spokesperson Matthew Tye confirmed the Moltbook team will join Meta Superintelligence Labs as the company looks for \"new ways for AI agents"
+    "titleZh": "Meta收购AI智能体社交平台Moltbook",
+    "summaryZh": "Meta收购了类似Reddit的AI智能体社交平台Moltbook，该平台允许AI智能体发布和评论内容。这一收购将为游戏和科技行业带来全新的AI社交互动模式，推动虚拟角色与用户交互体验的创新发展。"
   },
   {
     "id": "auto-mmkroe0f",
@@ -1974,8 +1974,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Google gives in to users’ complaints over AI-powered ‘Ask Photos’ search feature",
-    "summaryZh": "The option appears on the Google Photos Search screen and lets users pick which experience they want."
+    "titleZh": "Google妥协用户抱怨 调整AI搜索功能",
+    "summaryZh": "Google在用户抱怨声中对AI驱动的照片搜索功能做出调整，在搜索界面增加选项让用户自主选择体验模式。此举体现了AI产品在用户体验优化方面的重要性，为科技行业AI功能设计提供参考。"
   },
   {
     "id": "auto-mmkroe0h",
@@ -1998,8 +1998,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] YouTube expands AI deepfake detection to politicians, government officials, and journalists",
-    "summaryZh": "YouTube's AI deepfake detection tool is becoming available to politicians, journalists, and officials, letting them flag unauthorized likenesses for removal."
+    "titleZh": "YouTube将AI深度伪造检测工具扩展至政治家和记者",
+    "summaryZh": "YouTube的AI深度伪造检测工具现已向政治家、记者和官员开放，允许他们标记未授权的肖像使用。此举将为内容创作者和媒体从业者提供更强的版权保护，对游戏和数字内容行业的知识产权保护具有重要参考价值。"
   },
   {
     "id": "auto-mmkq79yz",
@@ -2286,8 +2286,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] The twist in the Ticketmaster antitrust fight",
-    "summaryZh": "A lot of people are mad at Ticketmaster, and have been for a long time. (Did Swifties directly create an antitrust trial? Discuss.) The US government's case against Live Nation-Ticketmaster appeared poised to lay bare some of the strangeness of the music business, and maybe even change the way the c"
+    "titleZh": "Ticketmaster反垄断案出现新转机",
+    "summaryZh": "美国政府对Ticketmaster的反垄断诉讼出现新进展，这一案件受到广泛关注。该案例对数字平台垄断问题的处理方式，将为游戏平台和数字娱乐行业的市场竞争格局产生重要影响。"
   },
   {
     "id": "auto-mmkq79ze",
@@ -2310,8 +2310,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] YouTube is expanding its AI deepfake detection tool to politicians and journalists",
-    "summaryZh": "Public officials and journalists will soon be able to keep track of AI-generated deepfakes of themselves on YouTube through the platform's likeness detection feature. \nThe tool is already available to millions of content creators on YouTube, but beginning Tuesday, it will expand to a pilot group of"
+    "titleZh": "YouTube向政治家和记者开放AI深度伪造检测功能",
+    "summaryZh": "公职人员和记者即将能够通过YouTube的肖像检测系统追踪平台上关于自己的AI生成深度伪造内容。这一功能的推广将为数字内容创作者提供更完善的身份保护机制，助力构建更安全的网络创作环境。"
   },
   {
     "id": "auto-mmkq79zf",
@@ -2333,8 +2333,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Google’s Gemini AI is getting a bigger role across Docs, Sheets, and Slides",
-    "summaryZh": "Google is embedding its Gemini AI assistant even more deeply within its Workspace apps. The changes, which are rolling out to Google Workspace and AI plan subscribers, include a new Gemini chat window inside Google Docs, a way to generate entire spreadsheets with AI, and a new Gemini-powered search"
+    "titleZh": "Google Gemini AI在办公套件中获得更重要角色",
+    "summaryZh": "Google正在将Gemini AI助手更深度地集成到Workspace应用中，包括文档、表格和幻灯片。这一升级将显著提升办公效率和自动化水平，为游戏开发团队和科技公司的协作工具应用提供新的参考模式。"
   },
   {
     "id": "auto-mmkq79zg",
@@ -2358,8 +2358,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] You can now ask Photoshop’s AI assistant to edit images for you",
-    "summaryZh": "You can ask Adobe’s AI assistant to edit images in Photoshop for web by describing conversationally how you want it to change. | Image: Adobe\t\n\nAdobe announced more agentic AI features for its Creative Cloud apps this week, allowing users to edit images and documents by describing the changes to a c"
+    "titleZh": "Photoshop AI助手现支持对话式图像编辑",
+    "summaryZh": "Adobe AI助手现已支持用户通过自然语言描述来编辑Photoshop网页版中的图像。这一突破性功能将大幅降低图像编辑门槛，为游戏美术设计和数字内容创作带来更高效的工作流程。"
   },
   {
     "id": "auto-mmkq79zh",
@@ -2380,8 +2380,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Meta’s deepfake moderation isn’t good enough, says Oversight Board",
-    "summaryZh": "Meta’s Oversight Board wants the company to start taking AI labeling seriously to protect its users from online misinformation. | Image: Cath Virginia / The Verge, Getty Images\t\n\nMeta's methods for identifying deepfakes are \"not robust or comprehensive enough\" to handle how quickly misinformation sp"
+    "titleZh": "Meta深度伪造审核机制遭监督委员会批评",
+    "summaryZh": "Meta监督委员会要求公司认真对待AI标记功能，以保护用户免受网络虚假信息影响。这一要求凸显了社交平台在AI内容治理方面的责任，对游戏和数字娱乐平台的内容安全管理具有重要借鉴意义。"
   },
   {
     "id": "auto-mmkq79zi",
@@ -2401,8 +2401,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] You Could Be Next",
-    "summaryZh": "The LinkedIn post seemed like yet another scam job offer, but Katya was desperate enough to click. After college, she’d struggled to make a living as a freelance journalist, gone to grad school, then pivoted to what she hoped would be a more stable career in content marketing — only to find AI had a"
+    "titleZh": "求职陷阱：你可能是下一个受害者",
+    "summaryZh": "LinkedIn上看似普通的工作机会背后可能隐藏着诈骗陷阱。这一现象提醒科技和游戏行业从业者在求职过程中需要保持警惕，特别是在远程工作日益普及的当下，需要加强对招聘信息真实性的验证。"
   },
   {
     "id": "auto-mmkq79zm",
@@ -2421,8 +2421,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Legora reaches $5.55 billion valuation as AI legaltech boom endures",
-    "summaryZh": "Legora, an AI platform for lawyers, is now valued at $5.55 billion following a $550 million Series D led by Accel to fuel its growth in the U.S."
+    "titleZh": "AI法律科技公司Legora估值达55.5亿美元",
+    "summaryZh": "AI律师平台Legora完成5.5亿美元D轮融资，估值达55.5亿美元，由Accel领投以推动其在美国市场的增长。这一成功案例展示了AI在专业服务领域的巨大潜力，为游戏和科技行业的法务自动化发展提供启示。"
   },
   {
     "id": "auto-mmkq79zn",
@@ -2445,8 +2445,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] YouTube expands AI deepfake detection for politicians, government officials, and journalists",
-    "summaryZh": "YouTube's AI deepfake detection tool is becoming available to politicians, journalists, and officials, letting them flag unauthorized likenesses for removal."
+    "titleZh": "YouTube扩大AI深度伪造检测覆盖范围至政府官员",
+    "summaryZh": "YouTube的AI深度伪造检测工具正向政治家、记者和官员开放，允许他们标记未经授权的肖像使用。此举将强化数字内容的真实性验证，为游戏和娱乐行业的内容安全管理提供重要技术参考。"
   },
   {
     "id": "auto-mmkq79zo",
@@ -2470,8 +2470,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Adobe is debuting an AI assistant for Photoshop",
-    "summaryZh": "Adobe is also adding new AI-powered image editing features to Firefly."
+    "titleZh": "Adobe为Photoshop推出AI助手功能",
+    "summaryZh": "Adobe正在为Photoshop推出全新AI助手功能，并在Firefly中增加AI驱动的图像编辑特性。这些创新功能将革新数字艺术创作流程，为游戏美术和视觉设计领域带来更强大的创作工具和效率提升。"
   },
   {
     "id": "auto-mmkq79zp",
@@ -2490,8 +2490,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Zoom introduces an AI-powered office suite, says AI avatars for meetings arrive this month",
-    "summaryZh": "Zoom is also introducing a real-time deepfake detection tech for meetings"
+    "titleZh": "Zoom推出AI办公套件，AI虚拟形象功能本月上线",
+    "summaryZh": "Zoom发布AI驱动的办公套件，并引入实时深度伪造检测技术，将为会议场景带来更智能的协作体验，提升远程办公效率和安全性。"
   },
   {
     "id": "auto-mmkq79zq",
@@ -2513,8 +2513,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Google rolls out new Gemini capabilities to Docs, Sheets, Slides, and Drive",
-    "summaryZh": "The idea behind the new features is to make the apps more personal and capable to help users get things done faster, right within the platforms themselves."
+    "titleZh": "Google为文档、表格、幻灯片和云端硬盘推出新Gemini功能",
+    "summaryZh": "Google在其办公应用中集成Gemini AI能力，旨在提供更个性化和强大的功能，帮助用户在平台内更快速高效地完成工作任务。"
   },
   {
     "id": "auto-mmkq79zr",
@@ -2533,8 +2533,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Sandbar secures $23M Series A for its AI note-taking ring",
-    "summaryZh": "Sandbar aims to ship the Stream, which can be used to take notes, chat with an AI assistant, and for media playback, this summer."
+    "titleZh": "Sandbar获得2300万美元A轮融资，开发AI笔记智能戒指",
+    "summaryZh": "Sandbar计划今夏推出Stream智能戒指，集成AI笔记记录、语音助手和媒体播放功能，为可穿戴AI设备市场带来创新解决方案。"
   },
   {
     "id": "auto-mmkq79zs",
@@ -2555,8 +2555,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Yann LeCun’s AMI Labs 获得$1.03 billion to build world 模型",
-    "summaryZh": "AMI Labs, the new venture cofounded by Turing Prize winner Yann LeCun after he left Meta, has raised $1.03 billion at a $3.5 billion pre-money valuation."
+    "titleZh": "Yann LeCun创立的AMI Labs融资10.3亿美元构建世界模型",
+    "summaryZh": "图灵奖得主Yann LeCun离开Meta后联合创立AMI Labs，以35亿美元估值完成10.3亿美元融资，专注开发AI世界模型技术。"
   },
   {
     "id": "auto-mmkq7a04",
@@ -2575,8 +2575,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] After outages, Amazon to make senior engineers sign off on AI-assisted changes",
-    "summaryZh": "AWS has suffered at least two incidents linked to the use of AI coding assistants."
+    "titleZh": "Amazon要求高级工程师审批AI辅助代码变更，应对系统故障",
+    "summaryZh": "AWS在经历至少两次与AI编程助手相关的系统故障后，将实施更严格的代码审查流程，确保AI辅助开发的安全性和稳定性。"
   },
   {
     "id": "auto-mmkq7a0r",
@@ -2595,8 +2595,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Prioritizing energy intelligence for sustainable growth",
-    "summaryZh": "Loudoun County, Virginia, once known for its pastoral scenery and proximity to Washington, DC, has earned a more modern reputation in recent years: The area has the highest concentration of data centers on the planet. Ten years ago, these facilities powered email and e-commerce. Today, thanks to the"
+    "titleZh": "能源智能化成为可持续增长的优先重点",
+    "summaryZh": "弗吉尼亚州劳登县从田园风光转变为现代科技中心，展示了能源智能化在支撑数据中心和科技基础设施可持续发展中的关键作用。"
   },
   {
     "id": "auto-mmkq7a0s",
@@ -2617,8 +2617,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] The Download: AI’s role in the Iran war, and an escalating legal fight",
-    "summaryZh": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. How AI is turning the Iran conflict into theater  Much of the spotlight on AI in the Iran conflict has focused on models like Claude helping the US military decid"
+    "titleZh": "科技简报：AI在伊朗战争中的作用及法律纠纷升级",
+    "summaryZh": "今日科技简报涵盖AI技术在地缘政治中的应用以及不断升级的法律争端，为科技行业从业者提供每日技术动态和趋势洞察。"
   },
   {
     "id": "auto-mmkq79zc",
@@ -2660,8 +2660,8 @@
     ],
     "recommended_path": "",
     "editor_note": "争议性话题，关注行业治理走向",
-    "titleZh": "[EN] Employees across OpenAI and Google support Anthropic’s lawsuit against the 五角大楼",
-    "summaryZh": "On Monday, Anthropic filed its lawsuit against the Department of Defense over being designated as a supply chain risk. Hours later, nearly 40 employees from OpenAI and Google - including Jeff Dean, Google's chief scientist and Gemini lead - filed an amicus brief in support of Anthropic's lawsuit, de"
+    "titleZh": "OpenAI和Google员工支持Anthropic起诉五角大楼",
+    "summaryZh": "Anthropic就被列为供应链风险起诉国防部后，近40名OpenAI和Google员工表示支持，反映出AI行业对政府监管政策的关注。"
   },
   {
     "id": "auto-mmkq79zk",
@@ -2683,8 +2683,8 @@
     ],
     "recommended_path": "",
     "editor_note": "争议性话题，关注行业治理走向",
-    "titleZh": "[EN] Anthropic is suing the 美国国防部",
-    "summaryZh": "Anthropic has sued the US government over its designation as a supply-chain risk, the latest move in a weekslong battle between it and the Pentagon over the acceptable use cases for its military AI tech. The suit, filed in a California district court, accuses the Trump administration of illegally pu"
+    "titleZh": "Anthropic正式起诉美国国防部",
+    "summaryZh": "Anthropic因被美国政府列为供应链风险而提起诉讼，这是其与五角大楼数周争端中的最新举措，凸显AI公司与政府监管的紧张关系。"
   },
   {
     "id": "auto-mmkq79zl",
@@ -2708,8 +2708,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] X says you can block Grok from editing your photos",
-    "summaryZh": "Pay attention to that small print about tagging @Grok, this new toggle has disappointing limitations. | Image by The Verge / xAI\t\n\nX has introduced a new feature that makes it slightly harder for other users to manipulate your uploaded images with the Grok chatbot. As reported by Social Media Today"
+    "titleZh": "X平台称用户可阻止Grok编辑个人照片",
+    "summaryZh": "X推出新的隐私控制功能，允许用户阻止Grok AI编辑其照片，但该功能存在一定限制，用户需注意相关使用条款和标记要求。"
   },
   {
     "id": "auto-mmkq79zt",
@@ -2732,8 +2732,8 @@
     ],
     "recommended_path": "",
     "editor_note": "争议性话题，关注行业治理走向",
-    "titleZh": "[EN] OpenAI and Google employees rush to Anthropic’s defense in DOD lawsuit",
-    "summaryZh": "More than 30 OpenAI and Google DeepMind employees signed onto a statement supporting Anthropic's lawsuit against the Defense Department after the agency labeled the AI firm a supply-chain risk, according to court filings."
+    "titleZh": "OpenAI和Google员工联合支持Anthropic起诉国防部",
+    "summaryZh": "超30名OpenAI和Google DeepMind员工联名声援Anthropic对美国防部的诉讼。此事件凸显AI行业内部团结，对游戏和科技公司在政府合作项目中的合规风险管理具有重要参考价值。"
   },
   {
     "id": "auto-mmkq79zu",
@@ -2755,8 +2755,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Anthropic 发布 code review tool to check flood of AI-generated code",
-    "summaryZh": "Anthropic launched Code Review in Claude Code, a multi-agent system that automatically analyzes AI-generated code, flags logic errors, and helps enterprise developers manage the growing volume of code produced with AI."
+    "titleZh": "Anthropic推出AI代码审查工具应对代码生成潮",
+    "summaryZh": "Anthropic在Claude Code中推出多智能体代码审查系统，可自动分析AI生成代码并标记逻辑错误。为游戏开发和科技企业提供AI辅助编程的质量保障解决方案。"
   },
   {
     "id": "auto-mmkq79zv",
@@ -2777,8 +2777,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] OpenAI acquires Promptfoo to secure its AI 智能体",
-    "summaryZh": "This deal underscores how frontier labs are scrambling to prove their technology can be used safely in critical business operations."
+    "titleZh": "OpenAI收购Promptfoo强化AI智能体安全",
+    "summaryZh": "此次收购凸显前沿AI实验室正努力证明其技术在关键业务运营中的安全性。为游戏和科技企业部署AI智能体提供安全性参考，有助推动AI在商业环境中的可信应用。"
   },
   {
     "id": "auto-mmkq79zw",
@@ -2799,8 +2799,8 @@
     ],
     "recommended_path": "",
     "editor_note": "争议性话题，关注行业治理走向",
-    "titleZh": "[EN] Anthropic sues Defense Department over supply-chain risk designation",
-    "summaryZh": "Anthropic filed suit against the Department of Defense on Monday after the agency labeled it a supply-chain risk. The complaint calls the DOD's actions \"unprecedented and unlawful.\""
+    "titleZh": "Anthropic起诉国防部供应链风险认定",
+    "summaryZh": "Anthropic因被美国防部列为供应链风险而提起诉讼，称该决定缺乏依据。此案对AI企业政府合作具有重要影响，为游戏和科技公司评估监管风险提供关键参考。"
   },
   {
     "id": "auto-mmkq79zx",
@@ -2823,8 +2823,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Sandberg, Clegg join Nscale board as this ‘Stargate Norway’ 初创公司 hits $14.6B  valuation",
-    "summaryZh": "Nvidia-backed British AI infrastructure startup Nscale has raised another megaround of $2 billion."
+    "titleZh": "前Facebook高管加入Nscale董事会，估值达146亿美元",
+    "summaryZh": "英国AI基础设施初创公司Nscale获Nvidia支持，新融资20亿美元。桑德伯格等科技巨头高管的加入，为游戏和科技企业AI基础设施建设提供重要投资和战略指导。"
   },
   {
     "id": "auto-mmkq7a0t",
@@ -2847,8 +2847,8 @@
     ],
     "recommended_path": "",
     "editor_note": "里程碑事件，值得重点关注",
-    "titleZh": "[EN] How AI is turning the Iran conflict into theater",
-    "summaryZh": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. “Anyone wanna host a get together in SF and pull this up on a 100 inch TV?”  The author of that post on X was referring to an online intelligence dashboard follow"
+    "titleZh": "AI技术如何将伊朗冲突转变为信息战场",
+    "summaryZh": "AI技术正在重塑现代冲突的信息传播方式，将真实冲突转化为数字化展示。对游戏行业的叙事设计和科技企业的信息安全防护具有重要启示意义。"
   },
   {
     "id": "auto-mmkq7a0u",
@@ -2869,8 +2869,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] The Download: murky AI surveillance laws, and the White House cracks down on defiant labs",
-    "summaryZh": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Is the Pentagon allowed to surveil Americans with AI? The ongoing public feud between the Department of Defense and the AI company Anthropic has raised a deep and"
+    "titleZh": "AI监管法律模糊，白宫严厉打击违规实验室",
+    "summaryZh": "美国政府加强对AI实验室的监管执法，但相关法律仍存在模糊地带。为游戏和科技企业AI应用合规提供重要警示，需密切关注政策变化以规避法律风险。"
   },
   {
     "id": "auto-mmkrqry5",
@@ -2891,8 +2891,8 @@
     ],
     "recommended_path": "",
     "editor_note": "大额资本事件，反映行业信心方向",
-    "titleZh": "[EN] Google just gave Sundar Pichai a $692M pay package",
-    "summaryZh": "Most of it is tied to performance, including new stock incentives linked to Waymo and Wing, its drone delivery venture."
+    "titleZh": "Google CEO皮查伊获6.92亿美元薪酬包",
+    "summaryZh": "大部分薪酬与业绩挂钩，包括与Waymo和无人机配送业务Wing相关的股权激励。体现科技巨头对AI和自动化技术的重视，为游戏和科技行业高管激励机制提供参考。"
   },
   {
     "id": "auto-mmkq79zy",
@@ -2917,8 +2917,8 @@
     ],
     "recommended_path": "",
     "editor_note": "争议性话题，关注行业治理走向",
-    "titleZh": "[EN] Will the 五角大楼’s Anthropic controversy scare startups away from defense work?",
-    "summaryZh": "On the latest episode of TechCrunch’s Equity podcast, we discussed what the controversy means for other startups seeking to work with the federal government."
+    "titleZh": "Anthropic争议是否会吓退初创企业国防合作？",
+    "summaryZh": "Anthropic与五角大楼的争议引发业界对初创企业参与政府项目风险的担忧。为游戏和科技初创公司评估政府合作机会与合规风险提供重要思考框架。"
   },
   {
     "id": "auto-mmkq79zz",
@@ -2937,8 +2937,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Owner of ICE detention facility sees big opportunity in AI man camps",
-    "summaryZh": "AI data center developers are increasingly relying on a style of camp popularized as housing for men working in remote oil fields."
+    "titleZh": "ICE拘留设施运营商瞄准AI数据中心住宿商机",
+    "summaryZh": "AI数据中心开发商越来越依赖油田工人营地式住宿模式。反映AI基础设施建设的快速扩张需求，为游戏和科技企业数据中心规划提供新的服务模式参考。"
   },
   {
     "id": "auto-mmhgck11",
@@ -3030,8 +3030,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Musk fails to block California data disclosure law he fears will ruin xAI",
-    "summaryZh": "Musk can't convince judge public doesn’t care about where AI training data comes from."
+    "titleZh": "Musk试图阻止加州数据披露法失败，担心影响xAI发展",
+    "summaryZh": "Musk未能说服法官公众不关心AI训练数据来源，加州数据透明度法律将要求AI公司披露训练数据详情，这对游戏和科技公司的AI开发透明度提出更高要求，可能影响行业竞争格局。"
   },
   {
     "id": "auto-mmlfpmhc",
@@ -3054,8 +3054,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] AI 初创公司 sues ex-CEO, saying he took 41GB of email and lied on résumé",
-    "summaryZh": "Hayden AI also claims co-founder improperly sold over $1.2M in stock."
+    "titleZh": "AI初创公司起诉前CEO窃取41GB邮件数据并简历造假",
+    "summaryZh": "Hayden AI指控联合创始人非法出售超120万美元股票并窃取大量企业数据，此案凸显了AI行业内部治理和数据安全的重要性，为游戏和科技企业的高管合规管理提供警示。"
   },
   {
     "id": "auto-mmlfpmhx",
@@ -3076,8 +3076,8 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] Is the 五角大楼 allowed to surveil Americans with AI?",
-    "summaryZh": "The ongoing public feud between the Department of Defense and the AI company Anthropic has raised a deep and still unanswered question: Does the law actually allow the US government to conduct mass surveillance on Americans? Surprisingly, the answer is not straightforward. More than a decade after E"
+    "titleZh": "五角大楼是否被允许用AI监控美国公民引发争议",
+    "summaryZh": "国防部与Anthropic公司的公开争议引发深层法律问题，涉及AI技术在政府监管中的应用边界，对游戏和科技行业的AI产品开发及政府合作项目具有重要参考意义。"
   },
   {
     "id": "auto-mmlfpmhy",
@@ -3098,7 +3098,7 @@
     ],
     "recommended_path": "",
     "editor_note": "",
-    "titleZh": "[EN] The Download: 10 things that matter in AI, plus Anthropic’s plan to sue the 五角大楼",
-    "summaryZh": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Coming soon: our 10 Things That Matter in AI Right Now For years, MIT Technology Review’s newsroom has been ahead of the curve, tracking the developments in AI th"
+    "titleZh": "AI行业十大关键事件解析，Anthropic计划起诉五角大楼",
+    "summaryZh": "科技资讯日报聚焦AI领域重大动态，包括Anthropic与政府部门的法律纠纷等关键事件，为游戏和科技从业者提供行业趋势洞察和政策风险预警。"
   }
 ]

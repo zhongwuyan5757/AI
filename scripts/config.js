@@ -1,7 +1,13 @@
 /**
  * config.js — 自动化脚本统一配置
  */
-require('dotenv').config({ path: require('path').resolve(__dirname, '..', '.env') });
+const _dotenvResult = require('dotenv').config({ path: require('path').resolve(__dirname, '..', '.env') });
+// Node.js v25 兼容：dotenv 解析成功但 process.env 未更新时，手动注入
+if (_dotenvResult.parsed) {
+  for (const [k, v] of Object.entries(_dotenvResult.parsed)) {
+    if (!process.env[k]) process.env[k] = v;
+  }
+}
 
 const path = require('path');
 
@@ -35,11 +41,11 @@ module.exports = {
     { name: 'VentureBeat-AI', type: 'rss', url: 'https://venturebeat.com/category/ai/feed/' },
     { name: 'MIT-Tech-AI', type: 'rss', url: 'https://www.technologyreview.com/feed/' },
     // HackerNews API（多关键词扩大覆盖）
-    { name: 'HackerNews-AI', type: 'api', url: 'https://hn.algolia.com/api/v1/search?query=AI+tools&tags=story&hitsPerPage=30' },
-    { name: 'HackerNews-LLM', type: 'api', url: 'https://hn.algolia.com/api/v1/search?query=LLM+generative+AI&tags=story&hitsPerPage=25' },
-    { name: 'HackerNews-GPT', type: 'api', url: 'https://hn.algolia.com/api/v1/search?query=GPT+Claude+Gemini&tags=story&hitsPerPage=20' },
-    { name: 'HackerNews-Diffusion', type: 'api', url: 'https://hn.algolia.com/api/v1/search?query=Midjourney+Stable+Diffusion+DALL-E&tags=story&hitsPerPage=15' },
-    { name: 'HackerNews-Agent', type: 'api', url: 'https://hn.algolia.com/api/v1/search?query=AI+agent+automation&tags=story&hitsPerPage=15' },
+    { name: 'HackerNews-AI', type: 'api', url: 'https://hn.algolia.com/api/v1/search?query=AI+tools&tags=story&hitsPerPage=50' },
+    { name: 'HackerNews-LLM', type: 'api', url: 'https://hn.algolia.com/api/v1/search?query=LLM+generative+AI&tags=story&hitsPerPage=40' },
+    { name: 'HackerNews-GPT', type: 'api', url: 'https://hn.algolia.com/api/v1/search?query=GPT+Claude+Gemini&tags=story&hitsPerPage=35' },
+    { name: 'HackerNews-Diffusion', type: 'api', url: 'https://hn.algolia.com/api/v1/search?query=Midjourney+Stable+Diffusion+DALL-E&tags=story&hitsPerPage=25' },
+    { name: 'HackerNews-Agent', type: 'api', url: 'https://hn.algolia.com/api/v1/search?query=AI+agent+automation&tags=story&hitsPerPage=25' },
   ],
 
   // 工具发现源
@@ -58,8 +64,8 @@ module.exports = {
     minTitleLength: 8,
     // 描述最低长度
     minDescLength: 20,
-    // 最大保留条目数（7天累积，每天约100条）
-    maxNewsItems: 700,
+    // 最大保留条目数（7天累积，每天约200条）
+    maxNewsItems: 1400,
     maxToolsItems: 50,
     maxModelsItems: 30,
   },

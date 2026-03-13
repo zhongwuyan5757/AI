@@ -166,23 +166,38 @@ async function main() {
   log.info('🌐 开始双语翻译...');
   const CJK_REGEX = /[\u4e00-\u9fff\u3040-\u309f\u30a0-\u30ff\uac00-\ud7af]/;
   let translatedCount = 0;
+  let translationFailCount = 0;
   for (const item of cleaned) {
     if (!CJK_REGEX.test(item.title)) {
       // 英文标题 → 生成 titleZh 和 summaryZh
       try {
         const translation = await translateToZh(item);
-        item.titleZh = translation.titleZh;
-        item.summaryZh = translation.summaryZh;
-        translatedCount++;
+        // 翻译质量验证：中文字符占比必须 ≥ 30%
+        const zhChars = (translation.titleZh || '').match(/[\u4e00-\u9fff]/g) || [];
+        const isGoodTranslation = zhChars.length >= 4 && zhChars.length / translation.titleZh.length >= 0.3;
+        if (isGoodTranslation) {
+          item.titleZh = translation.titleZh;
+          item.summaryZh = translation.summaryZh;
+          translatedCount++;
+        } else {
+          // 翻译质量不合格，标记待翻译但不使用垃圾翻译
+          log.warn(`  翻译质量不合格: ${item.title?.substring(0, 40)}`);
+          item.titleZh = '';
+          item.summaryZh = '';
+          translationFailCount++;
+        }
       } catch (err) {
         log.warn(`  翻译失败: ${item.title?.substring(0, 30)} — ${err.message}`);
-        // 回退：使用简单的标记提醒需要人工翻译
-        item.titleZh = `[待翻译] ${item.title}`;
-        item.summaryZh = item.summary;
+        item.titleZh = '';
+        item.summaryZh = '';
+        translationFailCount++;
       }
     }
   }
-  log.info(`🌐 翻译完成: ${translatedCount} 条英文新闻已添加中文翻译`);
+  log.info(`🌐 翻译完成: ${translatedCount} 条成功${translationFailCount > 0 ? `, ${translationFailCount} 条待翻译` : ''}`);
+  if (!config.AI_ENABLED && translationFailCount > 0) {
+    log.warn('⚠️ ANTHROPIC_API_KEY 未配置，英文新闻无法自动翻译！请在 .env 中配置 API Key');
+  }
 
   // ====== Step 5: 校验 ======
   const validated = validateBatch(cleaned, 'news', log);

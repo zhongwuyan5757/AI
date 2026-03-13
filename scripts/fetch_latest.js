@@ -23,7 +23,7 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data');
 const DRY_RUN = process.argv.includes('--dry-run');
-const MAX_PER_FETCH = 100;   // 每次更新保留的最大新条目数
+const MAX_PER_FETCH = 200;   // 每次更新保留的最大新条目数
 const RETENTION_DAYS = 7;    // 新闻保留天数，超过自动清理
 
 function fileHash(filePath) {
