@@ -379,7 +379,10 @@ function _setupVtEvents() {
       _videoToolState.transcript = this.value;
       _videoToolState.isTranscriptManual = true;
       const len = this.value.length;
-      if (charCount) charCount.textContent = `${len} 字符`;
+      const truncLimit = 15000;
+      const truncWarning = len > truncLimit ? ` （超出 ${len - truncLimit} 字符，AI 仅处理前 ${truncLimit} 字符）` : '';
+      if (charCount) charCount.textContent = `${len} 字符${truncWarning}`;
+      if (charCount) charCount.style.color = len > truncLimit ? '#e57373' : '';
       if (clearTranscript) clearTranscript.style.display = len > 0 ? 'inline-flex' : 'none';
       _updateAiButtonStates();
     });
