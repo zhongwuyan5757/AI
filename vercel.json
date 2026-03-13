@@ -33,7 +33,7 @@
         },
         {
           "key": "X-XSS-Protection",
-          "value": "0"
+          "value": "1; mode=block"
         },
         {
           "key": "Strict-Transport-Security",

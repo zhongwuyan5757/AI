@@ -47,10 +47,17 @@ const TASK_PROMPTS = {
 };
 
 export default async function handler(req, res) {
-  // CORS
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  // CORS — 仅允许自有域名，防止跨站滥用
+  const allowedOrigins = [
+    'https://fiveseven-ai.vercel.app',
+    'https://fiveseven.ai'
+  ];
+  const requestOrigin = req.headers.origin || '';
+  const corsOrigin = allowedOrigins.includes(requestOrigin) ? requestOrigin : allowedOrigins[0];
+  res.setHeader('Access-Control-Allow-Origin', corsOrigin);
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Vary', 'Origin');
 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
@@ -62,9 +69,10 @@ export default async function handler(req, res) {
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    return res.status(500).json({
+    console.error('[video-ai] ANTHROPIC_API_KEY is not configured');
+    return res.status(503).json({
       success: false,
-      error: '服务端未配置 ANTHROPIC_API_KEY，请联系管理员'
+      error: 'AI 服务暂时不可用，请稍后重试'
     });
   }
 
