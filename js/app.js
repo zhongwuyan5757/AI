@@ -161,19 +161,25 @@ function runCleanups() {
 
 function navigate(section, param) {
   trackEvent('navigate', { section, param: param || '' });
-  if (param) {
-    window.location.hash = `${section}/${param}`;
-  } else {
-    window.location.hash = section === 'home' ? '' : section;
-  }
+  var path = param ? '/' + section + '/' + param : (section === 'home' ? '/' : '/' + section);
+  history.pushState(null, '', path);
+  handleRoute();
 }
 
 function handleRoute() {
   // 清理前一个页面的资源（observer、定时器等）
   runCleanups();
 
-  const hash = window.location.hash.slice(1) || 'home';
-  const parts = hash.split('/');
+  // 优先从 pathname 读取路由（navigate 使用 pushState 设置路径 URL）
+  // 回退到 hash（兼容旧的 /#section 链接和直接输入）
+  var route = '';
+  if (window.location.hash) {
+    route = window.location.hash.slice(1);
+  } else if (window.location.pathname && window.location.pathname !== '/') {
+    route = window.location.pathname.slice(1); // 去掉开头的 /
+  }
+  route = route || 'home';
+  const parts = route.split('/');
   const section = parts[0] || 'home';
   const param = parts.slice(1).join('/') || null;
 
@@ -274,9 +280,12 @@ function updatePageTitle(section, param) {
     document.title = `${SECTION_TITLES[section]} — ${SITE_NAME}`;
   }
 
-  // 更新地址栏为 path URL，让分享链接被爬虫正确解析 OG 标签
-  var pathUrl = param ? '/' + section + '/' + param : (section === 'home' ? '/' : '/' + section);
-  try { history.replaceState(null, '', pathUrl); } catch(e) { /* ignore */ }
+  // 注意：URL 路径由 navigate() 的 pushState 管理，不在此处 replaceState
+  // 仅对 hash 路由（旧链接/直接输入 /#section）做一次性 URL 美化
+  if (window.location.hash) {
+    var pathUrl = param ? '/' + section + '/' + param : (section === 'home' ? '/' : '/' + section);
+    try { history.replaceState(null, '', pathUrl); } catch(e) { /* ignore */ }
+  }
 }
 
 
@@ -3911,7 +3920,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 
-  // 哈希路由
+  // 路由：支持 pushState 路径路由 + 旧 hash 路由
+  window.addEventListener('popstate', handleRoute);
   window.addEventListener('hashchange', handleRoute);
   handleRoute();
 });
