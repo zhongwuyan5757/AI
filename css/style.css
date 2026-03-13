@@ -5898,6 +5898,47 @@ footer {
   position: relative;
   z-index: 2;
 }
+.tool-verdict-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: calc(14px * 1.65 * 3 + 14px * 2);
+}
+
+/* --- 展开/折叠按钮 --- */
+.tool-card-expand {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  padding-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: color 0.2s;
+  position: relative;
+  z-index: 2;
+}
+.tool-card-expand:hover { color: var(--primary); }
+.tool-card-expand i { font-size: 10px; transition: transform 0.2s; }
+
+/* --- 展开内容容器 --- */
+.tool-expand-content {
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- 可点击卡片 --- */
+.tool-detail-card.tool-clickable { cursor: pointer; }
+
+/* --- 展开态卡片边框高亮 --- */
+.tool-detail-card.tool-card-open {
+  border-color: rgba(105,234,203,0.15);
+}
 
 /* --- 适合 / 不适合 --- */
 .ext-fit-section {

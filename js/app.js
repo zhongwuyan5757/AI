@@ -601,6 +601,23 @@ function toggleUpdateDetail(card) {
   if (!isOpen) trackEvent('update_expand', { title: card.querySelector('.upd-card-title')?.textContent });
 }
 
+function toggleToolDetail(card) {
+  var content = card.querySelector('.tool-expand-content');
+  var btn = card.querySelector('.tool-card-expand');
+  if (!content || !btn) return;
+  var isOpen = card.classList.contains('tool-card-open');
+  content.style.display = isOpen ? 'none' : 'flex';
+  btn.innerHTML = isOpen
+    ? '<i class="fa-solid fa-chevron-down"></i> 展开详情'
+    : '<i class="fa-solid fa-chevron-up"></i> 收起详情';
+  card.classList.toggle('tool-card-open', !isOpen);
+  var verdict = card.querySelector('.tool-verdict');
+  if (verdict) {
+    verdict.classList.toggle('tool-verdict-clamp', isOpen);
+  }
+  if (!isOpen) trackEvent('tool_expand', { id: card.dataset.id });
+}
+
 function renderHomeCTA() {
   return `
     <div class="home-section">
@@ -2167,7 +2184,7 @@ function renderToolDetailCard(tool) {
   const hasExt = !!tool.verdict;
 
   return `
-    <div class="tool-detail-card${hasExt ? ' tool-extended' : ''}" data-id="${tool.id}" style="--tool-glow:${tool.color}25;--tool-color:${tool.color}">
+    <div class="tool-detail-card${hasExt ? ' tool-extended tool-clickable' : ''}" data-id="${tool.id}" style="--tool-glow:${tool.color}25;--tool-color:${tool.color}" ${hasExt ? 'onclick="if(!event.target.closest(\'a,button\')){toggleToolDetail(this)}"' : ''}>
       <button class="fav-btn ${isFav ? 'favorited' : ''}" onclick="event.stopPropagation();toggleFavorite('${tool.id}',this)" title="${isFav ? '取消收藏' : '收藏'}"><i class="fa-${isFav ? 'solid' : 'regular'} fa-heart"></i></button>
       <div class="tool-detail-header">
         <div class="tool-icon-container">${icon}</div>
@@ -2180,32 +2197,35 @@ function renderToolDetailCard(tool) {
         </div>
         <span class="difficulty ${diff.cssClass}">${diff.label}</span>
       </div>
-      ${hasExt ? `<div class="tool-verdict">${escapeHtml(tool.verdict)}</div>` : ''}
-      <div class="tool-detail-desc">${tool.desc}</div>
-      ${tool.bestFor ? `
-      <div class="ext-fit-section">
-        <div class="ext-fit-item ext-fit-yes"><span class="ext-fit-icon">✅</span><span>${escapeHtml(tool.bestFor)}</span></div>
-        <div class="ext-fit-item ext-fit-no"><span class="ext-fit-icon">❌</span><span>${escapeHtml(tool.notFor || '')}</span></div>
-      </div>` : ''}
+      ${hasExt ? `<div class="tool-verdict tool-verdict-clamp">${escapeHtml(tool.verdict)}</div>` : ''}
       <div class="tool-detail-meta">
         <div class="tool-meta-item"><span class="tool-meta-label">定价</span><span class="tool-meta-value">${tool.pricing}</span></div>
         <div class="tool-meta-item"><span class="tool-meta-label">擅长解决</span><span class="tool-meta-value">${tool.problemsSolved.join('、')}</span></div>
       </div>
-      ${tool.strengths ? renderExtStrengthsHtml(tool) : ''}
-      ${tool.pricingAdvice ? `<div class="ext-pricing-advice"><i class="fa-solid fa-coins"></i><span>${escapeHtml(tool.pricingAdvice)}</span></div>` : ''}
-      ${tool.vsAlternatives && tool.vsAlternatives.length ? renderExtComparisonsHtml(tool) : ''}
-      ${tool.quickStart ? `
-      <div class="ext-quickstart">
-        <div class="ext-section-title"><i class="fa-solid fa-rocket"></i> 快速上手</div>
-        <div class="ext-quickstart-text">${escapeHtml(tool.quickStart)}</div>
-        ${tool.timeToValue ? `<div class="ext-time-value"><i class="fa-solid fa-clock"></i> ${escapeHtml(tool.timeToValue)}</div>` : ''}
-      </div>` : ''}
-      ${renderExtRelatedHtml(tool)}
       <div class="tool-actions">
         <a href="${tool.officialUrl}" target="_blank" rel="noopener noreferrer" class="dl-btn primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> 访问官网</a>
         ${tool.tutorialId ? `<a href="#tutorials" class="dl-btn secondary" onclick="setTimeout(()=>navigate('tutorials'),10)"><i class="fa-solid fa-graduation-cap"></i> 查看教程</a>` : ''}
       </div>
-      ${tool.lastUpdated ? `<div class="ext-updated"><i class="fa-solid fa-calendar-check"></i> 更新于 ${tool.lastUpdated}</div>` : ''}
+      ${hasExt ? `<div class="tool-expand-content" style="display:none">
+        <div class="tool-detail-desc">${tool.desc}</div>
+        ${tool.bestFor ? `
+        <div class="ext-fit-section">
+          <div class="ext-fit-item ext-fit-yes"><span class="ext-fit-icon">✅</span><span>${escapeHtml(tool.bestFor)}</span></div>
+          <div class="ext-fit-item ext-fit-no"><span class="ext-fit-icon">❌</span><span>${escapeHtml(tool.notFor || '')}</span></div>
+        </div>` : ''}
+        ${tool.strengths ? renderExtStrengthsHtml(tool) : ''}
+        ${tool.pricingAdvice ? `<div class="ext-pricing-advice"><i class="fa-solid fa-coins"></i><span>${escapeHtml(tool.pricingAdvice)}</span></div>` : ''}
+        ${tool.vsAlternatives && tool.vsAlternatives.length ? renderExtComparisonsHtml(tool) : ''}
+        ${tool.quickStart ? `
+        <div class="ext-quickstart">
+          <div class="ext-section-title"><i class="fa-solid fa-rocket"></i> 快速上手</div>
+          <div class="ext-quickstart-text">${escapeHtml(tool.quickStart)}</div>
+          ${tool.timeToValue ? `<div class="ext-time-value"><i class="fa-solid fa-clock"></i> ${escapeHtml(tool.timeToValue)}</div>` : ''}
+        </div>` : ''}
+        ${renderExtRelatedHtml(tool)}
+        ${tool.lastUpdated ? `<div class="ext-updated"><i class="fa-solid fa-calendar-check"></i> 更新于 ${tool.lastUpdated}</div>` : ''}
+      </div>
+      <div class="tool-card-expand" onclick="event.stopPropagation();toggleToolDetail(this.closest('.tool-detail-card'))"><i class="fa-solid fa-chevron-down"></i> 展开详情</div>` : ''}
     </div>
   `;
 }
