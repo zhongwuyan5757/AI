@@ -618,6 +618,19 @@ function toggleToolDetail(card) {
   if (!isOpen) trackEvent('tool_expand', { id: card.dataset.id });
 }
 
+function togglePromptDetail(card) {
+  var content = card.querySelector('.prompt-expand-content');
+  var btn = card.querySelector('.prompt-card-expand');
+  if (!content || !btn) return;
+  var isOpen = card.classList.contains('prompt-card-open');
+  content.style.display = isOpen ? 'none' : 'block';
+  btn.innerHTML = isOpen
+    ? '<i class="fa-solid fa-chevron-down"></i> 展开详情'
+    : '<i class="fa-solid fa-chevron-up"></i> 收起详情';
+  card.classList.toggle('prompt-card-open', !isOpen);
+  if (!isOpen) trackEvent('prompt_expand', { id: card.dataset.id });
+}
+
 function renderHomeCTA() {
   return `
     <div class="home-section">
@@ -2238,7 +2251,7 @@ function renderPromptCard(p) {
   const hasExt = !!p.taskCategory;
 
   return `
-    <div class="prompt-card${hasExt ? ' prompt-extended' : ''}" data-id="${p.id}">
+    <div class="prompt-card${hasExt ? ' prompt-extended prompt-clickable' : ''}" data-id="${p.id}" ${hasExt ? 'onclick="if(!event.target.closest(\'a,button\')){togglePromptDetail(this)}"' : ''}>
       <div class="prompt-header">
         <h3 class="prompt-name">${p.name}</h3>
         <div class="prompt-scenario-tag">${p.scenario}</div>
@@ -2251,6 +2264,7 @@ function renderPromptCard(p) {
         <div class="ext-when-item ext-when-yes"><span class="ext-when-icon">✅</span><span><strong>什么时候用</strong>：${escapeHtml(p.whenToUse)}</span></div>
         <div class="ext-when-item ext-when-no"><span class="ext-when-icon">❌</span><span><strong>什么时候别用</strong>：${escapeHtml(p.whenNotToUse || '')}</span></div>
       </div>` : ''}
+      ${hasExt ? `<div class="prompt-expand-content" style="display:none">` : ''}
       <div class="prompt-content">
         <pre><code>${highlightedPrompt}</code></pre>
         <button class="copy-btn" data-copy="${escapeAttr(p.prompt)}"><i class="fa-solid fa-copy"></i> 复制</button>
@@ -2266,6 +2280,8 @@ function renderPromptCard(p) {
       ${p.versions ? renderPromptVersionsHtml(p) : ''}
       ${p.notes ? `<div class="prompt-notes"><i class="fa-solid fa-circle-info"></i> ${p.notes}</div>` : ''}
       ${renderExtRelatedHtml(p)}
+      ${hasExt ? `</div>
+      <div class="prompt-card-expand" onclick="event.stopPropagation();togglePromptDetail(this.closest('.prompt-card'))"><i class="fa-solid fa-chevron-down"></i> 展开详情</div>` : ''}
     </div>
   `;
 }

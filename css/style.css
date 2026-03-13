@@ -5906,12 +5906,12 @@ footer {
   max-height: calc(14px * 1.65 * 3 + 14px * 2);
 }
 
-/* --- 展开/折叠按钮 --- */
-.tool-card-expand {
+/* --- 展开/折叠按钮（通用） --- */
+.tool-card-expand,
+.prompt-card-expand {
   font-size: 12px;
   color: var(--text-muted);
   text-align: center;
-  padding-top: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5919,10 +5919,59 @@ footer {
   cursor: pointer;
   transition: color 0.2s;
   position: relative;
-  z-index: 2;
+  z-index: 4;
+  margin-top: -36px;
+  padding-top: 48px;
+  padding-bottom: 4px;
 }
-.tool-card-expand:hover { color: var(--primary); }
-.tool-card-expand i { font-size: 10px; transition: transform 0.2s; }
+.tool-card-expand:hover,
+.prompt-card-expand:hover { color: var(--primary); }
+.tool-card-expand i,
+.prompt-card-expand i { font-size: 10px; transition: transform 0.2s; }
+
+/* --- 渐变遮罩（展开按钮 ::before） --- */
+.tool-card-expand::before,
+.prompt-card-expand::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  right: -26px;
+  bottom: 0;
+  height: 90px;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 14, 19, 0) 0%,
+    rgba(14, 14, 19, 0.45) 33%,
+    rgba(14, 14, 19, 0.88) 66%,
+    rgba(14, 14, 19, 0.99) 100%
+  );
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.prompt-card-expand::before {
+  left: -20px;
+  right: -20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 22, 29, 0) 0%,
+    rgba(22, 22, 29, 0.5) 33%,
+    rgba(22, 22, 29, 0.9) 66%,
+    #16161d 100%
+  );
+}
+
+/* --- 展开态：渐变消失，布局恢复 --- */
+.tool-detail-card.tool-card-open .tool-card-expand,
+.prompt-card.prompt-card-open .prompt-card-expand {
+  margin-top: 0;
+  padding-top: 4px;
+}
+.tool-detail-card.tool-card-open .tool-card-expand::before,
+.prompt-card.prompt-card-open .prompt-card-expand::before {
+  opacity: 0;
+  height: 0;
+}
 
 /* --- 展开内容容器 --- */
 .tool-expand-content {
@@ -5931,9 +5980,17 @@ footer {
   position: relative;
   z-index: 2;
 }
+.prompt-expand-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
 
 /* --- 可点击卡片 --- */
-.tool-detail-card.tool-clickable { cursor: pointer; }
+.tool-detail-card.tool-clickable,
+.prompt-card.prompt-clickable { cursor: pointer; }
 
 /* --- 展开态卡片边框高亮 --- */
 .tool-detail-card.tool-card-open {
