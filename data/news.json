@@ -1,5 +1,482 @@
 [
   {
+    "id": "auto-mmpq3qsu",
+    "title": "Meta据悉计划大规模裁员，或影响20%以上员工",
+    "url": "https://36kr.com/newsflashes/3722133233858948?f=rss",
+    "source": "36氪",
+    "date": "2026-03-14",
+    "summary": "3月14日消息，据报道，Meta正计划进行大规模裁员，可能影响公司20%或更多员工，此举旨在抵消高昂的人工智能基础设施投资成本，并为人工智能辅助员工带来的更高效率做好准备。据悉，裁员的具体日期尚未确定，规模也尚未最终敲定。（界面新闻）",
+    "category": "deep-insight",
+    "tags": [
+      "Meta"
+    ],
+    "relatedJobs": [],
+    "isHot": true,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "7day-beginner",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmpq3qsv",
+    "title": "Claude Opus 4.6与Sonnet 4.6上线百万上下文窗口",
+    "url": "https://36kr.com/newsflashes/3722131061700996?f=rss",
+    "source": "36氪",
+    "date": "2026-03-14",
+    "summary": "当地时间3月13日，Anthropic的人工智能聊天机器人Claude宣布，Claude Opus 4.6和Sonnet 4.6现已在Claude平台上以标准价格提供完整的100万令牌上下文窗口，标准定价适用于整个窗口——Opus 4.6为每百万令牌5美元/25美元，Sonnet 4.6为每百万令牌3美元/15美元。Claude称，此次更新包括统一价格，完整上下文窗口，即无需支付长上下文附加费，所有上下文长度均适用完整速率限制。（财联社）",
+    "category": "model-update",
+    "tags": [
+      "Claude",
+      "Anthropic"
+    ],
+    "relatedJobs": [],
+    "isHot": true,
+    "why_it_matters": "新工具/模型可能改变现有工作流",
+    "fit_for": [
+      "发行"
+    ],
+    "recommended_path": "",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmpq3qt9",
+    "title": "‘Not built right the first time’ — Musk’s xAI is starting over again, again",
+    "url": "https://techcrunch.com/2026/03/13/not-built-right-the-first-time-musks-xai-is-starting-over-again-again/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-14",
+    "summary": "The AI lab is revamping its effort to build an AI coding tool, with two new executives joining from Cursor.",
+    "category": "tools-workflow",
+    "tags": [
+      "Cursor"
+    ],
+    "relatedJobs": [
+      "graphic-designer",
+      "video-designer",
+      "product-ops"
+    ],
+    "isHot": true,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "里程碑事件，值得重点关注",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
+    "id": "auto-mmpq3qta",
+    "title": "Lawyer behind AI psychosis cases warns of mass casualty risks",
+    "url": "https://techcrunch.com/2026/03/13/lawyer-behind-ai-psychosis-cases-warns-of-mass-casualty-risks/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-14",
+    "summary": "AI chatbots have been linked to suicides for years. Now one lawyer says they are showing up in mass casualty cases too, and the technology is moving faster than the safeguards.",
+    "category": "tools-workflow",
+    "tags": [],
+    "relatedJobs": [
+      "graphic-designer",
+      "video-designer",
+      "product-ops"
+    ],
+    "isHot": true,
+    "why_it_matters": "合规政策影响产品上线与市场策略",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "争议性话题，关注行业治理走向",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
+    "id": "auto-mmpq3qsp",
+    "title": "氪星晚报 ｜魅族手机“解体”：做车机，做AI，或者离开；美团王莆中：建设物理世界AI底座，帮每个商家都用上自己的AI助理",
+    "url": "https://36kr.com/p/3721253543164549?f=rss",
+    "source": "36氪",
+    "date": "2026-03-13",
+    "summary": "大公司：\n小鹏汽车机器人的步态调整专利公布\n36氪获悉，爱企查App显示，近日，广州小鹏汽车科技有限公司一项名为“机器人的步态调整方法、装置、设备及存储介质”的发明专利公布。专利摘要显示，本发明涉及智能机器人领域，公开了机器人的步态调整方法、装置、设备及存储介质，方法包括：获取仿人机器人脚部的目标采样点，以及每个目标采样点对应的坐标值和地形高程数据；依据每个目标采样点对应的坐标值和地形高程数据计算仿人机器人的落脚点回报值；获取每个目标采样点在预设半径内的地形高程数据最大值，依据坐标值和地形高程数据最大值计算仿人机器人的踢台阶回报值；依据落脚点回报值和踢台阶回报值对仿人机器人进行步态调整。本发明",
+    "category": "tools-workflow",
+    "tags": [],
+    "relatedJobs": [
+      "graphic-designer",
+      "video-designer",
+      "product-ops"
+    ],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "数值"
+    ],
+    "recommended_path": "",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmpq3qsq",
+    "title": "魅族手机“解体”：做车机，做AI，或者离开丨智能涌现独家",
+    "url": "https://36kr.com/p/3721227876039047?f=rss",
+    "source": "36氪",
+    "date": "2026-03-13",
+    "summary": "文｜邱晓芬\n编辑｜苏建勋 杨轩\n年前持续发酵的“魅族手机停摆”风波，今日落下帷幕。\n《智能涌现》从内部人士处独家获悉，魅族近期宣布一轮大调整，超50%的员工即将离开，涉及400人左右。\n这部分人有三个去处——其中，一部分将获得“N+2”的赔偿。\n消息人士称，“大多数人将在本周五之内办完（手续）”；\n魅族的“PANDAER”潮牌团队将分拆，自负盈亏；\n魅族AR眼镜团队则部分被AR眼镜公司「雷鸟创新」吸收。\n其实，早在2月27日，针对外界传言，魅族方面发布了名为《廿三载热爱，以Flyme之名新生》的公告，称“决定暂停手机新产品自研硬件项目，并正接洽第三方硬件合作伙伴”。\n而据《智能涌现》了解，经过",
+    "category": "model-update",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "新工具/模型可能改变现有工作流",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmpq3qsr",
+    "title": "36氪 × OpenClaw\"龙虾\"｜让你的AI Agent先一步看到未来",
+    "url": "https://36kr.com/p/3720817143396993?f=rss",
+    "source": "36氪",
+    "date": "2026-03-13",
+    "summary": "当AI Agent从“智能助手”进化为“行动者”，当OpenClaw“龙虾”成为无数开发者、创业者的高效协作伙伴，如何让你的AI智能体突破信息壁垒，精准链接行业核心资源？\n今日，36氪正式开放OpenClaw“龙虾”专属对话入口，让你的OpenClaw“龙虾”，直接与36氪开启实时通信对话，抢占行业发展先机，提前看见未来趋势。\n为什么要让你的AI Agent对话36氪？\n在AI Agent快速普及的当下，单一智能体的能力始终有限，而36氪作为深耕科技创新领域十余年的生态服务平台，早已构建起覆盖创业、融资、科技、合作的全链路资源网络，这正是你的AI Agent最需要的“能力补给站”。\n36氪是一",
+    "category": "deep-insight",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "影响行业资本走向与竞争格局",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "大额资本事件，反映行业信心方向"
+  },
+  {
+    "id": "auto-mmpq3qss",
+    "title": "率先向AI托管账号出手，为什么小红书要打响第一枪？",
+    "url": "https://36kr.com/p/3720962630417024?f=rss",
+    "source": "36氪",
+    "date": "2026-03-13",
+    "summary": "托举小红书社区氛围的真实体验和情感，只能来源于人。 \n当OpenClaw爆火，“养龙虾”安全性仍存疑之时，借助OpenClaw等AI工具形成的AI托管账号已经悄悄流向主流内容社区。\n在此背景下，小红书向AI托管账号开了第一枪，这也是主流平台首次对 AI 智能体工具在内容社区的滥用行为作出明确规制。\n作为以真人分享起家的UGC社区，真诚、真实一直是小红书的底色，当AI Agent试图侵入社区真实性时，已经触犯了平台不可逾越的底线。\n而小红书的这次出手，既是对自身生态的守护，也是对行业乱象的一次及时纠偏。\n 出手\n一款开源AI智能体OpenClaw近日在全球掀起热潮，因其图标形似小龙虾，“养龙虾”",
+    "category": "tools-workflow",
+    "tags": [],
+    "relatedJobs": [
+      "graphic-designer",
+      "video-designer",
+      "product-ops"
+    ],
+    "isHot": false,
+    "why_it_matters": "开源资源可直接提升团队能力",
+    "fit_for": [
+      "运营",
+      "新媒体"
+    ],
+    "recommended_path": "",
+    "editor_note": "里程碑事件，值得重点关注"
+  },
+  {
+    "id": "auto-mmpq3qst",
+    "title": "科氪 | AWE 2026再携重磅阵容，MOVA全面披露芯片战略，擎画“主动时代”技术版图",
+    "url": "https://36kr.com/p/3720969176988041?f=rss",
+    "source": "36氪",
+    "date": "2026-03-13",
+    "summary": "2026年3月12日，中国上海——当人工智能加速从模型能力走向系统能力，家庭场景正成为AI规模化落地的关键单元。今日，全球超高端AI智慧生活引领者MOVA在中国家电及消费电子博览会（AWE 2026）开幕首日，首次系统披露自研芯片战略，并对外阐释其“家庭AI系统”技术架构及多项生态布局。\n依托AWE 2026“一展双区”的创新布局，MOVA以“智见新宇宙，慧享新生活”为主题亮相上海新国际博览中心。本次发布中，MOVA带来5项行业级首创技术、32项体系级创新技术以及31款创新产品。这不仅是一次产品的集中展示，更是MOVA以芯片与AI算法为底层能力构建智慧生活生态的具象呈现，标志着品牌正从单一产品",
+    "category": "model-update",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "新工具/模型可能改变现有工作流",
+    "fit_for": [
+      "设计",
+      "策划",
+      "品牌"
+    ],
+    "recommended_path": "5day-advanced",
+    "editor_note": "里程碑事件，值得重点关注"
+  },
+  {
+    "id": "auto-mmpq3qsw",
+    "title": "郭明錤：英伟达下一代Rubin平台启动新材测试，PCB升级周期将至",
+    "url": "https://36kr.com/newsflashes/3721355909544581?f=rss",
+    "source": "36氪",
+    "date": "2026-03-13",
+    "summary": "分析师郭明錤最新供应链调查，英伟达已与PCB厂商就下一代覆铜板（CCL）材料M10启动测试，目标应用涵盖Rubin Ultra及Feynman平台的正交背板与交换刀片主板。若M10测试如期推进，量产时间节点锁定在2027年下半年，届时将开启新一轮AI服务器PCB材料的规模化采购周期，相关供应链厂商有望迎来业绩催化窗口。（财联社）",
+    "category": "deep-insight",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": ""
+  },
+  {
+    "id": "auto-mmpq3qsz",
+    "title": "Microsoft’s Copilot AI assistant is coming to current-gen Xbox consoles this year",
+    "url": "https://www.theverge.com/games/894799/microsoft-gaming-copilot-ai-xbox-consoles",
+    "source": "AI | The Verge",
+    "date": "2026-03-13",
+    "summary": "Xbox is getting ready to launch its Gaming Copilot AI assistant on \"current-generation consoles\" this year, according to a report from GamesRadar. Sonali Yadav, Xbox's product manager for gaming AI, revealed the news during a panel at the Game Developers Conference (GDC), adding that the company wil",
+    "category": "model-update",
+    "tags": [
+      "Copilot"
+    ],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "新工具/模型可能改变现有工作流",
+    "fit_for": [
+      "投放"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
+    "id": "auto-mmpq3qtb",
+    "title": "Nyne, founded by a father-son duo, gives AI agents the human context they’re missing",
+    "url": "https://techcrunch.com/2026/03/13/nyne-founded-by-a-father-son-duo-gives-ai-agents-the-human-context-theyre-missing/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-13",
+    "summary": "The data infrastructure startup raised $5.3 million in seed funding led by Wischoff Ventures and South Park Commons.",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [
+      "product-ops",
+      "ad-optimizer",
+      "publishing-manager"
+    ],
+    "isHot": false,
+    "why_it_matters": "影响行业资本走向与竞争格局",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "大额资本事件，反映行业信心方向",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
+    "id": "auto-mmpq3qtc",
+    "title": "Steven Spielberg says he’s ‘never used AI’ in any of his films",
+    "url": "https://techcrunch.com/2026/03/13/steven-spielberg-says-hes-never-used-ai-in-any-of-his-films/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-13",
+    "summary": "At SXSW, Steven Spielberg said AI has uses in many fields, but not when it comes to replacing creative people in film and TV writing.",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
+    "id": "auto-mmpq3qtd",
+    "title": "The biggest AI stories of the year (so far)",
+    "url": "https://techcrunch.com/2026/03/13/the-biggest-ai-stories-of-the-year-so-far/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-13",
+    "summary": "The AI industry is constantly churning out news, like major acquisitions, indie developer successes, public outcry, and existentially dangerous contract negotiations.",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "影响行业资本走向与竞争格局",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "大额资本事件，反映行业信心方向",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
+    "id": "auto-mmpq3qte",
+    "title": "The wild six weeks for NanoClaw’s creator that led to a deal with Docker",
+    "url": "https://techcrunch.com/2026/03/13/the-wild-six-weeks-for-nanoclaws-creator-that-led-to-a-deal-with-docker/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-13",
+    "summary": "Gavriel Cohen is living an open source developer's dream as his project has achieved acclaim and a partnership with Docker in a matter of weeks.",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "开源资源可直接提升团队能力",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
+    "id": "auto-mmpq3qtf",
+    "title": "The $32B acquisition that one VC is calling the ‘Deal of the Decade’",
+    "url": "https://techcrunch.com/video/the-32b-acquisition-that-one-vc-is-calling-the-deal-of-the-decade/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-13",
+    "summary": "According to Index Ventures Partner Shardul Shah, cybersecurity startup Wiz sits “at the center of three tailwinds: AI, cloud, and security spend.” Those tailwinds powered what just became the largest venture-backed acquisition in history — Google’s $32 billion deal, finalized after a declined 2024",
+    "category": "industry-product",
+    "tags": [
+      "Google"
+    ],
+    "relatedJobs": [
+      "product-ops",
+      "ad-optimizer",
+      "publishing-manager"
+    ],
+    "isHot": false,
+    "why_it_matters": "影响行业资本走向与竞争格局",
+    "fit_for": [
+      "投放"
+    ],
+    "recommended_path": "",
+    "editor_note": "大额资本事件，反映行业信心方向",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
+    "id": "auto-mmpq3qtg",
+    "title": "Peacock expands into AI-driven video, mobile-first live sports, and gaming",
+    "url": "https://techcrunch.com/2026/03/13/peacock-expands-into-ai-driven-video-mobile-first-live-sports-and-gaming/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-13",
+    "summary": "Peacock is betting on new AI-powered video experiences, vertical clips, and mobile games to help its growth.",
+    "category": "tools-workflow",
+    "tags": [],
+    "relatedJobs": [
+      "graphic-designer",
+      "video-designer",
+      "product-ops"
+    ],
+    "isHot": false,
+    "why_it_matters": "创意生产工具直接影响内容效率",
+    "fit_for": [
+      "视频"
+    ],
+    "recommended_path": "",
+    "editor_note": "里程碑事件，值得重点关注",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
+    "id": "auto-mmpq3qth",
+    "title": "Before quantum computing arrives, this startup wants enterprises already running on it",
+    "url": "https://techcrunch.com/2026/03/12/before-quantum-computing-arrives-this-startup-wants-enterprises-already-running-on-it/",
+    "source": "AI News & Artificial Intelligence | TechCrunch",
+    "date": "2026-03-13",
+    "summary": "After selling his AI startup to AMD for $665 million, Peter Sarlin is back with Qutwo, a new venture building the infrastructure it believes enterprises will need when quantum computing finally arrives.",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [
+      "product-ops",
+      "ad-optimizer",
+      "publishing-manager"
+    ],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "投放"
+    ],
+    "recommended_path": "",
+    "editor_note": "大额资本事件，反映行业信心方向",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
+    "id": "auto-mmpq3qtp",
+    "title": "Figuring out why AIs get flummoxed by some games",
+    "url": "https://arstechnica.com/ai/2026/03/figuring-out-why-ais-get-flummoxed-by-some-games/",
+    "source": "AI - Ars Technica",
+    "date": "2026-03-13",
+    "summary": "When winning depends on intuiting a mathematical function, AIs come up short.",
+    "category": "industry-product",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "直接关联游戏行业生产流程",
+    "fit_for": [
+      "全员"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
+    "id": "auto-mmpq3qub",
+    "title": "Why physical AI is becoming manufacturing’s next advantage",
+    "url": "https://www.technologyreview.com/2026/03/13/1134184/why-physical-ai-is-becoming-manufacturings-next-advantage/",
+    "source": "MIT Technology Review",
+    "date": "2026-03-13",
+    "summary": "For decades, manufacturers have pursued automation to drive efficiency, reduce costs, and stabilize operations. That approach delivered meaningful gains, but it is no longer enough. Today’s manufacturing leaders face a different challenge: how to grow amid labor constraints, rising complexity, and i",
+    "category": "tools-workflow",
+    "tags": [],
+    "relatedJobs": [
+      "graphic-designer",
+      "video-designer",
+      "product-ops"
+    ],
+    "isHot": false,
+    "why_it_matters": "自动化趋势将重塑岗位协作模式",
+    "fit_for": [
+      "投放"
+    ],
+    "recommended_path": "5day-efficiency",
+    "editor_note": "",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
+    "id": "auto-mmpq3quc",
+    "title": "The Download: how AI is used for military targeting, and the Pentagon’s war on Claude",
+    "url": "https://www.technologyreview.com/2026/03/13/1134278/the-download-defense-official-ai-chatbots-targeting-pentagon-claude-pollute-military-supply-chain/",
+    "source": "MIT Technology Review",
+    "date": "2026-03-13",
+    "summary": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Defense official reveals how AI chatbots could be used for targeting decisions  The US military might use generative AI systems to rank targets and recommend whic",
+    "category": "model-update",
+    "tags": [
+      "Claude"
+    ],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "值得了解的行业动态",
+    "fit_for": [
+      "投放"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
+    "id": "auto-mmpq3qud",
+    "title": "Future AI chips could be built on glass",
+    "url": "https://www.technologyreview.com/2026/03/13/1134230/future-ai-chips-could-be-built-on-glass/",
+    "source": "MIT Technology Review",
+    "date": "2026-03-13",
+    "summary": "Human-made glass is thousands of years old. But it’s now poised to find its way into the AI chips used in the world’s newest and largest data centers. This year, a South Korean company called Absolics is planning to start commercial production of special glass panels designed to make next-generation",
+    "category": "deep-insight",
+    "tags": [],
+    "relatedJobs": [],
+    "isHot": false,
+    "why_it_matters": "创意生产工具直接影响内容效率",
+    "fit_for": [
+      "设计",
+      "投放"
+    ],
+    "recommended_path": "",
+    "editor_note": "",
+    "titleZh": "",
+    "summaryZh": ""
+  },
+  {
     "id": "auto-mmoapprp",
     "title": "龙虾火爆，但这8个“注意事项”你应该知道",
     "url": "https://36kr.com/p/3720215408310663?f=rss",
@@ -11,7 +488,7 @@
       "Claude"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "开源资源可直接提升团队能力",
     "fit_for": [
       "策划"
@@ -29,7 +506,7 @@
     "category": "model-update",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "新工具/模型可能改变现有工作流",
     "fit_for": [
       "视频"
@@ -49,7 +526,7 @@
       "Meta"
     ],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "值得了解的行业动态",
     "fit_for": [
       "运营"
@@ -67,7 +544,7 @@
     "category": "model-update",
     "tags": [],
     "relatedJobs": [],
-    "isHot": true,
+    "isHot": false,
     "why_it_matters": "新工具/模型可能改变现有工作流",
     "fit_for": [
       "全员"
@@ -3012,93 +3489,5 @@
     ],
     "recommended_path": null,
     "editor_note": "新品发布，建议第一时间体验"
-  },
-  {
-    "id": "auto-mmlfpmhb",
-    "title": "Musk fails to block California data disclosure law he fears will ruin xAI",
-    "url": "https://arstechnica.com/tech-policy/2026/03/musk-fails-to-block-california-data-disclosure-law-he-fears-will-ruin-xai/",
-    "source": "AI - Ars Technica",
-    "date": "2026-03-06",
-    "summary": "Musk can't convince judge public doesn’t care about where AI training data comes from.",
-    "category": "industry-product",
-    "tags": [],
-    "relatedJobs": [],
-    "isHot": false,
-    "why_it_matters": "合规政策影响产品上线与市场策略",
-    "fit_for": [
-      "全员"
-    ],
-    "recommended_path": "",
-    "editor_note": "",
-    "titleZh": "Musk试图阻止加州数据披露法失败，担心影响xAI发展",
-    "summaryZh": "Musk未能说服法官公众不关心AI训练数据来源，加州数据透明度法律将要求AI公司披露训练数据详情，这对游戏和科技公司的AI开发透明度提出更高要求，可能影响行业竞争格局。"
-  },
-  {
-    "id": "auto-mmlfpmhc",
-    "title": "AI startup sues ex-CEO, saying he took 41GB of email and lied on résumé",
-    "url": "https://arstechnica.com/tech-policy/2026/03/ai-startup-sues-ex-ceo-saying-he-took-41gb-of-email-and-lied-on-resume/",
-    "source": "AI - Ars Technica",
-    "date": "2026-03-06",
-    "summary": "Hayden AI also claims co-founder improperly sold over $1.2M in stock.",
-    "category": "industry-product",
-    "tags": [],
-    "relatedJobs": [
-      "product-ops",
-      "ad-optimizer",
-      "publishing-manager"
-    ],
-    "isHot": false,
-    "why_it_matters": "值得了解的行业动态",
-    "fit_for": [
-      "全员"
-    ],
-    "recommended_path": "",
-    "editor_note": "",
-    "titleZh": "AI初创公司起诉前CEO窃取41GB邮件数据并简历造假",
-    "summaryZh": "Hayden AI指控联合创始人非法出售超120万美元股票并窃取大量企业数据，此案凸显了AI行业内部治理和数据安全的重要性，为游戏和科技企业的高管合规管理提供警示。"
-  },
-  {
-    "id": "auto-mmlfpmhx",
-    "title": "Is the Pentagon allowed to surveil Americans with AI?",
-    "url": "https://www.technologyreview.com/2026/03/06/1134012/is-the-pentagon-allowed-to-surveil-americans-with-ai/",
-    "source": "MIT Technology Review",
-    "date": "2026-03-06",
-    "summary": "The ongoing public feud between the Department of Defense and the AI company Anthropic has raised a deep and still unanswered question: Does the law actually allow the US government to conduct mass surveillance on Americans? Surprisingly, the answer is not straightforward. More than a decade after E",
-    "category": "industry-product",
-    "tags": [
-      "Anthropic"
-    ],
-    "relatedJobs": [],
-    "isHot": false,
-    "why_it_matters": "合规政策影响产品上线与市场策略",
-    "fit_for": [
-      "投放"
-    ],
-    "recommended_path": "",
-    "editor_note": "",
-    "titleZh": "五角大楼是否被允许用AI监控美国公民引发争议",
-    "summaryZh": "国防部与Anthropic公司的公开争议引发深层法律问题，涉及AI技术在政府监管中的应用边界，对游戏和科技行业的AI产品开发及政府合作项目具有重要参考意义。"
-  },
-  {
-    "id": "auto-mmlfpmhy",
-    "title": "The Download: 10 things that matter in AI, plus Anthropic’s plan to sue the Pentagon",
-    "url": "https://www.technologyreview.com/2026/03/06/1133989/the-download-10-things-that-matter-in-ai-anthropics-plan-sue-pentagon/",
-    "source": "MIT Technology Review",
-    "date": "2026-03-06",
-    "summary": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Coming soon: our 10 Things That Matter in AI Right Now For years, MIT Technology Review’s newsroom has been ahead of the curve, tracking the developments in AI th",
-    "category": "industry-product",
-    "tags": [
-      "Anthropic"
-    ],
-    "relatedJobs": [],
-    "isHot": false,
-    "why_it_matters": "值得了解的行业动态",
-    "fit_for": [
-      "投放"
-    ],
-    "recommended_path": "",
-    "editor_note": "",
-    "titleZh": "AI行业十大关键事件解析，Anthropic计划起诉五角大楼",
-    "summaryZh": "科技资讯日报聚焦AI领域重大动态，包括Anthropic与政府部门的法律纠纷等关键事件，为游戏和科技从业者提供行业趋势洞察和政策风险预警。"
   }
 ]

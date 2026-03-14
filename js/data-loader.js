@@ -8,7 +8,7 @@
  */
 
 async function loadData() {
-  const VERSION = '2026.03.13.0246';
+  const VERSION = '2026.03.14.0245';
 
   const contentFiles = ['jobs', 'news', 'tools', 'models', 'tutorials', 'prompts', 'resources', 'updates', 'digests', 'columns'];
 
